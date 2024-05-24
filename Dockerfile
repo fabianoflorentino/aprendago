@@ -1,0 +1,17 @@
+FROM golang:alpine3.20 AS builder
+
+WORKDIR /aprendago
+
+COPY . .
+
+RUN go build -o /go/bin/aprendago
+
+FROM alpine:3.20 as aprendago
+
+COPY --from=builder /go/bin/aprendago /go/bin/aprendago
+
+RUN apk update \
+    && apk upgrade
+
+ENTRYPOINT [ "/bin/sh" ]
+CMD [ "-c", "while true; do echo 'Im running...' && sleep 300; done" ]
