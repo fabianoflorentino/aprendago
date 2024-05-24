@@ -13,6 +13,7 @@ func main() {
 		fmt.Println("\nÉ necessário passar um argumento para o programa")
 		fmt.Println("\nExemplo: go run main.go --bem-vindo")
 		fmt.Print(outline.HELPME)
+
 		return
 	} else {
 		outline.Menu(os.Args[1])
