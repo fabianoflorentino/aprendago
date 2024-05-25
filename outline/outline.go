@@ -13,4 +13,5 @@ func Outline() {
 	visao_geral_do_curso.Recursos()
 	visao_geral_do_curso.ComoEsseCursoFunciona()
 	variaveis_valores_tipos.GoPlayground()
+	variaveis_valores_tipos.HelloWorld()
 }

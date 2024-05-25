@@ -16,6 +16,7 @@ Opções:
   --recursos                  Exibe os recursos do curso
   --como-esse-curso-funciona  Exibe como esse curso funciona
   --go-playground             Exibe as informações do Go Playground
+	--hello-world               Exibe os detales sobre o primeiro programa das linguagens o Hello World!
   --outline                   Exibe o outline do curso
   --help                      Exibe a lista de opções
 `
@@ -29,6 +30,7 @@ func Menu(args string) {
 		"--sucesso":       func() { visao_geral_do_curso.Sucesso() },
 		"--recursos":      func() { visao_geral_do_curso.Recursos() },
 		"--go-playground": func() { variaveis_valores_tipos.GoPlayground() },
+		"--hello-world":   func() { variaveis_valores_tipos.HelloWorld() },
 		"--outline":       func() { Outline() },
 		"--help":          func() { fmt.Print(HELPME) },
 	}
