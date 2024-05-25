@@ -18,6 +18,7 @@ Opções:
   --go-playground             		Exibe as informações do Go Playground
   --hello-world               		Exibe os detalhes sobre o primeiro programa das linguagens o Hello World!
   --operador-curto-de-declaracao	Exibe os detalhes sobre o operador curto de declaração
+  --a-palavra-reservada-var    		Exibe os detalhes sobre a palavra reservada var
   --outline                   		Exibe o outline do curso
   --help                      		Exibe a lista de opções
 `
@@ -26,14 +27,16 @@ func Menu(args string) {
 	fmt.Println("Aprenda GO")
 
 	options := map[string]func(){
-		"--bem-vindo":     func() { visao_geral_do_curso.BemVindo() },
-		"--porque-go":     func() { visao_geral_do_curso.PorQueGo() },
-		"--sucesso":       func() { visao_geral_do_curso.Sucesso() },
-		"--recursos":      func() { visao_geral_do_curso.Recursos() },
-		"--go-playground": func() { variaveis_valores_tipos.GoPlayground() },
-		"--hello-world":   func() { variaveis_valores_tipos.HelloWorld() },
-		"--outline":       func() { Outline() },
-		"--help":          func() { fmt.Print(HELPME) },
+		"--bem-vindo":                    func() { visao_geral_do_curso.BemVindo() },
+		"--porque-go":                    func() { visao_geral_do_curso.PorQueGo() },
+		"--sucesso":                      func() { visao_geral_do_curso.Sucesso() },
+		"--recursos":                     func() { visao_geral_do_curso.Recursos() },
+		"--go-playground":                func() { variaveis_valores_tipos.GoPlayground() },
+		"--hello-world":                  func() { variaveis_valores_tipos.HelloWorld() },
+		"--operador-curto-de-declaracao": func() { variaveis_valores_tipos.OperadorCurtoDeDeclaracao() },
+		"--a-palavra-reservada-var":      func() { variaveis_valores_tipos.ApalavraReservadaVar() },
+		"--outline":                      func() { Outline() },
+		"--help":                         func() { fmt.Print(HELPME) },
 	}
 
 	if _, ok := options[args]; ok {
