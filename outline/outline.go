@@ -16,4 +16,5 @@ func Outline() {
 	variaveis_valores_tipos.HelloWorld()
 	variaveis_valores_tipos.OperadorCurtoDeDeclaracao()
 	variaveis_valores_tipos.ApalavraReservadaVar()
+	variaveis_valores_tipos.ExplorandoTipos()
 }

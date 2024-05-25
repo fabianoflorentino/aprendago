@@ -19,6 +19,7 @@ Opções:
   --hello-world               		Exibe os detalhes sobre o primeiro programa das linguagens o Hello World!
   --operador-curto-de-declaracao	Exibe os detalhes sobre o operador curto de declaração
   --a-palavra-reservada-var    		Exibe os detalhes sobre a palavra reservada var
+	--explorando-tipos          		Exibe os detalhes sobre a exploração de tipos
   --outline                   		Exibe o outline do curso
   --help                      		Exibe a lista de opções
 `
@@ -35,6 +36,7 @@ func Menu(args string) {
 		"--hello-world":                  func() { variaveis_valores_tipos.HelloWorld() },
 		"--operador-curto-de-declaracao": func() { variaveis_valores_tipos.OperadorCurtoDeDeclaracao() },
 		"--a-palavra-reservada-var":      func() { variaveis_valores_tipos.ApalavraReservadaVar() },
+		"--explorando-tipos":             func() { variaveis_valores_tipos.ExplorandoTipos() },
 		"--outline":                      func() { Outline() },
 		"--help":                         func() { fmt.Print(HELPME) },
 	}
