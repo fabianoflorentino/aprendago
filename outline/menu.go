@@ -19,7 +19,7 @@ Opções:
   --hello-world               		Exibe os detalhes sobre o primeiro programa das linguagens o Hello World!
   --operador-curto-de-declaracao	Exibe os detalhes sobre o operador curto de declaração
   --a-palavra-reservada-var    		Exibe os detalhes sobre a palavra reservada var
-	--explorando-tipos          		Exibe os detalhes sobre a exploração de tipos
+  --explorando-tipos          		Exibe os detalhes sobre a exploração de tipos
   --outline                   		Exibe o outline do curso
   --help                      		Exibe a lista de opções
 `
