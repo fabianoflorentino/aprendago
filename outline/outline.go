@@ -17,4 +17,5 @@ func Outline() {
 	variaveis_valores_tipos.OperadorCurtoDeDeclaracao()
 	variaveis_valores_tipos.ApalavraReservadaVar()
 	variaveis_valores_tipos.ExplorandoTipos()
+	variaveis_valores_tipos.ValorZero()
 }
