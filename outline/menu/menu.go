@@ -3,26 +3,10 @@ package outline
 import (
 	"fmt"
 
+	outline "github.com/fabianoflorentino/aprendago/outline"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
-
-const HELPME = `
-Opções:
-
-  --bem-vindo                 		Exibe a mensagem de boas-vindas do curso
-  --porque-go                 		Exibe a mensagem sobre por que aprender Go
-  --sucesso                   		Exibe a mensagem sobre sucesso
-  --recursos                  		Exibe os recursos do curso
-  --como-esse-curso-funciona  		Exibe como esse curso funciona
-  --go-playground             		Exibe as informações do Go Playground
-  --hello-world               		Exibe os detalhes sobre o primeiro programa das linguagens o Hello World!
-  --operador-curto-de-declaracao	Exibe os detalhes sobre o operador curto de declaração
-  --a-palavra-reservada-var    		Exibe os detalhes sobre a palavra reservada var
-  --explorando-tipos          		Exibe os detalhes sobre a exploração de tipos
-  --outline                   		Exibe o outline do curso
-  --help                      		Exibe a lista de opções
-`
 
 func Menu(args string) {
 	fmt.Println("Aprenda GO")
@@ -37,14 +21,14 @@ func Menu(args string) {
 		"--operador-curto-de-declaracao": func() { variaveis_valores_tipos.OperadorCurtoDeDeclaracao() },
 		"--a-palavra-reservada-var":      func() { variaveis_valores_tipos.ApalavraReservadaVar() },
 		"--explorando-tipos":             func() { variaveis_valores_tipos.ExplorandoTipos() },
-		"--outline":                      func() { Outline() },
-		"--help":                         func() { fmt.Print(HELPME) },
+		"--outline":                      func() { outline.Outline() },
+		"--help":                         func() { PrintHelpMe() },
 	}
 
-	if _, ok := options[args]; ok {
-		options[args]()
+	if action, ok := options[args]; ok {
+		action()
 	} else {
 		fmt.Println("\nOpção inválida")
-		fmt.Print(HELPME)
+		PrintHelpMe()
 	}
 }
