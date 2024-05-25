@@ -11,6 +11,9 @@ services:
       - .env
     networks:
       - aprendago
+    volumes:
+      - .:/aprendago
+
     tty: true
     stdin_open: true
 
