@@ -21,6 +21,8 @@ func Menu(args string) {
 		"--operador-curto-de-declaracao": func() { variaveis_valores_tipos.OperadorCurtoDeDeclaracao() },
 		"--a-palavra-reservada-var":      func() { variaveis_valores_tipos.ApalavraReservadaVar() },
 		"--explorando-tipos":             func() { variaveis_valores_tipos.ExplorandoTipos() },
+		"--valor-zero":                   func() { variaveis_valores_tipos.ValorZero() },
+		"--o-pacote-fmt":                 func() { variaveis_valores_tipos.OpacoteFmt() },
 		"--outline":                      func() { outline.Outline() },
 		"--help":                         func() { PrintHelpMe() },
 	}
