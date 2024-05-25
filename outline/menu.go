@@ -10,15 +10,16 @@ import (
 const HELPME = `
 Opções:
 
-  --bem-vindo                 Exibe a mensagem de boas-vindas do curso
-  --porque-go                 Exibe a mensagem sobre por que aprender Go
-  --sucesso                   Exibe a mensagem sobre sucesso
-  --recursos                  Exibe os recursos do curso
-  --como-esse-curso-funciona  Exibe como esse curso funciona
-  --go-playground             Exibe as informações do Go Playground
-	--hello-world               Exibe os detales sobre o primeiro programa das linguagens o Hello World!
-  --outline                   Exibe o outline do curso
-  --help                      Exibe a lista de opções
+  --bem-vindo                 		Exibe a mensagem de boas-vindas do curso
+  --porque-go                 		Exibe a mensagem sobre por que aprender Go
+  --sucesso                   		Exibe a mensagem sobre sucesso
+  --recursos                  		Exibe os recursos do curso
+  --como-esse-curso-funciona  		Exibe como esse curso funciona
+  --go-playground             		Exibe as informações do Go Playground
+  --hello-world               		Exibe os detalhes sobre o primeiro programa das linguagens o Hello World!
+  --operador-curto-de-declaracao	Exibe os detalhes sobre o operador curto de declaração
+  --outline                   		Exibe o outline do curso
+  --help                      		Exibe a lista de opções
 `
 
 func Menu(args string) {
