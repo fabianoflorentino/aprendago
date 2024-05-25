@@ -2,7 +2,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	outline "github.com/fabianoflorentino/aprendago/outline/menu"
@@ -10,8 +9,6 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("\nÉ necessário passar um argumento para o programa")
-		fmt.Println("\nExemplo: go run main.go --bem-vindo")
 		outline.PrintHelpMe()
 
 		return
