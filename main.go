@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fabianoflorentino/aprendago/outline"
+	outline "github.com/fabianoflorentino/aprendago/outline/menu"
 )
 
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("\nÉ necessário passar um argumento para o programa")
 		fmt.Println("\nExemplo: go run main.go --bem-vindo")
-		fmt.Print(outline.HELPME)
+		outline.PrintHelpMe()
 
 		return
 	} else {
