@@ -57,6 +57,8 @@ var HELPME = []HelpMe{
 	{"--na-pratica-exercicio-1 --resolucao", "Exibe a resolução do primeiro exercício prático.", 0},
 	{"--na-pratica-exercicio-2", "Apresenta o segundo exercício prático do curso.", 0},
 	{"--na-pratica-exercicio-2 --resolucao", "Exibe a resolução do segundo exercício prático.", 0},
+	{"--na-pratica-exercicio-3", "Apresenta o terceiro exercício prático do curso.", 0},
+	{"--na-pratica-exercicio-3 --resolucao", "Exibe a resolução do terceiro exercício prático.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }
