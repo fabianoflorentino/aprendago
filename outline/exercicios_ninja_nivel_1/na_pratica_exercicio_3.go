@@ -12,7 +12,8 @@ func NaPraticaExercicio3() {
     2. para "y" atribua "James Bond"
     3. para "z" atribua true
   2. Na função main:
-    1. Use fmt.Sprintf para atribuir todos esses valores a uma única variável. Faça essa atribuição de tipo string a uma variável de nome "s" utilizando o operador curto de declaração.
+    1. Use fmt.Sprintf para atribuir todos esses valores a uma única variável.
+      Faça essa atribuição de tipo string a uma variável de nome "s" utilizando o operador curto de declaração.
     2. Demonstre a variável "s".
 - Solução: https://play.golang.org/p/QFctSQB_h3
   `
@@ -22,5 +23,11 @@ func NaPraticaExercicio3() {
 }
 
 func ResolucaoNaPraticaExercicio3() {
+	x := 42
+	y := "James Bond"
+	z := true
 
+	s := fmt.Sprintf("%v %v %v", x, y, z)
+
+	fmt.Println(s)
 }
