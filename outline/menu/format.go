@@ -38,21 +38,21 @@ type HelpMe struct {
 // HELPME é uma lista de opções disponíveis para o programa.
 // Cada opção é representada por uma estrutura HelpMe que contém a flag, a descrição e o tamanho da flag.
 var HELPME = []HelpMe{
-	{"--bem-vindo", "Exibe a mensagem de boas-vindas do curso", 0},
-	{"--porque-go", "Exibe a mensagem sobre por que aprender Go", 0},
-	{"--sucesso", "Exibe a mensagem sobre sucesso", 0},
-	{"--recursos", "Exibe os recursos do curso", 0},
-	{"--como-esse-curso-funciona", "Exibe como esse curso funciona", 0},
-	{"--go-playground", "Exibe as informações do Go Playground", 0},
-	{"--hello-world", "Exibe os detalhes sobre o primeiro programa das linguagens o Hello World!", 0},
-	{"--operador-curto-de-declaracao", "Exibe os detalhes sobre o operador curto de declaração", 0},
-	{"--a-palavra-reservada-var", "Exibe os detalhes sobre a palavra reservada var", 0},
-	{"--explorando-tipos", "Exibe os detalhes sobre a exploração de tipos", 0},
-	{"--valor-zero", "Exibe os detalhes sobre o valor zero", 0},
-	{"--o-pacote-fmt", "Outline sobre o pacote fmt", 0},
-	{"--criando-seu-proprio-tipo", "Exibe os detalhes sobre a criação de seu próprio tipo", 0},
-	{"--outline", "Exibe o outline do curso", 0},
-	{"--help", "Exibe a lista de opções", 0},
+	{"--bem-vindo", "Exibe a mensagem de boas-vindas ao curso Aprenda Go.", 0},
+	{"--porque-go", "Descreve os benefícios e razões para aprender a linguagem Go.", 0},
+	{"--sucesso", "Apresenta dicas e estratégias para ter sucesso no curso.", 0},
+	{"--recursos", "Lista recursos e materiais de apoio para o curso.", 0},
+	{"--como-esse-curso-funciona", "Explica a estrutura e metodologia do curso.", 0},
+	{"--go-playground", "Fornece informações sobre o uso do Go Playground.", 0},
+	{"--hello-world", "Detalha o primeiro programa em Go: 'Hello, World!'.", 0},
+	{"--operador-curto-de-declaracao", "Explica o uso do operador curto de declaração em Go.", 0},
+	{"--a-palavra-reservada-var", "Descreve o uso da palavra reservada 'var' em Go.", 0},
+	{"--explorando-tipos", "Explora os diferentes tipos de dados em Go.", 0},
+	{"--valor-zero", "Discute o conceito de valor zero em Go.", 0},
+	{"--o-pacote-fmt", "Fornece um resumo do pacote 'fmt' para formatação de E/S.", 0},
+	{"--criando-seu-proprio-tipo", "Detalha como criar seus próprios tipos em Go.", 0},
+	{"--outline", "Exibe o outline completo do curso.", 0},
+	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }
 
 // parseWidth é uma função que recebe uma lista de flags e retorna o tamanho da maior flag
