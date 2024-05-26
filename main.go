@@ -13,6 +13,6 @@ func main() {
 
 		return
 	} else {
-		outline.Menu(os.Args[1])
+		outline.Menu(os.Args[1:])
 	}
 }
