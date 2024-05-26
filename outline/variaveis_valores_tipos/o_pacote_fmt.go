@@ -24,6 +24,6 @@ func OpacoteFmt() {
     - func Fprintln(w io.Writer, a ...interface{}) (n int, err error)
   `
 
-	fmt.Println("\nO pacote fmt")
+	fmt.Println("O pacote fmt")
 	fmt.Println(o_pacote_fmt)
 }

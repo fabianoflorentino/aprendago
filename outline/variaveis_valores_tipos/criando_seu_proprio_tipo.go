@@ -13,6 +13,6 @@ func CriandoSeuProprioTipo() {
 - Uma variável de tipo hotdog não pode ser atribuida com o valor de uma variável tipo int, mesmo que este seja o tipo subjacente de hotdog.
   `
 
-	fmt.Println("\nCriando seu proprio tipo")
+	fmt.Println("Criando seu proprio tipo")
 	fmt.Println(criando_seu_proprio_tipo)
 }

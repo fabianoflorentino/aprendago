@@ -18,6 +18,6 @@ func HelloWorld() {
 - Lição principal: package main, func main, pacote.Identificador.
   `
 
-	fmt.Println("\n Hello World!")
+	fmt.Println("Hello World!")
 	fmt.Println(hello_world)
 }

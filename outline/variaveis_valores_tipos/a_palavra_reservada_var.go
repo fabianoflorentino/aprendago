@@ -10,6 +10,6 @@ func ApalavraReservadaVar() {
 - Prestar atenção: chaves, colchetes, parênteses
   `
 
-	fmt.Println("\nA palavra reservada var")
+	fmt.Println("A palavra reservada var")
 	fmt.Println(a_palava_reservada_var)
 }

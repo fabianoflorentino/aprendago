@@ -23,6 +23,6 @@ func ExplorandoTipos() {
 - O ato de definir, criar, estruturar tipos compostos chama-se composição. Veremos muito disso futuramente.
   `
 
-	fmt.Println("\nExplorando Tipos")
+	fmt.Println("Explorando Tipos")
 	fmt.Println(explorando_tipos)
 }

@@ -22,6 +22,6 @@ func OperadorCurtoDeDeclaracao() {
   - = para atribuir valores a variáveis já existentes
   `
 
-	fmt.Println("\nOperador de Curto de Declaração")
+	fmt.Println("Operador de Curto de Declaração")
 	fmt.Println(operador_curto_de_declaracao)
 }

@@ -15,6 +15,6 @@ func GoPlayground() {
   - Função run.
   `
 
-	fmt.Println("\nGo Playground")
+	fmt.Println("Go Playground")
 	fmt.Println(go_playground)
 }

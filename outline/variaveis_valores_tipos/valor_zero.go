@@ -16,6 +16,6 @@ func ValorZero() {
 - Use var para package-level scope.
   `
 
-	fmt.Println("\nValor Zero")
+	fmt.Println("Valor Zero")
 	fmt.Println(valor_zero)
 }

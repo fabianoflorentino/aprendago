@@ -27,6 +27,6 @@ func Recursos() {
 - Defective Go: https://www.youtube.com/channel/UC98qIvCCqd4fjOw1ks78SwA
   `
 
-	fmt.Println("\nRecrusos")
+	fmt.Println("Recrusos")
 	fmt.Println(recrusos)
 }
