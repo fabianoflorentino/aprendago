@@ -18,4 +18,6 @@ func Outline() {
 	variaveis_valores_tipos.ApalavraReservadaVar()
 	variaveis_valores_tipos.ExplorandoTipos()
 	variaveis_valores_tipos.ValorZero()
+	variaveis_valores_tipos.OpacoteFmt()
+	variaveis_valores_tipos.CriandoSeuProprioTipo()
 }
