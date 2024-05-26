@@ -53,6 +53,8 @@ var HELPME = []HelpMe{
 	{"--criando-seu-proprio-tipo", "Detalha como criar seus próprios tipos em Go.", 0},
 	{"--conversao-nao-coercao", "Explica a diferença entre conversão e coerção em Go.", 0},
 	{"--contribua-seu-codigo", "Fornece informações sobre como contribuir com seu próprio código.", 0},
+	{"--na-pratica-exercicio-1", "Apresenta o primeiro exercício prático do curso.", 0},
+	{"--na-pratica-exercicio-1 --resolucao", "Exibe a resolução do primeiro exercício prático.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }
