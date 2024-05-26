@@ -23,6 +23,7 @@ func Menu(args string) {
 		"--explorando-tipos":             func() { variaveis_valores_tipos.ExplorandoTipos() },
 		"--valor-zero":                   func() { variaveis_valores_tipos.ValorZero() },
 		"--o-pacote-fmt":                 func() { variaveis_valores_tipos.OpacoteFmt() },
+		"--criando-seu-proprio-tipo":     func() { variaveis_valores_tipos.CriandoSeuProprioTipo() },
 		"--outline":                      func() { outline.Outline() },
 		"--help":                         func() { PrintHelpMe() },
 	}
