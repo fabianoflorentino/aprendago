@@ -20,4 +20,5 @@ func Outline() {
 	variaveis_valores_tipos.ValorZero()
 	variaveis_valores_tipos.OpacoteFmt()
 	variaveis_valores_tipos.CriandoSeuProprioTipo()
+	variaveis_valores_tipos.ConversaoNaoCoercao()
 }

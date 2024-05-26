@@ -51,6 +51,7 @@ var HELPME = []HelpMe{
 	{"--valor-zero", "Discute o conceito de valor zero em Go.", 0},
 	{"--o-pacote-fmt", "Fornece um resumo do pacote 'fmt' para formatação de E/S.", 0},
 	{"--criando-seu-proprio-tipo", "Detalha como criar seus próprios tipos em Go.", 0},
+	{"--conversao-nao-coercao", "Explica a diferença entre conversão e coerção em Go.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }

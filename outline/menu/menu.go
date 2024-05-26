@@ -24,6 +24,7 @@ func Menu(args string) {
 		"--valor-zero":                   func() { variaveis_valores_tipos.ValorZero() },
 		"--o-pacote-fmt":                 func() { variaveis_valores_tipos.OpacoteFmt() },
 		"--criando-seu-proprio-tipo":     func() { variaveis_valores_tipos.CriandoSeuProprioTipo() },
+		"--conversao-nao-coercao":        func() { variaveis_valores_tipos.ConversaoNaoCoercao() },
 		"--outline":                      func() { outline.Outline() },
 		"--help":                         func() { PrintHelpMe() },
 	}
