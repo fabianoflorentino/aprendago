@@ -50,6 +50,7 @@ var HELPME = []HelpMe{
 	{"--explorando-tipos", "Exibe os detalhes sobre a exploração de tipos", 0},
 	{"--valor-zero", "Exibe os detalhes sobre o valor zero", 0},
 	{"--o-pacote-fmt", "Outline sobre o pacote fmt", 0},
+	{"--criando-seu-proprio-tipo", "Exibe os detalhes sobre a criação de seu próprio tipo", 0},
 	{"--outline", "Exibe o outline do curso", 0},
 	{"--help", "Exibe a lista de opções", 0},
 }
