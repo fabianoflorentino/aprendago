@@ -29,9 +29,11 @@ func Menu(args []string) {
 		"--conversao-nao-coercao":              func() { variaveis_valores_tipos.ConversaoNaoCoercao() },
 		"--contribua-seu-codigo":               func() { exercicios_ninja_nivel_1.ContribuaSeuCodigo() },
 		"--na-pratica-exercicio-1":             func() { exercicios_ninja_nivel_1.NaPraticaExercicio1() },
-		"--na-pratica-exercicio-2":             func() { exercicios_ninja_nivel_1.NaPraticaExercicio2() },
 		"--na-pratica-exercicio-1 --resolucao": func() { exercicios_ninja_nivel_1.ResolucaoNaPraticaExercicio1() },
+		"--na-pratica-exercicio-2":             func() { exercicios_ninja_nivel_1.NaPraticaExercicio2() },
 		"--na-pratica-exercicio-2 --resolucao": func() { exercicios_ninja_nivel_1.ResolucaoNaPraticaExercicio2() },
+		"--na-pratica-exercicio-3":             func() { exercicios_ninja_nivel_1.NaPraticaExercicio3() },
+		"--na-pratica-exercicio-3 --resolucao": func() { exercicios_ninja_nivel_1.ResolucaoNaPraticaExercicio3() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}
