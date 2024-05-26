@@ -2,6 +2,7 @@
 package outline
 
 import (
+	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
@@ -21,4 +22,5 @@ func Outline() {
 	variaveis_valores_tipos.OpacoteFmt()
 	variaveis_valores_tipos.CriandoSeuProprioTipo()
 	variaveis_valores_tipos.ConversaoNaoCoercao()
+	exercicios_ninja_nivel_1.ContribuaSeuCodigo()
 }

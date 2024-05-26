@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	outline "github.com/fabianoflorentino/aprendago/outline"
+	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
@@ -25,6 +26,7 @@ func Menu(args string) {
 		"--o-pacote-fmt":                 func() { variaveis_valores_tipos.OpacoteFmt() },
 		"--criando-seu-proprio-tipo":     func() { variaveis_valores_tipos.CriandoSeuProprioTipo() },
 		"--conversao-nao-coercao":        func() { variaveis_valores_tipos.ConversaoNaoCoercao() },
+		"--contribua-seu-codigo":         func() { exercicios_ninja_nivel_1.ContribuaSeuCodigo() },
 		"--outline":                      func() { outline.Outline() },
 		"--help":                         func() { PrintHelpMe() },
 	}
