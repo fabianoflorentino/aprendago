@@ -63,6 +63,7 @@ func parseWidth(flags []HelpMe) int {
 	// O loop for percorre a lista de flags e verifica o tamanho de cada flag.
 	// Se o tamanho da flag for maior que o tamanho máximo, o tamanho máximo é atualizado.
 	for _, flag := range flags {
+		flag.Flag = strings.TrimSpace(flag.Flag)
 		if len(flag.Flag) > maxWidth {
 			maxWidth = len(flag.Flag)
 		}
@@ -74,7 +75,7 @@ func parseWidth(flags []HelpMe) int {
 // indent adiciona um recuo à frente de cada linha de uma string.
 // O recuo é calculado com base no tamanho da flag e em um valor fixo (4).
 func indent(width int, description string) string {
-	lines := strings.Split(description, "\n")
+	lines := strings.Split(strings.TrimSpace(description), "\n")
 	if len(lines) <= 1 {
 		return description
 	}
