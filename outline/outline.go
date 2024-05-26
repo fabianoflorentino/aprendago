@@ -23,4 +23,7 @@ func Outline() {
 	variaveis_valores_tipos.CriandoSeuProprioTipo()
 	variaveis_valores_tipos.ConversaoNaoCoercao()
 	exercicios_ninja_nivel_1.ContribuaSeuCodigo()
+	exercicios_ninja_nivel_1.NaPraticaExercicio1()
+	exercicios_ninja_nivel_1.NaPraticaExercicio2()
+	exercicios_ninja_nivel_1.NaPraticaExercicio3()
 }
