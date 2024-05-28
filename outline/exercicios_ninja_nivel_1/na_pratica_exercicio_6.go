@@ -51,7 +51,7 @@ func QuestionarioProva() {
 		{"20.", "Quando vemos fmt.Println(), isto esta chamando a função Println() que pertence ao package fmt", "[1] Verdade [2] Mentira: "},
 		{"21.", "Identificador é o nome atribuido a uma variável, função ou constante", "[1] Verdade [2] Mentira: "},
 		{"22.", "Para utilizar uma função, variável ou constante de outro package utiliza-se o formato package-ponto-identificador. Por exemplo fmt.Println()", "[1] Verdade [2] Mentira: "},
-		{"23.", "Qual é o caracter que permite jogar fora um valor? Ou seja, qual caracter permite que voce diga ao programa que não vai utilzar o valor retornado por uma função?", "[1] # [2] @ [3] _ [4] $ [5] isso é pegadinha... "},
+		{"23.", "Qual é o caracter que permite jogar fora um valor? Ou seja, qual caracter permite que voce diga ao programa que não vai utilzar o valor retornado por uma função?", "[1] # [2] @ [3] _ [4] $ [5] isso é pegadinha...: "},
 		{"24.", "Uma função cujo parâmetro é '... interface{}' é uma função variatica. Isso significa que você pode passar à função um número pré determinado de valores", "[1] Verdade [2] Mentira: "},
 		{"25.", "Todo valor em Go pertence também ao tipo interface vazia, representado pela notação interface{}", "[1] Verdade [2] Mentira: "},
 		{"26.", "2+3 é uma declaração/statement, não uma expressão", "[1] Verdade [2] Mentira: "},
@@ -67,6 +67,19 @@ func QuestionarioProva() {
 		fmt.Println(pergunta.NumeroPergunta, pergunta.Perguntas)
 		fmt.Print(pergunta.Opcoes)
 		fmt.Scan(&resposta)
+
+		validOptions := []string{"1", "2", "3", "4", "5"}
+		valid := false
+		for _, option := range validOptions {
+			if resposta == option {
+				valid = true
+				break
+			}
+		}
+
+		if !valid {
+			fmt.Println("Opção inválida")
+		}
 
 		// listaRespostas = append(listaRespostas, resposta)
 		// formatRespostas = fmt.Sprintf("Respostas: %v", strings.Join(listaRespostas, ", "))
