@@ -29,9 +29,8 @@ func NaPraticaExercicio6() {
 	fmt.Println(na_pratica_exercicio_6)
 }
 
-func QuestionarioProva() []string {
+func questionarioProva() []string {
 	var resposta string
-	// var formatRespostas string
 	var listaRespostas []string
 
 	var listaPerguntas = []Prova{
@@ -88,13 +87,11 @@ func QuestionarioProva() []string {
 		listaRespostas = append(listaRespostas, resposta)
 	}
 
-	// formatRespostas = fmt.Sprintf("Respostas: %v", strings.Join(listaRespostas, ", "))
-
 	return listaRespostas
 }
 
-func ProvaRespostas() {
-	resposta := QuestionarioProva()
+func RespondaAProva() {
+	resposta := questionarioProva()
 
 	var listaRespostas = []Respostas{
 		{"1.", resposta[0]},
@@ -137,7 +134,7 @@ func ProvaRespostas() {
 		// Verificar se ainda há respostas suficientes para imprimir em duas colunas
 		if i < len(listaRespostas) && i+15 < len(listaRespostas) {
 			// Imprimir o número da pergunta e a resposta correspondente em duas colunas
-			fmt.Printf("P: %-4s R: %-10s P: %-4s R: %-10s\n", listaRespostas[i].NumeroPergunta, listaRespostas[i].Resposta, listaRespostas[i+15].NumeroPergunta, listaRespostas[i+15].Resposta)
+			fmt.Printf("P: %-4s R: %-8s P: %-4s R: %-8s\n", listaRespostas[i].NumeroPergunta, listaRespostas[i].Resposta, listaRespostas[i+15].NumeroPergunta, listaRespostas[i+15].Resposta)
 		}
 	}
 
@@ -179,7 +176,7 @@ func ProvaRespostas() {
 
 	for i := 0; i < len(gabaritoProva); i++ {
 		if i < len(gabaritoProva) && i+15 < len(gabaritoProva) {
-			fmt.Printf("P: %-4s R: %-10s P: %-4s R: %-10s\n", gabaritoProva[i].NumeroPergunta, gabaritoProva[i].Resposta, gabaritoProva[i+15].NumeroPergunta, gabaritoProva[i+15].Resposta)
+			fmt.Printf("P: %-4s R: %-8s P: %-4s R: %-8s\n", gabaritoProva[i].NumeroPergunta, gabaritoProva[i].Resposta, gabaritoProva[i+15].NumeroPergunta, gabaritoProva[i+15].Resposta)
 		}
 	}
 }
