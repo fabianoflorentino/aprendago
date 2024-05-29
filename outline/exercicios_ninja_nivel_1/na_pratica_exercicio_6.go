@@ -2,12 +2,18 @@ package outline
 
 import (
 	"fmt"
+	"strings"
 )
 
 type Prova struct {
 	NumeroPergunta string
 	Perguntas      string
 	Opcoes         string
+}
+
+type Respostas struct {
+	NumeroPergunta string
+	Resposta       string
 }
 
 func NaPraticaExercicio6() {
@@ -23,10 +29,10 @@ func NaPraticaExercicio6() {
 	fmt.Println(na_pratica_exercicio_6)
 }
 
-func QuestionarioProva() {
+func QuestionarioProva() []string {
 	var resposta string
 	// var formatRespostas string
-	// var listaRespostas []string
+	var listaRespostas []string
 
 	var listaPerguntas = []Prova{
 		{"1.", "Qual o menor elemento em um programa que expressa uma ação a ser executada?", "[1] Uma declaração (Statement) [2] Uma expressão: "},
@@ -63,15 +69,13 @@ func QuestionarioProva() {
 	}
 
 	for _, pergunta := range listaPerguntas {
-
 		fmt.Println(pergunta.NumeroPergunta, pergunta.Perguntas)
 		fmt.Print(pergunta.Opcoes)
 		fmt.Scan(&resposta)
 
-		validOptions := []string{"1", "2", "3", "4", "5"}
 		valid := false
-		for _, option := range validOptions {
-			if resposta == option {
+		for _, option := range strings.Split(pergunta.Opcoes, " ") {
+			if resposta == strings.TrimSuffix(strings.TrimPrefix(option, "["), "]") {
 				valid = true
 				break
 			}
@@ -81,7 +85,101 @@ func QuestionarioProva() {
 			fmt.Println("Opção inválida")
 		}
 
-		// listaRespostas = append(listaRespostas, resposta)
-		// formatRespostas = fmt.Sprintf("Respostas: %v", strings.Join(listaRespostas, ", "))
+		listaRespostas = append(listaRespostas, resposta)
+	}
+
+	// formatRespostas = fmt.Sprintf("Respostas: %v", strings.Join(listaRespostas, ", "))
+
+	return listaRespostas
+}
+
+func ProvaRespostas() {
+	resposta := QuestionarioProva()
+
+	var listaRespostas = []Respostas{
+		{"1.", resposta[0]},
+		{"2.", resposta[1]},
+		{"3.", resposta[2]},
+		{"4.", resposta[3]},
+		{"5.", resposta[4]},
+		{"6.", resposta[5]},
+		{"7.", resposta[6]},
+		{"8.", resposta[7]},
+		{"9.", resposta[8]},
+		{"10.", resposta[9]},
+		{"11.", resposta[10]},
+		{"12.", resposta[11]},
+		{"13.", resposta[12]},
+		{"14.", resposta[13]},
+		{"15.", resposta[14]},
+		{"16.", resposta[15]},
+		{"17.", resposta[16]},
+		{"18.", resposta[17]},
+		{"19.", resposta[18]},
+		{"20.", resposta[19]},
+		{"21.", resposta[20]},
+		{"22.", resposta[21]},
+		{"23.", resposta[22]},
+		{"24.", resposta[23]},
+		{"25.", resposta[24]},
+		{"26.", resposta[25]},
+		{"27.", resposta[26]},
+		{"28.", resposta[27]},
+		{"29.", resposta[28]},
+		{"30.", resposta[29]},
+		{"31.", resposta[30]},
+	}
+
+	fmt.Println("Respostas da prova:")
+
+	// Imprimir as respostas em duas colunas
+	for i := 0; i < 15; i++ {
+		// Verificar se ainda há respostas suficientes para imprimir em duas colunas
+		if i < len(listaRespostas) && i+15 < len(listaRespostas) {
+			// Imprimir o número da pergunta e a resposta correspondente em duas colunas
+			fmt.Printf("P: %-4s R: %-10s P: %-4s R: %-10s\n", listaRespostas[i].NumeroPergunta, listaRespostas[i].Resposta, listaRespostas[i+15].NumeroPergunta, listaRespostas[i+15].Resposta)
+		}
+	}
+
+	var gabaritoProva = []Respostas{
+		{"1.", "1"},
+		{"2.", "2"},
+		{"3.", "1"},
+		{"4.", "3"},
+		{"5.", "2"},
+		{"6.", "1"},
+		{"7.", "2"},
+		{"8.", "1"},
+		{"9.", "2"},
+		{"10.", "1"},
+		{"11.", "1"},
+		{"12.", "2"},
+		{"13.", "1"},
+		{"14.", "2"},
+		{"15.", "2"},
+		{"16.", "1"},
+		{"17.", "2"},
+		{"18.", "1"},
+		{"19.", "2"},
+		{"20.", "1"},
+		{"21.", "1"},
+		{"22.", "1"},
+		{"23.", "3"},
+		{"24.", "1"},
+		{"25.", "1"},
+		{"26.", "2"},
+		{"27.", "1"},
+		{"28.", "1"},
+		{"29.", "1"},
+		{"30.", "1"},
+		{"31.", "1"},
+	}
+
+	fmt.Println("Gabarito da prova:")
+
+	for i := 0; i < len(gabaritoProva); i++ {
+		if i < len(gabaritoProva) && i+15 < len(gabaritoProva) {
+			fmt.Printf("P: %-4s R: %-10s P: %-4s R: %-10s\n", gabaritoProva[i].NumeroPergunta, gabaritoProva[i].Resposta, gabaritoProva[i+15].NumeroPergunta, gabaritoProva[i+15].Resposta)
+		}
 	}
 }
