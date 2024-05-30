@@ -1,21 +1,25 @@
 package outline
 
 import (
+	"errors"
 	"fmt"
 	"strings"
 )
 
+// Prova representa uma pergunta da prova
 type Prova struct {
 	NumeroPergunta string
 	Perguntas      string
 	Opcoes         string
 }
 
-type Respostas struct {
+// Resposta representa uma resposta fornecia pelo usuário
+type Resposta struct {
 	NumeroPergunta string
 	Resposta       string
 }
 
+// NaPraticaExercicio6 é a função que exibe o enunciado do exercício 6
 func NaPraticaExercicio6() {
 	na_pratica_exercicio_6 := `
 - Prova!
@@ -29,11 +33,9 @@ func NaPraticaExercicio6() {
 	fmt.Println(na_pratica_exercicio_6)
 }
 
-func questionarioProva() []string {
-	var resposta string
-	var listaRespostas []string
-
-	var listaPerguntas = []Prova{
+// CriarQuestionario retorna uma lista de perguntas da prova
+func CriarQuestionario() []Prova {
+	return []Prova{
 		{"1.", "Qual o menor elemento em um programa que expressa uma ação a ser executada?", "[1] Uma declaração (Statement) [2] Uma expressão: "},
 		{"2.", "A combinação de um ou mais valores, constantes, variáveis, operadores e funções que a linguagem interpreta e usa para produzir outro valor é?", "[1] Uma declaração (Statement) [2] Uma expressão: "},
 		{"3.", "Quais são parênteses?", "[1] () [2] {} [3] []: "},
@@ -66,117 +68,79 @@ func questionarioProva() []string {
 		{"30.", "Falando de tipos, em Go utilizamos o termo 'coerção' diferentemente de Java, por exemplo, onde se utiliza o termo 'conversão'", "[1] Verdade [2] Mentira: "},
 		{"31.", "Todo tipo criado pelo programador tem um tipo subjacente", "[1] Verdade [2] Mentira: "},
 	}
-
-	for _, pergunta := range listaPerguntas {
-		fmt.Println(pergunta.NumeroPergunta, pergunta.Perguntas)
-		fmt.Print(pergunta.Opcoes)
-		fmt.Scan(&resposta)
-
-		valid := false
-		for _, option := range strings.Split(pergunta.Opcoes, " ") {
-			if resposta == strings.TrimSuffix(strings.TrimPrefix(option, "["), "]") {
-				valid = true
-				break
-			}
-		}
-
-		if !valid {
-			fmt.Println("Opção inválida")
-		}
-
-		listaRespostas = append(listaRespostas, resposta)
-	}
-
-	return listaRespostas
 }
 
-func RespondaAProva() {
-	resposta := questionarioProva()
+// ColetarRespostas coleta as respostas do usuário para as perguntas da prova
+func ColetarRespostas(perguntas []Prova) ([]Resposta, error) {
+	var listaRespostas []Resposta
+	var resposta string
 
-	var listaRespostas = []Respostas{
-		{"1.", resposta[0]},
-		{"2.", resposta[1]},
-		{"3.", resposta[2]},
-		{"4.", resposta[3]},
-		{"5.", resposta[4]},
-		{"6.", resposta[5]},
-		{"7.", resposta[6]},
-		{"8.", resposta[7]},
-		{"9.", resposta[8]},
-		{"10.", resposta[9]},
-		{"11.", resposta[10]},
-		{"12.", resposta[11]},
-		{"13.", resposta[12]},
-		{"14.", resposta[13]},
-		{"15.", resposta[14]},
-		{"16.", resposta[15]},
-		{"17.", resposta[16]},
-		{"18.", resposta[17]},
-		{"19.", resposta[18]},
-		{"20.", resposta[19]},
-		{"21.", resposta[20]},
-		{"22.", resposta[21]},
-		{"23.", resposta[22]},
-		{"24.", resposta[23]},
-		{"25.", resposta[24]},
-		{"26.", resposta[25]},
-		{"27.", resposta[26]},
-		{"28.", resposta[27]},
-		{"29.", resposta[28]},
-		{"30.", resposta[29]},
-		{"31.", resposta[30]},
+	for _, pergunta := range perguntas {
+		fmt.Println(pergunta.NumeroPergunta, pergunta.Perguntas)
+		fmt.Println(pergunta.Opcoes)
+		fmt.Scan(&resposta)
+
+		if !opcaoValida(resposta, pergunta.Opcoes) {
+			return nil, errors.New("opção inválida")
+		}
+
+		listaRespostas = append(listaRespostas, Resposta{pergunta.NumeroPergunta, resposta})
 	}
 
-	fmt.Println("Respostas da prova:")
+	return listaRespostas, nil
+}
 
-	// Imprimir as respostas em duas colunas
-	for i := 0; i < 15; i++ {
-		// Verificar se ainda há respostas suficientes para imprimir em duas colunas
-		if i < len(listaRespostas) && i+15 < len(listaRespostas) {
-			// Imprimir o número da pergunta e a resposta correspondente em duas colunas
-			fmt.Printf("P: %-4s R: %-8s P: %-4s R: %-8s\n", listaRespostas[i].NumeroPergunta, listaRespostas[i].Resposta, listaRespostas[i+15].NumeroPergunta, listaRespostas[i+15].Resposta)
+// opcaoValida verifica se a opção fornecida pelo usuário
+func opcaoValida(resposta, opcoes string) bool {
+	for _, opt := range strings.Fields(opcoes) {
+		opt = strings.Trim(opt, "[]")
+		if resposta == opt {
+			return true
 		}
 	}
 
-	var gabaritoProva = []Respostas{
-		{"1.", "1"},
-		{"2.", "2"},
-		{"3.", "1"},
-		{"4.", "3"},
-		{"5.", "2"},
-		{"6.", "1"},
-		{"7.", "2"},
-		{"8.", "1"},
-		{"9.", "2"},
-		{"10.", "1"},
-		{"11.", "1"},
-		{"12.", "2"},
-		{"13.", "1"},
-		{"14.", "2"},
-		{"15.", "2"},
-		{"16.", "1"},
-		{"17.", "2"},
-		{"18.", "1"},
-		{"19.", "2"},
-		{"20.", "1"},
-		{"21.", "1"},
-		{"22.", "1"},
-		{"23.", "3"},
-		{"24.", "1"},
-		{"25.", "1"},
-		{"26.", "2"},
-		{"27.", "1"},
-		{"28.", "1"},
-		{"29.", "1"},
-		{"30.", "1"},
+	return false
+}
+
+// ImprimirRespostas exibe as respostas fornecidas pelo usuário
+func ImprimirRespostas(respostas []Resposta) {
+	fmt.Println("Respostas da prova:")
+
+	for i := 0; i < len(respostas); i++ {
+		if i+1 < len(respostas) && i+15 < len(respostas) {
+			fmt.Printf("P: %-4s R: %-8s P: %-4s R: %-8s\n", respostas[i].NumeroPergunta, respostas[i].Resposta, respostas[i+15].NumeroPergunta, respostas[i+15].Resposta)
+		}
+	}
+}
+
+// ImprimiGabarito exibe o gabarito da prova
+func ImprimiGabarito() {
+	gabarito := []Resposta{
+		{"1.", "1"}, {"2.", "2"}, {"3.", "1"}, {"4.", "3"}, {"5.", "2"},
+		{"6.", "1"}, {"7.", "2"}, {"8.", "1"}, {"9.", "2"}, {"10.", "1"},
+		{"11.", "1"}, {"12.", "2"}, {"13.", "1"}, {"14.", "2"}, {"15.", "2"},
+		{"16.", "1"}, {"17.", "2"}, {"18.", "1"}, {"19.", "2"}, {"20.", "1"},
+		{"21.", "1"}, {"22.", "1"}, {"23.", "3"}, {"24.", "1"}, {"25.", "1"},
+		{"26.", "2"}, {"27.", "1"}, {"28.", "1"}, {"29.", "1"}, {"30.", "1"},
 		{"31.", "1"},
 	}
 
 	fmt.Println("Gabarito da prova:")
-
-	for i := 0; i < len(gabaritoProva); i++ {
-		if i < len(gabaritoProva) && i+15 < len(gabaritoProva) {
-			fmt.Printf("P: %-4s R: %-8s P: %-4s R: %-8s\n", gabaritoProva[i].NumeroPergunta, gabaritoProva[i].Resposta, gabaritoProva[i+15].NumeroPergunta, gabaritoProva[i+15].Resposta)
+	for i := 0; i < len(gabarito); i++ {
+		if i+1 < len(gabarito) && i+15 < len(gabarito) {
+			fmt.Printf("P: %-4s R: %-8s P: %-4s R: %-8s\n", gabarito[i].NumeroPergunta, gabarito[i].Resposta, gabarito[i+15].NumeroPergunta, gabarito[i+15].Resposta)
 		}
 	}
+}
+
+func RespondaAProva() {
+	perguntas := CriarQuestionario()
+	respostas, err := ColetarRespostas(perguntas)
+	if err != nil {
+		fmt.Println("Erro ao coletar respostas:", err)
+		return
+	}
+
+	ImprimirRespostas(respostas)
+	ImprimiGabarito()
 }
