@@ -34,8 +34,12 @@ Opções:
   --na-pratica-exercicio-2 --resolucao   Exibe a resolução do segundo exercício prático.
   --na-pratica-exercicio-3               Apresenta o terceiro exercício prático do curso.
   --na-pratica-exercicio-3 --resolucao   Exibe a resolução do terceiro exercício prático.
-  --na-pratica-exercicio-4               Apresenta o terceiro exercício prático do curso.
-  --na-pratica-exercicio-4 --resolucao   Exibe a resolução do terceiro exercício prático.
+  --na-pratica-exercicio-4               Apresenta o quarto exercício prático do curso.
+  --na-pratica-exercicio-4 --resolucao   Exibe a resolução do quarto exercício prático.
+  --na-pratica-exercicio-5               Apresenta o quinto exercício prático do curso.
+  --na-pratica-exercicio-5 --resolucao   Exibe a resolução do quinto exercício prático.
+  --na-pratica-exercicio-6               Apresenta o sexto exercício prático do curso.
+  --na-pratica-exercicio-6 --prova       Exibe a prova do sexto exercício prático.
   --outline                              Exibe o outline completo do curso.
   --help                                 Exibe a lista de todas as opções disponíveis.
 ```
