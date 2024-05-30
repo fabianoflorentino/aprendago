@@ -45,7 +45,7 @@ func CriarQuestionario() []Prova {
 		{"7.", "Um tipo de dados primitivo é um tipo composto, criado a partir de outros tipos básicos que ja vem de fabrica na linguagem", "[1] Verdade [2] Mentira: "},
 		{"8.", "O tipo int é um tipo de dado primitivo", "[1] Verdade [2] Mentira: "},
 		{"9.", "O tipo string é um tipo de dado composto", "[1] Verdade [2] Mentira: "},
-		{"10.", "Um tipo de dado composto permite que você crie estruturas formadasde outros tipos de dados", "[1] Verdade [2] Mentira: "},
+		{"10.", "Um tipo de dado composto permite que você crie estruturas formadas de outros tipos de dados", "[1] Verdade [2] Mentira: "},
 		{"11.", "Quando declaramos uma variável com a palavra chave var e não atribuimos nenhum valor a esta variável, o compilador designa para esta um valor padrão, chamado de valor zero.", "[1] Verdade [2] Mentira: "},
 		{"12.", "Palavras chaves servem a propositos especificos, mas fora isso podem ser usadas livremente ao longo do programa", "[1] Verdade [2] Mentira: "},
 		{"13.", "Palavra chave e palavra reservada designam coisas diferentes", "[1] Verdade [2] Mentira: "},
