@@ -3,6 +3,7 @@ package outline
 
 import (
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
+	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
@@ -29,4 +30,5 @@ func Outline() {
 	exercicios_ninja_nivel_1.NaPraticaExercicio4()
 	exercicios_ninja_nivel_1.NaPraticaExercicio5()
 	exercicios_ninja_nivel_1.NaPraticaExercicio6()
+	fundamentos_da_programacao.TipoBooleano()
 }

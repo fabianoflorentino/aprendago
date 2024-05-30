@@ -6,6 +6,7 @@ import (
 
 	outline "github.com/fabianoflorentino/aprendago/outline"
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
+	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
@@ -40,6 +41,7 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-5 --resolucao": func() { exercicios_ninja_nivel_1.ResolucaoNaPraticaExercicio5() },
 		"--na-pratica-exercicio-6":             func() { exercicios_ninja_nivel_1.NaPraticaExercicio6() },
 		"--na-pratica-exercicio-6 --prova":     func() { exercicios_ninja_nivel_1.RespondaAProva() },
+		"--tipo-booleano":                      func() { fundamentos_da_programacao.TipoBooleano() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}

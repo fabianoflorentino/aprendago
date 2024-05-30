@@ -65,6 +65,7 @@ var HELPME = []HelpMe{
 	{"--na-pratica-exercicio-5 --resolucao", "Exibe a resolução do quinto exercício prático.", 0},
 	{"--na-pratica-exercicio-6", "Apresenta o sexto exercício prático do curso.", 0},
 	{"--na-pratica-exercicio-6 --prova", "Exibe a prova do sexto exercício prático.", 0},
+	{"--tipo-booleano", "Explora o tipo de dados booleano em Go.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }
