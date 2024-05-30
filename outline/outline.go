@@ -31,4 +31,5 @@ func Outline() {
 	exercicios_ninja_nivel_1.NaPraticaExercicio5()
 	exercicios_ninja_nivel_1.NaPraticaExercicio6()
 	fundamentos_da_programacao.TipoBooleano()
+	fundamentos_da_programacao.ComoOsComputadoresFuncionam()
 }

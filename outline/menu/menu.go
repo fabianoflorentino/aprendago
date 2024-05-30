@@ -12,7 +12,7 @@ import (
 )
 
 func Menu(args []string) {
-	fmt.Println("Aprenda GO")
+	fmt.Println("Aprenda GO\n")
 
 	options := map[string]func(){
 		"--bem-vindo":                          func() { visao_geral_do_curso.BemVindo() },
@@ -42,6 +42,7 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-6":             func() { exercicios_ninja_nivel_1.NaPraticaExercicio6() },
 		"--na-pratica-exercicio-6 --prova":     func() { exercicios_ninja_nivel_1.RespondaAProva() },
 		"--tipo-booleano":                      func() { fundamentos_da_programacao.TipoBooleano() },
+		"--como-os-computadores-funcionam":     func() { fundamentos_da_programacao.ComoOsComputadoresFuncionam() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}

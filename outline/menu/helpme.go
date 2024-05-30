@@ -66,6 +66,7 @@ var HELPME = []HelpMe{
 	{"--na-pratica-exercicio-6", "Apresenta o sexto exercício prático do curso.", 0},
 	{"--na-pratica-exercicio-6 --prova", "Exibe a prova do sexto exercício prático.", 0},
 	{"--tipo-booleano", "Explora o tipo de dados booleano em Go.", 0},
+	{"--como-os-computadores-funcionam", "Descreve o funcionamento dos computadores e sua importância para a programação.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }
