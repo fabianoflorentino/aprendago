@@ -12,7 +12,7 @@ import (
 )
 
 func Menu(args []string) {
-	fmt.Print("Aprenda GO\n")
+	fmt.Print("Aprenda GO\n\n")
 
 	options := map[string]func(){
 		"--bem-vindo":                          func() { visao_geral_do_curso.BemVindo() },
