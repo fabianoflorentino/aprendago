@@ -43,6 +43,7 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-6 --prova":     func() { exercicios_ninja_nivel_1.RespondaAProva() },
 		"--tipo-booleano":                      func() { fundamentos_da_programacao.TipoBooleano() },
 		"--como-os-computadores-funcionam":     func() { fundamentos_da_programacao.ComoOsComputadoresFuncionam() },
+		"--tipos-numericos":                    func() { fundamentos_da_programacao.TiposNumericos() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}
