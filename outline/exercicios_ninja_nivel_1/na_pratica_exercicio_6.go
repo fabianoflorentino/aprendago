@@ -1,3 +1,4 @@
+// Prova para validar o conhecimento dos primeiros capitulos do curso
 package outline
 
 import (
@@ -75,6 +76,7 @@ func ColetarRespostas(perguntas []Prova) ([]Resposta, error) {
 	var listaRespostas []Resposta
 	var resposta string
 
+	// Exibe as perguntas da prova e coleta as respostas do usuário
 	for _, pergunta := range perguntas {
 		fmt.Println(pergunta.NumeroPergunta, pergunta.Perguntas)
 		fmt.Println(pergunta.Opcoes)
@@ -84,6 +86,8 @@ func ColetarRespostas(perguntas []Prova) ([]Resposta, error) {
 			return nil, errors.New("opção inválida")
 		}
 
+		// Adiciona as respostas do usuário a lista de respostas concatenando o número da pergunta e a resposta
+		// gerando uma lista
 		listaRespostas = append(listaRespostas, Resposta{pergunta.NumeroPergunta, resposta})
 	}
 
@@ -106,6 +110,7 @@ func opcaoValida(resposta, opcoes string) bool {
 func ImprimirRespostas(respostas []Resposta) {
 	fmt.Println("Respostas da prova:")
 
+	// Exibe as respostas fornecidas pelo usuário em duas colunas de 15 perguntas com suas respectivas respostas
 	for i := 0; i < len(respostas); i++ {
 		if i+1 < len(respostas) && i+15 < len(respostas) {
 			fmt.Printf("P: %-4s R: %-8s P: %-4s R: %-8s\n", respostas[i].NumeroPergunta, respostas[i].Resposta, respostas[i+15].NumeroPergunta, respostas[i+15].Resposta)
@@ -121,6 +126,7 @@ func ImprimiGabarito() {
 		{"22.", "1"}, {"23.", "3"}, {"24.", "1"}, {"25.", "1"}, {"26.", "2"}, {"27.", "1"}, {"28.", "1"}, {"29.", "1"}, {"30.", "1"}, {"31.", "1"},
 	}
 
+	// Exibe o gabarito da prova para o usuário em  duas colunas de 15 perguntas com suas respectivas respostas
 	fmt.Println("Gabarito da prova:")
 	for i := 0; i < len(gabarito); i++ {
 		if i+1 < len(gabarito) && i+15 < len(gabarito) {
