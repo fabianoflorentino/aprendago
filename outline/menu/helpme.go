@@ -68,6 +68,7 @@ var HELPME = []HelpMe{
 	{"--tipo-booleano", "Explora o tipo de dados booleano em Go.", 0},
 	{"--como-os-computadores-funcionam", "Descreve o funcionamento dos computadores e sua importância para a programação.", 0},
 	{"--tipos-numericos", "Explora os tipos numéricos em Go.", 0},
+	{"--overflow", "Discute o conceito de overflow e como ele pode afetar seu código.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }

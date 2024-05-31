@@ -44,6 +44,7 @@ func Menu(args []string) {
 		"--tipo-booleano":                      func() { fundamentos_da_programacao.TipoBooleano() },
 		"--como-os-computadores-funcionam":     func() { fundamentos_da_programacao.ComoOsComputadoresFuncionam() },
 		"--tipos-numericos":                    func() { fundamentos_da_programacao.TiposNumericos() },
+		"--overflow":                           func() { fundamentos_da_programacao.Overflow() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}
