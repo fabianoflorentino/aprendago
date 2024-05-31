@@ -1,15 +1,17 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func ApalavraReservadaVar() {
-	a_palava_reservada_var := `
+	topic := format.OutlineContent{
+		Title: "A palavra reservada var",
+		Content: `
 - Variável declarada em um code block é undefined em outro
 - Para variáveis com uma abrangência maior, package level scope, utilizamos "var"
 - Funciona em qualquer lugar
 - Prestar atenção: chaves, colchetes, parênteses
-  `
+		`,
+	}
 
-	fmt.Println("A palavra reservada var")
-	fmt.Println(a_palava_reservada_var)
+	format.FormatOutlineTopic(topic)
 }

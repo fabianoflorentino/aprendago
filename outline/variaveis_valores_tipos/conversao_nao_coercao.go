@@ -1,17 +1,18 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func ConversaoNaoCoercao() {
-
-	conversao_nao_coercao := `
+	topic := format.OutlineContent{
+		Title: "Conversão não coerção",
+		Content: `
 - Conversão de tipos é o que soa.
 - Em Go não se diz casting, se diz conversion.
 - a = int(b)
 - ref/spec#Conversions
 - Fim da sessão. Parabéns! Dicas, motivação e exercícios.
-  `
+		`,
+	}
 
-	fmt.Println("Conversão não coerção")
-	fmt.Println(conversao_nao_coercao)
+	format.FormatOutlineTopic(topic)
 }
