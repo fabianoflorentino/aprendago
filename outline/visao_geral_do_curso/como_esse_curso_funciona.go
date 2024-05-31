@@ -18,6 +18,5 @@ func ComoEsseCursoFunciona() {
 - Seu feedback é super importante!
   `
 
-	fmt.Println("Como Esse Curso Funciona")
-	fmt.Println(como_esse_curso_funciona)
+	fmt.Printf("Como esse curso funciona?\n %s", como_esse_curso_funciona)
 }
