@@ -31,6 +31,5 @@ func PorQueGo() {
 - $$$: https://insights.stackoverflow.com/survey/2017#technology-top-paying-technologies-by-region -> US
   `
 
-	fmt.Println("Por que Go?")
-	fmt.Println(por_que_go)
+	fmt.Printf("Por que Go? \n %s\n", por_que_go)
 }

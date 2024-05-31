@@ -29,6 +29,5 @@ func Sucesso() {
 - Com paciência e com persistência você chega lá.
   `
 
-	fmt.Println("Sucesso")
-	fmt.Println(sucesso)
+	fmt.Printf("Sucesso \n %s\n", sucesso)
 }

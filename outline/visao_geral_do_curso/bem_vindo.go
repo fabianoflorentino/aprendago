@@ -14,6 +14,5 @@ func BemVindo() {
 - Para os novos na programação... Para os programadores experientes...
 - Participe!
   `
-	fmt.Println("Bem vindo")
-	fmt.Println(bem_vindo)
+	fmt.Printf("Bem vindo \n %s\n", bem_vindo)
 }
