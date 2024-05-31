@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func OpacoteFmt() {
-	o_pacote_fmt := `
+	topic := format.OutlineContent{
+		Title: "O pacote fmt",
+		Content: `
 - Setup: strings, ints, bools.
 - Strings: interpreted string literals vs. raw string literals.
   - Rune literals.
@@ -22,8 +24,8 @@ func OpacoteFmt() {
     - func Fprint(w io.Writer, a ...interface{}) (n int, err error)
     - func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)
     - func Fprintln(w io.Writer, a ...interface{}) (n int, err error)
-  `
+    `,
+	}
 
-	fmt.Println("O pacote fmt")
-	fmt.Println(o_pacote_fmt)
+	format.FormatOutlineTopic(topic)
 }

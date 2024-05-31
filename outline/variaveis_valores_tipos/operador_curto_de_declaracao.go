@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func OperadorCurtoDeDeclaracao() {
-	operador_curto_de_declaracao := `
+	topic := format.OutlineContent{
+		Title: "Operador curto de declaração",
+		Content: `
 - := parece uma marmota (gopher) ou o punisher.
 - Uso:
   - Tipagem automática
@@ -20,8 +22,8 @@ func OperadorCurtoDeDeclaracao() {
 - Lição principal:
   - := utilizado pra criar novas variáveis, dentro de code blocks
   - = para atribuir valores a variáveis já existentes
-  `
+    `,
+	}
 
-	fmt.Println("Operador de Curto de Declaração")
-	fmt.Println(operador_curto_de_declaracao)
+	format.FormatOutlineTopic(topic)
 }

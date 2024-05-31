@@ -18,7 +18,7 @@ func HelloWorld() {
 - Variáveis não utilizadas? Não pode: _ nelas.
 - ...funções variádicas.
 - Lição principal: package main, func main, pacote.Identificador.
-      `,
+    `,
 	}
 
 	format.FormatOutlineTopic(topic)

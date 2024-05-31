@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func ValorZero() {
-	valor_zero := `
+	topic := format.OutlineContent{
+		Title: "Valor zero",
+		Content: `
 - Declaração vs. inicialização vs. atribuição de valor. Variáveis: caixas postais.
 - O que é valor zero?
 - Os zeros:
@@ -14,8 +16,8 @@ func ValorZero() {
   - pointers, functions, interfaces, slices, channels, maps: nil
 - Use := sempre que possível.
 - Use var para package-level scope.
-  `
+    `,
+	}
 
-	fmt.Println("Valor Zero")
-	fmt.Println(valor_zero)
+	format.FormatOutlineTopic(topic)
 }
