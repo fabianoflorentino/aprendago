@@ -19,6 +19,7 @@ func Menu(args []string) {
 		"--porque-go":                          func() { visao_geral_do_curso.PorQueGo() },
 		"--sucesso":                            func() { visao_geral_do_curso.Sucesso() },
 		"--recursos":                           func() { visao_geral_do_curso.Recursos() },
+		"--como-esse-curso-funciona":           func() { visao_geral_do_curso.ComoEsseCursoFunciona() },
 		"--go-playground":                      func() { variaveis_valores_tipos.GoPlayground() },
 		"--hello-world":                        func() { variaveis_valores_tipos.HelloWorld() },
 		"--operador-curto-de-declaracao":       func() { variaveis_valores_tipos.OperadorCurtoDeDeclaracao() },
