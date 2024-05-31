@@ -3,7 +3,7 @@ package outline
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func BemVindo() {
-	topic := format.OulineContent{
+	topic := format.OutlineContent{
 		Title: "Bem-vindo",
 		Content: `
 - Bem vindo ao curso!

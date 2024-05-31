@@ -3,7 +3,7 @@ package outline
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func Recursos() {
-	topic := format.OulineContent{
+	topic := format.OutlineContent{
 		Title: "Recursos",
 		Content: `
 - Leia as descrições dos vídeos!

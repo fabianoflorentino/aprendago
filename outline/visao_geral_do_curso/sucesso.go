@@ -3,7 +3,7 @@ package outline
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func Sucesso() {
-	topic := format.OulineContent{
+	topic := format.OutlineContent{
 		Title: "Sucesso",
 		Content: `
 - Qual o motivo que algumas pessoa obtem sucesso e outras não?

@@ -3,7 +3,7 @@ package outline
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func ComoEsseCursoFunciona() {
-	topic := format.OulineContent{
+	topic := format.OutlineContent{
 		Title: "Como esse curso funciona",
 		Content: `
 - Velocidade de playback.

@@ -3,7 +3,7 @@ package outline
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func PorQueGo() {
-	topic := format.OulineContent{
+	topic := format.OutlineContent{
 		Title: "Por que Go?",
 		Content: `
 - Antes de investir seu tempo em aprender a linguagem Go, é bom você entender por que isso é uma boa idéia.
