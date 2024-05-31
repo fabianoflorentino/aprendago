@@ -2,11 +2,11 @@ package outline
 
 import "fmt"
 
-type OulineContent struct {
+type OutlineContent struct {
 	Title   string
 	Content string
 }
 
-func FormatOutlineTopic(topic OulineContent) {
+func FormatOutlineTopic(topic OutlineContent) {
 	fmt.Printf("%v \n %v\n", topic.Title, topic.Content)
 }
