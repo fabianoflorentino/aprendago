@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func GoPlayground() {
-	go_playground := `
+	topic := format.OutlineContent{
+		Title: "Go Playground",
+		Content: `
 - É online, funciona sem instalar nem configurar nada.
 - Assim você pode começar a programar o mais rápido possível.
 - Mais pra frente no curso vou explicar direitinho como configurar tudo no seu computador.
@@ -13,8 +15,8 @@ func GoPlayground() {
   - Função format.
     - Maneira idiomática: a gente fala da mesma maneira que a comunidade onde estamos.
   - Função run.
-  `
+    `,
+	}
 
-	fmt.Println("Go Playground")
-	fmt.Println(go_playground)
+	format.FormatOutlineTopic(topic)
 }

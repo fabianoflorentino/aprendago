@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func HelloWorld() {
-	hello_world := `
+	topic := format.OutlineContent{
+		Title: "Hello, World!",
+		Content: `
 - Estrutura básica:
   - package main.
   - func main: é aqui que tudo começa, é aqui que tudo acaba.
@@ -16,8 +18,8 @@ func HelloWorld() {
 - Variáveis não utilizadas? Não pode: _ nelas.
 - ...funções variádicas.
 - Lição principal: package main, func main, pacote.Identificador.
-  `
+      `,
+	}
 
-	fmt.Println("Hello World!")
-	fmt.Println(hello_world)
+	format.FormatOutlineTopic(topic)
 }
