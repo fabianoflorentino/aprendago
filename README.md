@@ -40,6 +40,10 @@ Opções:
   --na-pratica-exercicio-5 --resolucao   Exibe a resolução do quinto exercício prático.
   --na-pratica-exercicio-6               Apresenta o sexto exercício prático do curso.
   --na-pratica-exercicio-6 --prova       Exibe a prova do sexto exercício prático.
+  --tipo-booleano                        Explora o tipo de dados booleano em Go.
+  --como-os-computadores-funcionam       Descreve o funcionamento dos computadores e sua importância para a programação.
+  --tipos-numericos                      Explora os tipos numéricos em Go.
+  --overflow                             Discute o conceito de overflow e como ele pode afetar seu código.
   --outline                              Exibe o outline completo do curso.
   --help                                 Exibe a lista de todas as opções disponíveis.
 ```
