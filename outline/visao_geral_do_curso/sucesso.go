@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func Sucesso() {
-	sucesso := `
+	topic := format.OulineContent{
+		Title: "Sucesso",
+		Content: `
 - Qual o motivo que algumas pessoa obtem sucesso e outras não?
 - Eu quero que você obtenha sucesso com este curso, então vamos falar sobre o assunto.
 - Perguntaram a Bill Gates e Warren Buffet, independentemente, qual seria sua principal característica responsável pelo seu sucesso. A resposta de ambos foi:
@@ -27,7 +29,8 @@ func Sucesso() {
   - Boa parte de qualquer aprendizado se resume a memória muscular. Então quando eu passar exercícios, digite o código. Não copie e cole. Digite. E quando eu estiver programando "ao vivo," não passe pra frente, assista, e preste atenção. Se acostume com o processo, com o ato de programar.
 
 - Com paciência e com persistência você chega lá.
-  `
+      `,
+	}
 
-	fmt.Printf("Sucesso \n %s\n", sucesso)
+	format.FormatOutlineTopic(topic)
 }

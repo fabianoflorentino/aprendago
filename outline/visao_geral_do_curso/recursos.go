@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func Recursos() {
-	recrusos := `
+	topic := format.OulineContent{
+		Title: "Recursos",
+		Content: `
 - Leia as descrições dos vídeos!
   - Outline completo: https://github.com/ellenkorbes/aprendago/blob/master/OUTLINE.md
 - Exercícios:
@@ -25,7 +27,8 @@ func Recursos() {
   - golang.org/doc/effective_go.html
 - Podcast Go Time: https://changelog.com/gotime
 - Defective Go: https://www.youtube.com/channel/UC98qIvCCqd4fjOw1ks78SwA
-  `
+`,
+	}
 
-	fmt.Printf("Recrusos \n %s\n", recrusos)
+	format.FormatOutlineTopic(topic)
 }

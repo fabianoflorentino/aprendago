@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func BemVindo() {
-	bem_vindo := `
+	topic := format.OulineContent{
+		Title: "Bem-vindo",
+		Content: `
 - Bem vindo ao curso!
 - Eu sou...
 - Go foi criado por gente foda que criou o Unix, B, UTF-8...
@@ -13,6 +15,8 @@ func BemVindo() {
 - O curriculo que vamos estudar...
 - Para os novos na programação... Para os programadores experientes...
 - Participe!
-  `
-	fmt.Printf("Bem vindo \n %s\n", bem_vindo)
+`,
+	}
+
+	format.FormatOutlineTopic(topic)
 }

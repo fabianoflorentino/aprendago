@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func PorQueGo() {
-	por_que_go := `
+	topic := format.OulineContent{
+		Title: "Por que Go?",
+		Content: `
 - Antes de investir seu tempo em aprender a linguagem Go, é bom você entender por que isso é uma boa idéia.
 - O que estava acontecendo no Google...
 - Criada por Ken Thompson (Unix, B, C), Rob Pike (UTF-8), e Robert Griesemer.
@@ -29,7 +31,8 @@ func PorQueGo() {
 - Go é OOP? https://golang.org/doc/faq#Is_Go_an_object-oriented_language
 - Mais um: https://golang.org/doc/faq#principles
 - $$$: https://insights.stackoverflow.com/survey/2017#technology-top-paying-technologies-by-region -> US
-  `
+`,
+	}
 
-	fmt.Printf("Por que Go? \n %s\n", por_que_go)
+	format.FormatOutlineTopic(topic)
 }

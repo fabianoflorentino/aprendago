@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func ComoEsseCursoFunciona() {
-	como_esse_curso_funciona := `
+	topic := format.OulineContent{
+		Title: "Como esse curso funciona",
+		Content: `
 - Velocidade de playback.
 - Repetição.
 - Erros.
@@ -16,7 +18,8 @@ func ComoEsseCursoFunciona() {
   - (Alem de que eu não sei e nem quero saber o nome em português de boa parte dessas coisas :P)
 - Constantemente "em progresso."
 - Seu feedback é super importante!
-  `
+    `,
+	}
 
-	fmt.Printf("Como esse curso funciona?\n %s\n", como_esse_curso_funciona)
+	format.FormatOutlineTopic(topic)
 }
