@@ -70,6 +70,7 @@ var HELPME = []HelpMe{
 	{"--tipos-numericos", "Explora os tipos numéricos em Go.", 0},
 	{"--overflow", "Discute o conceito de overflow e como ele pode afetar seu código.", 0},
 	{"--tipo-string", "Explora o tipo de dados string em Go.", 0},
+	{"--sistemas-numericos", "Apresenta os sistemas numéricos e sua importância para a programação.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }

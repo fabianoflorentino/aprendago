@@ -47,6 +47,7 @@ func Menu(args []string) {
 		"--tipos-numericos":                    func() { fundamentos_da_programacao.TiposNumericos() },
 		"--overflow":                           func() { fundamentos_da_programacao.Overflow() },
 		"--tipo-string":                        func() { fundamentos_da_programacao.TipoString() },
+		"--sistemas-numericos":                 func() { fundamentos_da_programacao.SistemasNumericos() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}
