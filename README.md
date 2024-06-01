@@ -44,6 +44,8 @@ Opções:
   --como-os-computadores-funcionam       Descreve o funcionamento dos computadores e sua importância para a programação.
   --tipos-numericos                      Explora os tipos numéricos em Go.
   --overflow                             Discute o conceito de overflow e como ele pode afetar seu código.
+  --tipo-string                          Explora o tipo de dados string em Go.
+  --sistemas-numericos                   Apresenta os sistemas numéricos e sua importância para a programação.
   --outline                              Exibe o outline completo do curso.
   --help                                 Exibe a lista de todas as opções disponíveis.
 ```
