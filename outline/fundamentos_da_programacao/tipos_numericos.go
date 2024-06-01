@@ -1,9 +1,11 @@
 package outline
 
-import "fmt"
+import format "github.com/fabianoflorentino/aprendago/outline/format"
 
 func TiposNumericos() {
-	tipos_numericos := `
+	topic := format.OutlineContent{
+		Title: "Tipos numéricos",
+		Content: `
 - int vs. float: Números inteiros vs. números com frações.
 - golang.org/ref/spec → numeric types
 - Integers:
@@ -31,8 +33,8 @@ func TiposNumericos() {
   - GOOS
   - GORUNTIME
   - https://play.golang.org/p/1vp5DImIMM
-  `
+    `,
+	}
 
-	fmt.Println("Tipos numéricos")
-	fmt.Println(tipos_numericos)
+	format.FormatOutlineTopic(topic)
 }
