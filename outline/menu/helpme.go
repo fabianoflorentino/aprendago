@@ -69,6 +69,7 @@ var HELPME = []HelpMe{
 	{"--como-os-computadores-funcionam", "Descreve o funcionamento dos computadores e sua importância para a programação.", 0},
 	{"--tipos-numericos", "Explora os tipos numéricos em Go.", 0},
 	{"--overflow", "Discute o conceito de overflow e como ele pode afetar seu código.", 0},
+	{"--tipo-string", "Explora o tipo de dados string em Go.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }

@@ -46,6 +46,7 @@ func Menu(args []string) {
 		"--como-os-computadores-funcionam":     func() { fundamentos_da_programacao.ComoOsComputadoresFuncionam() },
 		"--tipos-numericos":                    func() { fundamentos_da_programacao.TiposNumericos() },
 		"--overflow":                           func() { fundamentos_da_programacao.Overflow() },
+		"--tipo-string":                        func() { fundamentos_da_programacao.TipoString() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}
