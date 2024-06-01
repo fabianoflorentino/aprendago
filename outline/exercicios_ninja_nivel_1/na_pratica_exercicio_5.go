@@ -2,10 +2,14 @@ package outline
 
 import (
 	"fmt"
+
+	format "github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func NaPraticaExercicio5() {
-	na_pratica_exercicio_5 := `
+	topic := format.OutlineContent{
+		Title: "Na Prática - Exercício #5",
+		Content: `
 - Utilizando a solução do exercício anterior:
   1. Em package-level scope, utilizando a palavra-chave var, crie uma variável com o identificador "y". O tipo desta variável deve ser o tipo subjacente do tipo que você criou no exercício anterior.
   2. Na função main:
@@ -19,10 +23,10 @@ func NaPraticaExercicio5() {
       2. Demonstre o valor de "y"
       3. Demonstre o tipo de "y"
 - Solução: https://play.golang.org/p/uq81T_fasP
-  `
+    `,
+	}
 
-	fmt.Println("Na prática: Exercicio #5")
-	fmt.Println(na_pratica_exercicio_5)
+	format.FormatOutlineTopic(topic)
 }
 
 func ResolucaoNaPraticaExercicio5() {

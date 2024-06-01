@@ -2,10 +2,14 @@ package outline
 
 import (
 	"fmt"
+
+	format "github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func NaPraticaExercicio3() {
-	na_pratica_exercicio_3 := `
+	topic := format.OutlineContent{
+		Title: "Na Prática - Exercício #3",
+		Content: `
 - Utilizando a solução do exercício anterior:
   1. Em package-level scope, atribua os seguintes valores às variáveis:
     1. para "x" atribua 42
@@ -16,10 +20,10 @@ func NaPraticaExercicio3() {
       Faça essa atribuição de tipo string a uma variável de nome "s" utilizando o operador curto de declaração.
     2. Demonstre a variável "s".
 - Solução: https://play.golang.org/p/QFctSQB_h3
-  `
+    `,
+	}
 
-	fmt.Println("Na prática: Exercicio #3")
-	fmt.Println(na_pratica_exercicio_3)
+	format.FormatOutlineTopic(topic)
 }
 
 func ResolucaoNaPraticaExercicio3() {

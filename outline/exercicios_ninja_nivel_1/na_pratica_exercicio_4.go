@@ -2,10 +2,14 @@ package outline
 
 import (
 	"fmt"
+
+	format "github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func NaPraticaExercicio4() {
-	na_pratica_exercicio_4 := `
+	topic := format.OutlineContent{
+		Title: "Na Prática - Exercício #4",
+		Content: `
 - Crie um tipo. O tipo subjacente deve ser int.
 - Crie uma variável para este tipo, com o identificador "x", utilizando a palavra-chave var.
 - Na função main:
@@ -16,10 +20,10 @@ func NaPraticaExercicio4() {
 - Para os aventureiros: https://golang.org/ref/spec#Types
 - Agora já somos quase ninjas nível 1!
 - Solução: https://play.golang.org/p/snm4WuuYmG
-  `
+    `,
+	}
 
-	fmt.Println("Na prática: Exercicio #4")
-	fmt.Println(na_pratica_exercicio_4)
+	format.FormatOutlineTopic(topic)
 }
 
 func ResolucaoNaPraticaExercicio4() {
