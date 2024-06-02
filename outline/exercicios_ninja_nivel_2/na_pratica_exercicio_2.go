@@ -29,6 +29,8 @@ func ResolucaoNaPraticaExercicio2() {
 	a := 10
 	b := 20
 
+	fmt.Printf("a: %v \nb: %v \n\n", a, b)
+
 	fmt.Printf("a == b: %v \n", a == b)
 	fmt.Printf("a != b: %v \n", a != b)
 	fmt.Printf("a <= b: %v \n", a <= b)
