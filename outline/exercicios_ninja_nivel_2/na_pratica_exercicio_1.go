@@ -11,7 +11,7 @@ func NaPraticaExercicio1() {
 		Title: "Na Prática - Exercício #1",
 		Content: `
 - Escreva um programa que mostre um número em decimal, binário, e hexadecimal.
-- Solução: https://play.golang.org/p/X7qm3aWSa6
+- Solução: (https://play.golang.org/p/X7qm3aWSa6) ou use no menu do programa (--na-pratica-exercicio-1 --nivel-2 --resolucao)
 		`,
 	}
 
@@ -19,7 +19,7 @@ func NaPraticaExercicio1() {
 }
 
 func ResolucaoNaPraticaExercicio1() {
-	numero := 10000000
+	numero := 1000019
 
 	fmt.Printf("Decimal: %d \nBinário: %b \nHexadecimal: %#x \n", numero, numero, numero)
 }
