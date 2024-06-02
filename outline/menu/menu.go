@@ -49,6 +49,7 @@ func Menu(args []string) {
 		"--tipo-string":                        func() { fundamentos_da_programacao.TipoString() },
 		"--sistemas-numericos":                 func() { fundamentos_da_programacao.SistemasNumericos() },
 		"--constantes":                         func() { fundamentos_da_programacao.Constantes() },
+		"--iota":                               func() { fundamentos_da_programacao.Iota() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}

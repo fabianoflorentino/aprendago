@@ -8,4 +8,5 @@ func FundamentosDaProgramacao() {
 	TipoString()
 	SistemasNumericos()
 	Constantes()
+	Iota()
 }

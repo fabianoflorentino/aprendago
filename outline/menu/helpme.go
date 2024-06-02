@@ -72,6 +72,7 @@ var HELPME = []HelpMe{
 	{"--tipo-string", "Explora o tipo de dados string em Go.", 0},
 	{"--sistemas-numericos", "Apresenta os sistemas numéricos e sua importância para a programação.", 0},
 	{"--constantes", "Detalha o uso de constantes em Go.", 0},
+	{"--iota", "Explora o uso do identificador iota em Go.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }
