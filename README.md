@@ -93,6 +93,8 @@ Opções:
   --na-pratica-exercicio-3 --nivel-2 --resolucao   Exibe a resolução do terceiro exercício prático do nível 2.
   --na-pratica-exercicio-4 --nivel-2               Apresenta o quarto exercício prático do nível 2.
   --na-pratica-exercicio-4 --nivel-2 --resolucao   Exibe a resolução do quarto exercício prático do nível 2.
+  --na-pratica-exercicio-5 --nivel-2               Apresenta o quinto exercício prático do nível 2.
+  --na-pratica-exercicio-5 --nivel-2 --resolucao   Exibe a resolução do quinto exercício prático do nível 2.
   --outline                                        Exibe o outline completo do curso.
   --help                                           Exibe a lista de todas as opções disponíveis.
 ```
