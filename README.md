@@ -1,10 +1,46 @@
 # Aprenda Go
 
-Github: [https://github.com/vkorbes/aprendago](https://github.com/vkorbes/aprendago)
+[Github](https://github.com/vkorbes/aprendago) [Youtube](https://youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg&si=_JIbmByhwYvHdJAr)
 
-Youtube: [https://youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg&si=_JIbmByhwYvHdJAr](https://youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg&si=_JIbmByhwYvHdJAr)
+## Docker
+
+### Build
+
+```shell
+docker compose build --no-cache
+```
+
+### Run
+
+```shell
+docker compose up -d
+```
+
+### Stop
+
+```shell
+docker compose down
+```
+
+### Logs
+
+```shell
+docker compose logs -f
+```
 
 ## Uso
+
+### Container
+
+```shell
+docker compose exec -it aprendago /bin/sh -c 'go run main.go --help'
+```
+
+### Local
+
+```shell
+go run main.go --help
+```
 
 ```shell
 Uso: go run main.go [opção]
@@ -51,6 +87,14 @@ Opções:
   --outline                              Exibe o outline completo do curso.
   --help                                 Exibe a lista de todas as opções disponíveis.
 ```
+
+### Uso Contianer
+
+```shell
+docker compose exec -it aprendago /bin/sh -c 'go run main.go --bem-vindo'
+```
+
+### Uso Local
 
 ```shell
 go run main.go --bem-vindo
