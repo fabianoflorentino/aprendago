@@ -60,6 +60,8 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-3 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio3() },
 		"--na-pratica-exercicio-4 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio4() },
 		"--na-pratica-exercicio-4 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio4() },
+		"--na-pratica-exercicio-5 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio5() },
+		"--na-pratica-exercicio-5 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio5() },
 		"--outline":                                      func() { outline.Outline() },
 		"--help":                                         func() { PrintHelpMe() },
 	}
