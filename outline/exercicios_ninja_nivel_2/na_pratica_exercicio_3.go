@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio3() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #1",
+		Title: "Na Prática - Exercício #3",
 		Content: `
 - Crie constantes tipadas e não-tipadas.
 - Demonstre seus valores.

@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio2() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #1",
+		Title: "Na Prática - Exercício #2",
 		Content: `
 - Escreva expressões utilizando os seguintes operadores, e atribua seus valores a variáveis.
 - ==
