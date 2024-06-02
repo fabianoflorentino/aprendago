@@ -17,6 +17,7 @@ type Questionario struct {
 type Resposta struct {
 	Numero   string
 	Resposta string
+	Status   string
 }
 
 func CriarQuestionario(questionario []Questionario) []Questionario {
@@ -36,15 +37,14 @@ func ColetarRespostas(questionario []Questionario) ([]Resposta, error) {
 	criar_questionario := CriarQuestionario(questionario)
 
 	for _, p := range criar_questionario {
-		fmt.Println(p.Numero, p.Pergunta, p.Opcoes)
-		fmt.Print(p.Opcoes)
+		fmt.Print(p.Numero, p.Pergunta, p.Opcoes)
 		fmt.Scan(&resposta)
 
 		if !opcaoValida(resposta, p.Opcoes) {
 			return nil, errors.New("opção inválida")
 		}
 
-		listaRespostas = append(listaRespostas, Resposta{p.Numero, resposta})
+		listaRespostas = append(listaRespostas, Resposta{p.Numero, resposta, ""})
 	}
 
 	return listaRespostas, nil
@@ -59,6 +59,30 @@ func opcaoValida(resposta, opcoes string) bool {
 	}
 
 	return false
+}
+
+func ValidarRespostas(respostas []Resposta, gabarito []Resposta) {
+	var validaRespostas []Resposta
+	var totalCorretas int
+
+	for i, resp := range respostas {
+		if resp.Resposta == gabarito[i].Resposta {
+			validaRespostas = append(validaRespostas, Resposta{resp.Numero, resp.Resposta, "Correta"})
+			totalCorretas++
+		} else {
+			validaRespostas = append(validaRespostas, Resposta{resp.Numero, resp.Resposta, "Incorreta"})
+		}
+	}
+
+	fmt.Printf("\nResultado da prova:\n")
+	fmt.Printf("\nTotal de respostas corretas: %d de %d\n", totalCorretas, len(gabarito))
+
+	resultadoDaProva := float64(totalCorretas) / float64(len(gabarito)) * 100
+	fmt.Printf("Percentual de acerto: %.2f%%.\n\n", resultadoDaProva)
+
+	for _, v := range validaRespostas {
+		fmt.Printf("P: %-4s R: %-4s %s\n", v.Numero, v.Resposta, v.Status)
+	}
 }
 
 func ImprimirRespostas(respostas []Resposta) {
