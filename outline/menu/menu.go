@@ -64,8 +64,10 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-5 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio5() },
 		"--na-pratica-exercicio-6 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio6() },
 		"--na-pratica-exercicio-6 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio6() },
-		"--outline":                                      func() { outline.Outline() },
-		"--help":                                         func() { PrintHelpMe() },
+		"--na-pratica-exercicio-7 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio7() },
+		"--na-pratica-exercicio-7 --nivel-2 --prova":     func() { exercicios_ninja_nivel_2.RespondaAProva() },
+		"--outline": func() { outline.Outline() },
+		"--help":    func() { PrintHelpMe() },
 	}
 
 	argsStr := strings.Join(args, " ")
