@@ -54,6 +54,8 @@ func Menu(args []string) {
 		"--deslocamento-de-bits":                         func() { fundamentos_da_programacao.DeslocamentoDeBits() },
 		"--na-pratica-exercicio-1 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio1() },
 		"--na-pratica-exercicio-1 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio1() },
+		"--na-pratica-exercicio-2 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio2() },
+		"--na-pratica-exercicio-2 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio2() },
 		"--outline":                                      func() { outline.Outline() },
 		"--help":                                         func() { PrintHelpMe() },
 	}
