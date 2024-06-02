@@ -19,5 +19,7 @@ func NaPraticaExercicio1() {
 }
 
 func ResolucaoNaPraticaExercicio1() {
-	fmt.Printf("%d \n %b \n %#x \n", 10, 10, 10)
+	numero := 10000000
+
+	fmt.Printf("Decimal: %d \nBinário: %b \nHexadecimal: %#x \n", numero, numero, numero)
 }
