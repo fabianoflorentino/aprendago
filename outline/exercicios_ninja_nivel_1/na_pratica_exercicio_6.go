@@ -74,6 +74,5 @@ func RespondaAProva() {
 		return
 	}
 
-	format.ImprimirRespostas(respostas)
-	format.ImprimiGabarito(gabarito)
+	format.ValidarRespostas(respostas, gabarito)
 }
