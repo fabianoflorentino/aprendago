@@ -37,7 +37,7 @@ func ColetarRespostas(questionario []Questionario) ([]Resposta, error) {
 
 	for _, p := range criar_questionario {
 		fmt.Println(p.Numero, p.Pergunta, p.Opcoes)
-		fmt.Println(p.Opcoes)
+		fmt.Print(p.Opcoes)
 		fmt.Scan(&resposta)
 
 		if !opcaoValida(resposta, p.Opcoes) {
@@ -45,7 +45,6 @@ func ColetarRespostas(questionario []Questionario) ([]Resposta, error) {
 		}
 
 		listaRespostas = append(listaRespostas, Resposta{p.Numero, resposta})
-
 	}
 
 	return listaRespostas, nil
