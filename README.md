@@ -87,6 +87,12 @@ Opções:
   --deslocamento-de-bits                           Discute o conceito de deslocamento de bits em Go.
   --na-pratica-exercicio-1 --nivel-2               Apresenta o primeiro exercício prático do nível 2.
   --na-pratica-exercicio-1 --nivel-2 --resolucao   Exibe a resolução do primeiro exercício prático do nível 2.
+  --na-pratica-exercicio-2 --nivel-2               Apresenta o segundo exercício prático do nível 2.
+  --na-pratica-exercicio-2 --nivel-2 --resolucao   Exibe a resolução do segundo exercício prático do nível 2.
+  --na-pratica-exercicio-3 --nivel-2               Apresenta o terceiro exercício prático do nível 2.
+  --na-pratica-exercicio-3 --nivel-2 --resolucao   Exibe a resolução do terceiro exercício prático do nível 2.
+  --na-pratica-exercicio-4 --nivel-2               Apresenta o quarto exercício prático do nível 2.
+  --na-pratica-exercicio-4 --nivel-2 --resolucao   Exibe a resolução do quarto exercício prático do nível 2.
   --outline                                        Exibe o outline completo do curso.
   --help                                           Exibe a lista de todas as opções disponíveis.
 ```
