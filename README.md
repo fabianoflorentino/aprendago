@@ -46,6 +46,8 @@ Opções:
   --overflow                             Discute o conceito de overflow e como ele pode afetar seu código.
   --tipo-string                          Explora o tipo de dados string em Go.
   --sistemas-numericos                   Apresenta os sistemas numéricos e sua importância para a programação.
+  --constantes                           Detalha o uso de constantes em Go.
+  --iota                                 Explora o uso do identificador iota em Go.
   --outline                              Exibe o outline completo do curso.
   --help                                 Exibe a lista de todas as opções disponíveis.
 ```
