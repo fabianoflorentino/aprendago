@@ -50,6 +50,7 @@ func Menu(args []string) {
 		"--sistemas-numericos":                 func() { fundamentos_da_programacao.SistemasNumericos() },
 		"--constantes":                         func() { fundamentos_da_programacao.Constantes() },
 		"--iota":                               func() { fundamentos_da_programacao.Iota() },
+		"--deslocamento-de-bits":               func() { fundamentos_da_programacao.DeslocamentoDeBits() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}

@@ -9,4 +9,5 @@ func FundamentosDaProgramacao() {
 	SistemasNumericos()
 	Constantes()
 	Iota()
+	DeslocamentoDeBits()
 }
