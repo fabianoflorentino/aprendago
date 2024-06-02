@@ -7,4 +7,5 @@ func FundamentosDaProgramacao() {
 	Overflow()
 	TipoString()
 	SistemasNumericos()
+	Constantes()
 }

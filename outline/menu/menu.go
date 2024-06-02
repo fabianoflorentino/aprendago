@@ -48,6 +48,7 @@ func Menu(args []string) {
 		"--overflow":                           func() { fundamentos_da_programacao.Overflow() },
 		"--tipo-string":                        func() { fundamentos_da_programacao.TipoString() },
 		"--sistemas-numericos":                 func() { fundamentos_da_programacao.SistemasNumericos() },
+		"--constantes":                         func() { fundamentos_da_programacao.Constantes() },
 		"--outline":                            func() { outline.Outline() },
 		"--help":                               func() { PrintHelpMe() },
 	}
