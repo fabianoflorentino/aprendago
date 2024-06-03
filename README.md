@@ -95,6 +95,10 @@ Opções:
   --na-pratica-exercicio-4 --nivel-2 --resolucao   Exibe a resolução do quarto exercício prático do nível 2.
   --na-pratica-exercicio-5 --nivel-2               Apresenta o quinto exercício prático do nível 2.
   --na-pratica-exercicio-5 --nivel-2 --resolucao   Exibe a resolução do quinto exercício prático do nível 2.
+  --na-pratica-exercicio-6 --nivel-2               Apresenta o sexto exercício prático do nível 2.
+  --na-pratica-exercicio-6 --nivel-2 --resolucao   Exibe a resolução do sexto exercício prático do nível 2.
+  --na-pratica-exercicio-7 --nivel-2               Apresenta o sétimo exercício prático do nível 2.
+  --na-pratica-exercicio-7 --nivel-2 --prova       Exibe a prova do sétimo exercício prático do nível 2.
   --outline                                        Exibe o outline completo do curso.
   --help                                           Exibe a lista de todas as opções disponíveis.
 ```
