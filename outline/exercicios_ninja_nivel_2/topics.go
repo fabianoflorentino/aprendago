@@ -1,6 +1,10 @@
 package outline
 
+import "fmt"
+
 func ExerciciosNinjaNivel2() {
+	fmt.Printf("05 - Exercicios: Ninja Nível 2")
+
 	NaPraticaExercicio1()
 	NaPraticaExercicio2()
 	NaPraticaExercicio3()
