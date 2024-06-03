@@ -84,25 +84,3 @@ func ValidarRespostas(respostas []Resposta, gabarito []Resposta) {
 		fmt.Printf("P: %-4s R: %-4s %s\n", v.Numero, v.Resposta, v.Status)
 	}
 }
-
-func ImprimirRespostas(respostas []Resposta) {
-	fmt.Printf("\nRespostas da prova:\n\n")
-
-	numRespostas := len(respostas)
-	for i := 0; i <= numRespostas; i++ {
-		if i+1 <= numRespostas {
-			fmt.Printf("P: %-4s R: %-8s\n", respostas[i].Numero, respostas[i].Resposta)
-		}
-	}
-}
-
-// ImprimiGabarito exibe o gabarito da prova
-func ImprimiGabarito(gabarito []Resposta) {
-	// Exibe o gabarito da prova para o usuário em  duas colunas de 15 perguntas com suas respectivas respostas
-	fmt.Printf("\nGabarito da prova:\n\n")
-	for i := 0; i <= len(gabarito); i++ {
-		if i+1 <= len(gabarito) {
-			fmt.Printf("P: %-4s R: %-8s\n", gabarito[i].Numero, gabarito[i].Resposta)
-		}
-	}
-}
