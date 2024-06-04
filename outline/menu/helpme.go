@@ -90,6 +90,7 @@ var HELPME = []HelpMe{
 	{"--na-pratica-exercicio-7 --nivel-2 --prova", "Exibe a prova do sétimo exercício prático do nível 2.", 0},
 	{"--entendendo-fluxo-de-controle", "Explica o conceito de fluxo de controle em Go.", 0},
 	{"--loops-inicializacao-condicao-pos", "Detalha o uso de loops com inicialização, condição e pós em Go.", 0},
+	{"--loops-nested-loop", "Explora o conceito de loops aninhados em Go.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }
