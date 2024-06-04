@@ -68,6 +68,7 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-7 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio7() },
 		"--na-pratica-exercicio-7 --nivel-2 --prova":     func() { exercicios_ninja_nivel_2.RespondaAProva() },
 		"--entendendo-fluxo-de-controle":                 func() { fluxo_de_controle.EntendendoFluxoDeControle() },
+		"--loops-inicializacao-condicao-pos":             func() { fluxo_de_controle.LoopsInicializacaoCondicaoPos() },
 		"--outline":                                      func() { outline.Outline() },
 		"--help":                                         func() { PrintHelpMe() },
 	}
