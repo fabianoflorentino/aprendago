@@ -7,4 +7,7 @@ func FluxoDeControle() {
 	EntendendoFluxoDeControle()
 	LoopsInicializacaoCondicaoPos()
 	LoopsNestedLoop()
+	LoopsADeclaracaoFor()
+	LoopsBreakEContinue()
+	LoopsUtilizandoAscii()
 }

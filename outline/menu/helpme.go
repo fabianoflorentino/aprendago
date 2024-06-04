@@ -91,6 +91,10 @@ var HELPME = []HelpMe{
 	{"--entendendo-fluxo-de-controle", "Explica o conceito de fluxo de controle em Go.", 0},
 	{"--loops-inicializacao-condicao-pos", "Detalha o uso de loops com inicialização, condição e pós em Go.", 0},
 	{"--loops-nested-loop", "Explora o conceito de loops aninhados em Go.", 0},
+	{"--loops-a-declaracao-for", "Apresenta a declaração for em Go.", 0},
+	{"--loops-break-e-continue", "Discute as instruções break e continue em loops em Go.", 0},
+	{"--loops-utilizando-ascii", "Desafio surpresa: utilize ASCII para exibir texto em Go.", 0},
+	{"--loops-utilizando-ascii --resolucao", "Desafio surpresa: utilize ASCII para exibir texto em Go.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }

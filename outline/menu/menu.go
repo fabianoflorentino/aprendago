@@ -70,6 +70,10 @@ func Menu(args []string) {
 		"--entendendo-fluxo-de-controle":                 func() { fluxo_de_controle.EntendendoFluxoDeControle() },
 		"--loops-inicializacao-condicao-pos":             func() { fluxo_de_controle.LoopsInicializacaoCondicaoPos() },
 		"--loops-nested-loop":                            func() { fluxo_de_controle.LoopsNestedLoop() },
+		"--loops-a-declaracao-for":                       func() { fluxo_de_controle.LoopsADeclaracaoFor() },
+		"--loops-break-e-continue":                       func() { fluxo_de_controle.LoopsBreakEContinue() },
+		"--loops-utilizando-ascii":                       func() { fluxo_de_controle.LoopsUtilizandoAscii() },
+		"--loops-utilizando-ascii --resolucao":           func() { fluxo_de_controle.ResolucaoLoopsUtilizandoAscii() },
 		"--outline":                                      func() { outline.Outline() },
 		"--help":                                         func() { PrintHelpMe() },
 	}
