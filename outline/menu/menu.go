@@ -7,6 +7,7 @@ import (
 	outline "github.com/fabianoflorentino/aprendago/outline"
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	exercicios_ninja_nivel_2 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
+	fluxo_de_controle "github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
@@ -66,8 +67,9 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-6 --nivel-2 --resolucao": func() { exercicios_ninja_nivel_2.ResolucaoNaPraticaExercicio6() },
 		"--na-pratica-exercicio-7 --nivel-2":             func() { exercicios_ninja_nivel_2.NaPraticaExercicio7() },
 		"--na-pratica-exercicio-7 --nivel-2 --prova":     func() { exercicios_ninja_nivel_2.RespondaAProva() },
-		"--outline": func() { outline.Outline() },
-		"--help":    func() { PrintHelpMe() },
+		"--entendendo-fluxo-de-controle":                 func() { fluxo_de_controle.EntendendoFluxoDeControle() },
+		"--outline":                                      func() { outline.Outline() },
+		"--help":                                         func() { PrintHelpMe() },
 	}
 
 	argsStr := strings.Join(args, " ")
