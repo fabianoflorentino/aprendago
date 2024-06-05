@@ -95,6 +95,11 @@ var HELPME = []HelpMe{
 	{"--loops-break-e-continue", "Discute as instruções break e continue em loops em Go.", 0},
 	{"--loops-utilizando-ascii", "Desafio surpresa: utilize ASCII para exibir texto em Go.", 0},
 	{"--loops-utilizando-ascii --resolucao", "Desafio surpresa: utilize ASCII para exibir texto em Go.", 0},
+	{"--condicionais-a-declaracao-if", "Apresenta a declaração if em Go.", 0},
+	{"--condicionais-if-else-if-else", "Detalha a declaração if-else-if-else em Go.", 0},
+	{"--condicionais-a-declaracao-switch", "Apresenta a declaração switch em Go.", 0},
+	{"--condicionais-a-declaracao-switch-pt2", "Detalha a declaração switch em Go.", 0},
+	{"--operadores-logicos-condicionais", "Explora os operadores lógicos condicionais em Go.", 0},
 	{"--outline", "Exibe o outline completo do curso.", 0},
 	{"--help", "Exibe a lista de todas as opções disponíveis.", 0},
 }

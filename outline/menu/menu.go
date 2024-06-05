@@ -74,6 +74,11 @@ func Menu(args []string) {
 		"--loops-break-e-continue":                       func() { fluxo_de_controle.LoopsBreakEContinue() },
 		"--loops-utilizando-ascii":                       func() { fluxo_de_controle.LoopsUtilizandoAscii() },
 		"--loops-utilizando-ascii --resolucao":           func() { fluxo_de_controle.ResolucaoLoopsUtilizandoAscii() },
+		"--condicionais-a-declaracao-if":                 func() { fluxo_de_controle.CondicionaisADeclaracaoIf() },
+		"--condicionais-if-else-if-else":                 func() { fluxo_de_controle.CondicionaisIfElseIfElse() },
+		"--condicionais-a-declaracao-switch":             func() { fluxo_de_controle.CondicionaisADeclaracaoSwitch() },
+		"--condicionais-a-declaracao-switch-pt2":         func() { fluxo_de_controle.CondicionaisADeclaracaoSwitchPt2() },
+		"--operadores-logicos-condicionais":              func() { fluxo_de_controle.OperadoresLogicosCondicionais() },
 		"--outline":                                      func() { outline.Outline() },
 		"--help":                                         func() { PrintHelpMe() },
 	}

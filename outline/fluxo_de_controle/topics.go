@@ -10,4 +10,9 @@ func FluxoDeControle() {
 	LoopsADeclaracaoFor()
 	LoopsBreakEContinue()
 	LoopsUtilizandoAscii()
+	CondicionaisADeclaracaoIf()
+	CondicionaisIfElseIfElse()
+	CondicionaisADeclaracaoSwitch()
+	CondicionaisADeclaracaoSwitchPt2()
+	OperadoresLogicosCondicionais()
 }
