@@ -99,6 +99,13 @@ Opções:
   --na-pratica-exercicio-6 --nivel-2 --resolucao   Exibe a resolução do sexto exercício prático do nível 2.
   --na-pratica-exercicio-7 --nivel-2               Apresenta o sétimo exercício prático do nível 2.
   --na-pratica-exercicio-7 --nivel-2 --prova       Exibe a prova do sétimo exercício prático do nível 2.
+  --entendendo-fluxo-de-controle                   Explica o conceito de fluxo de controle em Go.
+  --loops-inicializacao-condicao-pos               Detalha o uso de loops com inicialização, condição e pós em Go.
+  --loops-nested-loop                              Explora o conceito de loops aninhados em Go.
+  --loops-a-declaracao-for                         Apresenta a declaração for em Go.
+  --loops-break-e-continue                         Discute as instruções break e continue em loops em Go.
+  --loops-utilizando-ascii                         Desafio surpresa: utilize ASCII para exibir texto em Go.
+  --loops-utilizando-ascii --resolucao             Desafio surpresa: utilize ASCII para exibir texto em Go.
   --outline                                        Exibe o outline completo do curso.
   --help                                           Exibe a lista de todas as opções disponíveis.
 ```
