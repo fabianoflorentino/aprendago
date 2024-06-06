@@ -7,6 +7,7 @@ import (
 	outline "github.com/fabianoflorentino/aprendago/outline"
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	exercicios_ninja_nivel_2 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
+	exercicios_ninja_nivel_3 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
 	fluxo_de_controle "github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
@@ -79,6 +80,8 @@ func Menu(args []string) {
 		"--condicionais-a-declaracao-switch":             func() { fluxo_de_controle.CondicionaisADeclaracaoSwitch() },
 		"--condicionais-a-declaracao-switch-pt2":         func() { fluxo_de_controle.CondicionaisADeclaracaoSwitchPt2() },
 		"--operadores-logicos-condicionais":              func() { fluxo_de_controle.OperadoresLogicosCondicionais() },
+		"--na-pratica-exercicio-1 --nivel-3":             func() { exercicios_ninja_nivel_3.NaPraticaExercicio1() },
+		"--na-pratica-exercicio-1 --nivel-3 --resolucao": func() { exercicios_ninja_nivel_3.ResolucaoNaPraticaExercicio1() },
 		"--outline":                                      func() { outline.Outline() },
 		"--help":                                         func() { ShowHelpMe() },
 	}
