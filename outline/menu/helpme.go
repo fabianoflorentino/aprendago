@@ -1,13 +1,25 @@
 package outline
 
 import (
+	"fmt"
+
+	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
 
 func ShowHelpMe() {
+	header := `
+Uso: go run main.go [opção]
+
+Exemplo:
+	go run main.go --bem-vindo
+	`
+
+	fmt.Println(header)
 	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()
 	variaveis_valores_tipos.HelpMeVariaveisValoresTipos()
+	exercicios_ninja_nivel_1.HelpMeExerciciosNinjaNivel1()
 }
 
 // import (

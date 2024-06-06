@@ -8,13 +8,6 @@ import (
 )
 
 var templateHelpMe = `
-Uso: go run main.go [opção]
-
-Exemplos:
-  go run main.go --bem-vindo
-
-Opções:
-
 {{- range .}}
   {{ printf "%-*s" .Width .Flag }}   {{ .Description | indent .Width}}
 {{- end }}
