@@ -2,7 +2,7 @@ package outline
 
 import helpme "github.com/fabianoflorentino/aprendago/outline/format"
 
-func OutlineVisaoGeralDoCurso() {
+func HelpMeVisaoGeralDoCurso() {
 	hlp := []helpme.HelpMe{
 		{Flag: "--bem-vindo", Description: "Exibe a mensagem de boas-vindas ao curso Aprenda Go.", Width: 0},
 		{Flag: "--porque-go", Description: "Descreve os benefícios e razões para aprender a linguagem Go.", Width: 0},
