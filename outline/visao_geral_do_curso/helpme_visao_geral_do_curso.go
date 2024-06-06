@@ -1,6 +1,10 @@
 package outline
 
-import helpme "github.com/fabianoflorentino/aprendago/outline/format"
+import (
+	"fmt"
+
+	helpme "github.com/fabianoflorentino/aprendago/outline/format"
+)
 
 func HelpMeVisaoGeralDoCurso() {
 	hlp := []helpme.HelpMe{
@@ -11,5 +15,6 @@ func HelpMeVisaoGeralDoCurso() {
 		{Flag: "--como-esse-curso-funciona", Description: "Explica a estrutura e metodologia do curso.", Width: 0},
 	}
 
+	fmt.Println("Capítulo 1: Visão Geral do Curso")
 	helpme.PrintHelpMe(hlp)
 }

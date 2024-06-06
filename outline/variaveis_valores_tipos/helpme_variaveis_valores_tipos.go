@@ -1,6 +1,10 @@
 package outline
 
-import helpme "github.com/fabianoflorentino/aprendago/outline/format"
+import (
+	"fmt"
+
+	helpme "github.com/fabianoflorentino/aprendago/outline/format"
+)
 
 func HelpMeVariaveisValoresTipos() {
 
@@ -16,5 +20,6 @@ func HelpMeVariaveisValoresTipos() {
 		{Flag: "--conversao-nao-coercao", Description: "Exibe a conversão não coerção.", Width: 0},
 	}
 
+	fmt.Println("\nCapítulo 2: Variáveis, Valores e Tipos")
 	helpme.PrintHelpMe(hlp)
 }
