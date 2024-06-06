@@ -1,9 +1,13 @@
 package outline
 
-import visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
+import (
+	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
+	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
+)
 
 func ShowHelpMe() {
-	visao_geral_do_curso.OutlineVisaoGeralDoCurso()
+	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()
+	variaveis_valores_tipos.HelpMeVariaveisValoresTipos()
 }
 
 // import (
