@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		outline.PrintHelpMe()
+		outline.ShowHelpMe()
 
 		return
 	} else {

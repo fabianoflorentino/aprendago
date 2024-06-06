@@ -80,7 +80,7 @@ func Menu(args []string) {
 		"--condicionais-a-declaracao-switch-pt2":         func() { fluxo_de_controle.CondicionaisADeclaracaoSwitchPt2() },
 		"--operadores-logicos-condicionais":              func() { fluxo_de_controle.OperadoresLogicosCondicionais() },
 		"--outline":                                      func() { outline.Outline() },
-		"--help":                                         func() { PrintHelpMe() },
+		"--help":                                         func() { ShowHelpMe() },
 	}
 
 	argsStr := strings.Join(args, " ")
@@ -89,6 +89,6 @@ func Menu(args []string) {
 		action()
 	} else {
 		fmt.Println("\nOpção inválida")
-		PrintHelpMe()
+		ShowHelpMe()
 	}
 }
