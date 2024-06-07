@@ -11,6 +11,8 @@ func HelpMeExerciciosNinjaNivel3() {
 		// {Flag: "", Description: "", Width: 0},
 		{Flag: "--na-pratica-exercicio-1 --nivel-3", Description: "Apresenta o primeiro exercício prático do nível 3.", Width: 0},
 		{Flag: "--na-pratica-exercicio-1 --nivel-3 --resolucao", Description: "Exibe a resolução do primeiro exercício prático do nível 3.", Width: 0},
+		{Flag: "--na-pratica-exercicio-2 --nivel-3", Description: "Apresenta o segundo exercício prático do nível 3.", Width: 0},
+		{Flag: "--na-pratica-exercicio-2 --nivel-3 --resolucao", Description: "Exibe a resolução do segundo exercício prático do nível 3.", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 7: Exercícios Ninja Nível 3")
