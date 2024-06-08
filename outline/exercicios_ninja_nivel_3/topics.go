@@ -14,4 +14,5 @@ func ExerciciosNinjaNivel3() {
 	NaPraticaExercicio7()
 	NaPraticaExercicio8()
 	NaPraticaExercicio9()
+	NaPraticaExercicio10()
 }
