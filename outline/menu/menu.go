@@ -15,7 +15,7 @@ import (
 )
 
 func Menu(args []string) {
-	fmt.Println("Aprenda GO")
+	fmt.Printf("Aprenda GO\n\n")
 
 	options := map[string]func(){
 		"--bem-vindo":                                    func() { visao_geral_do_curso.BemVindo() },
@@ -88,6 +88,8 @@ func Menu(args []string) {
 		"--na-pratica-exercicio-3 --nivel-3 --resolucao": func() { exercicios_ninja_nivel_3.ResolucaoNaPraticaExercicio3() },
 		"--na-pratica-exercicio-4 --nivel-3":             func() { exercicios_ninja_nivel_3.NaPraticaExercicio4() },
 		"--na-pratica-exercicio-4 --nivel-3 --resolucao": func() { exercicios_ninja_nivel_3.ResolucaoNaPraticaExercicio4() },
+		"--na-pratica-exercicio-5 --nivel-3":             func() { exercicios_ninja_nivel_3.NaPraticaExercicio5() },
+		"--na-pratica-exercicio-5 --nivel-3 --resolucao": func() { exercicios_ninja_nivel_3.ResolucaoNaPraticaExercicio5() },
 		"--outline": func() { outline.Outline() },
 		"--help":    func() { ShowHelpMe() },
 	}
