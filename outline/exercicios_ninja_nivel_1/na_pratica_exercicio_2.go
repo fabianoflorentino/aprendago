@@ -17,7 +17,7 @@ func NaPraticaExercicio2() {
 - Na função main:
   1. Demonstre os valores de cada identificador
   2. O compilador atribuiu valores para essas variáveis. Como esses valores se chamam?
-- Solução: https://play.golang.org/p/pAFd-F7uGZ
+- Solução: https://play.golang.org/p/pAFd-F7uGZ ou use no menu do programa (--na-pratica-exercicio-2 --nivel-1 --resolucao)
     `,
 	}
 

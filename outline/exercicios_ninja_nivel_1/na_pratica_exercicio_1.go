@@ -25,7 +25,7 @@ func NaPraticaExercicio1() {
 - Agora demonstre os valores nestas variáveis, com:
     1. Uma única declaração print
     2. Múltiplas declarações print
-- Solução: https://play.golang.org/p/yYXnWXIQNa
+- Solução: https://play.golang.org/p/yYXnWXIQNa ou use no menu do programa (--na-pratica-exercicio-1 --nivel-1 --resolucao)
     `,
 	}
 

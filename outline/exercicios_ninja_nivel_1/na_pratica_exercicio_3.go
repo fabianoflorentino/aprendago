@@ -19,7 +19,7 @@ func NaPraticaExercicio3() {
     1. Use fmt.Sprintf para atribuir todos esses valores a uma única variável.
       Faça essa atribuição de tipo string a uma variável de nome "s" utilizando o operador curto de declaração.
     2. Demonstre a variável "s".
-- Solução: https://play.golang.org/p/QFctSQB_h3
+- Solução: https://play.golang.org/p/QFctSQB_h3 ou use no menu do programa (--na-pratica-exercicio-3 --nivel-1 --resolucao)
     `,
 	}
 

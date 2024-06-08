@@ -19,7 +19,7 @@ func NaPraticaExercicio4() {
   4. Demonstre o valor da variável "x"
 - Para os aventureiros: https://golang.org/ref/spec#Types
 - Agora já somos quase ninjas nível 1!
-- Solução: https://play.golang.org/p/snm4WuuYmG
+- Solução: https://play.golang.org/p/snm4WuuYmG ou use no menu do programa (--na-pratica-exercicio-4 --nivel-1 --resolucao)
     `,
 	}
 

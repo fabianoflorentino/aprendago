@@ -22,7 +22,7 @@ func NaPraticaExercicio5() {
       1. Utilize conversão para transformar o tipo do valor da variável "x" em seu tipo subjacente e, utilizando o operador "=", atribua o valor de "x" a "y"
       2. Demonstre o valor de "y"
       3. Demonstre o tipo de "y"
-- Solução: https://play.golang.org/p/uq81T_fasP
+- Solução: https://play.golang.org/p/uq81T_fasP ou use no menu do programa (--na-pratica-exercicio-5 --nivel-1 --resolucao)
     `,
 	}
 
