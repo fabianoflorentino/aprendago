@@ -11,7 +11,7 @@ func NaPraticaExercicio5() {
 		Title: "Na prática: Exercício #5",
 		Content: `
 - Demonstre o resto da divisão por 4 de todos os números entre 10 e 100
-- Solução: https://play.golang.org/p/zcEsXqnBr8
+- Solução: https://play.golang.org/p/zcEsXqnBr8 ou use no menu do programa (--na-pratica-exercicio-5 --nivel-3 --resolucao)
     `,
 	}
 

@@ -13,7 +13,7 @@ func NaPraticaExercicio4() {
 		Content: `
 - Crie um loop utilizando a sintaxe: for {}
 - Utilize-o para demonstrar os anos desde que você nasceu.
-- Solução: https://play.golang.org/p/dIbfdiuw0ms
+- Solução: https://play.golang.org/p/dIbfdiuw0ms ou use no menu do programa (--na-pratica-exercicio-4 --nivel-3 --resolucao)
     `,
 	}
 

@@ -21,7 +21,7 @@ func NaPraticaExercicio2() {
 		U+0042 'B'
 		U+0042 'B'
 	...e por aí vai.
-- Solução: https://play.golang.org/p/QlP6nVchq-
+- Solução: https://play.golang.org/p/QlP6nVchq- ou use no menu do programa (--na-pratica-exercicio-2 --nivel-3 --resolucao)
 		`,
 	}
 
