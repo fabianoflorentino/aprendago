@@ -20,7 +20,6 @@ func NaPraticaExercicio4() {
 	format.FormatOutlineTopic(topic)
 }
 
-// ResolucaoNaPraticaExercicio4 - Exercício #4
 func ResolucaoNaPraticaExercicio4() {
 	var birdthYear int = 1985
 	currentYear := time.Now().Year()
