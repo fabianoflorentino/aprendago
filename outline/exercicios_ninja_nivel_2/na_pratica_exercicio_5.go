@@ -12,7 +12,7 @@ func NaPraticaExercicio5() {
 		Content: `
 - Crie uma variável de tipo string utilizando uma raw string literal.
 - Demonstre-a.
-- Solução: https://play.golang.org/p/RkpqPpRWuo
+- Solução: https://play.golang.org/p/RkpqPpRWuo ou use no menu do programa (--na-pratica-exercicio-5 --nivel-2 --resolucao)
     `,
 	}
 
