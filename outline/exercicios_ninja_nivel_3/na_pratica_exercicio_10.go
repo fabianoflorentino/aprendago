@@ -24,15 +24,19 @@ func NaPraticaExercicio10() {
 }
 
 func ResolucaoNaPraticaExercicio10() {
-
-	fmt.Println("Anotado!")
 	anotacao := `
-true && true
-true && false
-true || true
-true || false
-!true
-  `
+fmt.Println(true && true)
+fmt.Println(true && false)
+fmt.Println(true || true)
+fmt.Println(true || false)
+fmt.Println(!true)
+`
+	fmt.Printf("%v\n", anotacao)
 
-	fmt.Printf("%v", anotacao)
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println(true || true)
+	fmt.Println(true || false)
+	fmt.Println(!true)
+
 }
