@@ -5,6 +5,7 @@ import (
 
 	outline "github.com/fabianoflorentino/aprendago/outline"
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
+	exercicios_ninja_nivel_2 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	format "github.com/fabianoflorentino/aprendago/outline/format"
 	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
@@ -16,11 +17,12 @@ func Menu(args []string) {
 
 	buildMenu(
 		args,
+		generalMenu(args),
 		variaveis_valores_tipos.MenuVariaveisValoresTipos(args),
 		visao_geral_do_curso.MenuVisaoGeralDoCurso(args),
 		exercicios_ninja_nivel_1.MenuExerciciosNinjaNivel1(args),
 		fundamentos_da_programacao.MenuFundamentosDaProgramcao(args),
-		generalMenu(args),
+		exercicios_ninja_nivel_2.MenuExerciciosNinjaNivel2(args),
 	)
 }
 
