@@ -2,6 +2,7 @@
 package outline
 
 import (
+	agrupamento_de_dados "github.com/fabianoflorentino/aprendago/outline/agrupamento_de_dados"
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	exercicios_ninja_nivel_2 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	exercicios_ninja_nivel_3 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
@@ -19,4 +20,5 @@ func Outline() {
 	exercicios_ninja_nivel_2.ExerciciosNinjaNivel2()
 	fluxo_de_controle.FluxoDeControle()
 	exercicios_ninja_nivel_3.ExerciciosNinjaNivel3()
+	agrupamento_de_dados.AgrupamentoDeDados()
 }
