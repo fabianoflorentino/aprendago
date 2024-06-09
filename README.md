@@ -45,25 +45,36 @@ go run main.go --help
 ```shell
 Uso: go run main.go [opção]
 
-Exemplos:
-  go run main.go --bem-vindo
+Exemplo:
+	go run main.go --bem-vindo
 
-Opções:
-  --bem-vindo                                      Exibe a mensagem de boas-vindas ao curso Aprenda Go.
-  --porque-go                                      Descreve os benefícios e razões para aprender a linguagem Go.
-  --sucesso                                        Apresenta dicas e estratégias para ter sucesso no curso.
-  --recursos                                       Lista recursos e materiais de apoio para o curso.
-  --como-esse-curso-funciona                       Explica a estrutura e metodologia do curso.
-  --go-playground                                  Fornece informações sobre o uso do Go Playground.
-  --hello-world                                    Detalha o primeiro programa em Go: 'Hello, World!'.
-  --operador-curto-de-declaracao                   Explica o uso do operador curto de declaração em Go.
-  --a-palavra-reservada-var                        Descreve o uso da palavra reservada 'var' em Go.
-  --explorando-tipos                               Explora os diferentes tipos de dados em Go.
-  --valor-zero                                     Discute o conceito de valor zero em Go.
-  --o-pacote-fmt                                   Fornece um resumo do pacote 'fmt' para formatação de E/S.
-  --criando-seu-proprio-tipo                       Detalha como criar seus próprios tipos em Go.
-  --conversao-nao-coercao                          Explica a diferença entre conversão e coerção em Go.
-  --contribua-seu-codigo                           Fornece informações sobre como contribuir com seu próprio código.
+Ajuda:
+
+--outline  Exibe o outline completo do curso.
+--help     Exibe a lista de todas as opções disponíveis.
+
+Capítulo 1: Visão Geral do Curso
+
+  --bem-vindo                  Exibe a mensagem de boas-vindas ao curso Aprenda Go.
+  --porque-go                  Descreve os benefícios e razões para aprender a linguagem Go.
+  --sucesso                    Apresenta dicas e estratégias para ter sucesso no curso.
+  --recursos                   Lista recursos e materiais de apoio para o curso.
+  --como-esse-curso-funciona   Explica a estrutura e metodologia do curso.
+
+Capítulo 2: Variáveis, Valores e Tipos
+
+  --go-playground                  Exibe o Go Playground.
+  --hello-world                    Exibe o Hello World.
+  --operador-curto-de-declaracao   Exibe o operador curto de declaração.
+  --a-palavra-reservada-var        Exibe a palavra reservada var.
+  --explorando-tipos               Exibe como explorar tipos.
+  --valor-zero                     Exibe o valor zero.
+  --o-pacote-fmt                   Exibe o pacote fmt.
+  --criando-seu-proprio-tipo       Exibe como criar seu próprio tipo.
+  --conversao-nao-coercao          Exibe a conversão não coerção.
+
+Capítulo 3: Exercícios Ninja Nível 1
+
   --na-pratica-exercicio-1 --nivel-1               Apresenta o primeiro exercício prático do curso.
   --na-pratica-exercicio-1 --nivel-1 --resolucao   Exibe a resolução do primeiro exercício prático.
   --na-pratica-exercicio-2 --nivel-1               Apresenta o segundo exercício prático do curso.
@@ -76,15 +87,21 @@ Opções:
   --na-pratica-exercicio-5 --nivel-1 --resolucao   Exibe a resolução do quinto exercício prático.
   --na-pratica-exercicio-6 --nivel-1               Apresenta o sexto exercício prático do curso.
   --na-pratica-exercicio-6 --nivel-1 --prova       Exibe a prova do sexto exercício prático.
-  --tipo-booleano                                  Explora o tipo de dados booleano em Go.
-  --como-os-computadores-funcionam                 Descreve o funcionamento dos computadores e sua importância para a programação.
-  --tipos-numericos                                Explora os tipos numéricos em Go.
-  --overflow                                       Discute o conceito de overflow e como ele pode afetar seu código.
-  --tipo-string                                    Explora o tipo de dados string em Go.
-  --sistemas-numericos                             Apresenta os sistemas numéricos e sua importância para a programação.
-  --constantes                                     Detalha o uso de constantes em Go.
-  --iota                                           Explora o uso do identificador iota em Go.
-  --deslocamento-de-bits                           Discute o conceito de deslocamento de bits em Go.
+
+Capítulo 4: Fundamentos da Programação
+
+  --tipo-booleano                    Explora o tipo de dados booleano em Go.
+  --como-os-computadores-funcionam   Descreve o funcionamento dos computadores e sua importância para a programação.
+  --tipos-numericos                  Explora os tipos numéricos em Go.
+  --overflow                         Discute o conceito de overflow e como ele pode afetar seu código.
+  --tipo-string                      Explora o tipo de dados string em Go.
+  --sistemas-numericos               Apresenta os sistemas numéricos e sua importância para a programação.
+  --constantes                       Detalha o uso de constantes em Go.
+  --iota                             Explora o uso do identificador iota em Go.
+  --deslocamento-de-bits             Discute o conceito de deslocamento de bits em Go.
+
+Capítulo 5: Exercícios Ninja - Nível 2
+
   --na-pratica-exercicio-1 --nivel-2               Apresenta o primeiro exercício prático do nível 2.
   --na-pratica-exercicio-1 --nivel-2 --resolucao   Exibe a resolução do primeiro exercício prático do nível 2.
   --na-pratica-exercicio-2 --nivel-2               Apresenta o segundo exercício prático do nível 2.
@@ -99,15 +116,44 @@ Opções:
   --na-pratica-exercicio-6 --nivel-2 --resolucao   Exibe a resolução do sexto exercício prático do nível 2.
   --na-pratica-exercicio-7 --nivel-2               Apresenta o sétimo exercício prático do nível 2.
   --na-pratica-exercicio-7 --nivel-2 --prova       Exibe a prova do sétimo exercício prático do nível 2.
-  --entendendo-fluxo-de-controle                   Explica o conceito de fluxo de controle em Go.
-  --loops-inicializacao-condicao-pos               Detalha o uso de loops com inicialização, condição e pós em Go.
-  --loops-nested-loop                              Explora o conceito de loops aninhados em Go.
-  --loops-a-declaracao-for                         Apresenta a declaração for em Go.
-  --loops-break-e-continue                         Discute as instruções break e continue em loops em Go.
-  --loops-utilizando-ascii                         Desafio surpresa: utilize ASCII para exibir texto em Go.
-  --loops-utilizando-ascii --resolucao             Desafio surpresa: utilize ASCII para exibir texto em Go.
-  --outline                                        Exibe o outline completo do curso.
-  --help                                           Exibe a lista de todas as opções disponíveis.
+
+Capípulo 6: Fluxo de Controle
+
+  --entendendo-fluxo-de-controle           Explica o conceito de fluxo de controle em Go.
+  --loops-inicializacao-condicao-pos       Detalha o uso de loops com inicialização, condição e pós em Go.
+  --loops-nested-loop                      Explora o conceito de loops aninhados em Go.
+  --loops-a-declaracao-for                 Apresenta a declaração for em Go.
+  --loops-break-e-continue                 Discute as instruções break e continue em loops em Go.
+  --loops-utilizando-ascii                 Desafio surpresa: utilize ASCII para exibir texto em Go.
+  --loops-utilizando-ascii --resolucao     Desafio surpresa: utilize ASCII para exibir texto em Go.
+  --condicionais-a-declaracao-if           Apresenta a declaração if em Go.
+  --condicionais-if-else-if-else           Detalha a declaração if-else-if-else em Go.
+  --condicionais-a-declaracao-switch       Apresenta a declaração switch em Go.
+  --condicionais-a-declaracao-switch-pt2   Detalha a declaração switch em Go.
+  --operadores-logicos-condicionais        Explora os operadores lógicos condicionais em Go.
+
+Capítulo 7: Exercícios Ninja Nível 3
+
+  --na-pratica-exercicio-1 --nivel-3                Apresenta o primeiro exercício prático do nível 3.
+  --na-pratica-exercicio-1 --nivel-3 --resolucao    Exibe a resolução do primeiro exercício prático do nível 3.
+  --na-pratica-exercicio-2 --nivel-3                Apresenta o segundo exercício prático do nível 3.
+  --na-pratica-exercicio-2 --nivel-3 --resolucao    Exibe a resolução do segundo exercício prático do nível 3.
+  --na-pratica-exercicio-3 --nivel-3                Apresenta o terceiro exercício prático do nível 3.
+  --na-pratica-exercicio-3 --nivel-3 --resolucao    Exibe a resolução do terceiro exercício prático do nível 3.
+  --na-pratica-exercicio-4 --nivel-3                Apresenta o quarto exercício prático do nível 3.
+  --na-pratica-exercicio-4 --nivel-3 --resolucao    Exibe a resolução do quarto exercício prático do nível 3.
+  --na-pratica-exercicio-5 --nivel-3                Apresenta o quinto exercício prático do nível 3.
+  --na-pratica-exercicio-5 --nivel-3 --resolucao    Exibe a resolução do quinto exercício prático do nível 3.
+  --na-pratica-exercicio-6 --nivel-3                Apresenta o sexto exercício prático do nível 3.
+  --na-pratica-exercicio-6 --nivel-3 --resolucao    Exibe a resolução do sexto exercício prático do nível 3.
+  --na-pratica-exercicio-7 --nivel-3                Apresenta o sétimo exercício prático do nível 3.
+  --na-pratica-exercicio-7 --nivel-3 --resolucao    Exibe a resolução do sétimo exercício prático do nível 3.
+  --na-pratica-exercicio-8 --nivel-3                Apresenta o oitavo exercício prático do nível 3.
+  --na-pratica-exercicio-8 --nivel-3 --resolucao    Exibe a resolução do oitavo exercício prático do nível 3.
+  --na-pratica-exercicio-9 --nivel-3                Apresenta o nono exercício prático do nível 3.
+  --na-pratica-exercicio-9 --nivel-3 --resolucao    Exibe a resolução do nono exercício prático do nível 3.
+  --na-pratica-exercicio-10 --nivel-3               Apresenta o décimo exercício prático do nível 3.
+  --na-pratica-exercicio-10 --nivel-3 --resolucao   Exibe a resolução do décimo exercício prático do nível 3
 ```
 
 ### Uso Contianer
