@@ -46,7 +46,7 @@ go run main.go --help
 Uso: go run main.go [opção]
 
 Exemplo:
-	go run main.go --bem-vindo
+go run main.go --bem-vindo
 
 Ajuda:
 
