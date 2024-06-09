@@ -2,7 +2,7 @@ package outline
 
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
-func MenuVisaoGeralDoCurso(args []string) []format.MenuOptions {
+func MenuVisaoGeralDoCurso([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--bem-vindo", ExecFunc: func() { BemVindo() }},
 		{Options: "--porque-go", ExecFunc: func() { PorQueGo() }},

@@ -2,7 +2,7 @@ package outline
 
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
-func MenuVariaveisValoresTipos(args []string) []format.MenuOptions {
+func MenuVariaveisValoresTipos([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--go-playground", ExecFunc: func() { GoPlayground() }},
 		{Options: "--hello-world", ExecFunc: func() { HelloWorld() }},

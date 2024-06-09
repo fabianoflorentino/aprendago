@@ -2,7 +2,7 @@ package outline
 
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
-func MenuExerciciosNinjaNivel1(args []string) []format.MenuOptions {
+func MenuExerciciosNinjaNivel1([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--na-pratica-exercicio-1 --nivel-1", ExecFunc: func() { NaPraticaExercicio1() }},
 		{Options: "--na-pratica-exercicio-1 --nivel-1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
