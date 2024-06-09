@@ -3,8 +3,10 @@ package outline
 import (
 	"fmt"
 
+	outline "github.com/fabianoflorentino/aprendago/outline"
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	format "github.com/fabianoflorentino/aprendago/outline/format"
+	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
@@ -17,7 +19,16 @@ func Menu(args []string) {
 		variaveis_valores_tipos.MenuVariaveisValoresTipos(args),
 		visao_geral_do_curso.MenuVisaoGeralDoCurso(args),
 		exercicios_ninja_nivel_1.MenuExerciciosNinjaNivel1(args),
+		fundamentos_da_programacao.MenuFundamentosDaProgramcao(args),
+		generalMenu(args),
 	)
+}
+
+func generalMenu([]string) []format.MenuOptions {
+	return []format.MenuOptions{
+		{Options: "--help", ExecFunc: func() { ShowHelpMe() }},
+		{Options: "--outline", ExecFunc: func() { outline.Outline() }},
+	}
 }
 
 func buildMenu(args []string, options ...[]format.MenuOptions) {
