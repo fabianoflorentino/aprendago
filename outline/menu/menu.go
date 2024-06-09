@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	outline "github.com/fabianoflorentino/aprendago/outline"
+	agrupamento_de_dados "github.com/fabianoflorentino/aprendago/outline/agrupamento_de_dados"
 	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	exercicios_ninja_nivel_2 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	exercicios_ninja_nivel_3 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
@@ -27,6 +28,7 @@ func Menu(args []string) {
 		exercicios_ninja_nivel_2.MenuExerciciosNinjaNivel2(args),
 		fluxo_de_controle.MenuFluxoDeControle(args),
 		exercicios_ninja_nivel_3.MenuExerciciosNinjaNivel3(args),
+		agrupamento_de_dados.MenuAgrupamentoDeDados(args),
 	)
 }
 
