@@ -10,7 +10,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	format "github.com/fabianoflorentino/aprendago/outline/format"
-	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
+	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
