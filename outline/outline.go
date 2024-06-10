@@ -9,7 +9,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
-	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
+	"github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
 
 func Outline() {

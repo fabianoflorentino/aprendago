@@ -12,7 +12,7 @@ import (
 	format "github.com/fabianoflorentino/aprendago/outline/format"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
-	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
+	"github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
 
 func Menu(args []string) {
