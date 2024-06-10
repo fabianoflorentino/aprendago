@@ -1,4 +1,4 @@
-package outline
+package fluxo_de_controle
 
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 

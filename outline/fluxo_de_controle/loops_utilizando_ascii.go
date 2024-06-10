@@ -1,4 +1,4 @@
-package outline
+package fluxo_de_controle
 
 import (
 	"fmt"
