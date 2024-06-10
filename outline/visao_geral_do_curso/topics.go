@@ -1,4 +1,4 @@
-package outline
+package visao_geral_do_curso
 
 import "fmt"
 
