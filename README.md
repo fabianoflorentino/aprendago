@@ -151,6 +151,9 @@ Capítulo 7: Exercícios Ninja Nível 3
 
 Capítulo 8: Agrupamento de Dados
 
-  --array                    Apresenta o tópico Array.
-  --slice-literal-composta   Apresenta o tópico Slice Literal Composta.
+  --array                                                  Apresenta o tópico Array.
+  --slice-literal-composta                                 Apresenta o tópico Slice Literal Composta.
+  --slice-for-range                                        Apresenta o tópico Slice: for range.
+  --slice-fatiando-ou-deletando-de-uma-fatia               Apresenta o tópico Slice: fatiando ou deletando de uma fatia.
+  --slice-fatiando-ou-deletando-de-uma-fatia --resolucao   Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia.
 ```
