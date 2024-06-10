@@ -1,4 +1,4 @@
-package outline
+package exercicios_ninja_nivel_2
 
 import "fmt"
 
