@@ -1,4 +1,4 @@
-package outline
+package format
 
 import (
 	"fmt"

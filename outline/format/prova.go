@@ -1,5 +1,5 @@
 // Pacote com funções para criar um questionário, coletar respostas e validar as respostas
-package outline
+package format
 
 import (
 	"errors"
