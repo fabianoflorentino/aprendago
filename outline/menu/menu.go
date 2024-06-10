@@ -11,7 +11,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	format "github.com/fabianoflorentino/aprendago/outline/format"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
-	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
+	"github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
 	visao_geral_do_curso "github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
 
