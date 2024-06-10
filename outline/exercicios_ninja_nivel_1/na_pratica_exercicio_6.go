@@ -1,5 +1,5 @@
 // Prova para validar o conhecimento dos primeiros capitulos do curso
-package outline
+package exercicios_ninja_nivel_1
 
 import (
 	"fmt"
