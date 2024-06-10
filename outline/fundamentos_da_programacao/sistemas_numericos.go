@@ -1,4 +1,4 @@
-package outline
+package fundamentos_da_programacao
 
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 
