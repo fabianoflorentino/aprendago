@@ -8,4 +8,5 @@ func AgrupamentoDeDados() {
 	Array()
 	SliceLiteralComposta()
 	SliceForRange()
+	SliceFatiandoOuDeletandoDeUmaFatia()
 }
