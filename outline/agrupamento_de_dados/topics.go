@@ -1,4 +1,4 @@
-package outline
+package agrupamento_de_dados
 
 import "fmt"
 
