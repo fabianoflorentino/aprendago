@@ -1,7 +1,7 @@
 // Explorando tipos
 package variaveis_valores_tipos
 
-import format "github.com/fabianoflorentino/aprendago/outline/format"
+import "github.com/fabianoflorentino/aprendago/outline/format"
 
 // ExplorandoTipos
 func ExplorandoTipos() {

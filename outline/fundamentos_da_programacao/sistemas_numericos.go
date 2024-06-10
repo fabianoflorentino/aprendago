@@ -1,6 +1,6 @@
 package fundamentos_da_programacao
 
-import format "github.com/fabianoflorentino/aprendago/outline/format"
+import "github.com/fabianoflorentino/aprendago/outline/format"
 
 func SistemasNumericos() {
 	topic := format.OutlineContent{

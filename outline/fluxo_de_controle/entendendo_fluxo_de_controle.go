@@ -1,6 +1,6 @@
 package fluxo_de_controle
 
-import format "github.com/fabianoflorentino/aprendago/outline/format"
+import "github.com/fabianoflorentino/aprendago/outline/format"
 
 func EntendendoFluxoDeControle() {
 	topic := format.OutlineContent{

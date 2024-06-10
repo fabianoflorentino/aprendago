@@ -1,6 +1,6 @@
 package visao_geral_do_curso
 
-import format "github.com/fabianoflorentino/aprendago/outline/format"
+import "github.com/fabianoflorentino/aprendago/outline/format"
 
 func Sucesso() {
 	topic := format.OutlineContent{

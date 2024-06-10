@@ -1,6 +1,6 @@
 package exercicios_ninja_nivel_1
 
-import format "github.com/fabianoflorentino/aprendago/outline/format"
+import "github.com/fabianoflorentino/aprendago/outline/format"
 
 func MenuExerciciosNinjaNivel1([]string) []format.MenuOptions {
 	return []format.MenuOptions{

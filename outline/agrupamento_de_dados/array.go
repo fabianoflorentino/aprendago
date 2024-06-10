@@ -1,6 +1,6 @@
 package agrupamento_de_dados
 
-import format "github.com/fabianoflorentino/aprendago/outline/format"
+import "github.com/fabianoflorentino/aprendago/outline/format"
 
 func Array() {
 	topic := format.OutlineContent{
