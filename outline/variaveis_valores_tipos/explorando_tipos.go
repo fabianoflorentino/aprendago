@@ -1,5 +1,5 @@
 // Explorando tipos
-package outline
+package variaveis_valores_tipos
 
 import format "github.com/fabianoflorentino/aprendago/outline/format"
 

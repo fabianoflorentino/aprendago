@@ -1,4 +1,4 @@
-package outline
+package variaveis_valores_tipos
 
 import (
 	"fmt"
