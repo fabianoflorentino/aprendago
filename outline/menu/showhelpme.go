@@ -3,9 +3,9 @@ package outline
 import (
 	"fmt"
 
-	agrupamento_de_dados "github.com/fabianoflorentino/aprendago/outline/agrupamento_de_dados"
-	exercicios_ninja_nivel_1 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
-	exercicios_ninja_nivel_2 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
+	"github.com/fabianoflorentino/aprendago/outline/agrupamento_de_dados"
+	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
+	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	exercicios_ninja_nivel_3 "github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
 	fluxo_de_controle "github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	fumdamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
