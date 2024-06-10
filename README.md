@@ -151,5 +151,6 @@ Capítulo 7: Exercícios Ninja Nível 3
 
 Capítulo 8: Agrupamento de Dados
 
-  --array   Apresenta o tópico Array.
+  --array                    Apresenta o tópico Array.
+  --slice-literal-composta   Apresenta o tópico Slice Literal Composta.
 ```
