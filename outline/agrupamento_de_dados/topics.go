@@ -7,4 +7,5 @@ func AgrupamentoDeDados() {
 
 	Array()
 	SliceLiteralComposta()
+	SliceForRange()
 }
