@@ -30,17 +30,11 @@ docker compose logs -f
 
 ## Uso
 
-### Container
-
 ```shell
 docker compose exec -it aprendago /bin/sh -c 'go run main.go --help'
 ```
 
-### Local
-
-```shell
-go run main.go --help
-```
+## Opções
 
 ```shell
 Uso: go run main.go [opção]
@@ -154,32 +148,8 @@ Capítulo 7: Exercícios Ninja Nível 3
   --na-pratica-exercicio-9 --nivel-3 --resolucao    Exibe a resolução do nono exercício prático do nível 3.
   --na-pratica-exercicio-10 --nivel-3               Apresenta o décimo exercício prático do nível 3.
   --na-pratica-exercicio-10 --nivel-3 --resolucao   Exibe a resolução do décimo exercício prático do nível 3
-```
 
-### Uso Contianer
+Capítulo 8: Agrupamento de Dados
 
-```shell
-docker compose exec -it aprendago /bin/sh -c 'go run main.go --bem-vindo'
-```
-
-### Uso Local
-
-```shell
-go run main.go --bem-vindo
-```
-
-```shell
-Aprenda GO
-
-Bem vindo
-
-- Bem vindo ao curso!
-- Eu sou...
-- Go foi criado por gente foda que criou o Unix, B, UTF-8...
-- Em 2006 o google queria...
-- É uma lingguagem que vem crescrendo horrores...
-- Nesse curso você vai aprender...
-- O curriculo que vamos estudar...
-- Para os novos na programação... Para os programadores experientes...
-- Participe!
+  --array   Apresenta o tópico Array.
 ```
