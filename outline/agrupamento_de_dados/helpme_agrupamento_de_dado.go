@@ -9,6 +9,7 @@ import (
 func HelpMeAgrupamentoDeDados() {
 	hlp := []helpme.HelpMe{
 		{Flag: "--array", Description: "Apresenta o tópico Array.", Width: 0},
+		{Flag: "--slice-literal-composta", Description: "Apresenta o tópico Slice Literal Composta.", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 8: Agrupamento de Dados")
