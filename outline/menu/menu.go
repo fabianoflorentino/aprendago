@@ -8,7 +8,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
-	fluxo_de_controle "github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
+	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	format "github.com/fabianoflorentino/aprendago/outline/format"
 	fundamentos_da_programacao "github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	variaveis_valores_tipos "github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
