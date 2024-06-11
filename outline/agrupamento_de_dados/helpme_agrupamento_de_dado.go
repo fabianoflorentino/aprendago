@@ -14,6 +14,7 @@ func HelpMeAgrupamentoDeDados() {
 		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia", Description: "Apresenta o tópico Slice: fatiando ou deletando de uma fatia.", Width: 0},
 		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao", Description: "Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia.", Width: 0},
 		{Flag: "--slice-anexando-a-uma-slice", Description: "Apresenta o tópico Slice: anexando a uma slice.", Width: 0},
+		{Flag: "--slice-make", Description: "Apresenta o tópico Slice: Make.", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 8: Agrupamento de Dados")

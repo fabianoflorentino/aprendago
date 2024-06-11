@@ -10,4 +10,5 @@ func AgrupamentoDeDados() {
 	SliceForRange()
 	SliceFatiandoOuDeletandoDeUmaFatia()
 	SliceAnexandoASlice()
+	SliceMake()
 }
