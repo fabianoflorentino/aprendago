@@ -12,4 +12,5 @@ func AgrupamentoDeDados() {
 	SliceAnexandoASlice()
 	SliceMake()
 	SliceMultiDimensional()
+	SliceASurpresaDoArraySubjacente()
 }
