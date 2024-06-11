@@ -3,11 +3,11 @@ package fundamentos_da_programacao
 import (
 	"fmt"
 
-	helpme "github.com/fabianoflorentino/aprendago/outline/format"
+	"github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func HelpMeFundamentosDaProgramacao() {
-	hlp := []helpme.HelpMe{
+	hlp := []format.HelpMe{
 		{Flag: "--tipo-booleano", Description: "Explora o tipo de dados booleano em Go.", Width: 0},
 		{Flag: "--como-os-computadores-funcionam", Description: "Descreve o funcionamento dos computadores e sua importância para a programação.", Width: 0},
 		{Flag: "--tipos-numericos", Description: "Explora os tipos numéricos em Go.", Width: 0},
@@ -20,5 +20,5 @@ func HelpMeFundamentosDaProgramacao() {
 	}
 
 	fmt.Println("\nCapítulo 4: Fundamentos da Programação")
-	helpme.PrintHelpMe(hlp)
+	format.PrintHelpMe(hlp)
 }

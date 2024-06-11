@@ -3,11 +3,11 @@ package exercicios_ninja_nivel_2
 import (
 	"fmt"
 
-	helpme "github.com/fabianoflorentino/aprendago/outline/format"
+	"github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func HelpMeExerciciosNinjaNivel2() {
-	hlp := []helpme.HelpMe{
+	hlp := []format.HelpMe{
 		{Flag: "--na-pratica-exercicio-1 --nivel-2", Description: "Apresenta o primeiro exercício prático do nível 2.", Width: 0},
 		{Flag: "--na-pratica-exercicio-1 --nivel-2 --resolucao", Description: "Exibe a resolução do primeiro exercício prático do nível 2.", Width: 0},
 		{Flag: "--na-pratica-exercicio-2 --nivel-2", Description: "Apresenta o segundo exercício prático do nível 2.", Width: 0},
@@ -25,5 +25,5 @@ func HelpMeExerciciosNinjaNivel2() {
 	}
 
 	fmt.Println("\nCapítulo 5: Exercícios Ninja - Nível 2")
-	helpme.PrintHelpMe(hlp)
+	format.PrintHelpMe(hlp)
 }

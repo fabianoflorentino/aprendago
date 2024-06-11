@@ -3,12 +3,12 @@ package variaveis_valores_tipos
 import (
 	"fmt"
 
-	helpme "github.com/fabianoflorentino/aprendago/outline/format"
+	"github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func HelpMeVariaveisValoresTipos() {
 
-	hlp := []helpme.HelpMe{
+	hlp := []format.HelpMe{
 		{Flag: "--go-playground", Description: "Exibe o Go Playground.", Width: 0},
 		{Flag: "--hello-world", Description: "Exibe o Hello World.", Width: 0},
 		{Flag: "--operador-curto-de-declaracao", Description: "Exibe o operador curto de declaração.", Width: 0},
@@ -21,5 +21,5 @@ func HelpMeVariaveisValoresTipos() {
 	}
 
 	fmt.Println("\nCapítulo 2: Variáveis, Valores e Tipos")
-	helpme.PrintHelpMe(hlp)
+	format.PrintHelpMe(hlp)
 }
