@@ -25,6 +25,8 @@ Ajuda:
 --help     Exibe a lista de todas as opções disponíveis.
 	`
 
+// ShowHelpMe exibe a lista de todas as opções disponíveis.
+// Esta função é chamada quando o usuário passa a opção --help.
 func ShowHelpMe() {
 	fmt.Println(HEADER)
 	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()

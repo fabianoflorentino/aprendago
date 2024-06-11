@@ -15,9 +15,13 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
 
+// Options é a função principal do pacote menu. Ela é responsável por exibir as opções disponíveis em cada menu.
+// A função Options recebe uma lista de argumentos (args) como parâmetro. Esses argumentos são usados para determinar
 func Options(args []string) {
 	fmt.Printf("Aprenda GO\n\n")
 
+	// A função buildOptions é responsável por construir as opções disponíveis em cada menu.
+	// Ela recebe uma lista de argumentos (args) e uma lista de opções (options) como parâmetros.
 	buildOptions(
 		args,
 		generalOptions(args),
@@ -32,6 +36,8 @@ func Options(args []string) {
 	)
 }
 
+// A função generalOptions retorna uma lista de opções gerais disponíveis em todos os menus.
+// Neste caso, a função retorna duas opções: --help e --outline.
 func generalOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--help", ExecFunc: func() { ShowHelpMe() }},
