@@ -156,4 +156,8 @@ Capítulo 8: Agrupamento de Dados
   --slice-for-range                                        Apresenta o tópico Slice: for range.
   --slice-fatiando-ou-deletando-de-uma-fatia               Apresenta o tópico Slice: fatiando ou deletando de uma fatia.
   --slice-fatiando-ou-deletando-de-uma-fatia --resolucao   Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia.
+  --slice-anexando-a-uma-slice                             Apresenta o tópico Slice: anexando a uma slice.
+  --slice-make                                             Apresenta o tópico Slice: Make.
+  --slice-multi-dimensional                                Apresenta o tópico Slice: Multi Dimensional.
+  --slice-a-surpresa-do-array-subjacente                   Apresenta o tópico Slice: a surpresa do array subjacente.
 ```
