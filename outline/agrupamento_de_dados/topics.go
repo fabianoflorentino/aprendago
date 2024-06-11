@@ -11,4 +11,5 @@ func AgrupamentoDeDados() {
 	SliceFatiandoOuDeletandoDeUmaFatia()
 	SliceAnexandoASlice()
 	SliceMake()
+	SliceMultiDimensional()
 }

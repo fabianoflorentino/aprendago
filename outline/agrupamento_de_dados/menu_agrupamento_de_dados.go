@@ -11,5 +11,6 @@ func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 		{Options: "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao", ExecFunc: func() { ResolucaoFatiaOuDeletandoDeUmaFatia() }},
 		{Options: "--slice-anexando-a-uma-slice", ExecFunc: func() { SliceAnexandoASlice() }},
 		{Options: "--slice-make", ExecFunc: func() { SliceMake() }},
+		{Options: "--slice-multi-dimensional", ExecFunc: func() { SliceMultiDimensional() }},
 	}
 }
