@@ -1,4 +1,4 @@
-package outline
+package menu
 
 import (
 	"fmt"
@@ -15,12 +15,12 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
 
-func Menu(args []string) {
+func Options(args []string) {
 	fmt.Printf("Aprenda GO\n\n")
 
-	buildMenu(
+	buildOptions(
 		args,
-		generalMenu(args),
+		generalOptions(args),
 		variaveis_valores_tipos.MenuVariaveisValoresTipos(args),
 		visao_geral_do_curso.MenuVisaoGeralDoCurso(args),
 		exercicios_ninja_nivel_1.MenuExerciciosNinjaNivel1(args),
@@ -32,7 +32,7 @@ func Menu(args []string) {
 	)
 }
 
-func generalMenu([]string) []format.MenuOptions {
+func generalOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--help", ExecFunc: func() { ShowHelpMe() }},
 		{Options: "--outline", ExecFunc: func() { outline.Outline() }},
@@ -49,7 +49,7 @@ func generalMenu([]string) []format.MenuOptions {
 
 // Se nenhuma correspondência for encontrada, a função imprime o cabeçalho do menu usando fmt.Print(headerMenu).
 // Isso pode ser útil para exibir uma mensagem de erro ou mostrar as opções disponíveis novamente.
-func buildMenu(args []string, options ...[]format.MenuOptions) {
+func buildOptions(args []string, options ...[]format.MenuOptions) {
 	var opt []format.MenuOptions
 
 	// options ...[]format.MenuOptions: Aqui, options é um parâmetro de função que permite receber um número variável de argumentos do tipo []format.MenuOptions.
