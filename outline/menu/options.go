@@ -40,7 +40,7 @@ func Options(args []string) {
 // Neste caso, a função retorna duas opções: --help e --outline.
 func generalOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
-		{Options: "--help", ExecFunc: func() { ShowHelpMe() }},
+		{Options: "--help", ExecFunc: func() { HelpMe() }},
 		{Options: "--outline", ExecFunc: func() { outline.Outline() }},
 	}
 }
