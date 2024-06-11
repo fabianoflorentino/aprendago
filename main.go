@@ -4,15 +4,15 @@ package main
 import (
 	"os"
 
-	outline "github.com/fabianoflorentino/aprendago/outline/menu"
+	"github.com/fabianoflorentino/aprendago/outline/menu"
 )
 
 func main() {
 	if len(os.Args) < 2 {
-		outline.ShowHelpMe()
+		menu.ShowHelpMe()
 
 		return
 	} else {
-		outline.Menu(os.Args[1:])
+		menu.Options(os.Args[1:])
 	}
 }
