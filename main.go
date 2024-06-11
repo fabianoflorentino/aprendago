@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		menu.ShowHelpMe()
+		menu.HelpMe()
 
 		return
 	} else {

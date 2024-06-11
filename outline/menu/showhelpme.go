@@ -27,7 +27,7 @@ Ajuda:
 
 // ShowHelpMe exibe a lista de todas as opções disponíveis.
 // Esta função é chamada quando o usuário passa a opção --help.
-func ShowHelpMe() {
+func HelpMe() {
 	fmt.Println(HEADER)
 	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()
 	variaveis_valores_tipos.HelpMeVariaveisValoresTipos()
