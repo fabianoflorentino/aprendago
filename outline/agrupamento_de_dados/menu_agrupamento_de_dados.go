@@ -13,5 +13,6 @@ func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 		{Options: "--slice-make", ExecFunc: func() { SliceMake() }},
 		{Options: "--slice-multi-dimensional", ExecFunc: func() { SliceMultiDimensional() }},
 		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { SliceASurpresaDoArraySubjacente() }},
+		{Options: "--maps-introducao", ExecFunc: func() { MapsIntroducao() }},
 	}
 }

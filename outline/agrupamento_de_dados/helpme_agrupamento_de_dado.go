@@ -17,6 +17,7 @@ func HelpMeAgrupamentoDeDados() {
 		{Flag: "--slice-make", Description: "Apresenta o tópico Slice: Make.", Width: 0},
 		{Flag: "--slice-multi-dimensional", Description: "Apresenta o tópico Slice: Multi Dimensional.", Width: 0},
 		{Flag: "--slice-a-surpresa-do-array-subjacente", Description: "Apresenta o tópico Slice: a surpresa do array subjacente.", Width: 0},
+		{Flag: "--maps-introducao", Description: "Apresenta o tópico Maps: introdução.", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 8: Agrupamento de Dados")
