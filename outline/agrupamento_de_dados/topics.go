@@ -13,4 +13,5 @@ func AgrupamentoDeDados() {
 	SliceMake()
 	SliceMultiDimensional()
 	SliceASurpresaDoArraySubjacente()
+	MapsIntroducao()
 }
