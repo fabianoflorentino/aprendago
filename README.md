@@ -160,4 +160,5 @@ Capítulo 8: Agrupamento de Dados
   --slice-make                                             Apresenta o tópico Slice: Make.
   --slice-multi-dimensional                                Apresenta o tópico Slice: Multi Dimensional.
   --slice-a-surpresa-do-array-subjacente                   Apresenta o tópico Slice: a surpresa do array subjacente.
+  --maps-introducao                                        Apresenta o tópico Maps: introdução.
 ```
