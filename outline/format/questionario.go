@@ -132,3 +132,99 @@ func validaOpcao(resposta, opcoes string) bool {
 	}
 	return false
 }
+
+/**
+1. Interfaces
+
+As interfaces permitem a definição de contratos que os tipos concretos devem seguir,
+promovendo a abstração e a capacidade de intercambiar implementações.
+
+CriaQuestionario: define um contrato para a criação de questionários.
+
+- Método Cria: Permite criar um questionário a partir de uma lista de perguntas (Questionario).
+Isso facilita a troca da implementação concreta sem alterar o código que usa essa interface.
+
+ColetaRespostas: define um contrato para a coleta de respostas de um questionário.
+
+- Método Coleta: Permite coletar as respostas dos usuários para um questionário. Através da interface,
+podemos mudar como as respostas são coletadas (ex. input manual, leitura de um arquivo) sem
+afetar o restante do código.
+
+ValidaResposta: define um contrato para a validação das respostas de um questionário.
+
+- Método Valida: Permite validar as respostas do usuário contra um gabarito fornecido.
+A interface permite a alteração da lógica de validação (ex. diferentes critérios de correção)
+sem impactar o restante do sistema.
+
+2. Structs
+
+As structs fornecem uma estrutura para armazenar dados relacionados a perguntas e respostas, além
+de implementações concretas das interfaces.
+
+Questionario: representa uma pergunta do questionário
+
+Campos:
+  * Numero: Armazena o número da pergunta
+	* Pergunta: Armazena o texto da pergunta
+	* Opcoes: opções disponíveis de resposta
+
+Resposta: representa a resposta do usuário
+
+Campos:
+	* Numero: Armazena o número da pergunta
+	* Resposta: Armazena a resposta dada pelo usuário
+	* Status: Armazena o status da resposta (correta/incorreta)
+
+ServicoQuestionario: implementa a interface CriaQuestionario
+
+Método Cria: Responsável pela criação do questionário. Implementa o método da interface
+CriaQuestionario que cria um questionário a partir de um slice de Questionario.
+
+ServicoResposta: implementa a interface ColetaRespostas e ValidaResposta
+
+Método Coleta: Responsável pela coleta das respostas do usuário. Implementa o método da interface
+ColetaRespostas permitindo uma abordage flexível para coleta de respostas.
+
+Método Valida: Responsável pela validação das respostas do usuário. Implementa o método da interface
+ValidaResposta que valida as respostas do usuário contra um gabarito fornecido.
+
+3. Funções
+As funções realizam operações específicas que são necessárias para o fluxo de trabalho do questionário, tais como validação de opções e coleta de respostas.
+
+opcaoValida
+
+Verifica se uma resposta está entre as opções válidas para uma pergunta.
+
+Parâmetros resposta, opcoes: Recebe a resposta fornecida pelo usuário e as opções válidas.
+Retorna bool: Retorna true se a resposta está entre as opções válidas, false caso contrário. Facilita a validação de respostas.
+
+
+Exemplo de Uso: Cria instâncias dos serviços (QuestionnaireService e AnswerService),
+cria um questionário, coleta respostas e valida essas respostas. Demonstra como as
+interfaces permitem a substituição e a flexibilidade das implementações concretas.
+
+---
+Benefícios das Interfaces e Estruturas na Refatoração
+
+Modularidade:
+
+As interfaces separam o contrato da implementação, permitindo a troca de uma
+implementação por outra sem alterar o código dependente.
+
+Testabilidade:
+
+Facilita a criação de mocks e stubs para testes unitários, permitindo testar
+componentes de forma isolada.
+
+Manutenibilidade:
+
+O código é mais fácil de manter, pois a alteração de uma implementação concreta não
+afeta a interface ou outras implementações que seguem o mesmo contrato.
+
+Flexibilidade:
+
+Permite a adição de novas formas de coleta, criação e validação sem mudar a estrutura
+principal do código. Por exemplo, podemos adicionar um novo AnswerCollector que coleta
+respostas de uma API em vez de fmt.Scan.
+---
+**/
