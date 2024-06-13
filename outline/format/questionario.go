@@ -99,10 +99,10 @@ func (sr *ServicoResposta) Valida(resposta []Resposta, gabarito []Resposta) {
 	// Adiciona a resposta ao slice de RespostaValida
 	for i, rsp := range resposta {
 		if rsp.Resposta == gabarito[i].Resposta {
-			respostaValida = append(respostaValida, Resposta{rsp.Numero, rsp.Resposta, "correta"})
+			respostaValida = append(respostaValida, Resposta{Numero: rsp.Numero, Resposta: rsp.Resposta, Status: "correta"})
 			respostaCorreta++
 		} else {
-			respostaValida = append(respostaValida, Resposta{rsp.Numero, rsp.Resposta, "incorreta"})
+			respostaValida = append(respostaValida, Resposta{Numero: rsp.Numero, Resposta: rsp.Resposta, Status: "incorreta"})
 		}
 	}
 
