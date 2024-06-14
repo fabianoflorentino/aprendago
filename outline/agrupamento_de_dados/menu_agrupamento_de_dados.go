@@ -14,5 +14,6 @@ func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 		{Options: "--slice-multi-dimensional", ExecFunc: func() { SliceMultiDimensional() }},
 		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { SliceASurpresaDoArraySubjacente() }},
 		{Options: "--maps-introducao", ExecFunc: func() { MapsIntroducao() }},
+		{Options: "--maps-range-e-deletando", ExecFunc: func() { MapRangeEDeletando() }},
 	}
 }
