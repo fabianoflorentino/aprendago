@@ -67,12 +67,15 @@ func RespondaAProva() {
 		{Numero: "26.", Resposta: "2"}, {Numero: "27.", Resposta: "1"}, {Numero: "28.", Resposta: "1"}, {Numero: "29.", Resposta: "1"}, {Numero: "30.", Resposta: "1"}, {Numero: "31.", Resposta: "1"},
 	}
 
-	perguntas := format.CriarQuestionario(questionario)
-	respostas, err := format.ColetarRespostas(perguntas)
+	// Cria o questionário
+	sq := new(format.ServicoQuestionario)
+	sr := new(format.ServicoResposta)
+
+	prova := sq.Cria(questionario)
+	respostas, err := sr.Coleta(prova)
 	if err != nil {
 		fmt.Println("Erro ao coletar respostas:", err)
-		return
 	}
 
-	format.ValidarRespostas(respostas, gabarito)
+	sr.Valida(respostas, gabarito)
 }
