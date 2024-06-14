@@ -52,7 +52,7 @@ type ValidaResposta interface {
 
 // Metodo do tipo ServicoQuestionario que implementa a interface CriaQuestionario com o método Cria
 // Recebe um slice de Questionario e retorna um slice de Questionario
-func (sq *ServicoQuestionario) Cria(questionario []Questionario) []Questionario {
+func (sq ServicoQuestionario) Cria(questionario []Questionario) []Questionario {
 	var prova []Questionario
 
 	// Itera sobre o slice de Questionario e adiciona as perguntas e opções de respostas
@@ -65,7 +65,7 @@ func (sq *ServicoQuestionario) Cria(questionario []Questionario) []Questionario 
 
 // Metodo do tipo ServicoResposta que implementa a interface ColetaRespostas com o método Coleta
 // Recebe um slice de Questionario e retorna um slice de Resposta e um erro
-func (sr *ServicoResposta) Coleta(questionario []Questionario) ([]Resposta, error) {
+func (sr ServicoResposta) Coleta(questionario []Questionario) ([]Resposta, error) {
 	var listaResposta []Resposta
 	var resposta string
 
