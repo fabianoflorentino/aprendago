@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Questionario de uma prova represnsta uma pergunta com suas opções de resposta.
+// Questionario de uma prova representa uma pergunta com suas opções de resposta.
 type TipoQuestionario struct {
 	Numero   string // Número da pergunta
 	Pergunta string // Texto da pergunta
