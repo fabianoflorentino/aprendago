@@ -7,6 +7,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
+	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_4"
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
@@ -37,4 +38,5 @@ func HelpMe() {
 	fluxo_de_controle.HelpMeFluxoDeControle()
 	exercicios_ninja_nivel_3.HelpMeExerciciosNinjaNivel3()
 	agrupamento_de_dados.HelpMeAgrupamentoDeDados()
+	exercicios_ninja_nivel_4.HelpMeExerciciosNinjaNivel4()
 }
