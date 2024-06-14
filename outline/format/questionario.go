@@ -7,14 +7,14 @@ import (
 )
 
 // Questionario de uma prova representa uma pergunta com suas opções de resposta.
-type TipoQuestionario struct {
+type Questionario struct {
 	Numero   string // Número da pergunta
 	Pergunta string // Texto da pergunta
 	Opcoes   string // Opções de resposta
 }
 
 // Resposta de uma pergunta armazena a resposta dada pelo usuário e seu status.
-type TipoResposta struct {
+type Resposta struct {
 	Numero   string // Número da pergunta
 	Resposta string // Resposta dada pelo usuário
 	Status   string // Opções de resposta disponíveis
@@ -106,15 +106,17 @@ func (sr *ServicoResposta) Valida(resposta []Resposta, gabarito []Resposta) {
 		}
 	}
 
-	fmt.Printf("\nResultado da prova:\n")
+	fmt.Printf("\nResultado da prova:\n\n")
 	fmt.Printf("Total de respostas corretas %d de %d\n", respostaCorreta, len(gabarito))
 
 	// Calcula a porcentagem de acertos do usuário na prova
 	resultadoProva := float64(respostaCorreta) / float64(len(gabarito)) * 100
-	fmt.Printf("Porcentagem de acertos %.2f%%\n", resultadoProva)
+	fmt.Printf("Porcentagem de acertos %.2f%%\n\n", resultadoProva)
 
 	for _, rsp := range respostaValida {
-		fmt.Printf("Questão %s: Resposta %s - %s\n", rsp.Numero, rsp.Resposta, rsp.Status)
+		rspNumero := strings.Trim(rsp.Numero, ".")
+
+		fmt.Printf("Questão %s: Resposta: %s - %s\n", rspNumero, rsp.Resposta, rsp.Status)
 	}
 }
 
