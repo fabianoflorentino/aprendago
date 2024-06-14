@@ -6,5 +6,5 @@ func ExerciciosNinjaNivel4() {
 	fmt.Printf("09 - Exercícios Ninja Nível 4\n\n")
 
 	NaPraticaExercicio1()
-	ResolucaoNaPraticaExercicio1()
+	NaPraticaExercicio2()
 }
