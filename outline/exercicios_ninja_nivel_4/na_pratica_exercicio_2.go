@@ -26,10 +26,10 @@ func ResolucaoNaPraticaExercicio2() {
 	slice := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
 	for _, value := range slice {
-		if value == len(slice) {
-			fmt.Printf("%v", value)
-		} else {
+		if value != len(slice) {
 			fmt.Printf("%v, ", value)
+		} else {
+			fmt.Printf("%v", value)
 		}
 	}
 
