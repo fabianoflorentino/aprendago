@@ -172,3 +172,44 @@ Capítulo 8: Agrupamento de Dados
   --na-pratica-exercicio-3 --nivel-4               Apresenta o terceiro exercício prático do curso.
   --na-pratica-exercicio-3 --nivel-4 --resolucao   Exibe a resolução do terceiro exercício prático.
 ```
+
+## Diagrama
+
+```mermaid
+graph LR
+
+aprendago(Aprenda GO)
+outline(Outline)
+cap1(1. Visão Geral do Curso)
+cap11(1.1 Bem-vindo)
+cap12(1.2 Porque Go)
+cap13(1.3 Sucesso)
+cap14(1.4 Recursos)
+cap15(1.5 Como Esse Curso Funciona)
+cap2(2. Variáveis, Valores e Tipos)
+cap3(3. Exercícios Ninja Nível 1)
+cap4(4. Fundamentos da Programação)
+cap5(5. Exercícios Ninja - Nível 2)
+cap6(6. Fluxo de Controle)
+cap7(7. Exercícios Ninja Nível 3)
+cap8(8. Agrupamento de Dados)
+cap9(9. Exercícios Ninja Nível 4)
+
+aprendago --> outline
+outline --> cap1
+cap1 --> cap11
+cap1 --> cap12
+cap1 --> cap13
+cap1 --> cap14
+cap1 --> cap15
+outline --> cap2
+outline --> cap3
+outline --> cap4
+outline --> cap5
+outline --> cap6
+outline --> cap7
+outline --> cap8
+outline --> cap9
+
+classDef default fill: #3399FF, stroke: #b3e6ff, color: #ffffff
+```
