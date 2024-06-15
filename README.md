@@ -161,4 +161,14 @@ Capítulo 8: Agrupamento de Dados
   --slice-multi-dimensional                                Apresenta o tópico Slice: Multi Dimensional.
   --slice-a-surpresa-do-array-subjacente                   Apresenta o tópico Slice: a surpresa do array subjacente.
   --maps-introducao                                        Apresenta o tópico Maps: introdução.
+  --maps-range-e-deletando                                 Apresenta o tópico Maps: Range e Deletando.
+
+09 - Exercícios Ninja Nível 4
+
+  --na-pratica-exercicio-1 --nivel-4               Apresenta o primeiro exercício prático do curso.
+  --na-pratica-exercicio-1 --nivel-4 --resolucao   Exibe a resolução do primeiro exercício prático.
+  --na-pratica-exercicio-2 --nivel-4               Apresenta o segundo exercício prático do curso.
+  --na-pratica-exercicio-2 --nivel-4 --resolucao   Exibe a resolução do segundo exercício prático.
+  --na-pratica-exercicio-3 --nivel-4               Apresenta o terceiro exercício prático do curso.
+  --na-pratica-exercicio-3 --nivel-4 --resolucao   Exibe a resolução do terceiro exercício prático.
 ```
