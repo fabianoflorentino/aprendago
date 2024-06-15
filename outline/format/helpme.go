@@ -7,18 +7,21 @@ import (
 	"strings"
 )
 
+// Template para formatar a saída de ajuda. O modelo usa a função printf para formatar a saída.
 var templateHelpMe = `
 {{- range .}}
   {{ printf "%-*s" .Width .Flag }}   {{ .Description | indent .Width}}
 {{- end }}
 `
 
+// HelpMe é uma estrutura que representa uma opção de ajuda.
 type HelpMe struct {
 	Flag        string
 	Description string
 	Width       int
 }
 
+// parseWidth é uma função que calcula o tamanho máximo de uma flag. O tamanho máximo é usado para formatar a saída de ajuda.
 func parseWidth(flags []HelpMe) int {
 	maxWidth := 0
 
