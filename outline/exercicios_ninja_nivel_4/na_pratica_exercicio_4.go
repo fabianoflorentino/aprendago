@@ -28,14 +28,12 @@ func NaPraticaExercicio4() {
 func ResolucaoNaPraticaExercicio4() {
 	slice := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
 	append52 := append(slice, 52)
-
 	append53to55 := append(append52, 53, 54, 55)
 
-	fmt.Printf("Slice: %v\n", append53to55)
-
 	sliceY := []int{56, 57, 58, 59, 60}
-
 	appendSliceY := append(append53to55, sliceY...)
 
-	fmt.Printf("Slice: %v\n", appendSliceY)
+	resolucao := fmt.Sprintf("append52: %v\nappend53to55: %v\nappendSliceY: %v", append52, append53to55, appendSliceY)
+
+	format.FormatResolucaoExercicios(resolucao)
 }

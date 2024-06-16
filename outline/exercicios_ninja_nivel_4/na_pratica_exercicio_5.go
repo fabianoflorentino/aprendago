@@ -25,5 +25,7 @@ func ResolucaoNaPraticaExercicio5() {
 	slice := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
 	novoSlice := append(slice[:3], slice[6:]...)
 
-	fmt.Printf("%v", novoSlice)
+	resolucao := fmt.Sprintf("%v", novoSlice)
+
+	format.FormatResolucaoExercicios(resolucao)
 }
