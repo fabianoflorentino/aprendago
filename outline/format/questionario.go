@@ -3,6 +3,7 @@ package format
 import (
 	"errors"
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -34,13 +35,13 @@ type ValidaResposta interface {
 type Questionario struct {
 	Numero   string // Número da pergunta
 	Pergunta string // Texto da pergunta
-	Opcoes   string // Opções de resposta
+	Opcoes []string // Opções de resposta
 }
 
 // Resposta de uma pergunta armazena a resposta dada pelo usuário e seu status.
 type Resposta struct {
 	Numero   string // Número da pergunta
-	Resposta string // Resposta dada pelo usuário
+	Resposta int // Resposta dada pelo usuário
 	Status   string // Opções de resposta disponíveis
 }
 
@@ -60,6 +61,13 @@ func (sq ServicoQuestionario) Cria(questionario []Questionario) []Questionario {
 	return prova
 }
 
+func (questao Questionario) Imprime() {
+	fmt.Println(questao.Numero, questao.Pergunta)
+	for i, opcao := range questao.Opcoes {
+		fmt.Printf("[%d] %s\n", i + 1, opcao)
+	}
+}
+
 // ServicoResposta é um tipo que implementa a interface ColetaRespostas através do método Coleta
 type ServicoResposta struct{}
 
@@ -67,15 +75,17 @@ type ServicoResposta struct{}
 // Recebe um slice de Questionario e retorna um slice de Resposta e um erro
 func (sr ServicoResposta) Coleta(questionario []Questionario) ([]Resposta, error) {
 	var listaResposta []Resposta
-	var resposta string
+	var input string
 
 	// Cria um questionário com as perguntas e opções de respostas
 	criar_questionario := new(ServicoQuestionario).Cria(questionario)
 
 	// Itera sobre o slice de Questionario e coleta as respostas do usuário para cada pergunta
 	for _, p := range criar_questionario {
-		fmt.Print(p.Numero, p.Pergunta, p.Opcoes)
-		fmt.Scan(&resposta)
+		p.Imprime()
+		fmt.Print("Resposta: ")
+		fmt.Scan(&input)
+		resposta, _ := strconv.Atoi(input)
 
 		// Verifica se a resposta é válida
 		if !validaOpcao(resposta, p.Opcoes) {
@@ -119,21 +129,14 @@ func (sr ServicoResposta) Valida(resposta []Resposta, gabarito []Resposta) {
 		// Remove o ponto final do número da pergunta
 		rspNumero := strings.Trim(rsp.Numero, ".")
 
-		fmt.Printf("Questão %s: Resposta: %s - %s\n", rspNumero, rsp.Resposta, rsp.Status)
+		fmt.Printf("Questão %s: Resposta: %d - %s\n", rspNumero, rsp.Resposta, rsp.Status)
 	}
 }
 
 // validaOpcao verifica se a resposta do usuário é válida para uma pergunta.
 // Recebe a resposta do usuário e as opções válidas como strings.
 // Retorna true se a resposta estiver entre as opções válidas, caso contrário retorna false.
-func validaOpcao(resposta, opcoes string) bool {
-	// Itera sobre as opções de respostas da pergunta e verifica se a resposta do usuário é válida
-	for _, opt := range strings.Fields(opcoes) {
-		opt = strings.Trim(opt, "[]")
-		opt = strings.Split(opt, " ")[0] // Extract the option letter
-		if resposta == opt {
-			return true
-		}
-	}
-	return false
+func validaOpcao(resposta int, opcoes []string) bool {
+	//V erifica se a resposta do usuário é válida
+	return resposta > 0 && resposta < len(opcoes)
 }
