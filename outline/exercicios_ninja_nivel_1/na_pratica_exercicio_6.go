@@ -7,6 +7,8 @@ import (
 	format "github.com/fabianoflorentino/aprendago/outline/format"
 )
 
+var opcaoVerdadeiroFalso []string = []string{"Verdade", "Mentira"}
+
 // NaPraticaExercicio6 é a função que exibe o enunciado do exercício 6
 func NaPraticaExercicio6() {
 	topic := format.OutlineContent{
@@ -30,32 +32,32 @@ func RespondaAProva() {
 		{Numero: "3.", Pergunta: "Quais são parênteses?", Opcoes: []string{"()", "{}", "[]"}},
 		{Numero: "4.", Pergunta: "Quais são colchetes?", Opcoes: []string{"()", "{}", "[]"}},
 		{Numero: "5.", Pergunta: "Quais são chaves?", Opcoes: []string{"()", "{}", "[]"}},
-		{Numero: "6.", Pergunta: "A abrangência de uma variável designa onde no código você pode acessar essa variável, e atribuir ou ler valores dela", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "7.", Pergunta: "Um tipo de dados primitivo é um tipo composto, criado a partir de outros tipos básicos que ja vem de fabrica na linguagem", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "8.", Pergunta: "O tipo int é um tipo de dado primitivo", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "9.", Pergunta: "O tipo string é um tipo de dado composto", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "10.", Pergunta: "Um tipo de dado composto permite que você crie estruturas formadas de outros tipos de dados", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "11.", Pergunta: "Quando declaramos uma variável com a palavra chave var e não atribuimos nenhum valor a esta variável, o compilador designa para esta um valor padrão, chamado de valor zero.", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "12.", Pergunta: "Palavras chaves servem a propositos especificos, mas fora isso podem ser usadas livremente ao longo do programa", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "13.", Pergunta: "Palavra chave e palavra reservada designam coisas diferentes", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "14.", Pergunta: "Uma palavra chave somente pode ser usada para seu proposito especifico e para declarar variaveis", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "15.", Pergunta: "Em 2 + 2, os numeros 2 são operadores", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "16.", Pergunta: "O termo package é uma palavra chave", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "17.", Pergunta: "O termo variable é uma palavra chave", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "18.", Pergunta: "O ponto de entrada para todos os programas é a função main(), que deve ficar dentro do package main", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "19.", Pergunta: "O operador curto de declaração pode ser usado ao invés de var em todas as situações", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "20.", Pergunta: "Quando vemos fmt.Println(), isto esta chamando a função Println() que pertence ao package fmt", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "21.", Pergunta: "Identificador é o nome atribuido a uma variável, função ou constante", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "22.", Pergunta: "Para utilizar uma função, variável ou constante de outro package utiliza-se o formato package-ponto-identificador. Por exemplo fmt.Println()", Opcoes: []string{"Verdade", "Mentira"}},
+		{Numero: "6.", Pergunta: "A abrangência de uma variável designa onde no código você pode acessar essa variável, e atribuir ou ler valores dela", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "7.", Pergunta: "Um tipo de dados primitivo é um tipo composto, criado a partir de outros tipos básicos que ja vem de fabrica na linguagem", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "8.", Pergunta: "O tipo int é um tipo de dado primitivo", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "9.", Pergunta: "O tipo string é um tipo de dado composto", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "10.", Pergunta: "Um tipo de dado composto permite que você crie estruturas formadas de outros tipos de dados", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "11.", Pergunta: "Quando declaramos uma variável com a palavra chave var e não atribuimos nenhum valor a esta variável, o compilador designa para esta um valor padrão, chamado de valor zero.", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "12.", Pergunta: "Palavras chaves servem a propositos especificos, mas fora isso podem ser usadas livremente ao longo do programa", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "13.", Pergunta: "Palavra chave e palavra reservada designam coisas diferentes", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "14.", Pergunta: "Uma palavra chave somente pode ser usada para seu proposito especifico e para declarar variaveis", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "15.", Pergunta: "Em 2 + 2, os numeros 2 são operadores", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "16.", Pergunta: "O termo package é uma palavra chave", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "17.", Pergunta: "O termo variable é uma palavra chave", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "18.", Pergunta: "O ponto de entrada para todos os programas é a função main(), que deve ficar dentro do package main", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "19.", Pergunta: "O operador curto de declaração pode ser usado ao invés de var em todas as situações", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "20.", Pergunta: "Quando vemos fmt.Println(), isto esta chamando a função Println() que pertence ao package fmt", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "21.", Pergunta: "Identificador é o nome atribuido a uma variável, função ou constante", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "22.", Pergunta: "Para utilizar uma função, variável ou constante de outro package utiliza-se o formato package-ponto-identificador. Por exemplo fmt.Println()", Opcoes: opcaoVerdadeiroFalso},
 		{Numero: "23.", Pergunta: "Qual é o caracter que permite jogar fora um valor? Ou seja, qual caracter permite que voce diga ao programa que não vai utilzar o valor retornado por uma função?", Opcoes: []string{"#", "@", "_", "$", "isso é pegadinha..."}},
-		{Numero: "24.", Pergunta: "Uma função cujo parâmetro é '... interface{}' é uma função variatica. Isso significa que você pode passar à função um número pré determinado de valores", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "25.", Pergunta: "Todo valor em Go pertence também ao tipo interface vazia, representado pela notação interface{}", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "26.", Pergunta: "2+3 é uma declaração/statement, não uma expressão", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "27.", Pergunta: "2+3 é uma expressão não uma declaração/statemente", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "28.", Pergunta: "Se eu quiser salvar o resultado de um format printing em uma variável, posso usar a função fmt.Sprintf()", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "29.", Pergunta: "Em Go podemos criar nossos proprios tipos?", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "30.", Pergunta: "Falando de tipos, em Go utilizamos o termo 'coerção' diferentemente de Java, por exemplo, onde se utiliza o termo 'conversão'", Opcoes: []string{"Verdade", "Mentira"}},
-		{Numero: "31.", Pergunta: "Todo tipo criado pelo programador tem um tipo subjacente", Opcoes: []string{"Verdade", "Mentira"}},
+		{Numero: "24.", Pergunta: "Uma função cujo parâmetro é '... interface{}' é uma função variatica. Isso significa que você pode passar à função um número pré determinado de valores", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "25.", Pergunta: "Todo valor em Go pertence também ao tipo interface vazia, representado pela notação interface{}", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "26.", Pergunta: "2+3 é uma declaração/statement, não uma expressão", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "27.", Pergunta: "2+3 é uma expressão não uma declaração/statemente", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "28.", Pergunta: "Se eu quiser salvar o resultado de um format printing em uma variável, posso usar a função fmt.Sprintf()", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "29.", Pergunta: "Em Go podemos criar nossos proprios tipos?", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "30.", Pergunta: "Falando de tipos, em Go utilizamos o termo 'coerção' diferentemente de Java, por exemplo, onde se utiliza o termo 'conversão'", Opcoes: opcaoVerdadeiroFalso},
+		{Numero: "31.", Pergunta: "Todo tipo criado pelo programador tem um tipo subjacente", Opcoes: opcaoVerdadeiroFalso},
 	}
 
 	gabarito := []format.Resposta{
