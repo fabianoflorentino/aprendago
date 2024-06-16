@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio4() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #4",
+		Title: "Na prática - Exercício #4",
 		Content: `
 - Crie um programa que:
 - Atribua um valor int a uma variável

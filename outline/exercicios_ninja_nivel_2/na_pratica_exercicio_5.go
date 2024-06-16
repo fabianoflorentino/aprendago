@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio5() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #5",
+		Title: "Na prática - Exercício #5",
 		Content: `
 - Crie uma variável de tipo string utilizando uma raw string literal.
 - Demonstre-a.

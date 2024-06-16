@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio5() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #5",
+		Title: "Na prática - Exercício #5",
 		Content: `
 - Utilizando a solução do exercício anterior:
   1. Em package-level scope, utilizando a palavra-chave var, crie uma variável com o identificador "y". O tipo desta variável deve ser o tipo subjacente do tipo que você criou no exercício anterior.

@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio3() {
 	topic := format.OutlineContent{
-		Title: "Na pratica: Exercício #3",
+		Title: "Na prática: Exercício #3",
 		Content: `
 - Utilizando como base o exercício anterior, utilize slicing para demonstrar os valores:
   - Do primeiro ao terceiro item do slice (incluindo o terceiro item!)

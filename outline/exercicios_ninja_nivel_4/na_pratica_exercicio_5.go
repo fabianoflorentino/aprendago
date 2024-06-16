@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio5() {
 	topic := format.OutlineContent{
-		Title: "Na pratica: Exercício #5",
+		Title: "Na prática: Exercício #5",
 		Content: `
 - Comece com essa slice:
     - x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}

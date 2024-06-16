@@ -10,7 +10,7 @@ var opcaoVerdadeiroFalso []string = []string{"Verdade", "Mentira"}
 
 func NaPraticaExercicio7() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #7",
+		Title: "Na prática - Exercício #7",
 		Content: `
 - Prova!
 - Link: https://goo.gl/forms/fnPXMmxvKAEUD8xP2 [Link quebrado]. (Use a opção --na-pratica-exercicio-7 --nivel-2 --prova)

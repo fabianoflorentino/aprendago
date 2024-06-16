@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio6() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #6",
+		Title: "Na prática - Exercício #6",
 		Content: `
 - Utilizando iota, crie 4 constantes cujos valores sejam os próximos 4 anos.
 - Demonstre-a.

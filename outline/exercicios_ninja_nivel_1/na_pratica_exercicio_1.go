@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio1() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #1",
+		Title: "Na prática - Exercício #1",
 		Content: `
 - Esses são seus primeiros exercícios, e seus primeiros passos.
 - Completando os exercícios dessa seção, você será um ninja nível 1.

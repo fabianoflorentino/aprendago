@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio2() {
 	topic := format.OutlineContent{
-		Title: "Na pratica: Exercício #2",
+		Title: "Na prática: Exercício #2",
 		Content: `
 - Usando uma literal composta:
   - Crie uma slice de tipo int

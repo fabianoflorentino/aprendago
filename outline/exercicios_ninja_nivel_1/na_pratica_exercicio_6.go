@@ -12,7 +12,7 @@ var opcaoVerdadeiroFalso []string = []string{"Verdade", "Mentira"}
 // NaPraticaExercicio6 é a função que exibe o enunciado do exercício 6
 func NaPraticaExercicio6() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #6",
+		Title: "Na prática - Exercício #6",
 		Content: `
 - Prova!
 - Link: https://goo.gl/forms/s9y91iVSPvA4iahj1 [Link quebrado]. (Use a opção --na-pratica-exercicio-6 --nivel-1 --prova)

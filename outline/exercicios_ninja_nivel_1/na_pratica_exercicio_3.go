@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio3() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #3",
+		Title: "Na prática - Exercício #3",
 		Content: `
 - Utilizando a solução do exercício anterior:
   1. Em package-level scope, atribua os seguintes valores às variáveis:

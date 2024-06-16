@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio1() {
 	topic := format.OutlineContent{
-		Title: "Na pratica: Exercício #1",
+		Title: "Na prática: Exercício #1",
 		Content: `
 - Usando uma literal composta:
   - Crie um array que suporte 5 valores to tipo int

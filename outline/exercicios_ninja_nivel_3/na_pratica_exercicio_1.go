@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio1() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #1",
+		Title: "Na prática - Exercício #1",
 		Content: `
 - Põe na tela: todos os números de 1 a 10000.
 - Solução: https://play.golang.org/p/MkdZiDW8SQ ou use no menu do programa (--na-pratica-exercicio-1 --nivel-3 --resolucao)

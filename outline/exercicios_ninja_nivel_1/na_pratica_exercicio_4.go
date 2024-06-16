@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio4() {
 	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #4",
+		Title: "Na prática - Exercício #4",
 		Content: `
 - Crie um tipo. O tipo subjacente deve ser int.
 - Crie uma variável para este tipo, com o identificador "x", utilizando a palavra-chave var.
