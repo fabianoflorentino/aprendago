@@ -31,7 +31,7 @@ func ResolucaoNaPraticaExercicio3() {
 	y := "James Bond"
 	z := true
 
-	s := fmt.Sprintf("%v %v %v", x, y, z)
+	resolucao := fmt.Sprintf("%v %v %v", x, y, z)
 
-	fmt.Println(s)
+	format.FormatResolucaoExercicios(resolucao)
 }

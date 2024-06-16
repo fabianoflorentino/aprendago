@@ -35,15 +35,10 @@ func ResolucaoNaPraticaExercicio5() {
 	var x ninja
 	var y int
 
-	fmt.Println(x)
-	fmt.Printf("%T\n", x)
-
 	x = 42
-
-	fmt.Println(x)
-
 	y = int(x)
 
-	fmt.Println(y)
-	fmt.Printf("%T\n", y)
+	resolucao := fmt.Sprintf("%T\n%T", x, y)
+
+	format.FormatResolucaoExercicios(resolucao)
 }

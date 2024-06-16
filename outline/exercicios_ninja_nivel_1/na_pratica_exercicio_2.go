@@ -29,7 +29,7 @@ func ResolucaoNaPraticaExercicio2() {
 	var y string
 	var z bool
 
-	fmt.Println("Valor de x:", x)
-	fmt.Println("Valor de y:", y)
-	fmt.Println("Valor de z:", z)
+	resolucao := fmt.Sprintf("%v %v %v", x, y, z)
+
+	format.FormatResolucaoExercicios(resolucao)
 }

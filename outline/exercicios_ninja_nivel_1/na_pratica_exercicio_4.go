@@ -29,12 +29,11 @@ func NaPraticaExercicio4() {
 func ResolucaoNaPraticaExercicio4() {
 	type ninja int
 
-	var x ninja
+	x := ninja(42)
 
-	fmt.Println(x)
-	fmt.Printf("%T\n", x)
+	resolucao := fmt.Sprintf("%v", x)
+	format.FormatResolucaoExercicios(resolucao)
 
-	x = 42
+	fmt.Printf("\n%T\n", x)
 
-	fmt.Println(x)
 }
