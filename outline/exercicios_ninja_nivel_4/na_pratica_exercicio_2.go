@@ -2,6 +2,7 @@ package exercicios_ninja_nivel_4
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/fabianoflorentino/aprendago/outline/format"
 )
@@ -24,14 +25,18 @@ func NaPraticaExercicio2() {
 
 func ResolucaoNaPraticaExercicio2() {
 	slice := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	var newSlice []string
 
 	for _, value := range slice {
 		if value != len(slice) {
-			fmt.Printf("%v, ", value)
+			newSlice = append(newSlice, fmt.Sprintf("%v, ", value))
 		} else {
-			fmt.Printf("%v", value)
+			newSlice = append(newSlice, fmt.Sprintf("%v", value))
 		}
 	}
 
-	fmt.Printf("\nTipo: %T", slice)
+	joinSlice := strings.Join(newSlice, "")
+	resolucao := fmt.Sprintf("\nSlice: %v\nTipo: %T", joinSlice, newSlice)
+
+	format.FormatResolucaoExercicios(resolucao)
 }
