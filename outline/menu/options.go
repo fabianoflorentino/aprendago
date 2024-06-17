@@ -50,11 +50,9 @@ func generalOptions([]string) []format.MenuOptions {
 // Ela recebe dois parâmetros: args, que é uma lista de argumentos do menu, e options, que é uma lista de opções do menu.
 // A função começa juntando os argumentos separados por espaço em uma única string usando a função strings.Join(args, " ").
 // Isso é feito para facilitar a comparação com as opções disponíveis.
-
 // Em seguida, a função percorre cada opção disponível usando um loop for range. Para cada opção, ela verifica se a
 // string de argumentos (argStr) é igual à opção (opt.Options). Se houver uma correspondência, a função opt.ExecFunc() é executada.
 // Essa função é responsável por executar a ação associada à opção do menu.
-
 // Se nenhuma correspondência for encontrada, a função imprime o cabeçalho do menu usando fmt.Print(headerMenu).
 // Isso pode ser útil para exibir uma mensagem de erro ou mostrar as opções disponíveis novamente.
 func buildOptions(args []string, options ...[]format.MenuOptions) {
@@ -63,7 +61,6 @@ func buildOptions(args []string, options ...[]format.MenuOptions) {
 	// options ...[]format.MenuOptions: Aqui, options é um parâmetro de função que permite receber um número variável de argumentos do tipo []format.MenuOptions.
 	// Isso significa que você pode passar zero ou mais argumentos do tipo []format.MenuOptions para a função buildMenu.
 	// Esses argumentos serão agrupados em uma única fatia ([]format.MenuOptions) dentro da função.
-
 	// o := range options: Aqui, o é uma variável que recebe cada elemento da fatia options à medida que o loop for itera sobre ela.
 	// O uso de ... antes da variável o indica que o é uma fatia de elementos do tipo format.MenuOptions.
 	// Isso permite que você itere sobre uma fatia de fatias de format.MenuOptions e extraia cada elemento individualmente.
