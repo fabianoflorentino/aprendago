@@ -3,7 +3,7 @@ package exercicios_ninja_nivel_2
 import (
 	"fmt"
 
-	format "github.com/fabianoflorentino/aprendago/outline/format"
+	"github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func NaPraticaExercicio4() {
@@ -25,9 +25,11 @@ func NaPraticaExercicio4() {
 func ResolucaoNaPraticaExercicio4() {
 	v1 := 10
 
-	fmt.Printf("Decimal: %d \nBinário: %b \nHexadecimal: %#x \n\n", v1, v1, v1)
+	resolucao1 := fmt.Sprintf("Decimal: %d \nBinário: %b \nHexadecimal: %#x \n\n", v1, v1, v1)
 
 	v2 := v1 << 1
 
-	fmt.Printf("Decimal: %d \nBinário: %b \nHexadecimal: %#x", v2, v2, v2)
+	resolucao2 := fmt.Sprintf("Decimal: %d \nBinário: %b \nHexadecimal: %#x", v2, v2, v2)
+
+	format.FormatResolucaoExercicios(resolucao1 + resolucao2)
 }

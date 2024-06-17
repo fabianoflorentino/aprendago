@@ -3,7 +3,7 @@ package exercicios_ninja_nivel_2
 import (
 	"fmt"
 
-	format "github.com/fabianoflorentino/aprendago/outline/format"
+	"github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func NaPraticaExercicio2() {
@@ -29,12 +29,7 @@ func ResolucaoNaPraticaExercicio2() {
 	a := 10
 	b := 20
 
-	fmt.Printf("a: %v \nb: %v \n\n", a, b)
+	resolucao := fmt.Sprintf("a: %v \nb: %v \n\na == b: %v \na != b: %v \na <= b: %v \na < b: %v \na >= b: %v \na > b: %v \n", a, b, a == b, a != b, a <= b, a < b, a >= b, a > b)
 
-	fmt.Printf("a == b: %v \n", a == b)
-	fmt.Printf("a != b: %v \n", a != b)
-	fmt.Printf("a <= b: %v \n", a <= b)
-	fmt.Printf("a < b: %v \n", a < b)
-	fmt.Printf("a >= b: %v \n", a >= b)
-	fmt.Printf("a > b: %v \n", a > b)
+	format.FormatResolucaoExercicios(resolucao)
 }

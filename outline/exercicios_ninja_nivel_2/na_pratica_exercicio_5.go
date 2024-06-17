@@ -1,10 +1,6 @@
 package exercicios_ninja_nivel_2
 
-import (
-	"fmt"
-
-	format "github.com/fabianoflorentino/aprendago/outline/format"
-)
+import "github.com/fabianoflorentino/aprendago/outline/format"
 
 func NaPraticaExercicio5() {
 	topic := format.OutlineContent{
@@ -22,5 +18,5 @@ func NaPraticaExercicio5() {
 func ResolucaoNaPraticaExercicio5() {
 	v1 := `Aprenda Go!`
 
-	fmt.Println(v1)
+	format.FormatResolucaoExercicios(v1)
 }

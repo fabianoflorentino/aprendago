@@ -3,7 +3,7 @@ package exercicios_ninja_nivel_2
 import (
 	"fmt"
 
-	format "github.com/fabianoflorentino/aprendago/outline/format"
+	"github.com/fabianoflorentino/aprendago/outline/format"
 )
 
 func NaPraticaExercicio3() {
@@ -25,5 +25,7 @@ func ResolucaoNaPraticaExercicio3() {
 		typedConst   int = 20
 	)
 
-	fmt.Printf("untypedConst: %v \ntypedConst: %v", untypedConst, typedConst)
+	resolucao := fmt.Sprintf("untypedConst: %v \ntypedConst: %v", untypedConst, typedConst)
+
+	format.FormatResolucaoExercicios(resolucao)
 }

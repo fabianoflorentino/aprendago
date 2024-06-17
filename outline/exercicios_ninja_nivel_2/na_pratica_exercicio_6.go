@@ -28,5 +28,7 @@ func ResolucaoNaPraticaExercicio6() {
 		v4
 	)
 
-	fmt.Printf("v1: %v\nv2: %v\nv3: %v\nv4: %v\n", v1, v2, v3, v4)
+	resolucao := fmt.Sprintf("v1: %v\nv2: %v\nv3: %v\nv4: %v\n", v1, v2, v3, v4)
+
+	format.FormatResolucaoExercicios(resolucao)
 }
