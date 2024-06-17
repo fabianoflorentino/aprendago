@@ -40,7 +40,9 @@ func parseWidth(flags []HelpMe) int {
 // indent adiciona um recuo à frente de cada linha de uma string.
 // O recuo é calculado com base no tamanho da flag e em um valor fixo (4).
 func indent(width int, description string) string {
-	lines := strings.Split(strings.TrimSpace(description), "\n")
+	trimSpaceDescription := strings.TrimSpace(description)
+
+	lines := strings.Split(trimSpaceDescription, "\n")
 	if len(lines) <= 1 {
 		return description
 	}
