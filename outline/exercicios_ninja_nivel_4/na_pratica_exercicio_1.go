@@ -2,6 +2,7 @@ package exercicios_ninja_nivel_4
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/fabianoflorentino/aprendago/outline/format"
 )
@@ -24,5 +25,12 @@ func NaPraticaExercicio1() {
 
 func ResolucaoNaPraticaExercicio1() {
 	array := [5]int{1, 2, 3, 4, 5}
-	fmt.Printf("Tipo: %T", array)
+	var resolucao string
+
+	for _, value := range array {
+		resolucao += fmt.Sprintf("%v, ", value)
+	}
+
+	resolucao = strings.Trim(resolucao, ", ")
+	format.FormatResolucaoExercicios(resolucao)
 }
