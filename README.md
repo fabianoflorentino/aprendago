@@ -171,4 +171,10 @@ Capítulo 8: Agrupamento de Dados
   --na-pratica-exercicio-2 --nivel-4 --resolucao   Exibe a resolução do segundo exercício prático.
   --na-pratica-exercicio-3 --nivel-4               Apresenta o terceiro exercício prático do curso.
   --na-pratica-exercicio-3 --nivel-4 --resolucao   Exibe a resolução do terceiro exercício prático.
+  --na-pratica-exercicio-4 --nivel-4               Apresenta o quarto exercício prático do curso.
+  --na-pratica-exercicio-4 --nivel-4 --resolucao   Exibe a resolução do quarto exercício prático.
+  --na-pratica-exercicio-5 --nivel-4               Apresenta o quinto exercício prático do curso.
+  --na-pratica-exercicio-5 --nivel-4 --resolucao   Exibe a resolução do quinto exercício prático.
+  --na-pratica-exercicio-6 --nivel-4               Apresenta o sexto exercício prático do curso.
+  --na-pratica-exercicio-6 --nivel-4 --resolucao   Exibe a resolução do sexto exercício prático.
 ```
