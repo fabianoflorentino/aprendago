@@ -20,5 +20,7 @@ func MenuExerciciosNinjaNivel4([]string) []format.MenuOptions {
 		{Options: "--na-pratica-exercicio-7 --nivel-4 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio7() }},
 		{Options: "--na-pratica-exercicio-8 --nivel-4", ExecFunc: func() { NaPraticaExercicio8() }},
 		{Options: "--na-pratica-exercicio-8 --nivel-4 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio8() }},
+		{Options: "--na-pratica-exercicio-9 --nivel-4", ExecFunc: func() { NaPraticaExercicio9() }},
+		{Options: "--na-pratica-exercicio-9 --nivel-4 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio9() }},
 	}
 }
