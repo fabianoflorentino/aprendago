@@ -1,3 +1,27 @@
+/*
+Package menu fornece uma interface de linha de comando para navegar pelas opções e funcionalidades
+do curso Aprenda GO. Ele agrupa e organiza diferentes menus e suas opções, permitindo ao usuário
+acessar capítulos específicos, exercícios práticos e visões gerais do curso com base nos argumentos fornecidos.
+
+Funcionalidades principais:
+
+- Exibe o menu principal com opções gerais e específicas dos capítulos.
+- Permite acessar diferentes seções do curso, como variáveis, tipos, fluxo de controle e exercícios práticos.
+- Processa os argumentos fornecidos pelo usuário para determinar e executar a opção apropriada.
+- Oferece suporte a opções de ajuda e visão geral para facilitar a navegação.
+
+Uso básico:
+
+Para usar o pacote menu, você deve chamar a função Options com uma lista de argumentos.
+Esses argumentos determinam qual menu ou opção será exibido e executado.
+
+Exemplo:
+
+	args := []string{"--help"}
+	menu.Options(args)
+
+Nesse exemplo, a função Options exibirá a ajuda, com base no argumento fornecido.
+*/
 package menu
 
 import (
@@ -16,18 +40,19 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/visao_geral_do_curso"
 )
 
-// Options é a função principal do pacote menu. Ela é responsável por exibir as opções disponíveis em cada menu.
-// A função Options recebe uma lista de argumentos (args) como parâmetro. Esses argumentos são usados para determinar
+// Options é a função principal do pacote menu. Ela exibe o menu principal do programa,
+// mostrando todas as opções disponíveis com base nos argumentos fornecidos (args).
 func Options(args []string) {
 	fmt.Printf("Aprenda GO\n\n")
 
-	// A função buildOptions é responsável por construir as opções disponíveis em cada menu.
-	// Ela recebe uma lista de argumentos (args) e uma lista de opções (options) como parâmetros.
+	// Chama a função buildOptions para construir e exibir as opções de menu.
+	// Combina opções gerais e específicas dos capítulos com base nos argumentos fornecidos.
 	buildOptions(
 		args,
 		generalOptions(args),
-		variaveis_valores_tipos.MenuVariaveisValoresTipos(args),
+		MenuCapituloOptions(args),
 		visao_geral_do_curso.MenuVisaoGeralDoCurso(args),
+		variaveis_valores_tipos.MenuVariaveisValoresTipos(args),
 		exercicios_ninja_nivel_1.MenuExerciciosNinjaNivel1(args),
 		fundamentos_da_programacao.MenuFundamentosDaProgramcao(args),
 		exercicios_ninja_nivel_2.MenuExerciciosNinjaNivel2(args),
@@ -38,35 +63,26 @@ func Options(args []string) {
 	)
 }
 
-// A função generalOptions retorna uma lista de opções gerais disponíveis em todos os menus.
-// Neste caso, a função retorna duas opções: --help e --outline.
+// generalOptions retorna as opções gerais disponíveis em todos os menus,
+// como ajuda e visão geral do curso.
 func generalOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--help", ExecFunc: func() { HelpMe() }},
 		{Options: "--outline", ExecFunc: func() { outline.Outline() }},
+		{Options: "--caps", ExecFunc: func() { HelpMeCapituloOptions() }},
 	}
 }
 
-// Ela recebe dois parâmetros: args, que é uma lista de argumentos do menu, e options, que é uma lista de opções do menu.
-// A função começa juntando os argumentos separados por espaço em uma única string usando a função strings.Join(args, " ").
-// Isso é feito para facilitar a comparação com as opções disponíveis.
-// Em seguida, a função percorre cada opção disponível usando um loop for range. Para cada opção, ela verifica se a
-// string de argumentos (argStr) é igual à opção (opt.Options). Se houver uma correspondência, a função opt.ExecFunc() é executada.
-// Essa função é responsável por executar a ação associada à opção do menu.
-// Se nenhuma correspondência for encontrada, a função imprime o cabeçalho do menu usando fmt.Print(headerMenu).
-// Isso pode ser útil para exibir uma mensagem de erro ou mostrar as opções disponíveis novamente.
+// buildOptions combina e processa as opções de menu com base nos argumentos fornecidos.
+// Ele verifica se os argumentos correspondem a alguma opção de menu e executa a ação associada.
 func buildOptions(args []string, options ...[]format.MenuOptions) {
 	var opt []format.MenuOptions
 
-	// options ...[]format.MenuOptions: Aqui, options é um parâmetro de função que permite receber um número variável de argumentos do tipo []format.MenuOptions.
-	// Isso significa que você pode passar zero ou mais argumentos do tipo []format.MenuOptions para a função buildMenu.
-	// Esses argumentos serão agrupados em uma única fatia ([]format.MenuOptions) dentro da função.
-	// o := range options: Aqui, o é uma variável que recebe cada elemento da fatia options à medida que o loop for itera sobre ela.
-	// O uso de ... antes da variável o indica que o é uma fatia de elementos do tipo format.MenuOptions.
-	// Isso permite que você itere sobre uma fatia de fatias de format.MenuOptions e extraia cada elemento individualmente.
+	// Combina todas as opções recebidas em uma única lista.
 	for _, o := range options {
 		opt = append(opt, o...)
 	}
 
+	// Formata e exibe as opções de menu com base nos argumentos.
 	format.FormatMenuOptions(args, opt)
 }
