@@ -258,4 +258,6 @@ Capítulo 9: Exercícios Ninja Nível 4
   --na-pratica-exercicio-8 --nivel-4 --resolucao   Exibe a resolução do oitavo exercício prático do Nível 4.
   --na-pratica-exercicio-9 --nivel-4               Apresenta o nono exercício prático do Nível 4.
   --na-pratica-exercicio-9 --nivel-4 --resolucao   Exibe a resolução do nono exercício prático do Nível 4.
+  --na-pratica-exercicio-10 --nivel-4              Apresenta o décimo exercício prático do Nível 4.
+  --na-pratica-exercicio-10 --nivel-4 --resolucao  Exibe a resolução do décimo exercício prático do Nível 4.
 ```
