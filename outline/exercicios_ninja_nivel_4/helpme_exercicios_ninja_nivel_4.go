@@ -28,6 +28,8 @@ func HelpMeExerciciosNinjaNivel4() {
 		{Flag: "--na-pratica-exercicio-6 --nivel-4 --resolucao", Description: "Exibe a resolução do sexto exercício prático do Nível 4.", Width: 0},
 		{Flag: "--na-pratica-exercicio-7 --nivel-4", Description: "Apresenta o sétimo exercício prático do Nível 4.", Width: 0},
 		{Flag: "--na-pratica-exercicio-7 --nivel-4 --resolucao", Description: "Exibe a resolução do sétimo exercício prático do Nível 4.", Width: 0},
+		{Flag: "--na-pratica-exercicio-8 --nivel-4", Description: "Apresenta o oitavo exercício prático do Nível 4.", Width: 0},
+		{Flag: "--na-pratica-exercicio-8 --nivel-4 --resolucao", Description: "Exibe a resolução do oitavo exercício prático do Nível 4.", Width: 0},
 	}
 
 	// Imprime o menu de ajuda para os exercícios do Nível 4.
