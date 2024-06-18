@@ -11,11 +11,10 @@ services:
       - aprendago
     volumes:
       - .:/aprendago
-
     tty: true
     stdin_open: true
 
 networks:
   aprendago:
-    driver: bridge
     name: aprendago
+    driver: bridge
