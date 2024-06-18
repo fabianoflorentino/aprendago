@@ -163,7 +163,7 @@ Capítulo 8: Agrupamento de Dados
   --maps-introducao                                        Apresenta o tópico Maps: introdução.
   --maps-range-e-deletando                                 Apresenta o tópico Maps: Range e Deletando.
 
-09 - Exercícios Ninja Nível 4
+Capítulo 9: - Exercícios Ninja Nível 4
 
   --na-pratica-exercicio-1 --nivel-4               Apresenta o primeiro exercício prático do curso.
   --na-pratica-exercicio-1 --nivel-4 --resolucao   Exibe a resolução do primeiro exercício prático.
