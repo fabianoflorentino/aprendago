@@ -24,12 +24,14 @@ Ajuda:
 
 --outline  Exibe o outline completo do curso.
 --help     Exibe a lista de todas as opções disponíveis.
+--caps     Exibe a lista de capítulos disponíveis.
 	`
 
 // ShowHelpMe exibe a lista de todas as opções disponíveis.
 // Esta função é chamada quando o usuário passa a opção --help.
 func HelpMe() {
 	fmt.Println(HEADER)
+	HelpMeCapituloOptions()
 	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()
 	variaveis_valores_tipos.HelpMeVariaveisValoresTipos()
 	exercicios_ninja_nivel_1.HelpMeExerciciosNinjaNivel1()
