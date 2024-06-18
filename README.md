@@ -165,16 +165,18 @@ Capítulo 8: Agrupamento de Dados
 
 Capítulo 9: - Exercícios Ninja Nível 4
 
-  --na-pratica-exercicio-1 --nivel-4               Apresenta o primeiro exercício prático do curso.
-  --na-pratica-exercicio-1 --nivel-4 --resolucao   Exibe a resolução do primeiro exercício prático.
-  --na-pratica-exercicio-2 --nivel-4               Apresenta o segundo exercício prático do curso.
-  --na-pratica-exercicio-2 --nivel-4 --resolucao   Exibe a resolução do segundo exercício prático.
-  --na-pratica-exercicio-3 --nivel-4               Apresenta o terceiro exercício prático do curso.
-  --na-pratica-exercicio-3 --nivel-4 --resolucao   Exibe a resolução do terceiro exercício prático.
-  --na-pratica-exercicio-4 --nivel-4               Apresenta o quarto exercício prático do curso.
-  --na-pratica-exercicio-4 --nivel-4 --resolucao   Exibe a resolução do quarto exercício prático.
-  --na-pratica-exercicio-5 --nivel-4               Apresenta o quinto exercício prático do curso.
-  --na-pratica-exercicio-5 --nivel-4 --resolucao   Exibe a resolução do quinto exercício prático.
-  --na-pratica-exercicio-6 --nivel-4               Apresenta o sexto exercício prático do curso.
-  --na-pratica-exercicio-6 --nivel-4 --resolucao   Exibe a resolução do sexto exercício prático.
+  --na-pratica-exercicio-1 --nivel-4               Apresenta o primeiro exercício prático do Nível 4.
+  --na-pratica-exercicio-1 --nivel-4 --resolucao   Exibe a resolução do primeiro exercício prático do Nível 4.
+  --na-pratica-exercicio-2 --nivel-4               Apresenta o segundo exercício prático do Nível 4.
+  --na-pratica-exercicio-2 --nivel-4 --resolucao   Exibe a resolução do segundo exercício prático do Nível 4.
+  --na-pratica-exercicio-3 --nivel-4               Apresenta o terceiro exercício prático do Nível 4.
+  --na-pratica-exercicio-3 --nivel-4 --resolucao   Exibe a resolução do terceiro exercício prático do Nível 4.
+  --na-pratica-exercicio-4 --nivel-4               Apresenta o quarto exercício prático do Nível 4.
+  --na-pratica-exercicio-4 --nivel-4 --resolucao   Exibe a resolução do quarto exercício prático do Nível 4.
+  --na-pratica-exercicio-5 --nivel-4               Apresenta o quinto exercício prático do Nível 4.
+  --na-pratica-exercicio-5 --nivel-4 --resolucao   Exibe a resolução do quinto exercício prático do Nível 4.
+  --na-pratica-exercicio-6 --nivel-4               Apresenta o sexto exercício prático do Nível 4.
+  --na-pratica-exercicio-6 --nivel-4 --resolucao   Exibe a resolução do sexto exercício prático do Nível 4.
+  --na-pratica-exercicio-7 --nivel-4               Apresenta o sétimo exercício prático do Nível 4.
+  --na-pratica-exercicio-7 --nivel-4 --resolucao   Exibe a resolução do sétimo exercício prático do Nível 4.
 ```
