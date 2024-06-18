@@ -37,15 +37,31 @@ docker compose exec -it aprendago /bin/sh -c 'go run main.go --help'
 ## Opções
 
 ```shell
+Aprenda GO
+
+
 Uso: go run main.go [opção]
 
 Exemplo:
-go run main.go --bem-vindo
+  go run main.go --bem-vindo
 
 Ajuda:
 
 --outline  Exibe o outline completo do curso.
 --help     Exibe a lista de todas as opções disponíveis.
+--caps     Exibe a lista de capítulos disponíveis.
+
+Capítulos do Curso
+
+  --cap-1   Visão Geral do Curso
+  --cap-2   Variáveis, Valores e Tipos
+  --cap-3   Exercícios Ninja: Nível 1
+  --cap-4   Fundamentos da Programação
+  --cap-5   Exercícios Ninja: Nível 2
+  --cap-6   Fluxo de Controle
+  --cap-7   Exercícios Ninja: Nível 3
+  --cap-8   Agrupamento de Dados
+  --cap-9   Exercícios Ninja: Nível 4
 
 Capítulo 1: Visão Geral do Curso
 
@@ -147,7 +163,7 @@ Capítulo 7: Exercícios Ninja Nível 3
   --na-pratica-exercicio-9 --nivel-3                Apresenta o nono exercício prático do nível 3.
   --na-pratica-exercicio-9 --nivel-3 --resolucao    Exibe a resolução do nono exercício prático do nível 3.
   --na-pratica-exercicio-10 --nivel-3               Apresenta o décimo exercício prático do nível 3.
-  --na-pratica-exercicio-10 --nivel-3 --resolucao   Exibe a resolução do décimo exercício prático do nível 3
+  --na-pratica-exercicio-10 --nivel-3 --resolucao   Exibe a resolução do décimo exercício prático do nível 3.
 
 Capítulo 8: Agrupamento de Dados
 
@@ -163,7 +179,7 @@ Capítulo 8: Agrupamento de Dados
   --maps-introducao                                        Apresenta o tópico Maps: introdução.
   --maps-range-e-deletando                                 Apresenta o tópico Maps: Range e Deletando.
 
-Capítulo 9: - Exercícios Ninja Nível 4
+Capítulo 9: Exercícios Ninja Nível 4
 
   --na-pratica-exercicio-1 --nivel-4               Apresenta o primeiro exercício prático do Nível 4.
   --na-pratica-exercicio-1 --nivel-4 --resolucao   Exibe a resolução do primeiro exercício prático do Nível 4.
