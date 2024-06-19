@@ -24,5 +24,5 @@ func Outline() {
 	exercicios_ninja_nivel_3.ExerciciosNinjaNivel3()
 	agrupamento_de_dados.AgrupamentoDeDados()
 	exercicios_ninja_nivel_4.ExerciciosNinjaNivel4()
-	structs.Struct()
+	structs.TopicStructs()
 }
