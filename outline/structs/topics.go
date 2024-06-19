@@ -2,8 +2,9 @@ package structs
 
 import "fmt"
 
-func Structs() {
-	fmt.Print("10 - Structss\n\n")
+func TopicStructs() {
+	fmt.Print("10 - Structs\n\n")
 
 	Struct()
+	StructsEmbutidos()
 }
