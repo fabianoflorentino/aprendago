@@ -7,4 +7,5 @@ func TopicStructs() {
 
 	Struct()
 	StructsEmbutidos()
+	LendoADocumentacao()
 }
