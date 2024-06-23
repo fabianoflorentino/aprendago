@@ -8,7 +8,7 @@ import (
 
 func NaPraticaExercicio1() {
 	topic := format.OutlineContent{
-		Title: "Exercício #1",
+		Title: "Na prática: Exercício #1",
 		Content: `
 - Crie um tipo "pessoa" com tipo subjacente struct, que possa conter os seguintes campos:
   - Nome

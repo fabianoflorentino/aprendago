@@ -7,7 +7,10 @@ import (
 )
 
 func HelpMeExerciciosNinjaNivel5() {
-	hlp := []format.HelpMe{}
+	hlp := []format.HelpMe{
+		{Flag: "--na-pratica-exercicio-1 --nivel-5", Description: "Apresenta o primeiro exercício prático do Nível 5.", Width: 0},
+		{Flag: "--na-pratica-exercicio-1 --nivel-5 --resolucao", Description: "Exibe a resolução do primeiro exercício prático do Nível 5.", Width: 0},
+	}
 
 	fmt.Println("\nCapítulo 11: Exercícios Ninja Nível 5")
 	format.PrintHelpMe(hlp)
