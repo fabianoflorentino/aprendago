@@ -11,6 +11,7 @@ func HelpMeStructs() {
 		{Flag: "--structs", Description: "Structs", Width: 0},
 		{Flag: "--structs-embutidos", Description: "Structs Embutidos", Width: 0},
 		{Flag: "--lendo-a-documentacao", Description: "Lendo a documentação", Width: 0},
+		{Flag: "--structs-anonimos", Description: "Structs Anônimos", Width: 0},
 	}
 
 	fmt.Println("\n Capítulo 10: Structs")

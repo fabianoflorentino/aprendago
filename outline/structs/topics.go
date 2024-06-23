@@ -8,4 +8,5 @@ func TopicStructs() {
 	Struct()
 	StructsEmbutidos()
 	LendoADocumentacao()
+	StructsAnonimos()
 }
