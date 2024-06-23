@@ -8,6 +8,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_4"
+	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_5"
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/outline/structs"
@@ -43,4 +44,5 @@ func HelpMe() {
 	agrupamento_de_dados.HelpMeAgrupamentoDeDados()
 	exercicios_ninja_nivel_4.HelpMeExerciciosNinjaNivel4()
 	structs.HelpMeStructs()
+	exercicios_ninja_nivel_5.HelpMeExerciciosNinjaNivel5()
 }

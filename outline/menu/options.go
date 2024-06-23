@@ -33,6 +33,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_4"
+	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_5"
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/outline/format"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
@@ -62,6 +63,7 @@ func Options(args []string) {
 		agrupamento_de_dados.MenuAgrupamentoDeDados(args),
 		exercicios_ninja_nivel_4.MenuExerciciosNinjaNivel4(args),
 		structs.MenuStructs(args),
+		exercicios_ninja_nivel_5.MenuExerciciosNinjaNivel5(args),
 	)
 }
 
