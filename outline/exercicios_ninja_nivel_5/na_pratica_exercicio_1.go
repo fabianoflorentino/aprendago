@@ -24,28 +24,28 @@ func NaPraticaExercicio1() {
 
 func ResolucaoNaPraticaExercicio1() {
 	type pessoa struct {
-		nome      string
-		sobrenome string
-		sorvete   []string
+		nome               string
+		sobrenome          string
+		sabores_de_sorvete []string
 	}
 
 	p1 := pessoa{
-		nome:      "Fulano",
-		sobrenome: "de Tal",
-		sorvete:   []string{"Chocolate", "Morango", "Baunilha"},
+		nome:               "Fulano",
+		sobrenome:          "de Tal",
+		sabores_de_sorvete: []string{"Chocolate", "Morango", "Baunilha"},
 	}
 
 	p2 := pessoa{
-		nome:      "Ciclano",
-		sobrenome: "da Silva",
-		sorvete:   []string{"Pistache", "Creme", "Coco"},
+		nome:               "Ciclano",
+		sobrenome:          "da Silva",
+		sabores_de_sorvete: []string{"Pistache", "Creme", "Coco"},
 	}
 
 	pessoas := []pessoa{p1, p2}
 
 	for _, p := range pessoas {
 		fmt.Println(p.nome, p.sobrenome)
-		for _, s := range p.sorvete {
+		for _, s := range p.sabores_de_sorvete {
 			fmt.Printf("\t%v\n", s)
 		}
 	}
