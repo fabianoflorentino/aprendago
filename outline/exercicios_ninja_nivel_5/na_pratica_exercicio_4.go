@@ -21,23 +21,27 @@ func NaPraticaExercicio4() {
 
 func ResolucaoNaPraticaExercicio4() {
 	pessoa := struct {
-		nome             string
-		idade            int
-		amigos           map[string]int
-		comidasFavoritas []string
+		Nome             string
+		Idade            int
+		Amigos           map[string]int
+		ComidasFavoritas []string
 	}{
-		nome:  "Fabiano",
-		idade: 33,
-		amigos: map[string]int{
-			"João":  30,
-			"Maria": 25,
+		Nome:  "Fabiano",
+		Idade: 39,
+		Amigos: map[string]int{
+			"Ale":   46,
+			"Lucas": 38,
 		},
-		comidasFavoritas: []string{
+		ComidasFavoritas: []string{
 			"Pizza",
 			"Lasanha",
 			"Hamburguer",
 		},
 	}
+
+	// mais para frente
+	// jsonData, _ := json.Marshal(pessoa)
+	// fmt.Println(string(jsonData))
 
 	fmt.Println(pessoa)
 }
