@@ -8,5 +8,7 @@ func MenuExerciciosNinjaNivel5([]string) []format.MenuOptions {
 		{Options: "--na-pratica-exercicio-1 --nivel-5 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
 		{Options: "--na-pratica-exercicio-2 --nivel-5", ExecFunc: func() { NaPraticaExercicio2() }},
 		{Options: "--na-pratica-exercicio-2 --nivel-5 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio2() }},
+		{Options: "--na-pratica-exercicio-3 --nivel-5", ExecFunc: func() { NaPraticaExercicio3() }},
+		{Options: "--na-pratica-exercicio-3 --nivel-5 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio3() }},
 	}
 }
