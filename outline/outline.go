@@ -9,6 +9,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_4"
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_5"
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
+	"github.com/fabianoflorentino/aprendago/outline/funcoes"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/outline/structs"
 	"github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
@@ -27,4 +28,5 @@ func Outline() {
 	exercicios_ninja_nivel_4.ExerciciosNinjaNivel4()
 	structs.TopicStructs()
 	exercicios_ninja_nivel_5.ExerciciosNinjaNivel5()
+	funcoes.Funcoes()
 }

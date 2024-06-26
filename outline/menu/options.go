@@ -36,6 +36,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/outline/exercicios_ninja_nivel_5"
 	"github.com/fabianoflorentino/aprendago/outline/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/outline/format"
+	"github.com/fabianoflorentino/aprendago/outline/funcoes"
 	"github.com/fabianoflorentino/aprendago/outline/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/outline/structs"
 	"github.com/fabianoflorentino/aprendago/outline/variaveis_valores_tipos"
@@ -64,6 +65,7 @@ func Options(args []string) {
 		exercicios_ninja_nivel_4.MenuExerciciosNinjaNivel4(args),
 		structs.MenuStructs(args),
 		exercicios_ninja_nivel_5.MenuExerciciosNinjaNivel5(args),
+		funcoes.MenuFuncoes(args),
 	)
 }
 
