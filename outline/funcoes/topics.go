@@ -1,0 +1,5 @@
+package funcoes
+
+func Funcoes() {
+
+}
