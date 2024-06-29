@@ -1,5 +1,9 @@
 package funcoes
 
-func Funcoes() {
+import "fmt"
 
+func Funcoes() {
+	fmt.Printf("Capítulo 12: Funções\n\n")
+
+	Sintaxe()
 }
