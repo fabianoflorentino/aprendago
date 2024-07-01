@@ -39,6 +39,68 @@ docker compose exec -it aprendago /bin/sh -c 'go run main.go --caps'
 ```shell
 Aprenda GO
 
+Capítulos do Curso
+
+  --cap-1    Visão Geral do Curso
+  --cap-2    Variáveis, Valores e Tipos
+  --cap-3    Exercícios Ninja: Nível 1
+  --cap-4    Fundamentos da Programação
+  --cap-5    Exercícios Ninja: Nível 2
+  --cap-6    Fluxo de Controle
+  --cap-7    Exercícios Ninja: Nível 3
+  --cap-8    Agrupamento de Dados
+  --cap-9    Exercícios Ninja: Nível 4
+  --cap-10   Structs
+  --cap-11   Exercícios Ninja: Nível 5
+  --cap-12   Funções
+```
+
+```shell
+docker compose exec -it aprendago /bin/sh -c 'go run main.go --cap-1'
+```
+
+```shell
+Aprenda GO
+
+
+Capítulo 1: Visão Geral do Curso
+
+  --bem-vindo                  Exibe a mensagem de boas-vindas ao curso Aprenda Go.
+  --porque-go                  Descreve os benefícios e razões para aprender a linguagem Go.
+  --sucesso                    Apresenta dicas e estratégias para ter sucesso no curso.
+  --recursos                   Lista recursos e materiais de apoio para o curso.
+  --como-esse-curso-funciona   Explica a estrutura e metodologia do curso.
+```
+
+```shell
+docker compose exec -it aprendago /bin/sh -c 'go run main.go --bem-vindo'
+```
+
+```shell
+Aprenda GO
+
+Bem-vindo
+
+- Bem vindo ao curso!
+- Eu sou...
+- Go foi criado por gente foda que criou o Unix, B, UTF-8...
+- Em 2006 o google queria...
+- É uma lingguagem que vem crescrendo horrores...
+- Nesse curso você vai aprender...
+- O curriculo que vamos estudar...
+- Para os novos na programação... Para os programadores experientes...
+- Participe!
+```
+
+### Menu Help (Todas as Opções Disponíveis)
+
+```shell
+docker compose exec -it aprendago /bin/sh -c 'go run main.go --help'
+```
+
+```shell
+Aprenda GO
+
 Uso: go run main.go [opção]
 
 Exemplo:
