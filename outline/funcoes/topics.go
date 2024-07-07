@@ -6,4 +6,5 @@ func Funcoes() {
 	fmt.Printf("Capítulo 12: Funções\n\n")
 
 	Sintaxe()
+	DesenrolandoEnumerandoUmaSlice()
 }
