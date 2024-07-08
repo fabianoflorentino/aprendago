@@ -8,4 +8,5 @@ func Funcoes() {
 	Sintaxe()
 	DesenrolandoEnumerandoUmaSlice()
 	Defer()
+	Metodos()
 }
