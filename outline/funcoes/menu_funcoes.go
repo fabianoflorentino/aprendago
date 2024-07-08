@@ -7,5 +7,6 @@ func MenuFuncoes([]string) []format.MenuOptions {
 		{Options: "--sintaxe", ExecFunc: func() { Sintaxe() }},
 		{Options: "--desenrolando-enumerando-uma-slice", ExecFunc: func() { DesenrolandoEnumerandoUmaSlice() }},
 		{Options: "--defer", ExecFunc: func() { Defer() }},
+		{Options: "--metodos", ExecFunc: func() { Metodos() }},
 	}
 }
