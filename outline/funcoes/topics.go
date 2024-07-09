@@ -9,4 +9,5 @@ func Funcoes() {
 	DesenrolandoEnumerandoUmaSlice()
 	Defer()
 	Metodos()
+	InterfacesEPolimorfismo()
 }
