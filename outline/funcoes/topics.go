@@ -10,4 +10,5 @@ func Funcoes() {
 	Defer()
 	Metodos()
 	InterfacesEPolimorfismo()
+	FuncoesAnonimas()
 }
