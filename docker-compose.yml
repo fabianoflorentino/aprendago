@@ -4,9 +4,9 @@ services:
     image: fabianoflorentino/aprendago:v0.1
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: build/Dockerfile.dev
     env_file:
-      - .env
+      - configs/.env
     networks:
       - aprendago
     volumes:
