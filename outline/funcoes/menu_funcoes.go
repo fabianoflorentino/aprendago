@@ -9,5 +9,6 @@ func MenuFuncoes([]string) []format.MenuOptions {
 		{Options: "--defer", ExecFunc: func() { Defer() }},
 		{Options: "--metodos", ExecFunc: func() { Metodos() }},
 		{Options: "--interfaces-e-polimorfismo", ExecFunc: func() { InterfacesEPolimorfismo() }},
+		{Options: "--funcoes-anonimas", ExecFunc: func() { FuncoesAnonimas() }},
 	}
 }
