@@ -14,6 +14,7 @@ func HelpMeFuncoes() {
 		{Flag: "--defer", Description: "Descreve o uso da declaração defer", Width: 0},
 		{Flag: "--metodos", Description: "Descreve o que são métodos em Go", Width: 0},
 		{Flag: "--interfaces-e-polimorfismo", Description: "Descreve o que são interfaces e polimorfismo em Go", Width: 0},
+		{Flag: "--funcoes-anonimas", Description: "Descreve o que são funções anônimas em Go", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 12: Funções")
