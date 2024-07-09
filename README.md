@@ -33,7 +33,7 @@ docker compose logs -f
 ### Menu Caps (Capítulos)
 
 ```shell
-docker compose exec -it aprendago /bin/sh -c 'go run main.go --caps'
+docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --caps'
 ```
 
 ```shell
@@ -56,7 +56,7 @@ Capítulos do Curso
 ```
 
 ```shell
-docker compose exec -it aprendago /bin/sh -c 'go run main.go --cap-1'
+docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --cap-1'
 ```
 
 ```shell
@@ -73,7 +73,7 @@ Capítulo 1: Visão Geral do Curso
 ```
 
 ```shell
-docker compose exec -it aprendago /bin/sh -c 'go run main.go --bem-vindo'
+docker compose exec -it aprendago /bin/sh -c 'go cmd/aprendago/run main.go --bem-vindo'
 ```
 
 ```shell
@@ -95,7 +95,7 @@ Bem-vindo
 ### Menu Help (Todas as Opções Disponíveis)
 
 ```shell
-docker compose exec -it aprendago /bin/sh -c 'go run main.go --help'
+docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --help'
 ```
 
 ```shell
@@ -286,5 +286,182 @@ Capítulo 11: Exercícios Ninja Nível 5
 
 Capítulo 12: Funções
 
-  --sintaxe   Sintaxe
+  --sintaxe                            Sintaxe de declaração de função
+  --desenroland-enumerando-uma-slice   Descreve como iterar (enumerar) uma slice
+  --defer                              Descreve o uso da declaração defer
+  --metodos                            Descreve o que são métodos em Go
+  --interfaces-e-polimorfismo          Descreve o que são interfaces e polimorfismo em Go
+  --funcoes-anonimas                   Descreve o que são funções anônimas em Go
+```
+
+## Estrutura do Projeto
+
+```shell
+.
+├── README.md
+├── build
+│   ├── Dockerfile.dev
+│   └── Dockerfile.prod
+├── cmd
+│   └── aprendago
+│       └── main.go
+├── configs
+│   └── _env
+├── docker-compose.yml
+├── go.mod
+├── internal
+│   ├── agrupamento_de_dados
+│   │   ├── array.go
+│   │   ├── helpme_agrupamento_de_dado.go
+│   │   ├── map_range_e_deletando.go
+│   │   ├── maps_introducao.go
+│   │   ├── menu_agrupamento_de_dados.go
+│   │   ├── slice_a_surpresa_do_array_subjacente.go
+│   │   ├── slice_anexando_a_uma_slice.go
+│   │   ├── slice_fatiando_ou_deletando_de_uma_fatia.go
+│   │   ├── slice_for_range.go
+│   │   ├── slice_literal_composta.go
+│   │   ├── slice_make.go
+│   │   ├── slice_multi_dimensional.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_1
+│   │   ├── contribua_seu_codigo.go
+│   │   ├── helpme_exercicios_ninja_nivel_1.go
+│   │   ├── menu_exercicios_ninja_nivel_1.go
+│   │   ├── na_pratica_exercicio_1.go
+│   │   ├── na_pratica_exercicio_2.go
+│   │   ├── na_pratica_exercicio_3.go
+│   │   ├── na_pratica_exercicio_4.go
+│   │   ├── na_pratica_exercicio_5.go
+│   │   ├── na_pratica_exercicio_6.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_2
+│   │   ├── helpme_exercicios_ninja_nivel_2.go
+│   │   ├── menu_exercicios_ninja_nivel_2.go
+│   │   ├── na_pratica_exercicio_1.go
+│   │   ├── na_pratica_exercicio_2.go
+│   │   ├── na_pratica_exercicio_3.go
+│   │   ├── na_pratica_exercicio_4.go
+│   │   ├── na_pratica_exercicio_5.go
+│   │   ├── na_pratica_exercicio_6.go
+│   │   ├── na_pratica_exercicio_7.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_3
+│   │   ├── helpme_exercicios_ninja_nivel_3.go
+│   │   ├── menu_exercicios_ninja_nivel_3.go
+│   │   ├── na_pratica_exercicio_1.go
+│   │   ├── na_pratica_exercicio_10.go
+│   │   ├── na_pratica_exercicio_2.go
+│   │   ├── na_pratica_exercicio_3.go
+│   │   ├── na_pratica_exercicio_4.go
+│   │   ├── na_pratica_exercicio_5.go
+│   │   ├── na_pratica_exercicio_6.go
+│   │   ├── na_pratica_exercicio_7.go
+│   │   ├── na_pratica_exercicio_8.go
+│   │   ├── na_pratica_exercicio_9.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_4
+│   │   ├── helpme_exercicios_ninja_nivel_4.go
+│   │   ├── menu_exercicios_ninja_nivel_4.go
+│   │   ├── na_pratica_exercicio_1.go
+│   │   ├── na_pratica_exercicio_10.go
+│   │   ├── na_pratica_exercicio_2.go
+│   │   ├── na_pratica_exercicio_3.go
+│   │   ├── na_pratica_exercicio_4.go
+│   │   ├── na_pratica_exercicio_5.go
+│   │   ├── na_pratica_exercicio_6.go
+│   │   ├── na_pratica_exercicio_7.go
+│   │   ├── na_pratica_exercicio_8.go
+│   │   ├── na_pratica_exercicio_9.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_5
+│   │   ├── helpme_exercicios_ninja_nivel_5.go
+│   │   ├── menu_exercicios_ninja_nivel_5.go
+│   │   ├── na_pratica_exercicio_1.go
+│   │   ├── na_pratica_exercicio_2.go
+│   │   ├── na_pratica_exercicio_3.go
+│   │   ├── na_pratica_exercicio_4.go
+│   │   └── topics.go
+│   ├── fluxo_de_controle
+│   │   ├── condicionais_a_declaracao_if.go
+│   │   ├── condicionais_a_declaracao_switch.go
+│   │   ├── condicionais_a_declaracao_switch_pt2.go
+│   │   ├── condicionais_if_elseif_else.go
+│   │   ├── entendendo_fluxo_de_controle.go
+│   │   ├── helpme_fluxo_de_controle.go
+│   │   ├── loops_a_declaracao_for.go
+│   │   ├── loops_break_e_continue.go
+│   │   ├── loops_inicializacao_condicao_pos.go
+│   │   ├── loops_nested_loop.go
+│   │   ├── loops_utilizando_ascii.go
+│   │   ├── menu_fluxo_de_controle.go
+│   │   ├── operadores_logicos_condicionais.go
+│   │   └── topics.go
+│   ├── funcoes
+│   │   ├── defer.go
+│   │   ├── desenrolando_enumerando_uma_slice.go
+│   │   ├── funcoes_anonimas.go
+│   │   ├── helpme_funcoes.go
+│   │   ├── interfaces_e_polimorfismo.go
+│   │   ├── menu_funcoes.go
+│   │   ├── metodos.go
+│   │   ├── sintaxe.go
+│   │   └── topics.go
+│   ├── fundamentos_da_programacao
+│   │   ├── como_os_computadores_funcionam.go
+│   │   ├── constantes.go
+│   │   ├── deslocamento_de_bits.go
+│   │   ├── helpme_fundamentos_da_programacao.go
+│   │   ├── iota.go
+│   │   ├── menu_fundamentos_da_programcao.go
+│   │   ├── overflow.go
+│   │   ├── sistemas_numericos.go
+│   │   ├── tipo_booleano.go
+│   │   ├── tipo_string.go
+│   │   ├── tipos_numericos.go
+│   │   └── topics.go
+│   ├── menu
+│   │   ├── capitulo_options.go
+│   │   ├── helpme.go
+│   │   └── options.go
+│   ├── outline.go
+│   ├── structs
+│   │   ├── helpme_structs.go
+│   │   ├── lendo_a_documentacao.go
+│   │   ├── menu_structs.go
+│   │   ├── struct.go
+│   │   ├── structs_anonimos.go
+│   │   ├── structs_embutidos.go
+│   │   └── topics.go
+│   ├── variaveis_valores_tipos
+│   │   ├── a_palavra_reservada_var.go
+│   │   ├── conversao_nao_coercao.go
+│   │   ├── criando_seu_proprio_tipo.go
+│   │   ├── explorando_tipos.go
+│   │   ├── go_playground.go
+│   │   ├── hello_world.go
+│   │   ├── helpme_variaveis_valores_tipos.go
+│   │   ├── menu_variaveis_valores_tipos.go
+│   │   ├── o_pacote_fmt.go
+│   │   ├── operador_curto_de_declaracao.go
+│   │   ├── topics.go
+│   │   └── valor_zero.go
+│   └── visao_geral_do_curso
+│       ├── bem_vindo.go
+│       ├── como_esse_curso_funciona.go
+│       ├── helpme_visao_geral_do_curso.go
+│       ├── menu_visao_geral_do_curso.go
+│       ├── por_que_go.go
+│       ├── recursos.go
+│       ├── sucesso.go
+│       └── topics.go
+└── pkg
+    └── format
+        ├── format_menu_options.go
+        ├── format_outline_topic.go
+        ├── format_resolucao_exercicios.go
+        ├── helpme.go
+        └── questionario.go
+
+21 directories, 144 files
 ```
