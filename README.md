@@ -457,11 +457,9 @@ Capítulo 12: Funções
 │       └── topics.go
 └── pkg
     └── format
-        ├── format_menu_options.go
-        ├── format_outline_topic.go
-        ├── format_resolucao_exercicios.go
         ├── helpme.go
-        └── questionario.go
-
-21 directories, 144 files
+        ├── menu_options.go
+        ├── outline_topic.go
+        ├── questionario.go
+        └── resolucao_exercicios.go
 ```
