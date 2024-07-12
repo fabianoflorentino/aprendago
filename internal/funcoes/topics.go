@@ -11,4 +11,5 @@ func Funcoes() {
 	Metodos()
 	InterfacesEPolimorfismo()
 	FuncoesAnonimas()
+	FuncComoExpressa()
 }

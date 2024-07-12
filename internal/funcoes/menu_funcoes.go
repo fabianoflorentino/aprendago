@@ -10,5 +10,6 @@ func MenuFuncoes([]string) []format.MenuOptions {
 		{Options: "--metodos", ExecFunc: func() { Metodos() }},
 		{Options: "--interfaces-e-polimorfismo", ExecFunc: func() { InterfacesEPolimorfismo() }},
 		{Options: "--funcoes-anonimas", ExecFunc: func() { FuncoesAnonimas() }},
+		{Options: "--func-como-expressa", ExecFunc: func() { FuncComoExpressa() }},
 	}
 }
