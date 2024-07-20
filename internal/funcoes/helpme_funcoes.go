@@ -19,6 +19,7 @@ func HelpMeFuncoes() {
 		{Flag: "--retornando-uma-funcao", Description: "Descreve como retornar uma função em Go", Width: 0},
 		{Flag: "--callback", Description: "Descreve o que é um callback em Go", Width: 0},
 		{Flag: "--resolucao-desafio-callback", Description: "Mostra a resolução do desafio de callback", Width: 0},
+		{Flag: "--closure", Description: "Descreve o que é um closure em Go", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 12: Funções")
