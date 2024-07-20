@@ -17,6 +17,8 @@ func HelpMeFuncoes() {
 		{Flag: "--funcoes-anonimas", Description: "Descreve o que são funções anônimas em Go", Width: 0},
 		{Flag: "--func-como-expressa", Description: "Descreve como declarar funções como expressões", Width: 0},
 		{Flag: "--retornando-uma-funcao", Description: "Descreve como retornar uma função em Go", Width: 0},
+		{Flag: "--callback", Description: "Descreve o que é um callback em Go", Width: 0},
+		{Flag: "--resolucao-desafio-callback", Description: "Mostra a resolução do desafio de callback", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 12: Funções")
