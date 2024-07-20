@@ -14,4 +14,5 @@ func Funcoes() {
 	FuncComoExpressa()
 	RetornandoUmaFuncao()
 	Callback()
+	Closure()
 }
