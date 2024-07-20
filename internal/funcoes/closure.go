@@ -4,7 +4,7 @@ import "github.com/fabianoflorentino/aprendago/pkg/format"
 
 func Closure() {
 	topic := format.OutlineContent{
-		Title: "Clousure",
+		Title: "Closure",
 		Content: `
 - Closure é cercar ou capturar um scope para que possamos utilizá-lo em outro contexto. Já vimos:
   - Package-level scope
