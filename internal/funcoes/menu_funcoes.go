@@ -11,5 +11,6 @@ func MenuFuncoes([]string) []format.MenuOptions {
 		{Options: "--interfaces-e-polimorfismo", ExecFunc: func() { InterfacesEPolimorfismo() }},
 		{Options: "--funcoes-anonimas", ExecFunc: func() { FuncoesAnonimas() }},
 		{Options: "--func-como-expressa", ExecFunc: func() { FuncComoExpressa() }},
+		{Options: "--retornando-uma-funcao", ExecFunc: func() { RetornandoUmaFuncao() }},
 	}
 }
