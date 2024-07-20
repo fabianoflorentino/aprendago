@@ -16,6 +16,7 @@ func HelpMeFuncoes() {
 		{Flag: "--interfaces-e-polimorfismo", Description: "Descreve o que são interfaces e polimorfismo em Go", Width: 0},
 		{Flag: "--funcoes-anonimas", Description: "Descreve o que são funções anônimas em Go", Width: 0},
 		{Flag: "--func-como-expressa", Description: "Descreve como declarar funções como expressões", Width: 0},
+		{Flag: "--retornando-uma-funcao", Description: "Descreve como retornar uma função em Go", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 12: Funções")
