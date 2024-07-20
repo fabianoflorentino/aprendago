@@ -13,4 +13,5 @@ func Funcoes() {
 	FuncoesAnonimas()
 	FuncComoExpressa()
 	RetornandoUmaFuncao()
+	Callback()
 }
