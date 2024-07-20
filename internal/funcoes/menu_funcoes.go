@@ -14,5 +14,6 @@ func MenuFuncoes([]string) []format.MenuOptions {
 		{Options: "--retornando-uma-funcao", ExecFunc: func() { RetornandoUmaFuncao() }},
 		{Options: "--callback", ExecFunc: func() { Callback() }},
 		{Options: "--resolucao-desafio-callback", ExecFunc: func() { ResolucaoDesafioCallback() }},
+		{Options: "--closure", ExecFunc: func() { Closure() }},
 	}
 }
