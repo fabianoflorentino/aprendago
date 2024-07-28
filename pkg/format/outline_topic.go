@@ -73,24 +73,3 @@ func StartSection(callback func(*OutlineContent)) {
 	callback(&section)
 	fmt.Println(section.Content)
 }
-
-// func renderList(list *List) string {
-// 	var content string
-
-// 	for {
-// 		tabs := strings.Repeat("\t", list.level)
-// 		for _, listItem := range list.items {
-// 			content += tabs + "- " + listItem + "\n"
-// 		}
-
-// 		if len(list.childLists) <= 0 {
-// 			break
-// 		}
-
-// 		for _, childList := range list.childLists {
-// 			content += renderList(childList)
-// 		}
-// 	}
-
-// 	return content
-// }
