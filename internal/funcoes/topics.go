@@ -15,4 +15,5 @@ func Funcoes() {
 	RetornandoUmaFuncao()
 	Callback()
 	Closure()
+	Recursividade()
 }
