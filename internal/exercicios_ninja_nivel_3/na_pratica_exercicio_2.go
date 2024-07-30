@@ -12,17 +12,17 @@ func NaPraticaExercicio2() {
 		Content: `
 - Põe na tela: O unicode code point de todas as letras maiúsculas do alfabeto, três vezes cada.
 - Por exemplo:
-	65
-		U+0041 'A'
-		U+0041 'A'
-		U+0041 'A'
-	66
-		U+0042 'B'
-		U+0042 'B'
-		U+0042 'B'
-	...e por aí vai.
+  65
+    U+0041 'A'
+    U+0041 'A'
+    U+0041 'A'
+  66
+    U+0042 'B'
+    U+0042 'B'
+    U+0042 'B'
+  ...e por aí vai.
 - Solução: https://play.golang.org/p/QlP6nVchq- ou use no menu do programa (--na-pratica-exercicio-2 --nivel-3 --resolucao)
-		`,
+    `,
 	}
 
 	format.FormatOutlineTopic(topic)

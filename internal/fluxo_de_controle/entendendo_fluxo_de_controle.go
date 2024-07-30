@@ -30,7 +30,7 @@ func EntendendoFluxoDeControle() {
         - default
         - múltiplos casos
         - casos podem ser expressões
-            - se resultarem em true, rodam
+          - se resultarem em true, rodam
         - tipo
         - if
           - bool
