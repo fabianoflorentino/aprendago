@@ -35,6 +35,7 @@ Ajuda:
 func HelpMe() {
 	fmt.Println(HEADER)
 	HelpMeCapituloOptions()
+	HelpMeCapituloOutline()
 	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()
 	variaveis_valores_tipos.HelpMeVariaveisValoresTipos()
 	exercicios_ninja_nivel_1.HelpMeExerciciosNinjaNivel1()
