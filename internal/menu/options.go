@@ -54,6 +54,7 @@ func Options(args []string) {
 		args,
 		generalOptions(args),
 		MenuCapituloOptions(args),
+		MenuCapituloOutline(args),
 		visao_geral_do_curso.MenuVisaoGeralDoCurso(args),
 		variaveis_valores_tipos.MenuVariaveisValoresTipos(args),
 		exercicios_ninja_nivel_1.MenuExerciciosNinjaNivel1(args),
