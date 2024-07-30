@@ -60,7 +60,7 @@ type itemContent struct {
 }
 
 func (itemContent itemContent) render() string {
-	tabs := strings.Repeat("\t", itemContent.list.level)
+	tabs := strings.Repeat("  ", itemContent.list.level)
 	return tabs + "- " + itemContent.content + "\n"
 }
 
