@@ -3,6 +3,9 @@ package format
 import (
 	"fmt"
 	"strings"
+
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 )
 
 type OutlineContent struct {
@@ -11,7 +14,11 @@ type OutlineContent struct {
 }
 
 func (outlineContent *OutlineContent) AddHeader(content string) {
-	outlineContent.Content += strings.ToUpper(content) + "\n"
+	for _, c := range []cases.Caser{
+		cases.Title(language.BrazilianPortuguese),
+	} {
+		outlineContent.Content += c.String(content) + "\n"
+	}
 }
 
 func (outlineContent *OutlineContent) AddText(content string) {
