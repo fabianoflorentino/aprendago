@@ -9,6 +9,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_5"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_6"
 	"github.com/fabianoflorentino/aprendago/internal/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/internal/funcoes"
 	"github.com/fabianoflorentino/aprendago/internal/fundamentos_da_programacao"
@@ -32,6 +33,7 @@ func MenuCapituloOptions([]string) []format.MenuOptions {
 		{Options: "--cap-10", ExecFunc: func() { structs.HelpMeStructs() }},
 		{Options: "--cap-11", ExecFunc: func() { exercicios_ninja_nivel_5.HelpMeExerciciosNinjaNivel5() }},
 		{Options: "--cap-12", ExecFunc: func() { funcoes.HelpMeFuncoes() }},
+		{Options: "--cap-13", ExecFunc: func() { exercicios_ninja_nivel_6.HelMeExerciciosNinjaNivel6() }},
 	}
 }
 
@@ -49,6 +51,7 @@ func HelpMeCapituloOptions() {
 		{Flag: "--cap-10", Description: "Structs", Width: 0},
 		{Flag: "--cap-11", Description: "Exercícios Ninja: Nível 5", Width: 0},
 		{Flag: "--cap-12", Description: "Funções", Width: 0},
+		{Flag: "--cap-13", Description: "Exercícios Ninja: Nível 6", Width: 0},
 	}
 
 	fmt.Println("Capítulos do Curso")
