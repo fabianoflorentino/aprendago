@@ -16,6 +16,6 @@ func HelMeExerciciosNinjaNivel6() {
 		{Flag: "--na-pratica-exercicio-3 --nivel-6 --resolucao", Description: "Apresenta a resolução do terceiro exercício prático do Nível 6.", Width: 0},
 	}
 
-	fmt.Println("\nCapítulo 12: Exercícios Ninja Nível 6")
+	fmt.Println("\nCapítulo 13: Exercícios Ninja Nível 6")
 	format.PrintHelpMe(hlp)
 }
