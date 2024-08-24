@@ -6,8 +6,8 @@ func MenuExerciciosNinjaNivel6([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--na-pratica-exercicio-1 --nivel-6", ExecFunc: func() { NaPraticaExercicio1() }},
 		{Options: "--na-pratica-exercicio-1 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
-		// {Options: "--na-pratica-exercicio-2 --nivel-6", ExecFunc: func() { NaPraticaExercicio2() }},
-		// {Options: "--na-pratica-exercicio-2 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio2() }},
+		{Options: "--na-pratica-exercicio-2 --nivel-6", ExecFunc: func() { NaPraticaExercicio2() }},
+		{Options: "--na-pratica-exercicio-2 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio2() }},
 		// {Options: "--na-pratica-exercicio-3 --nivel-6", ExecFunc: func() { NaPraticaExercicio3() }},
 		// {Options: "--na-pratica-exercicio-3 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio3() }},
 		// {Options: "--na-pratica-exercicio-4 --nivel-6", ExecFunc: func() { NaPraticaExercicio4() }},
