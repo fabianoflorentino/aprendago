@@ -3,7 +3,7 @@ package exercicios_ninja_nivel_6
 import "fmt"
 
 func ExerciciosNinjaNivel6() {
-	fmt.Printf("Capítulo 12: Exercícios Ninja Nível 6\n\n")
+	fmt.Printf("Capítulo 13: Exercícios Ninja Nível 6\n\n")
 
 	NaPraticaExercicio1()
 	NaPraticaExercicio2()
