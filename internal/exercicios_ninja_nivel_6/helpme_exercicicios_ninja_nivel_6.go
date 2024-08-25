@@ -14,6 +14,8 @@ func HelMeExerciciosNinjaNivel6() {
 		{Flag: "--na-pratica-exercicio-2 --nivel-6 --resolucao", Description: "Apresenta a resolução do segundo exercício prático do Nível 6.", Width: 0},
 		{Flag: "--na-pratica-exercicio-3 --nivel-6", Description: "Apresenta o terceiro exercício prático do Nível 6.", Width: 0},
 		{Flag: "--na-pratica-exercicio-3 --nivel-6 --resolucao", Description: "Apresenta a resolução do terceiro exercício prático do Nível 6.", Width: 0},
+		{Flag: "--na-pratica-exercicio-4 --nivel-6", Description: "Apresenta o quarto exercício prático do Nível 6.", Width: 0},
+		{Flag: "--na-pratica-exercicio-4 --nivel-6 --resolucao", Description: "Apresenta a resolução do quarto exercício prático do Nível 6.", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 13: Exercícios Ninja Nível 6")
