@@ -41,6 +41,7 @@ func parseWidth(flags []HelpMe) int {
 // O recuo é calculado com base no tamanho da flag e em um valor fixo (4).
 func indent(width int, description string) string {
 	trimSpaceDescription := strings.TrimSpace(description)
+	flagWidth := 4
 
 	lines := strings.Split(trimSpaceDescription, "\n")
 	if len(lines) <= 1 {
@@ -50,7 +51,7 @@ func indent(width int, description string) string {
 	// O loop for percorre as linhas da descrição e adiciona um recuo à frente de cada linha.
 	// O recuo é calculado com base no tamanho da flag e em um valor fixo (4).
 	for idx := 1; idx < len(lines); idx++ {
-		lines[idx] = strings.Repeat(" ", width+4) + lines[idx]
+		lines[idx] = strings.Repeat(" ", width+flagWidth) + lines[idx]
 	}
 
 	return strings.Join(lines, "\n")
