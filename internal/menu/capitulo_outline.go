@@ -5,6 +5,7 @@ import (
 
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
+	"github.com/fabianoflorentino/aprendago/internal/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/internal/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
@@ -18,6 +19,7 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 		{Options: "--cap-3 --exercicios-ninja-nivlel-1", ExecFunc: func() { exercicios_ninja_nivel_3.ExerciciosNinjaNivel3() }},
 		{Options: "--cap-4 --fundamentos-da-programacao", ExecFunc: func() { fundamentos_da_programacao.FundamentosDaProgramacao() }},
 		{Options: "--cap-5 --exercicios-ninja-nivel-2", ExecFunc: func() { exercicios_ninja_nivel_2.ExerciciosNinjaNivel2() }},
+		{Options: "--cap-6 --fluxo-de-controle", ExecFunc: func() { fluxo_de_controle.FluxoDeControle() }},
 	}
 }
 
@@ -28,6 +30,7 @@ func HelpMeCapituloOutline() {
 		{Flag: "--cap-3 --exercicios-ninja-nivlel-1", Description: "Exercícios Ninja Nível 1", Width: 0},
 		{Flag: "--cap-4 --fundamentos-da-programacao", Description: "Fundamentos da Programação", Width: 0},
 		{Flag: "--cap-5 --exercicios-ninja-nivel-2", Description: "Exercícios Ninja Nível 2", Width: 0},
+		{Flag: "--cap-6 --fluxo-de-controle", Description: "Fluxo de Controle", Width: 0},
 	}
 
 	fmt.Printf("\nOutline do Curso por Capítulo\n")
