@@ -39,67 +39,6 @@ docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --cap
 ```shell
 Aprenda GO
 
-Capítulos do Curso
-
-  --cap-1    Visão Geral do Curso
-  --cap-2    Variáveis, Valores e Tipos
-  --cap-3    Exercícios Ninja: Nível 1
-  --cap-4    Fundamentos da Programação
-  --cap-5    Exercícios Ninja: Nível 2
-  --cap-6    Fluxo de Controle
-  --cap-7    Exercícios Ninja: Nível 3
-  --cap-8    Agrupamento de Dados
-  --cap-9    Exercícios Ninja: Nível 4
-  --cap-10   Structs
-  --cap-11   Exercícios Ninja: Nível 5
-  --cap-12   Funções
-```
-
-```shell
-docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --cap-1'
-```
-
-```shell
-Aprenda GO
-
-
-Capítulo 1: Visão Geral do Curso
-
-  --bem-vindo                  Exibe a mensagem de boas-vindas ao curso Aprenda Go.
-  --porque-go                  Descreve os benefícios e razões para aprender a linguagem Go.
-  --sucesso                    Apresenta dicas e estratégias para ter sucesso no curso.
-  --recursos                   Lista recursos e materiais de apoio para o curso.
-  --como-esse-curso-funciona   Explica a estrutura e metodologia do curso.
-```
-
-```shell
-docker compose exec -it aprendago /bin/sh -c 'go cmd/aprendago/run main.go --bem-vindo'
-```
-
-```shell
-Aprenda GO
-
-Bem-vindo
-
-- Bem vindo ao curso!
-- Eu sou...
-- Go foi criado por gente foda que criou o Unix, B, UTF-8...
-- Em 2006 o google queria...
-- É uma lingguagem que vem crescrendo horrores...
-- Nesse curso você vai aprender...
-- O curriculo que vamos estudar...
-- Para os novos na programação... Para os programadores experientes...
-- Participe!
-```
-
-### Menu Help (Todas as Opções Disponíveis)
-
-```shell
-docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --help'
-```
-
-```shell
-Aprenda GO
 
 Uso: go run main.go [opção]
 
@@ -114,18 +53,28 @@ Ajuda:
 
 Capítulos do Curso
 
-  --cap-1    Visão Geral do Curso
-  --cap-2    Variáveis, Valores e Tipos
-  --cap-3    Exercícios Ninja: Nível 1
-  --cap-4    Fundamentos da Programação
-  --cap-5    Exercícios Ninja: Nível 2
-  --cap-6    Fluxo de Controle
-  --cap-7    Exercícios Ninja: Nível 3
-  --cap-8    Agrupamento de Dados
-  --cap-9    Exercícios Ninja: Nível 4
-  --cap-10   Structs
-  --cap-11   Exercícios Ninja: Nível 5
-  --cap-12   Funções
+  --cap-1 --topics    Visão Geral do Curso
+  --cap-2 --topics    Variáveis, Valores e Tipos
+  --cap-3 --topics    Exercícios Ninja: Nível 1
+  --cap-4 --topics    Fundamentos da Programação
+  --cap-5 --topics    Exercícios Ninja: Nível 2
+  --cap-6 --topics    Fluxo de Controle
+  --cap-7 --topics    Exercícios Ninja: Nível 3
+  --cap-8 --topics    Agrupamento de Dados
+  --cap-9 --topics    Exercícios Ninja: Nível 4
+  --cap-10 --topics   Structs
+  --cap-11 --topics   Exercícios Ninja: Nível 5
+  --cap-12 --topics   Funções
+  --cap-13 --topics   Exercícios Ninja: Nível 6
+
+Outline do Curso por Capítulo
+
+  --cap-1 --overview   Visão Geral do Curso
+  --cap-2 --overview   Variáveis, Valores &amp; Tipos
+  --cap-3 --overview   Exercícios Ninja Nível 1
+  --cap-4 --overview   Fundamentos da Programação
+  --cap-5 --overview   Exercícios Ninja Nível 2
+  --cap-6 --overview   Fluxo de Controle
 
 Capítulo 1: Visão Geral do Curso
 
@@ -292,6 +241,25 @@ Capítulo 12: Funções
   --metodos                            Descreve o que são métodos em Go
   --interfaces-e-polimorfismo          Descreve o que são interfaces e polimorfismo em Go
   --funcoes-anonimas                   Descreve o que são funções anônimas em Go
+  --func-como-expressa                 Descreve como declarar funções como expressões
+  --retornando-uma-funcao              Descreve como retornar uma função em Go
+  --callback                           Descreve o que é um callback em Go
+  --resolucao-desafio-callback         Mostra a resolução do desafio de callback
+  --closure                            Descreve o que é um closure em Go
+  --recursividade                      Descreve o que é recursividade em Go
+
+Capítulo 13: Exercícios Ninja Nível 6
+
+  --na-pratica-exercicio-1 --nivel-6               Apresenta o primeiro exercício prático do Nível 6.
+  --na-pratica-exercicio-1 --nivel-6 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 6.
+  --na-pratica-exercicio-2 --nivel-6               Apresenta o segundo exercício prático do Nível 6.
+  --na-pratica-exercicio-2 --nivel-6 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 6.
+  --na-pratica-exercicio-3 --nivel-6               Apresenta o terceiro exercício prático do Nível 6.
+  --na-pratica-exercicio-3 --nivel-6 --resolucao   Apresenta a resolução do terceiro exercício prático do Nível 6.
+  --na-pratica-exercicio-4 --nivel-6               Apresenta o quarto exercício prático do Nível 6.
+  --na-pratica-exercicio-4 --nivel-6 --resolucao   Apresenta a resolução do quarto exercício prático do Nível 6.
+  --na-pratica-exercicio-5 --nivel-6               Apresenta o quinto exercício prático do Nível 6.
+  --na-pratica-exercicio-5 --nivel-6 --resolucao   Apresenta a resolução do quinto exercício prático do Nível 6.
 ```
 
 ## Estrutura do Projeto
@@ -309,6 +277,7 @@ Capítulo 12: Funções
 │   └── _env
 ├── docker-compose.yml
 ├── go.mod
+├── go.sum
 ├── internal
 │   ├── agrupamento_de_dados
 │   │   ├── array.go
@@ -382,6 +351,15 @@ Capítulo 12: Funções
 │   │   ├── na_pratica_exercicio_3.go
 │   │   ├── na_pratica_exercicio_4.go
 │   │   └── topics.go
+│   ├── exercicios_ninja_nivel_6
+│   │   ├── helpme_exercicicios_ninja_nivel_6.go
+│   │   ├── menu_exercicios_ninja_nivel_6.go
+│   │   ├── na_pratica_exercicio_1.go
+│   │   ├── na_pratica_exercicio_2.go
+│   │   ├── na_pratica_exercicio_3.go
+│   │   ├── na_pratica_exercicio_4.go
+│   │   ├── na_pratica_exercicio_5.go
+│   │   └── topics.go
 │   ├── fluxo_de_controle
 │   │   ├── condicionais_a_declaracao_if.go
 │   │   ├── condicionais_a_declaracao_switch.go
@@ -398,13 +376,18 @@ Capítulo 12: Funções
 │   │   ├── operadores_logicos_condicionais.go
 │   │   └── topics.go
 │   ├── funcoes
+│   │   ├── callback.go
+│   │   ├── closure.go
 │   │   ├── defer.go
 │   │   ├── desenrolando_enumerando_uma_slice.go
+│   │   ├── func_como_expressao.go
 │   │   ├── funcoes_anonimas.go
 │   │   ├── helpme_funcoes.go
 │   │   ├── interfaces_e_polimorfismo.go
 │   │   ├── menu_funcoes.go
 │   │   ├── metodos.go
+│   │   ├── recursividade.go
+│   │   ├── retornando_uma_funcao.go
 │   │   ├── sintaxe.go
 │   │   └── topics.go
 │   ├── fundamentos_da_programacao
@@ -422,6 +405,7 @@ Capítulo 12: Funções
 │   │   └── topics.go
 │   ├── menu
 │   │   ├── capitulo_options.go
+│   │   ├── capitulo_outline.go
 │   │   ├── helpme.go
 │   │   └── options.go
 │   ├── outline.go
@@ -447,19 +431,19 @@ Capítulo 12: Funções
 │   │   ├── topics.go
 │   │   └── valor_zero.go
 │   └── visao_geral_do_curso
-│       ├── bem_vindo.go
-│       ├── como_esse_curso_funciona.go
-│       ├── helpme_visao_geral_do_curso.go
-│       ├── menu_visao_geral_do_curso.go
-│       ├── por_que_go.go
-│       ├── recursos.go
-│       ├── sucesso.go
+│       ├── menu.go
+│       ├── overview.go
+│       ├── overview.yml
 │       └── topics.go
 └── pkg
-    └── format
-        ├── helpme.go
-        ├── menu_options.go
-        ├── outline_topic.go
-        ├── questionario.go
-        └── resolucao_exercicios.go
+    ├── format
+    │   ├── helpme.go
+    │   ├── menu_options.go
+    │   ├── outline_topic.go
+    │   ├── overview.go
+    │   ├── questionario.go
+    │   ├── resolucao_exercicios.go
+    │   └── section.go
+    └── reader
+        └── document_reader.go
 ```
