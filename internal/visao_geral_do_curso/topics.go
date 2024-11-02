@@ -25,7 +25,7 @@ func PorQueGo() {
 }
 
 func Sucesso() {
-	format.BuildSection(rootDir, "Sucesso!")
+	format.BuildSection(rootDir, "Sucesso")
 }
 
 func Recursos() {
@@ -33,5 +33,5 @@ func Recursos() {
 }
 
 func ComoEsseCursoFunciona() {
-	format.BuildSection(rootDir, "Como Esse Curso Funciona?")
+	format.BuildSection(rootDir, "Como esse curso funciona")
 }
