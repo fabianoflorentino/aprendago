@@ -14,23 +14,23 @@ import (
 
 func MenuCapituloOutline([]string) []format.MenuOptions {
 	return []format.MenuOptions{
-		{Options: "--cap-1 --outline", ExecFunc: func() { visao_geral_do_curso.VisaoGeralDoCurso() }},
-		{Options: "--cap-2 --variaveis-valores-tipos", ExecFunc: func() { variaveis_valores_tipos.VariaveisValoresETipos() }},
-		{Options: "--cap-3 --exercicios-ninja-nivlel-1", ExecFunc: func() { exercicios_ninja_nivel_3.ExerciciosNinjaNivel3() }},
-		{Options: "--cap-4 --fundamentos-da-programacao", ExecFunc: func() { fundamentos_da_programacao.FundamentosDaProgramacao() }},
-		{Options: "--cap-5 --exercicios-ninja-nivel-2", ExecFunc: func() { exercicios_ninja_nivel_2.ExerciciosNinjaNivel2() }},
-		{Options: "--cap-6 --fluxo-de-controle", ExecFunc: func() { fluxo_de_controle.FluxoDeControle() }},
+		{Options: "--cap-1 --overview", ExecFunc: func() { visao_geral_do_curso.VisaoGeralDoCurso() }},
+		{Options: "--cap-2 --overview", ExecFunc: func() { variaveis_valores_tipos.VariaveisValoresETipos() }},
+		{Options: "--cap-3 --overview", ExecFunc: func() { exercicios_ninja_nivel_3.ExerciciosNinjaNivel3() }},
+		{Options: "--cap-4 --overview", ExecFunc: func() { fundamentos_da_programacao.FundamentosDaProgramacao() }},
+		{Options: "--cap-5 --overview", ExecFunc: func() { exercicios_ninja_nivel_2.ExerciciosNinjaNivel2() }},
+		{Options: "--cap-6 --overview", ExecFunc: func() { fluxo_de_controle.FluxoDeControle() }},
 	}
 }
 
 func HelpMeCapituloOutline() {
 	hlp := []format.HelpMe{
-		{Flag: "--cap-1 --outline", Description: "Visão Geral do Curso", Width: 0},
-		{Flag: "--cap-2 --variaveis-valores-tipos", Description: "Variáveis, Valores & Tipos", Width: 0},
-		{Flag: "--cap-3 --exercicios-ninja-nivlel-1", Description: "Exercícios Ninja Nível 1", Width: 0},
-		{Flag: "--cap-4 --fundamentos-da-programacao", Description: "Fundamentos da Programação", Width: 0},
-		{Flag: "--cap-5 --exercicios-ninja-nivel-2", Description: "Exercícios Ninja Nível 2", Width: 0},
-		{Flag: "--cap-6 --fluxo-de-controle", Description: "Fluxo de Controle", Width: 0},
+		{Flag: "--cap-1 --overview", Description: "Visão Geral do Curso", Width: 0},
+		{Flag: "--cap-2 --overview", Description: "Variáveis, Valores & Tipos", Width: 0},
+		{Flag: "--cap-3 --overview", Description: "Exercícios Ninja Nível 1", Width: 0},
+		{Flag: "--cap-4 --overview", Description: "Fundamentos da Programação", Width: 0},
+		{Flag: "--cap-5 --overview", Description: "Exercícios Ninja Nível 2", Width: 0},
+		{Flag: "--cap-6 --overview", Description: "Fluxo de Controle", Width: 0},
 	}
 
 	fmt.Printf("\nOutline do Curso por Capítulo\n")
