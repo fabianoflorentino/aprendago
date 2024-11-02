@@ -39,7 +39,7 @@ func buildDivider(document reader.Document) string {
 	return strings.Repeat(documentDivider, maxLength)
 }
 
-func FormatDocument(documents []reader.Document) error {
+func Overview(documents []reader.Document) error {
 	tmpl, err := template.New("document").Parse(documentTemplate)
 	if err != nil {
 		return err

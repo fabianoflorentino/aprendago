@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	DOCTOREAD_YML  = "document.yml"
-	DOCTOREAD_YAML = "document.yaml"
+	DOCTOREAD_YML  = "overview.yml"
+	DOCTOREAD_YAML = "overview.yaml"
 )
 
 type Section struct {
@@ -31,7 +31,7 @@ type Document struct {
 	Description Description `yaml:"description"`
 }
 
-func DocumentReader(rootDir string) ([]Document, error) {
+func Overview(rootDir string) ([]Document, error) {
 	var documentSpecification []Document
 
 	docPathYML := filepath.Join(rootDir, DOCTOREAD_YML)
@@ -64,7 +64,7 @@ func DocumentReader(rootDir string) ([]Document, error) {
 }
 
 func ReadSection(rootDir, sectionTitle string) (*Section, error) {
-	documents, err := DocumentReader(rootDir)
+	documents, err := Overview(rootDir)
 	if err != nil {
 		return nil, err
 	}

@@ -25,7 +25,7 @@ func BuildSection(dir string, title string) {
 		},
 	}
 
-	err = FormatDocument([]reader.Document{document})
+	err = Overview([]reader.Document{document})
 	if err != nil {
 		log.Fatalf("Erro ao formatar o documento: %v", err)
 	}
