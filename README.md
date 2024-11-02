@@ -431,8 +431,6 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── topics.go
 │   │   └── valor_zero.go
 │   └── visao_geral_do_curso
-│       ├── menu.go
-│       ├── overview.go
 │       ├── overview.yml
 │       └── topics.go
 └── pkg
@@ -445,5 +443,5 @@ Capítulo 13: Exercícios Ninja Nível 6
     │   ├── resolucao_exercicios.go
     │   └── section.go
     └── reader
-        └── document_reader.go
+        └── overview.go
 ```
