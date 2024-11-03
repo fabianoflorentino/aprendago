@@ -8,8 +8,8 @@ import (
 )
 
 const documentTemplate = `
-{{.Document.Description.Name}}
-{{range .Document.Description.Chapter.Sections}}
+{{- .Document.Description.Name}}
+{{range .Document.Description.Sections}}
 {{- .Title}}
 
 {{.Text -}}

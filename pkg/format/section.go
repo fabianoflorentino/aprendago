@@ -19,9 +19,7 @@ func FormatSection(dir string, title string) {
 
 	document := reader.Document{
 		Description: reader.Description{
-			Chapter: reader.Chapter{
-				Sections: []reader.Section{*section},
-			},
+			Sections: []reader.Section{*section},
 		},
 	}
 

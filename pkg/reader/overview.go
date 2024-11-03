@@ -18,13 +18,9 @@ type Section struct {
 	Text  string `yaml:"text"`
 }
 
-type Chapter struct {
-	Sections []Section `yaml:"sections"`
-}
-
 type Description struct {
-	Name    string  `yaml:"name"`
-	Chapter Chapter `yaml:"chapter"`
+	Name     string    `yaml:"name"`
+	Sections []Section `yaml:"sections"`
 }
 
 type Document struct {
@@ -70,7 +66,7 @@ func ReadSection(rootDir, sectionTitle string) (*Section, error) {
 	}
 
 	for _, document := range documents {
-		for _, section := range document.Description.Chapter.Sections {
+		for _, section := range document.Description.Sections {
 			if section.Title == sectionTitle {
 				return &section, nil
 			}
