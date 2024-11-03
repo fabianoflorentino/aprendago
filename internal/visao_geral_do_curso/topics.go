@@ -19,23 +19,23 @@ func VisaoGeralDoCurso() {
 }
 
 func BemVindo() {
-	format.BuildSection(rootDir, "Bem-vindo!")
+	format.FormatSection(rootDir, "Bem-vindo!")
 }
 
 func PorQueGo() {
-	format.BuildSection(rootDir, "Por que Go?")
+	format.FormatSection(rootDir, "Por que Go?")
 }
 
 func Sucesso() {
-	format.BuildSection(rootDir, "Sucesso")
+	format.FormatSection(rootDir, "Sucesso")
 }
 
 func Recursos() {
-	format.BuildSection(rootDir, "Recursos")
+	format.FormatSection(rootDir, "Recursos")
 }
 
 func ComoEsseCursoFunciona() {
-	format.BuildSection(rootDir, "Como esse curso funciona")
+	format.FormatSection(rootDir, "Como esse curso funciona")
 }
 
 func MenuVisaoGeralDoCurso([]string) []format.MenuOptions {

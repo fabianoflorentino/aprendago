@@ -31,7 +31,7 @@ type Document struct {
 	Description Description `yaml:"description"`
 }
 
-func Overview(rootDir string) ([]Document, error) {
+func ReadOverview(rootDir string) ([]Document, error) {
 	var documentSpecification []Document
 
 	docPathYML := filepath.Join(rootDir, DOCTOREAD_YML)
@@ -64,7 +64,7 @@ func Overview(rootDir string) ([]Document, error) {
 }
 
 func ReadSection(rootDir, sectionTitle string) (*Section, error) {
-	documents, err := Overview(rootDir)
+	documents, err := ReadOverview(rootDir)
 	if err != nil {
 		return nil, err
 	}

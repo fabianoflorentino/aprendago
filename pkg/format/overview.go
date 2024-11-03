@@ -16,7 +16,7 @@ const documentTemplate = `
 {{end -}}
 `
 
-func Overview(documents []reader.Document) error {
+func FormatOverview(documents []reader.Document) error {
 	tmpl, err := template.New("document").Parse(documentTemplate)
 	if err != nil {
 		return err

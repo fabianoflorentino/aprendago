@@ -7,7 +7,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/reader"
 )
 
-func BuildSection(dir string, title string) {
+func FormatSection(dir string, title string) {
 	section, err := reader.ReadSection(dir, title)
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -25,7 +25,7 @@ func BuildSection(dir string, title string) {
 		},
 	}
 
-	err = Overview([]reader.Document{document})
+	err = FormatOverview([]reader.Document{document})
 	if err != nil {
 		log.Fatalf("Erro ao formatar o documento: %v", err)
 	}
