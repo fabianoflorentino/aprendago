@@ -11,40 +11,20 @@ const rootDir = "internal/visao_geral_do_curso"
 func VisaoGeralDoCurso() {
 	fmt.Printf("01 - Visão Geral do Curso\n\n")
 
-	BemVindo()
-	PorQueGo()
-	Sucesso()
-	Recursos()
-	ComoEsseCursoFunciona()
-}
-
-func BemVindo() {
-	format.FormatSection(rootDir, "Bem-vindo!")
-}
-
-func PorQueGo() {
-	format.FormatSection(rootDir, "Por que Go?")
-}
-
-func Sucesso() {
-	format.FormatSection(rootDir, "Sucesso")
-}
-
-func Recursos() {
-	format.FormatSection(rootDir, "Recursos")
-}
-
-func ComoEsseCursoFunciona() {
-	format.FormatSection(rootDir, "Como esse curso funciona")
+	executeSection("Bem-vindo!")
+	executeSection("Por que Go?")
+	executeSection("Sucesso")
+	executeSection("Recursos")
+	executeSection("Como esse curso funciona")
 }
 
 func MenuVisaoGeralDoCurso([]string) []format.MenuOptions {
 	return []format.MenuOptions{
-		{Options: "--bem-vindo", ExecFunc: func() { BemVindo() }},
-		{Options: "--porque-go", ExecFunc: func() { PorQueGo() }},
-		{Options: "--sucesso", ExecFunc: func() { Sucesso() }},
-		{Options: "--recursos", ExecFunc: func() { Recursos() }},
-		{Options: "--como-esse-curso-funciona", ExecFunc: func() { ComoEsseCursoFunciona() }},
+		{Options: "--bem-vindo", ExecFunc: func() { executeSection("Bem-vindo") }},
+		{Options: "--porque-go", ExecFunc: func() { executeSection("Por que Go?") }},
+		{Options: "--sucesso", ExecFunc: func() { executeSection("Sucesso") }},
+		{Options: "--recursos", ExecFunc: func() { executeSection("Recursos") }},
+		{Options: "--como-esse-curso-funciona", ExecFunc: func() { executeSection("Como esse curso funciona") }},
 	}
 }
 
@@ -59,4 +39,8 @@ func HelpMeVisaoGeralDoCurso() {
 
 	fmt.Println("\nCapítulo 1: Visão Geral do Curso")
 	format.PrintHelpMe(hlp)
+}
+
+func executeSection(section string) {
+	format.FormatSection(rootDir, section)
 }
