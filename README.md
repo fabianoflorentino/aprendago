@@ -418,18 +418,8 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── structs_embutidos.go
 │   │   └── topics.go
 │   ├── variaveis_valores_tipos
-│   │   ├── a_palavra_reservada_var.go
-│   │   ├── conversao_nao_coercao.go
-│   │   ├── criando_seu_proprio_tipo.go
-│   │   ├── explorando_tipos.go
-│   │   ├── go_playground.go
-│   │   ├── hello_world.go
-│   │   ├── helpme_variaveis_valores_tipos.go
-│   │   ├── menu_variaveis_valores_tipos.go
-│   │   ├── o_pacote_fmt.go
-│   │   ├── operador_curto_de_declaracao.go
-│   │   ├── topics.go
-│   │   └── valor_zero.go
+│   │   ├── overview.yml
+│   │   └── topics.go
 │   └── visao_geral_do_curso
 │       ├── overview.yml
 │       └── topics.go
@@ -444,4 +434,6 @@ Capítulo 13: Exercícios Ninja Nível 6
     │   └── section.go
     └── reader
         └── overview.go
+
+23 directories, 146 files
 ```
