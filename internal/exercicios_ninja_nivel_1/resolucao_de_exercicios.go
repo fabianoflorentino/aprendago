@@ -1,4 +1,3 @@
-// Prova para validar o conhecimento dos primeiros capitulos do curso
 package exercicios_ninja_nivel_1
 
 import (
@@ -7,20 +6,60 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-// NaPraticaExercicio6 é a função que exibe o enunciado do exercício 6
-func NaPraticaExercicio6() {
-	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #6",
-		Content: `
-- Prova!
-- Link: https://goo.gl/forms/s9y91iVSPvA4iahj1 [Link quebrado]. (Use a opção --na-pratica-exercicio-6 --nivel-1 --prova)
-- Se você deu pausa e fez todos os exercícios anteriores você mesmo, e só viu a resposta depois...
-  e se você der pausa agora e fizer a prova inteira por conta própria, e só assistir as respostas depois...
-  sabe o que isso quer dizer? Que você é ninja. Ninja nível 1. Tá no caminho certo pra ser um developer ninja mestre.
-    `,
-	}
+func ResolucaoNaPraticaExercicio1() {
+	x := 42
+	y := "James Bond"
+	z := true
 
-	format.FormatOutlineTopic(topic)
+	resolucao := fmt.Sprintf("%v %v %v", x, y, z)
+
+	format.FormatResolucaoExercicios(resolucao)
+}
+
+func ResolucaoNaPraticaExercicio2() {
+	var x int
+	var y string
+	var z bool
+
+	resolucao := fmt.Sprintf("%v %v %v", x, y, z)
+
+	format.FormatResolucaoExercicios(resolucao)
+}
+
+func ResolucaoNaPraticaExercicio3() {
+	x := 42
+	y := "James Bond"
+	z := true
+
+	resolucao := fmt.Sprintf("%v %v %v", x, y, z)
+
+	format.FormatResolucaoExercicios(resolucao)
+}
+
+func ResolucaoNaPraticaExercicio4() {
+	type ninja int
+
+	x := ninja(42)
+
+	resolucao := fmt.Sprintf("%v", x)
+	format.FormatResolucaoExercicios(resolucao)
+
+	fmt.Printf("\n%T\n", x)
+
+}
+
+func ResolucaoNaPraticaExercicio5() {
+	type ninja int
+
+	var x ninja
+	var y int
+
+	x = 42
+	y = int(x)
+
+	resolucao := fmt.Sprintf("%T\n%T", x, y)
+
+	format.FormatResolucaoExercicios(resolucao)
 }
 
 func RespondaAProva() {
