@@ -294,15 +294,8 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── slice_multi_dimensional.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_1
-│   │   ├── contribua_seu_codigo.go
-│   │   ├── helpme_exercicios_ninja_nivel_1.go
-│   │   ├── menu_exercicios_ninja_nivel_1.go
-│   │   ├── na_pratica_exercicio_1.go
-│   │   ├── na_pratica_exercicio_2.go
-│   │   ├── na_pratica_exercicio_3.go
-│   │   ├── na_pratica_exercicio_4.go
-│   │   ├── na_pratica_exercicio_5.go
-│   │   ├── na_pratica_exercicio_6.go
+│   │   ├── overview.yml
+│   │   ├── resolucao_de_exercicios.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_2
 │   │   ├── helpme_exercicios_ninja_nivel_2.go
@@ -434,6 +427,4 @@ Capítulo 13: Exercícios Ninja Nível 6
     │   └── section.go
     └── reader
         └── overview.go
-
-23 directories, 146 files
 ```
