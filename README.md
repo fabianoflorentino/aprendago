@@ -384,17 +384,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── sintaxe.go
 │   │   └── topics.go
 │   ├── fundamentos_da_programacao
-│   │   ├── como_os_computadores_funcionam.go
-│   │   ├── constantes.go
-│   │   ├── deslocamento_de_bits.go
-│   │   ├── helpme_fundamentos_da_programacao.go
-│   │   ├── iota.go
-│   │   ├── menu_fundamentos_da_programcao.go
-│   │   ├── overflow.go
-│   │   ├── sistemas_numericos.go
-│   │   ├── tipo_booleano.go
-│   │   ├── tipo_string.go
-│   │   ├── tipos_numericos.go
+│   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── menu
 │   │   ├── capitulo_options.go
@@ -427,4 +417,6 @@ Capítulo 13: Exercícios Ninja Nível 6
     │   └── section.go
     └── reader
         └── overview.go
+
+23 directories, 129 files
 ```
