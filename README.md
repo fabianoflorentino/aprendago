@@ -298,15 +298,8 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── resolucao_de_exercicios.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_2
-│   │   ├── helpme_exercicios_ninja_nivel_2.go
-│   │   ├── menu_exercicios_ninja_nivel_2.go
-│   │   ├── na_pratica_exercicio_1.go
-│   │   ├── na_pratica_exercicio_2.go
-│   │   ├── na_pratica_exercicio_3.go
-│   │   ├── na_pratica_exercicio_4.go
-│   │   ├── na_pratica_exercicio_5.go
-│   │   ├── na_pratica_exercicio_6.go
-│   │   ├── na_pratica_exercicio_7.go
+│   │   ├── overview.yml
+│   │   ├── resolucao_de_exercicios.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_3
 │   │   ├── helpme_exercicios_ninja_nivel_3.go
@@ -418,5 +411,5 @@ Capítulo 13: Exercícios Ninja Nível 6
     └── reader
         └── overview.go
 
-23 directories, 129 files
+23 directories, 122 files
 ```
