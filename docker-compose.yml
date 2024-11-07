@@ -14,7 +14,7 @@ services:
     tty: true
     stdin_open: true
     healthcheck:
-      test: ["CMD-SHELL", "ping", "-c", "3", "localhost"]
+      test: ["CMD-SHELL", "ps aux |grep 'sleep' || exit 1"]
       interval: 30s
       timeout: 30s
       retries: 3
