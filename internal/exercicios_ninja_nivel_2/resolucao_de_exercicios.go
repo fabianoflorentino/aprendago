@@ -6,17 +6,64 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-func NaPraticaExercicio7() {
-	topic := format.OutlineContent{
-		Title: "Na Prática - Exercício #7",
-		Content: `
-- Prova!
-- Link: https://goo.gl/forms/fnPXMmxvKAEUD8xP2 [Link quebrado]. (Use a opção --na-pratica-exercicio-7 --nivel-2 --prova)
-- Motivação. Ninja nível 2!
-    `,
-	}
+func ResolucaoNaPraticaExercicio1() {
+	numero := 1000019
 
-	format.FormatOutlineTopic(topic)
+	resoluca := fmt.Sprintf("Decimal: %d \nBinário: %b \nHexadecimal: %#x \n", numero, numero, numero)
+
+	format.FormatResolucaoExercicios(resoluca)
+}
+
+func ResolucaoNaPraticaExercicio2() {
+	a := 10
+	b := 20
+
+	resolucao := fmt.Sprintf("a: %v \nb: %v \n\na == b: %v \na != b: %v \na <= b: %v \na < b: %v \na >= b: %v \na > b: %v \n", a, b, a == b, a != b, a <= b, a < b, a >= b, a > b)
+
+	format.FormatResolucaoExercicios(resolucao)
+}
+
+func ResolucaoNaPraticaExercicio3() {
+	const (
+		untypedConst     = 10
+		typedConst   int = 20
+	)
+
+	resolucao := fmt.Sprintf("untypedConst: %v \ntypedConst: %v", untypedConst, typedConst)
+
+	format.FormatResolucaoExercicios(resolucao)
+}
+
+func ResolucaoNaPraticaExercicio4() {
+	v1 := 10
+
+	resolucao1 := fmt.Sprintf("Decimal: %d \nBinário: %b \nHexadecimal: %#x \n\n", v1, v1, v1)
+
+	v2 := v1 << 1
+
+	resolucao2 := fmt.Sprintf("Decimal: %d \nBinário: %b \nHexadecimal: %#x", v2, v2, v2)
+
+	format.FormatResolucaoExercicios(resolucao1 + resolucao2)
+}
+
+func ResolucaoNaPraticaExercicio5() {
+	v1 := `Aprenda Go!`
+
+	format.FormatResolucaoExercicios(v1)
+}
+
+func ResolucaoNaPraticaExercicio6() {
+	const (
+		ano = 2024 + iota
+		v1
+		v2
+		v3
+		v4
+	)
+
+	resolucao := fmt.Sprintf("v1: %v\nv2: %v\nv3: %v\nv4: %v\n", v1, v2, v3, v4)
+
+	format.FormatResolucaoExercicios(resolucao)
 }
 
 func RespondaAProva() {
