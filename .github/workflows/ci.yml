@@ -43,6 +43,7 @@ jobs:
 
   tag:
     name: Tag
+    environment: GITHUB
     needs: build_and_push
     runs-on: ubuntu-latest
 
@@ -64,11 +65,17 @@ jobs:
           # Define uma tag dinâmica usando o número da execução e data/hora
           TAG_NAME="v${{ github.run_number }}-$(date +'%Y%m%d%H%M%S')"
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+
+          # Configura o remote com o token de autenticação
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+
+          # Cria e faz push da tag
           git tag $TAG_NAME
           git push origin $TAG_NAME
           # Usa `echo` para definir a saída `TAG_NAME` como output do step
           echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
   release:
     name: Release
     environment: GITHUB
