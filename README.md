@@ -347,19 +347,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── na_pratica_exercicio_5.go
 │   │   └── topics.go
 │   ├── fluxo_de_controle
-│   │   ├── condicionais_a_declaracao_if.go
-│   │   ├── condicionais_a_declaracao_switch.go
-│   │   ├── condicionais_a_declaracao_switch_pt2.go
-│   │   ├── condicionais_if_elseif_else.go
-│   │   ├── entendendo_fluxo_de_controle.go
-│   │   ├── helpme_fluxo_de_controle.go
-│   │   ├── loops_a_declaracao_for.go
-│   │   ├── loops_break_e_continue.go
-│   │   ├── loops_inicializacao_condicao_pos.go
-│   │   ├── loops_nested_loop.go
-│   │   ├── loops_utilizando_ascii.go
-│   │   ├── menu_fluxo_de_controle.go
-│   │   ├── operadores_logicos_condicionais.go
+│   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── funcoes
 │   │   ├── callback.go
@@ -399,17 +387,18 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   └── visao_geral_do_curso
 │       ├── overview.yml
 │       └── topics.go
-└── pkg
-    ├── format
-    │   ├── helpme.go
-    │   ├── menu_options.go
-    │   ├── outline_topic.go
-    │   ├── overview.go
-    │   ├── questionario.go
-    │   ├── resolucao_exercicios.go
-    │   └── section.go
-    └── reader
-        └── overview.go
+├── pkg
+│   ├── format
+│   │   ├── helpme.go
+│   │   ├── menu_options.go
+│   │   ├── outline_topic.go
+│   │   ├── overview.go
+│   │   ├── questionario.go
+│   │   ├── resolucao_exercicios.go
+│   │   └── section.go
+│   └── reader
+│       └── overview.go
+└── tree.log
 
-23 directories, 122 files
+23 directories, 111 files
 ```
