@@ -72,10 +72,13 @@ jobs:
           # Cria e faz push da tag
           git tag $TAG_NAME
           git push origin $TAG_NAME
-          # Usa `echo` para definir a saída `TAG_NAME` como output do step
-          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+      - name: Set output for tag_name
+        run: echo "::set-output name=TAG_NAME::$TAG_NAME"
+        id: set_output
+
   release:
     name: Release
     environment: GITHUB
@@ -89,7 +92,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ needs.tag.outputs.tag_name }}  # Usa o output do job `tag`
+          tag_name: ${{ needs.tag.outputs.tag_name }}
           files: aprendago
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
