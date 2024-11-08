@@ -1,4 +1,4 @@
-name: Build, Tag, Publish, and Release
+name: Build, Publish, Tag and Release
 
 on:
   workflow_dispatch:
