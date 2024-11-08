@@ -1,0 +1,88 @@
+name: Build, Tag, Publish, and Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - 'docs/**'
+      - '.github/**'
+
+jobs:
+  build_and_push:
+    name: Build and Push to Docker Hub
+    environment: DOCKERHUB
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.28'
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker image
+        run: |
+          docker build --no-cache --rm \
+            -t ${{ github.repository }}:v0.${{ github.run_number }} \
+            -f ./build/Dockerfile.prod .
+
+      - name: Push Docker image to Docker Hub
+        run: docker push ${{ github.repository }}:v0.${{ github.run_number }}
+
+  tag:
+    name: Tag
+    needs: build_and_push
+    runs-on: ubuntu-latest
+
+    outputs:
+      tag_name: ${{ steps.create_tag.outputs.TAG_NAME }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create and push tag
+        id: create_tag
+        run: |
+          # Define uma tag dinâmica usando o número da execução e data/hora
+          TAG_NAME="v${{ github.run_number }}-$(date +'%Y%m%d%H%M%S')"
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
+          # Usa `echo` para definir a saída `TAG_NAME` como output do step
+          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+
+  release:
+    name: Release
+    environment: GITHUB
+    needs: [build_and_push, tag]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ needs.tag.outputs.tag_name }}  # Usa o output do job `tag`
+          files: aprendago
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
