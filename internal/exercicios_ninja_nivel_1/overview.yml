@@ -25,7 +25,7 @@ description:
         - Agora demonstre os valores nestas variáveis, com:
           1. Uma única declaração print
           2. Múltiplas declarações print
-        - Solução: https://play.golang.org/p/yYXnWXIQNa ou use no menu do programa (--na-pratica-exercicio-1 --nivel-1 --resolucao)x
+        - Solução: https://play.golang.org/p/yYXnWXIQNa ou use no menu do programa (--na-pratica-exercicio-1 --nivel-1 --resolucao)
     - title: "Na prática - Exercício #2"
       text: |
         - Use var para declarar três variáveis. Elas devem ter package-level scope. Não atribua valores a estas variáveis. Utilize os seguintes identificadores e tipos para estas variáveis:
