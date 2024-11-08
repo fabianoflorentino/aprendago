@@ -4,7 +4,7 @@ WORKDIR /aprendago
 
 COPY . .
 
-RUN go build -o /go/bin/aprendago
+RUN go build -o /go/bin/aprendago cmd/aprendago/main.go
 
 FROM alpine:3.20 as aprendago
 
