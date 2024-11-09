@@ -425,6 +425,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 - [ ] Implementar os tópicos restantes do curso.
 - [ ] Implementar os exercícios restantes do curso.
 - [ ] Implementar os testes unitários.
+- [ ] Implementar o menu de overview por capítulo.
 - [ ] Melhorar a documentação do projeto.
 - [ ] Reorganizar a documentação em diretórios por capítulo.
 - [ ] Melhorar a documentação das funções e métodos.
