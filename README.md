@@ -304,6 +304,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 
 ```shell
 .
+├── LICENSE
 ├── README.md
 ├── build
 │   ├── Dockerfile.dev
@@ -322,11 +323,11 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_1
 │   │   ├── overview.yml
-│   │   ├── resolucao_de_exercicios.go
+│   │   ├── resolution_exercises.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_2
 │   │   ├── overview.yml
-│   │   ├── resolucao_de_exercicios.go
+│   │   ├── resolution_exercises.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_3
 │   │   ├── overview.yml
@@ -391,12 +392,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   └── options.go
 │   ├── outline.go
 │   ├── structs
-│   │   ├── helpme_structs.go
-│   │   ├── lendo_a_documentacao.go
-│   │   ├── menu_structs.go
-│   │   ├── struct.go
-│   │   ├── structs_anonimos.go
-│   │   ├── structs_embutidos.go
+│   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── variaveis_valores_tipos
 │   │   ├── overview.yml
@@ -410,18 +406,19 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── menu_options.go
 │   │   ├── outline_topic.go
 │   │   ├── overview.go
-│   │   ├── questionario.go
+│   │   ├── questionnaire.go
 │   │   ├── resolucao_exercicios.go
 │   │   └── section.go
 │   └── reader
 │       └── overview.go
 └── tree.log
 
-23 directories, 90 files
+23 directories, 86 files
 ```
 
 ## TO-DO
 
+- [ ] Refatorar o código para o uso de YAML para armazenar os tópicos.
 - [ ] Implementar os tópicos restantes do curso.
 - [ ] Implementar os exercícios restantes do curso.
 - [ ] Implementar os testes unitários.
