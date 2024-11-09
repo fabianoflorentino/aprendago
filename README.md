@@ -2,40 +2,76 @@
 
 [![Build, Publish, Tag and Release](https://github.com/fabianoflorentino/aprendago/actions/workflows/ci.yml/badge.svg)](https://github.com/fabianoflorentino/aprendago/actions/workflows/ci.yml)
 
+## Origem do Projeto
+
 Curso de Go para iniciantes. Aprenda Go é um curso abrangente que ensina desde o básico até tópicos avançados da linguagem Go. Ministrado por [Ellen Körbes](https://www.linkedin.com/in/vkorbes/), uma entusiasta da linguagem, o curso é gratuito e está disponível no YouTube e no GitHub. Acesse a playlist no YouTube [aqui](https://youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg&si=_JIbmByhwYvHdJAr) e o repositório no GitHub [aqui](https://github.com/vkorbes/aprendago).
 
-## Docker
+## Objetivo
 
-### Build
+Este projeto tem como objetivo criar um CLI para facilitar a navegação e o acesso ao conteúdo do curso Aprenda Go. O CLI foi desenvolvido em Go e utiliza as bibliotecas padrão da linguagem para criar um menu interativo que permite ao usuário acessar os tópicos do curso. O CLI esta sendo desenvolvido como parte da prática de estudos da linguagem Go.
+
+## Afim de contribuir?
+
+Se você deseja contribuir com o projeto, fique à vontade para abrir uma [issue](https://github.com/fabianoflorentino/aprendago/issues) ou submeter um [pull request](https://github.com/fabianoflorentino/aprendago/pulls). Sua contribuição é muito bem-vinda!
+
+## Montando o Ambiente de Desenvolvimento
+
+Faça o clone do repositório:
+
+```shell
+git clone https://github.com/fabianoflorentino/aprendago.git
+```
+
+### Construa a imagem Docker
 
 ```shell
 docker compose build --no-cache
 ```
 
-### Run
+### Inicie o container
 
 ```shell
 docker compose up -d
 ```
 
-### Stop
+### Parando o container
 
 ```shell
 docker compose down
 ```
 
-### Logs
-
-```shell
-docker compose logs -f
-```
-
-## Uso
+## Testando o CLI
 
 ### Menu Caps (Capítulos)
 
 ```shell
 docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --caps'
+```
+
+```shell
+Aprenda GO
+
+Capítulos do Curso
+
+  --cap-1 --topics    Visão Geral do Curso
+  --cap-2 --topics    Variáveis, Valores e Tipos
+  --cap-3 --topics    Exercícios Ninja: Nível 1
+  --cap-4 --topics    Fundamentos da Programação
+  --cap-5 --topics    Exercícios Ninja: Nível 2
+  --cap-6 --topics    Fluxo de Controle
+  --cap-7 --topics    Exercícios Ninja: Nível 3
+  --cap-8 --topics    Agrupamento de Dados
+  --cap-9 --topics    Exercícios Ninja: Nível 4
+  --cap-10 --topics   Structs
+  --cap-11 --topics   Exercícios Ninja: Nível 5
+  --cap-12 --topics   Funções
+  --cap-13 --topics   Exercícios Ninja: Nível 6
+```
+
+### Ajuda
+
+```shell
+docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --help'
 ```
 
 ```shell
@@ -268,6 +304,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 
 ```shell
 .
+.
 ├── README.md
 ├── build
 │   ├── Dockerfile.dev
@@ -304,18 +341,8 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── resolucao_de_exercicios.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_3
-│   │   ├── helpme_exercicios_ninja_nivel_3.go
-│   │   ├── menu_exercicios_ninja_nivel_3.go
-│   │   ├── na_pratica_exercicio_1.go
-│   │   ├── na_pratica_exercicio_10.go
-│   │   ├── na_pratica_exercicio_2.go
-│   │   ├── na_pratica_exercicio_3.go
-│   │   ├── na_pratica_exercicio_4.go
-│   │   ├── na_pratica_exercicio_5.go
-│   │   ├── na_pratica_exercicio_6.go
-│   │   ├── na_pratica_exercicio_7.go
-│   │   ├── na_pratica_exercicio_8.go
-│   │   ├── na_pratica_exercicio_9.go
+│   │   ├── overview.yml
+│   │   ├── resolucao_exercicios.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_4
 │   │   ├── helpme_exercicios_ninja_nivel_4.go
@@ -402,5 +429,5 @@ Capítulo 13: Exercícios Ninja Nível 6
 │       └── overview.go
 └── tree.log
 
-23 directories, 111 files
+23 directories, 101 files
 ```
