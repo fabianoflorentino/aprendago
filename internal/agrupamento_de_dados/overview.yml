@@ -1,0 +1,114 @@
+---
+description:
+  name: "08 - Agrupamento de Dados"
+  sections:
+    - title: Array
+      text: |
+        - Estruturas de dados, ou agrupamentos de dados, nos permitem agrupar valores diferentes. Estes valores podem ser ou não do mesmo tipo.
+        - As estruturas que veremos são: arrays, slices, structs e maps.
+        - Vamos começar com arrays. Arrays em Go são uma fundação, e não algo que utilizamos todo dia.
+        - Seu tamanho deve estar presente na declaração: var x [n]int
+        - Atribui-se valores a suas posições com: x[i] = y (0-based)
+        - Para ver o tamanho usa-se: len(x)
+        - ref/spec: "The length is part of the array's type" → [5]int != [6]int
+        - Effective Go: Arrays são úteis para [umas coisas que a gente não vai fazer nunca] e servem de fundação para slices. Use slices ao invés de arrays.
+        - Go Playground: https://play.golang.org/p/Fv-sDF-ryZ
+    - title: "Slice: literal composta"
+      text: |
+        - O que são tipos de dados compostos?
+          - Wikipedia: Composite_data_type
+          - Effective Go: Composite literals
+          - ref/spec: Composite literals
+        - Uma slice agrupa valores de um único tipo.
+        - Criando uma slice: literal composta → x := []type{values}
+        - Go Playground: https://play.golang.org/p/W7Cxm8NPZC
+    - title: "Slice: for range"
+      text: |
+        - Slices:
+          - Tamanho: len(x)
+          - Índice específico: x[i] (0-based)
+        - Para ver todos os itens de uma slice utilizamos o loop for com range.
+        - Range significa alcance, faixa, extensão.
+        - For range: for i, v := range x {}
+        - Go Playground:
+          - https://play.golang.org/p/h5-RFJn-Fh
+          - https://play.golang.org/p/2wj02m3-eM
+    - title: "Slice: fatiando ou deletando de uma fatia"
+      text: |
+        - x[:], x[a:], x[:b], x[a:b]
+        - "a" é incluso;
+        - "b" não é.
+        - Exemplo: cabeça magnética de um disco rígido (relógio, fita).
+          - Off-by-one error.
+        - Go Playground: https://play.golang.org/p/i5ZOLKb3Fi
+        - É fatiando que se deleta um item de uma slice. Na prática:
+          - x := append(x[:i], x[:i]...)
+          - Go Playground: https://play.golang.org/p/xK2HwCqvwd
+        - Exercício: tente acessar todos os itens de uma slice *sem* utilizar range.
+        - Solução: https://play.golang.org/p/aUC9qVCobH ou use no menu do programa (--slice-fatiando-ou-deletando-de-uma-fatia --resolucao)
+    - title: "Slice: anexando a uma slice"
+      text: |
+        - Effective Go: append (package builtin)
+        - x = append(slice, ...values)
+        - x = append(slice, slice...)
+        - Todd: unfurl → desdobrar, desenrolar
+        - Nome oficial: enumeration
+        - Go Playground: https://play.golang.org/p/RpkDCTumpT
+    - title: "Slice: make"
+      text: |
+        - Slices são feitas de arrays.
+        - Elas são dinâmicas, podem mudar de tamanho.
+        - Sempre que isso acontece, um novo array é criado e os dados são copiados.
+        - É conveniente, mas tem um custo computacional.
+        - Para otimizar as coisas, podemos utilizar make.
+        - make([]T, len, cap)
+        - "The length of a slice may be changed as long as it still fits within the limits of the underlying array; just assign it to a slice of itself. The capacity of a slice, accessible by the built-in function cap, reports the maximum length the slice may assume."
+        - len(x), cap(x)
+        - x[n] onde n > len é out of range. Use append.
+        - Append > cap modifica o array subjacente.
+        - pkg/builtin/#append: "If it has sufficient capacity, the destination is resliced to accommodate the new elements. If it does not, a new underlying array will be allocated."
+        - Effective Go.
+        - Go Playground: https://play.golang.org/p/e8GWzyEEL8
+    - title: "Slice: multi dimensional"
+      text: |
+        - Slices multi-dimensionais são slices que contem slices.
+        - São como planilhas.
+        - [][]type
+        - Go Playground: https://play.golang.org/p/vKyHiG1GtM
+        - Só pra sacanear: https://play.golang.org/p/ZSU_8eJ9Yp
+    - title: "Slice: a surpresa do array subjacente"
+      text: |
+        - Isso tudo aqui a gente já viu:
+        - Toda slice tem um array subjacente.
+        - Um slice é: um ponteiro/endereço para um array, mais len e cap (que é o len to array).
+        - Exemplo:
+          - x := []int{...números}
+          - y := append(x[:i], x[:i]...)
+          - pkg/builtin/#append: "If it has sufficient capacity, the destination is resliced to accommodate the new elements. If it does not, a new underlying array will be allocated."
+          - Ou seja, y utiliza o mesmo array subjacente que x.
+          - O que nos dá um resultado inesperado.
+        - Ou seja, bom saber de antemão pra não ter que aprender na marra.
+        - Go Playground: https://play.golang.org/p/BBJLuIjU_i
+    - title: "Maps: introdução"
+      text: |
+        - Utiliza o formato key:value.
+        - E.g. nome e telefone
+        - Performance excelente para lookups.
+        - map[key]value{ key: value }
+        - Acesso: m[key]
+        - Key sem value retorna zero. Isso pode trazer problemas.
+        - Para verificar: comma ok idiom.
+          - v, ok := m[key]
+          - ok é um boolean, true/false
+        - Na prática: if v, ok := m[key]; ok { }
+        - Para adicionar um item: m[v] = value
+        - Maps *não tem ordem.*
+        - Go Playground: https://play.golang.org/p/JXDdJan8Ev
+    - title: "Maps: range e deletando"
+      text: |
+        - Range: for k, v := range map { }
+        - Reiterando: maps *não tem ordem* e um range usará uma ordem aleatória.
+        - Go Playground: https://play.golang.org/p/6zEMfIP-AE
+        - delete(map, key)
+        - Deletar uma key não-existente não retorna erros!
+        - Go Playground: https://play.golang.org/p/0uuIicU3Zz

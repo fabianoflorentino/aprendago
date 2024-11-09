@@ -304,7 +304,6 @@ Capítulo 13: Exercícios Ninja Nível 6
 
 ```shell
 .
-.
 ├── README.md
 ├── build
 │   ├── Dockerfile.dev
@@ -319,18 +318,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 ├── go.sum
 ├── internal
 │   ├── agrupamento_de_dados
-│   │   ├── array.go
-│   │   ├── helpme_agrupamento_de_dado.go
-│   │   ├── map_range_e_deletando.go
-│   │   ├── maps_introducao.go
-│   │   ├── menu_agrupamento_de_dados.go
-│   │   ├── slice_a_surpresa_do_array_subjacente.go
-│   │   ├── slice_anexando_a_uma_slice.go
-│   │   ├── slice_fatiando_ou_deletando_de_uma_fatia.go
-│   │   ├── slice_for_range.go
-│   │   ├── slice_literal_composta.go
-│   │   ├── slice_make.go
-│   │   ├── slice_multi_dimensional.go
+│   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_1
 │   │   ├── overview.yml
@@ -429,5 +417,5 @@ Capítulo 13: Exercícios Ninja Nível 6
 │       └── overview.go
 └── tree.log
 
-23 directories, 101 files
+23 directories, 90 files
 ```
