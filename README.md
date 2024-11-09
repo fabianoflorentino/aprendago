@@ -419,3 +419,18 @@ Capítulo 13: Exercícios Ninja Nível 6
 
 23 directories, 90 files
 ```
+
+## TO-DO
+
+- [ ] Implementar os tópicos restantes do curso.
+- [ ] Implementar os exercícios restantes do curso.
+- [ ] Implementar os testes unitários.
+- [ ] Melhorar a documentação do projeto.
+- [ ] Reorganizar a documentação em diretórios por capítulo.
+- [ ] Melhorar a documentação das funções e métodos.
+- [ ] Melhorar a apresentação da resolução dos exercícios.
+- [ ] Implementar a funcionalidade de busca.
+
+## Licença
+
+Este projeto é licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
