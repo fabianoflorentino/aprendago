@@ -431,6 +431,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 - [ ] Melhorar a documentação das funções e métodos.
 - [ ] Melhorar a apresentação da resolução dos exercícios.
 - [ ] Implementar a funcionalidade de busca.
+- [ ] Padronizar a linguagem usada para escrever o código, en-US.
 
 ## Licença
 
