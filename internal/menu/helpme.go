@@ -19,22 +19,22 @@ import (
 )
 
 const HEADER = `
-Uso: go run main.go [opção]
+Uso: go run cmd/aprendago/main.go [opção]
 
 Exemplo:
-  go run main.go --bem-vindo
+  go run cmd/aprendago/main.go --bem-vindo
 
 Ajuda:
 
 --outline  Exibe o outline completo do curso.
 --help     Exibe a lista de todas as opções disponíveis.
 --caps     Exibe a lista de capítulos disponíveis.
-	`
+`
 
 // ShowHelpMe exibe a lista de todas as opções disponíveis.
 // Esta função é chamada quando o usuário passa a opção --help.
 func HelpMe() {
-	fmt.Println(HEADER)
+	fmt.Printf("%s\n", HEADER)
 	HelpMeCapituloOptions()
 	HelpMeCapituloOutline()
 	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()
