@@ -47,9 +47,6 @@ jobs:
     needs: build_and_push
     runs-on: ubuntu-latest
 
-    outputs:
-      tag_name: ${{ steps.create_tag.outputs.tag_name }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -77,6 +74,9 @@ jobs:
           echo "::set-output name=tag_name::$TAG_NAME"
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+    outputs:
+      tag_name: ${{ steps.create_tag.outputs.tag_name }}
 
   release:
     name: Release
