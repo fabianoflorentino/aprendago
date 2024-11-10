@@ -2,8 +2,6 @@ name: Trivy vulnerability scan
 
 on:
   workflow_dispatch:
-  check_run:
-    types: [completed]
   push:
     branches:
       - main
@@ -14,38 +12,20 @@ on:
       - '.github/**'
 
 jobs:
-  wait_for_build:
-    name: Wait for Build, Publish, Tag and Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Wait for successful build
-        uses: actions/github-script@v4
-        with:
-          script: |
-            const runs = await github.actions.listWorkflowRuns({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'ci.yml',
-              status: 'success'
-            });
-            if (runs.data.workflow_runs.length === 0) {
-              throw new Error('No successful build found');
-            }
-
   scan:
     name: Trivy vulnerability scan
     runs-on: ubuntu-latest
-    needs: wait_for_build
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Trivy vulnerability scan
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          image-ref: 'docker.io/${{ github.repository }}:v0.${{ github.run_number }}'
-          format: table
-          exit-code: 0
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'table'
+          exit-code: '1'
           ignore-unfixed: true
-          vuln-type: os,library
-          severity: HIGH,CRITICAL
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
