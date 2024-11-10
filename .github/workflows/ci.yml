@@ -41,21 +41,6 @@ jobs:
       - name: Push Docker image to Docker Hub
         run: docker push ${{ github.repository }}:v0.${{ github.run_number }}
 
-  trivy:
-    name: Trivy vulnerability scan
-    needs: build_and_push
-    runs-on: ubuntu-latest
-    steps:
-      - name:
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          image-ref: 'docker.io/${{ github.repository }}:v0.${{ github.run_number }}'
-          format: table
-          exit-code: 0
-          ignore-unfixed: true
-          vuln-type: os,library
-          severity: HIGH,CRITICAL
-
   tag:
     name: Tag
     environment: GITHUB
