@@ -22,10 +22,25 @@ jobs:
       - name: Trivy vulnerability scan
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          scan-type: 'fs'
-          scan-ref: '.'
-          format: 'table'
-          exit-code: '1'
+          scan-type: fs
+          scan-ref: .
+          format: table
+          output: scan.out
+          exit-code: 1
           ignore-unfixed: true
-          vuln-type: 'os,library'
+          vuln-type: os,library
           severity: 'CRITICAL,HIGH'
+
+      - name: Publish Trivy Output to Summary
+        run: |
+          if [[ -s scan.out ]]; then
+            {
+              echo "## Trivy Vulnerability Scan"
+              echo "<details><summary>Click to see the Trivy vulnerability scan results</summary>"
+              echo ""
+              echo '```go'
+              cat scan.out
+              echo '```'
+              echo "</details>"
+            } >> $TRIVY_SCAN_SUMMARY
+          fi
