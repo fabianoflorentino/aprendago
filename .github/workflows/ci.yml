@@ -39,6 +39,9 @@ jobs:
             -t ${{ github.repository }}:v0.${{ github.run_number }} \
             -f ./build/Dockerfile.prod .
 
+          # Output the image
+          echo "::set-output name=create_image::${{ github.repository }}:v0.${{ github.run_number }}"
+
       - name: Push Docker image to Docker Hub
         run: docker push ${{ github.repository }}:v0.${{ github.run_number }}
     outputs:
