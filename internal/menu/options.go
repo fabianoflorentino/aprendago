@@ -1,26 +1,26 @@
 /*
-Package menu fornece uma interface de linha de comando para navegar pelas opções e funcionalidades
-do curso Aprenda GO. Ele agrupa e organiza diferentes menus e suas opções, permitindo ao usuário
-acessar capítulos específicos, exercícios práticos e visões gerais do curso com base nos argumentos fornecidos.
+Package menu provides a command-line interface for navigating the options and functionalities
+of the Learn GO course. It groups and organizes different menus and their options, allowing the user
+to access specific chapters, practical exercises, and course overviews based on the provided arguments.
 
-Funcionalidades principais:
+Main functionalities:
 
-- Exibe o menu principal com opções gerais e específicas dos capítulos.
-- Permite acessar diferentes seções do curso, como variáveis, tipos, fluxo de controle e exercícios práticos.
-- Processa os argumentos fornecidos pelo usuário para determinar e executar a opção apropriada.
-- Oferece suporte a opções de ajuda e visão geral para facilitar a navegação.
+- Displays the main menu with general and chapter-specific options.
+- Allows access to different sections of the course, such as variables, types, control flow, and practical exercises.
+- Processes the arguments provided by the user to determine and execute the appropriate option.
+- Supports help and overview options to facilitate navigation.
 
-Uso básico:
+Basic usage:
 
-Para usar o pacote menu, você deve chamar a função Options com uma lista de argumentos.
-Esses argumentos determinam qual menu ou opção será exibido e executado.
+To use the menu package, you should call the Options function with a list of arguments.
+These arguments determine which menu or option will be displayed and executed.
 
-Exemplo:
+Example:
 
 	args := []string{"--help"}
 	menu.Options(args)
 
-Nesse exemplo, a função Options exibirá a ajuda, com base no argumento fornecido.
+In this example, the Options function will display the help, based on the provided argument.
 */
 package menu
 
@@ -44,13 +44,13 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-// Options é a função principal do pacote menu. Ela exibe o menu principal do programa,
-// mostrando todas as opções disponíveis com base nos argumentos fornecidos (args).
+// Options displays the main menu with general and chapter-specific options based on the provided arguments.
+// It allows the user to navigate through the course content, access practical exercises, and view course overviews.
+//   - buildOptions: Combines general and chapter-specific options based on the provided arguments.
+//   - generalOptions: Returns the general options available in the main menu.
 func Options(args []string) {
-	fmt.Printf("Aprenda GO\n\n")
+	fmt.Printf("Learn GO\n\n")
 
-	// Chama a função buildOptions para construir e exibir as opções de menu.
-	// Combina opções gerais e específicas dos capítulos com base nos argumentos fornecidos.
 	buildOptions(
 		args,
 		generalOptions(args),
@@ -72,8 +72,8 @@ func Options(args []string) {
 	)
 }
 
-// generalOptions retorna as opções gerais disponíveis em todos os menus,
-// como ajuda e visão geral do curso.
+// generalOptions returns the general options available in the main menu.
+// These options include help, outline, and chapter-specific options.
 func generalOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--help", ExecFunc: func() { HelpMe() }},
@@ -82,16 +82,14 @@ func generalOptions([]string) []format.MenuOptions {
 	}
 }
 
-// buildOptions combina e processa as opções de menu com base nos argumentos fornecidos.
-// Ele verifica se os argumentos correspondem a alguma opção de menu e executa a ação associada.
+// buildOptions combines the general and chapter-specific options based on the provided arguments.
+// It formats and displays the menu options using the FormatMenuOptions function.
 func buildOptions(args []string, options ...[]format.MenuOptions) {
 	var opt []format.MenuOptions
 
-	// Combina todas as opções recebidas em uma única lista.
 	for _, o := range options {
 		opt = append(opt, o...)
 	}
 
-	// Formata e exibe as opções de menu com base nos argumentos.
 	format.FormatMenuOptions(args, opt)
 }
