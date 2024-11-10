@@ -429,7 +429,8 @@ Capítulo 13: Exercícios Ninja Nível 6
 - [ ] Melhorar a apresentação da resolução dos exercícios.
 - [ ] Implementar a funcionalidade de busca.
 - [ ] Padronizar a linguagem usada para escrever o código, en-US.
-- [ ] Implementar função de log para registrar as ações do usuário.
+- [x] Implementar função de log para registrar as ações do usuário.
+- [ ] Atualizar as funções com a nova função de log.
 
 ## Licença
 
