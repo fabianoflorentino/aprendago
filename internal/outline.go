@@ -1,5 +1,5 @@
 // OUTLINE: https://github.com/vkorbes/aprendago/blob/master/OUTLINE.md
-package outline
+package internal
 
 import (
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
