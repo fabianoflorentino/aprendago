@@ -10,10 +10,10 @@ The functions in this file read the overview file and return the document of the
 package reader
 
 import (
-	"log"
 	"os"
 	"path/filepath"
 
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"gopkg.in/yaml.v2"
 )
 
@@ -90,7 +90,7 @@ func readOverview(rootDir string) ([]Document, error) {
 	} else if _, err := os.Stat(docPathYAML); err == nil {
 		docPath = docPathYAML
 	} else {
-		log.Printf("File %s or %s not found", docPathYML, docPathYAML)
+		logger.Log("File %s or %s not found", docPathYML, docPathYAML)
 		return nil, os.ErrNotExist
 	}
 
