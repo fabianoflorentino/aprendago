@@ -1,3 +1,4 @@
 .env
 .DS_Store
 tree.log
+log/*.log
