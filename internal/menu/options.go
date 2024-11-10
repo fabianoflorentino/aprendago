@@ -27,7 +27,7 @@ package menu
 import (
 	"fmt"
 
-	outline "github.com/fabianoflorentino/aprendago/internal"
+	"github.com/fabianoflorentino/aprendago/internal"
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
@@ -77,7 +77,7 @@ func Options(args []string) {
 func generalOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--help", ExecFunc: func() { HelpMe() }},
-		{Options: "--outline", ExecFunc: func() { outline.Outline() }},
+		{Options: "--outline", ExecFunc: func() { internal.Outline() }},
 		{Options: "--caps", ExecFunc: func() { HelpMeCapituloOptions() }},
 	}
 }
