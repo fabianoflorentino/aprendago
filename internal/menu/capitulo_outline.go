@@ -20,6 +20,7 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 		{Options: "--cap-4 --overview", ExecFunc: func() { fundamentos_da_programacao.FundamentosDaProgramacao() }},
 		{Options: "--cap-5 --overview", ExecFunc: func() { exercicios_ninja_nivel_2.ExerciciosNinjaNivel2() }},
 		{Options: "--cap-6 --overview", ExecFunc: func() { fluxo_de_controle.FluxoDeControle() }},
+		{Options: "--cap-7 --overview", ExecFunc: func() { exercicios_ninja_nivel_3.ExerciciosNinjaNivel3() }},
 	}
 }
 
@@ -31,6 +32,7 @@ func HelpMeCapituloOutline() {
 		{Flag: "--cap-4 --overview", Description: "Fundamentos da Programação", Width: 0},
 		{Flag: "--cap-5 --overview", Description: "Exercícios Ninja Nível 2", Width: 0},
 		{Flag: "--cap-6 --overview", Description: "Fluxo de Controle", Width: 0},
+		{Flag: "--cap-7 --overview", Description: "Exercícios Ninja Nível 3", Width: 0},
 	}
 
 	fmt.Printf("\nOutline do Curso por Capítulo\n")
