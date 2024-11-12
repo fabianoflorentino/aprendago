@@ -6,23 +6,6 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-func Callback() {
-	topic := format.OutlineContent{
-		Title: "Callback",
-		Content: `
-- Primeiro veja se você entende isso: https://play.golang.org/p/QkAtwMZU-z
-- Callback é passar uma função como argumento.
-- Exemplo:
-  - Criando uma função que retorna uma função e um []int, e usa somente os números pares como argumentos para a função.
-  - Go Playground:
-- Desafio: Crie uma função no programa acima que utilize somente os números *ímpares.*
-- Solução:
-    `,
-	}
-
-	format.FormatOutlineTopic(topic)
-}
-
 func ResolucaoDesafioCallback() {
 	result := somaImapres(soma, []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}...)
 

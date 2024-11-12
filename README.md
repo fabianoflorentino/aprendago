@@ -355,19 +355,8 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── funcoes
-│   │   ├── callback.go
-│   │   ├── closure.go
-│   │   ├── defer.go
-│   │   ├── desenrolando_enumerando_uma_slice.go
-│   │   ├── func_como_expressao.go
-│   │   ├── funcoes_anonimas.go
-│   │   ├── helpme_funcoes.go
-│   │   ├── interfaces_e_polimorfismo.go
-│   │   ├── menu_funcoes.go
-│   │   ├── metodos.go
-│   │   ├── recursividade.go
-│   │   ├── retornando_uma_funcao.go
-│   │   ├── sintaxe.go
+│   │   ├── overview.yml
+│   │   ├── resolution_challange.go
 │   │   └── topics.go
 │   ├── fundamentos_da_programacao
 │   │   ├── overview.yml
@@ -403,7 +392,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 │       └── overview.go
 └── tree.log
 
-25 directories, 73 files
+25 directories, 62 files
 ```
 
 ## TO-DO
