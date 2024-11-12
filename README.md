@@ -331,19 +331,15 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_3
 │   │   ├── overview.yml
-│   │   ├── resolucao_exercicios.go
+│   │   ├── resolution_exercises.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_4
 │   │   ├── overview.yml
 │   │   ├── resolution_exercises.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_5
-│   │   ├── helpme_exercicios_ninja_nivel_5.go
-│   │   ├── menu_exercicios_ninja_nivel_5.go
-│   │   ├── na_pratica_exercicio_1.go
-│   │   ├── na_pratica_exercicio_2.go
-│   │   ├── na_pratica_exercicio_3.go
-│   │   ├── na_pratica_exercicio_4.go
+│   │   ├── overview.yml
+│   │   ├── resolution_exercises.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_6
 │   │   ├── helpme_exercicicios_ninja_nivel_6.go
@@ -406,7 +402,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 │       └── overview.go
 └── tree.log
 
-25 directories, 77 files
+25 directories, 73 files
 ```
 
 ## TO-DO
