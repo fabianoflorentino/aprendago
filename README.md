@@ -75,13 +75,13 @@ docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --hel
 ```
 
 ```shell
-Aprenda GO
+Learn GO
 
 
-Uso: go run main.go [opção]
+Uso: go run cmd/aprendago/main.go [opção]
 
 Exemplo:
-  go run main.go --bem-vindo
+  go run cmd/aprendago/main.go --bem-vindo
 
 Ajuda:
 
@@ -113,6 +113,7 @@ Outline do Curso por Capítulo
   --cap-4 --overview   Fundamentos da Programação
   --cap-5 --overview   Exercícios Ninja Nível 2
   --cap-6 --overview   Fluxo de Controle
+  --cap-7 --overview   Exercícios Ninja Nível 3
 
 Capítulo 1: Visão Geral do Curso
 
