@@ -15,13 +15,7 @@ func ExerciciosNinjaNivel6() {
 	executeSection("Na Prárica - Exercício #2")
 	executeSection("Na Prática - Exercício #3")
 	executeSection("Na Prática - Exercício #4")
-	// NaPraticaExercicio5()
-	// NaPraticaExercicio6()
-	// NaPraticaExercicio7()
-	// NaPraticaExercicio8()
-	// NaPraticaExercicio9()
-	// NaPraticaExercicio10()
-	// NaPraticaExercicio11()
+	executeSection("Na Prática - Exercício #5")
 }
 
 func MenuExerciciosNinjaNivel6([]string) []format.MenuOptions {
