@@ -59,6 +59,16 @@ func ResolucaoNaPraticaExercicio6() {
 	}()
 }
 
+func ResolucaoNaPraticaExercicio7() {
+
+	// Função atribuída a uma variável.
+	f := func() {
+		fmt.Println("Função atribuída a uma variável.")
+	}
+
+	f()
+}
+
 // ResolucaoNaPraticaExercicio1
 func retornaInt() int {
 	return 42

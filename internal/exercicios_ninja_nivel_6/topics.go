@@ -16,6 +16,8 @@ func ExerciciosNinjaNivel6() {
 	executeSection("Na Prática - Exercício #3")
 	executeSection("Na Prática - Exercício #4")
 	executeSection("Na Prática - Exercício #5")
+	executeSection("Na Prática - Exercício #6")
+	executeSection("Na Prática - Exercício #7")
 }
 
 func MenuExerciciosNinjaNivel6([]string) []format.MenuOptions {
@@ -32,6 +34,8 @@ func MenuExerciciosNinjaNivel6([]string) []format.MenuOptions {
 		{Options: "--na-pratica-exercicio-5 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio5() }},
 		{Options: "--na-pratica-exercicio-6 --nivel-6", ExecFunc: func() { executeSection("Na Prática - Exercício #6") }},
 		{Options: "--na-pratica-exercicio-6 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio6() }},
+		{Options: "--na-pratica-exercicio-7 --nivel-6", ExecFunc: func() { ResolucaoNaPraticaExercicio7() }},
+		{Options: "--na-pratica-exercicio-7 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio7() }},
 	}
 }
 
@@ -49,6 +53,7 @@ func HelMeExerciciosNinjaNivel6() {
 		{Flag: "--na-pratica-exercicio-5 --nivel-6 --resolucao", Description: "Apresenta a resolução do quinto exercício prático do Nível 6.", Width: 0},
 		{Flag: "--na-pratica-exercicio-6 --nivel-6", Description: "Apresenta o sexto exercício prático do Nível 6.", Width: 0},
 		{Flag: "--na-pratica-exercicio-6 --nivel-6 --resolucao", Description: "Apresenta a resolução do sexto exercício prático do Nível 6.", Width: 0},
+		{Flag: "--na-pratica-exercicio-7 --nivel-6", Description: "Apresenta o sétimo exercício prático do Nível 6.", Width: 0},
 	}
 
 	fmt.Println("\nCapítulo 13: Exercícios Ninja Nível 6")

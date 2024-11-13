@@ -77,3 +77,8 @@ description:
       text: |
         - Crie e utilize uma função anônima.
         - Solução: https://play.golang.org/p/Kgo6hVr5G5
+    - title: "Na Prática - Exercício #7"
+      text: |
+        - Atribua uma função a uma variável.
+        - Chame essa função.
+        - Solução: https://play.golang.org/p/RMHLL3N5Ww
