@@ -73,3 +73,7 @@ description:
         - Use a função "info" para demonstrar a área do "quadrado"
         - Use a função "info" para demonstrar a área do "círculo"
         - Solução: https://play.golang.org/p/qLY-q3vffQ
+    - title: "Na Prática - Exercício #6"
+      text: |
+        - Crie e utilize uma função anônima.
+        - Solução: https://play.golang.org/p/Kgo6hVr5G5

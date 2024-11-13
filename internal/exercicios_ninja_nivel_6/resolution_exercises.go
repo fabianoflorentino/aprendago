@@ -50,6 +50,15 @@ func ResolucaoNaPraticaExercicio5() {
 	fmt.Printf("\nÁrea do círculo: %f", info(c))
 }
 
+func ResolucaoNaPraticaExercicio6() {
+
+	// Uma função anônima é uma função sem nome que pode ser definida e executada inline.
+	// Elas são úteis para tarefas rápidas e podem ser passadas como argumentos para outras funções.
+	func() {
+		fmt.Println("Função anônima executada.")
+	}()
+}
+
 // ResolucaoNaPraticaExercicio1
 func retornaInt() int {
 	return 42
