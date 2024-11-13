@@ -60,7 +60,7 @@ jobs:
         id: create_tag
         run: |
           # Define a dynamic tag using the run number and date/time
-          TAG_NAME="v${{ github.run_number }}-$(date +'%Y%m%d%H%M%S')"
+          TAG_NAME="v0.${{ github.run_number }}"
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
           # Configure the remote with authentication token
