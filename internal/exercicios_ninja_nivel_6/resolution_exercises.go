@@ -50,6 +50,30 @@ func ResolucaoNaPraticaExercicio5() {
 	fmt.Printf("\nÁrea do círculo: %f", info(c))
 }
 
+func ResolucaoNaPraticaExercicio6() {
+
+	// Uma função anônima é uma função sem nome que pode ser definida e executada inline.
+	// Elas são úteis para tarefas rápidas e podem ser passadas como argumentos para outras funções.
+	func() {
+		fmt.Println("Função anônima executada.")
+	}()
+}
+
+func ResolucaoNaPraticaExercicio7() {
+
+	// Função atribuída a uma variável.
+	f := func() {
+		fmt.Println("Função atribuída a uma variável.")
+	}
+
+	f()
+}
+
+func ResolucaoNaPraticaExercicio8() {
+	f := retornaFuncao()
+	f()
+}
+
 // ResolucaoNaPraticaExercicio1
 func retornaInt() int {
 	return 42
@@ -120,4 +144,11 @@ type circulo struct {
 // ResolucaoNaPraticaExercicio5
 func info(f figura) float64 {
 	return f.area()
+}
+
+// ResolucaoNaPraticaExercicio8
+func retornaFuncao() func() {
+	return func() {
+		fmt.Println("Função retornada.")
+	}
 }
