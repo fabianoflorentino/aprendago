@@ -69,6 +69,11 @@ func ResolucaoNaPraticaExercicio7() {
 	f()
 }
 
+func ResolucaoNaPraticaExercicio8() {
+	f := retornaFuncao()
+	f()
+}
+
 // ResolucaoNaPraticaExercicio1
 func retornaInt() int {
 	return 42
@@ -139,4 +144,11 @@ type circulo struct {
 // ResolucaoNaPraticaExercicio5
 func info(f figura) float64 {
 	return f.area()
+}
+
+// ResolucaoNaPraticaExercicio8
+func retornaFuncao() func() {
+	return func() {
+		fmt.Println("Função retornada.")
+	}
 }

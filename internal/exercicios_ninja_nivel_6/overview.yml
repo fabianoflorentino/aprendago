@@ -82,3 +82,9 @@ description:
         - Atribua uma função a uma variável.
         - Chame essa função.
         - Solução: https://play.golang.org/p/RMHLL3N5Ww
+    - title: "Na Prática - Exercício #8"
+      text: |
+        - Crie uma função que retorna uma função.
+        - Atribua a função retornada a uma variável.
+        - Chame a função retornada.
+        - Solução: https://play.golang.org/p/A74rufv6Rs
