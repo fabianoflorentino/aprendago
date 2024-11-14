@@ -79,6 +79,14 @@ func retornaInt() int {
 	return 42
 }
 
+func ResolucaoNaPraticaExercicio9() {
+	f := func() {
+		fmt.Println("Função passada como argumento.")
+	}
+
+	executaFuncao(f)
+}
+
 // ResolucaoNaPraticaExercicio1
 func retornaIntString() (int, string) {
 	return 42, "Olá, mundo!"
@@ -151,4 +159,9 @@ func retornaFuncao() func() {
 	return func() {
 		fmt.Println("Função retornada.")
 	}
+}
+
+// ResolucaoNaPraticaExercicio9
+func executaFuncao(f func()) {
+	f()
 }

@@ -88,3 +88,7 @@ description:
         - Atribua a função retornada a uma variável.
         - Chame a função retornada.
         - Solução: https://play.golang.org/p/A74rufv6Rs
+    - title: "Na Prática - Exercício #9"
+      text: |
+        - Callback: passe uma função como argumento a outra função.
+        - Solução: https://play.golang.org/p/2epLD_Yyap
