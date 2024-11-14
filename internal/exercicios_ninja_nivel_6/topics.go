@@ -19,6 +19,7 @@ func ExerciciosNinjaNivel6() {
 	executeSection("Na Prática - Exercício #6")
 	executeSection("Na Prática - Exercício #7")
 	executeSection("Na Prática - Exercício #8")
+	executeSection("Na Prática - Exercício #9")
 }
 
 func MenuExerciciosNinjaNivel6([]string) []format.MenuOptions {
@@ -39,6 +40,8 @@ func MenuExerciciosNinjaNivel6([]string) []format.MenuOptions {
 		{Options: "--na-pratica-exercicio-7 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio7() }},
 		{Options: "--na-pratica-exercicio-8 --nivel-6", ExecFunc: func() { ResolucaoNaPraticaExercicio8() }},
 		{Options: "--na-pratica-exercicio-8 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio8() }},
+		{Options: "--na-pratica-exercicio-9 --nivel-6", ExecFunc: func() { executeSection("Na Prática - Exercício #9") }},
+		{Options: "--na-pratica-exercicio-9 --nivel-6 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio9() }},
 	}
 }
 
