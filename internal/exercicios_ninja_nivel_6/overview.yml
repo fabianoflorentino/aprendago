@@ -73,3 +73,27 @@ description:
         - Use a função "info" para demonstrar a área do "quadrado"
         - Use a função "info" para demonstrar a área do "círculo"
         - Solução: https://play.golang.org/p/qLY-q3vffQ
+    - title: "Na Prática - Exercício #6"
+      text: |
+        - Crie e utilize uma função anônima.
+        - Solução: https://play.golang.org/p/Kgo6hVr5G5
+    - title: "Na Prática - Exercício #7"
+      text: |
+        - Atribua uma função a uma variável.
+        - Chame essa função.
+        - Solução: https://play.golang.org/p/RMHLL3N5Ww
+    - title: "Na Prática - Exercício #8"
+      text: |
+        - Crie uma função que retorna uma função.
+        - Atribua a função retornada a uma variável.
+        - Chame a função retornada.
+        - Solução: https://play.golang.org/p/A74rufv6Rs
+    - title: "Na Prática - Exercício #9"
+      text: |
+        - Callback: passe uma função como argumento a outra função.
+        - Solução: https://play.golang.org/p/2epLD_Yyap
+    - title: "Na Prática - Exercício #10"
+      text: |
+        - Demonstre o funcionamento de um closure.
+        - Ou seja: crie uma função que retorna outra função, onde esta outra função faz uso de uma variável alem de seu scope.
+        - Solução: https://play.golang.org/p/sA7NHpkCCg
