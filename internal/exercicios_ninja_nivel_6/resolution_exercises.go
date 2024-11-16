@@ -87,6 +87,14 @@ func ResolucaoNaPraticaExercicio9() {
 	executaFuncao(f)
 }
 
+func ResolucaoNaPraticaExercicio10() {
+	x := 10
+
+	func() {
+		fmt.Println(x)
+	}()
+}
+
 // ResolucaoNaPraticaExercicio1
 func retornaIntString() (int, string) {
 	return 42, "Olá, mundo!"
