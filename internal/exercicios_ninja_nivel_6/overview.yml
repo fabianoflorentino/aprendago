@@ -92,3 +92,8 @@ description:
       text: |
         - Callback: passe uma função como argumento a outra função.
         - Solução: https://play.golang.org/p/2epLD_Yyap
+    - title: "Na Prática - Exercício #10"
+      text: |
+        - Demonstre o funcionamento de um closure.
+        - Ou seja: crie uma função que retorna outra função, onde esta outra função faz uso de uma variável alem de seu scope.
+        - Solução: https://play.golang.org/p/sA7NHpkCCg
