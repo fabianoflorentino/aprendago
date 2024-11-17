@@ -35,9 +35,11 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_5"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_6"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_7"
 	"github.com/fabianoflorentino/aprendago/internal/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/internal/funcoes"
 	"github.com/fabianoflorentino/aprendago/internal/fundamentos_da_programacao"
+	"github.com/fabianoflorentino/aprendago/internal/ponteiros"
 	"github.com/fabianoflorentino/aprendago/internal/structs"
 	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
@@ -69,6 +71,8 @@ func Options(args []string) {
 		exercicios_ninja_nivel_5.MenuExerciciosNinjaNivel5(args),
 		funcoes.MenuFuncoes(args),
 		exercicios_ninja_nivel_6.MenuExerciciosNinjaNivel6(args),
+		ponteiros.MenuPonteiros(args),
+		exercicios_ninja_nivel_7.MenuExercicioNinjaNivel7(args),
 	)
 }
 

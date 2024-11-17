@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/variaveis_valores_tipos"
 
 func VariaveisValoresETipos() {
-	fmt.Printf("02 - Variáveis, Valores & Tipos\n\n")
+	fmt.Printf("\n\n02 - Variáveis, Valores & Tipos\n")
 
 	executeSection("Go Playground")
 	executeSection("Hello, World!")

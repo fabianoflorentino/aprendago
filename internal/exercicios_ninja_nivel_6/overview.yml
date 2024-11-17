@@ -97,3 +97,11 @@ description:
         - Demonstre o funcionamento de um closure.
         - Ou seja: crie uma função que retorna outra função, onde esta outra função faz uso de uma variável alem de seu scope.
         - Solução: https://play.golang.org/p/sA7NHpkCCg
+    - title: "Na Prática - Exercício #11"
+      text: |
+        - Uma das melhores maneiras de aprender é ensinando.
+        - Para este exercício escolha o seu código favorito dentre os que vimos estudando funções. Pode ser das aulas ou da seção de exercícios. Então:
+            - Faça download e instale isso aqui: https://obsproject.com/
+            - Grave um vídeo onde *você* ensina o tópico em questão
+            - Faça upload do vídeo no YouTube
+            - Compartilhe o vídeo no Twitter e me marque no tweet (@ellenkorbes)
