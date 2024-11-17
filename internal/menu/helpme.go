@@ -10,6 +10,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_5"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_6"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_7"
 	"github.com/fabianoflorentino/aprendago/internal/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/internal/funcoes"
 	"github.com/fabianoflorentino/aprendago/internal/fundamentos_da_programacao"
@@ -52,4 +53,5 @@ func HelpMe() {
 	funcoes.HelpMeFuncoes()
 	exercicios_ninja_nivel_6.HelMeExerciciosNinjaNivel6()
 	ponteiros.HelpMePonteiros()
+	exercicios_ninja_nivel_7.HelpMeExerciciosNinjaNivel7()
 }
