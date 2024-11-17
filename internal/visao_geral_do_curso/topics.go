@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/visao_geral_do_curso"
 
 func VisaoGeralDoCurso() {
-	fmt.Printf("01 - Visão Geral do Curso\n\n")
+	fmt.Printf("\n01 - Visão Geral do Curso\n")
 
 	executeSection("Bem-vindo!")
 	executeSection("Por que Go?")

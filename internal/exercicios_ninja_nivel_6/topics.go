@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/exercicios_ninja_nivel_6"
 
 func ExerciciosNinjaNivel6() {
-	fmt.Printf("Capítulo 13: Exercícios Ninja Nível 6\n\n")
+	fmt.Printf("\n\nCapítulo 13: Exercícios Ninja Nível 6\n")
 
 	executeSection("Na Prática - Exercício #1")
 	executeSection("Na Prárica - Exercício #2")

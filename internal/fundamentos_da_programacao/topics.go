@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/fundamentos_da_programacao"
 
 func FundamentosDaProgramacao() {
-	fmt.Print("04 - Fundamentos da Programação\n\n")
+	fmt.Print("\n\n04 - Fundamentos da Programação\n")
 
 	executeSection("Tipo booleano")
 	executeSection("Como os computadores funcionam")

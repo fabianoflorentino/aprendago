@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/agrupamento_de_dados"
 
 func AgrupamentoDeDados() {
-	fmt.Printf("08 - Agrupamento de Dados\n\n")
+	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
 
 	executeSection("Array")
 	executeSection("Slice: literal composta")

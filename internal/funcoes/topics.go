@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/funcoes"
 
 func Funcoes() {
-	fmt.Printf("Capítulo 12: Funções\n\n")
+	fmt.Printf("\n\nCapítulo 12: Funções\n")
 
 	executeSection("Síntaxe")
 	executeSection("Desenrolando (enumerando) uma slice")
