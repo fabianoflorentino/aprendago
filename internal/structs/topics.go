@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/structs"
 
 func TopicStructs() {
-	fmt.Print("10 - Structs\n\n")
+	fmt.Print("\n\n10 - Structs\n")
 
 	executeSection("Structs")
 	executeSection("Structs embutidos")

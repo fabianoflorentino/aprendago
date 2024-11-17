@@ -1,0 +1,26 @@
+---
+description:
+  name: "Capítulo 14: Ponteiros"
+  sections:
+    - title: "O que são ponteiros?"
+      text: |
+        - Todos os valores ficam armazenados na memória.
+        - Toda localização na memória possui um endereço.
+        - Um pointeiro se refere a esse endereço.
+        - Notações:
+            - &variável mostra o endereço de uma variável
+                - %T: variável vs. &variável
+            - *variável faz de-reference, mostra o valor que consta nesse endereço
+            - ????: *&var funciona!
+            - *type é um tipo que contem o endereço de um valor do tipo type, nesse caso * não é um operador
+        - Exemplo: a := 0; b := &a; *b++
+        - Go Playground: https://play.golang.org/p/gC1qGFUYrV
+    - title: "Quando usar ponteiros"
+      text: |
+        - Ponteiros permitem compartilhar endereços de memória. Isso é útil quando:
+            - Não queremos passar grandes volumes de dados pra lá e pra cá
+            - Queremos mudar um valor em sua localização original (tudo em Go é pass by value!)
+        - Exemplos:
+            - x := 0; funçãoquemudaovalordoargumentopra1(x); Print(x)
+            - x := 0; funçãoquemudaovalordo*argumentopra1(&x); Print(x)
+        - Go Playground: https://play.golang.org/p/VZmfWfw76s

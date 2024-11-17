@@ -9,7 +9,7 @@ import (
 const rootDir = "internal/fluxo_de_controle"
 
 func FluxoDeControle() {
-	fmt.Printf("06 - Fluxo de Controle\n\n")
+	fmt.Printf("\n\n06 - Fluxo de Controle\n")
 
 	executeSection("Entendendo Fluxo de Controle")
 	executeSection("Loops: Inicialização, Condição e Pós")
