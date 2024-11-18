@@ -104,6 +104,8 @@ Capítulos do Curso
   --cap-11 --topics   Exercícios Ninja: Nível 5
   --cap-12 --topics   Funções
   --cap-13 --topics   Exercícios Ninja: Nível 6
+  --cap-14 --topics   Ponteiros
+  --cap-15 --topics   Exercícios Ninja: Nível 7
 
 Outline do Curso por Capítulo
 
@@ -289,16 +291,40 @@ Capítulo 12: Funções
 
 Capítulo 13: Exercícios Ninja Nível 6
 
-  --na-pratica-exercicio-1 --nivel-6               Apresenta o primeiro exercício prático do Nível 6.
-  --na-pratica-exercicio-1 --nivel-6 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 6.
-  --na-pratica-exercicio-2 --nivel-6               Apresenta o segundo exercício prático do Nível 6.
-  --na-pratica-exercicio-2 --nivel-6 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 6.
-  --na-pratica-exercicio-3 --nivel-6               Apresenta o terceiro exercício prático do Nível 6.
-  --na-pratica-exercicio-3 --nivel-6 --resolucao   Apresenta a resolução do terceiro exercício prático do Nível 6.
-  --na-pratica-exercicio-4 --nivel-6               Apresenta o quarto exercício prático do Nível 6.
-  --na-pratica-exercicio-4 --nivel-6 --resolucao   Apresenta a resolução do quarto exercício prático do Nível 6.
-  --na-pratica-exercicio-5 --nivel-6               Apresenta o quinto exercício prático do Nível 6.
-  --na-pratica-exercicio-5 --nivel-6 --resolucao   Apresenta a resolução do quinto exercício prático do Nível 6.
+  --na-pratica-exercicio-1 --nivel-6                Apresenta o primeiro exercício prático do Nível 6.
+  --na-pratica-exercicio-1 --nivel-6 --resolucao    Apresenta a resolução do primeiro exercício prático do Nível 6.
+  --na-pratica-exercicio-2 --nivel-6                Apresenta o segundo exercício prático do Nível 6.
+  --na-pratica-exercicio-2 --nivel-6 --resolucao    Apresenta a resolução do segundo exercício prático do Nível 6.
+  --na-pratica-exercicio-3 --nivel-6                Apresenta o terceiro exercício prático do Nível 6.
+  --na-pratica-exercicio-3 --nivel-6 --resolucao    Apresenta a resolução do terceiro exercício prático do Nível 6.
+  --na-pratica-exercicio-4 --nivel-6                Apresenta o quarto exercício prático do Nível 6.
+  --na-pratica-exercicio-4 --nivel-6 --resolucao    Apresenta a resolução do quarto exercício prático do Nível 6.
+  --na-pratica-exercicio-5 --nivel-6                Apresenta o quinto exercício prático do Nível 6.
+  --na-pratica-exercicio-5 --nivel-6 --resolucao    Apresenta a resolução do quinto exercício prático do Nível 6.
+  --na-pratica-exercicio-6 --nivel-6                Apresenta o sexto exercício prático do Nível 6.
+  --na-pratica-exercicio-6 --nivel-6 --resolucao    Apresenta a resolução do sexto exercício prático do Nível 6.
+  --na-pratica-exercicio-7 --nivel-6                Apresenta o sétimo exercício prático do Nível 6.
+  --na-pratica-exercicio-7 --nivel-6 --resolucao    Apresenta a resolução do sétimo exercício prático do Nível 6.
+  --na-pratica-exercicio-8 --nivel-6                Apresenta o oitavo exercício prático do Nível 6.
+  --na-pratica-exercicio-8 --nivel-6 --resolucao    Apresenta a resolução do oitavo exercício prático do Nível 6.
+  --na-pratica-exercicio-9 --nivel-6                Apresenta o nono exercício prático do Nível 6.
+  --na-pratica-exercicio-9 --nivel-6 --resolucao    Apresenta a resolução do nono exercício prático do Nível 6.
+  --na-pratica-exercicio-10 --nivel-6               Apresenta o décimo exercício prático do Nível 6.
+  --na-pratica-exercicio-10 --nivel-6 --resolucao   Apresenta a resolução do décimo exercício prático do Nível 6.
+  --na-pratica-exercicio-11 --nivel-6               Apresenta o décimo primeiro exercício prático do Nível 6.
+  --na-pratica-exercicio-11 --nivel-6 --resolucao   Apresenta a resolução do décimo primeiro exercício prático do Nível 6.
+
+Capítulo 14: Ponteiros
+
+  --o-que-sao-ponteiros     Descreve o que são ponteiros em Go
+  --quando-usar-ponteiros   Descreve quando usar ponteiros em Go
+
+Capítulo 15: Exercícios Ninja - Nível 7
+
+  --na-pratica-exercicio-1 --nivel-7               Apresenta o primeiro exercício prático do Nível 7.
+  --na-pratica-exercicio-1 --nivel-7 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 7.
+  --na-pratica-exercicio-2 --nivel-7               Apresenta o segundo exercício prático do Nível 7.
+  --na-pratica-exercicio-2 --nivel-7 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 7.
 ```
 
 ## Estrutura do Projeto
@@ -346,6 +372,10 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── overview.yml
 │   │   ├── resolution_exercises.go
 │   │   └── topics.go
+│   ├── exercicios_ninja_nivel_7
+│   │   ├── overview.yml
+│   │   ├── resolution_exercises.go
+│   │   └── topics.go
 │   ├── fluxo_de_controle
 │   │   ├── overview.yml
 │   │   └── topics.go
@@ -362,6 +392,9 @@ Capítulo 13: Exercícios Ninja Nível 6
 │   │   ├── helpme.go
 │   │   └── options.go
 │   ├── outline.go
+│   ├── ponteiros
+│   │   ├── overview.yml
+│   │   └── topics.go
 │   ├── structs
 │   │   ├── overview.yml
 │   │   └── topics.go
@@ -387,7 +420,7 @@ Capítulo 13: Exercícios Ninja Nível 6
 │       └── overview.go
 └── tree.log
 
-25 directories, 57 files
+27 directories, 62 files
 ```
 
 ## TO-DO
