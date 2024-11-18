@@ -2,3 +2,4 @@
 .DS_Store
 tree.log
 log/*.log
+*.out
