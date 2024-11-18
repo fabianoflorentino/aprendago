@@ -106,6 +106,7 @@ Capítulos do Curso
   --cap-13 --topics   Exercícios Ninja: Nível 6
   --cap-14 --topics   Ponteiros
   --cap-15 --topics   Exercícios Ninja: Nível 7
+  --cap-16 --topics   Aplicações
 
 Outline do Curso por Capítulo
 
@@ -325,6 +326,17 @@ Capítulo 15: Exercícios Ninja - Nível 7
   --na-pratica-exercicio-1 --nivel-7 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 7.
   --na-pratica-exercicio-2 --nivel-7               Apresenta o segundo exercício prático do Nível 7.
   --na-pratica-exercicio-2 --nivel-7 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 7.
+
+Capítulo 16: Aplicações
+
+  --documentacao-json   Descreve como documentar um pacote em Go
+  --json-marshal        Descreve como ordenar um JSON
+  --json-unmarshal      Descreve como desordenar um JSON
+  --interface-writer    Descreve o que é a interface Writer
+  --pacote-sort         Descreve o pacote sort
+  --customizando-sort   Descreve como customizar o pacote sort
+  --bcrypt              Descreve o pacote bcrypt
+
 ```
 
 ## Estrutura do Projeto
