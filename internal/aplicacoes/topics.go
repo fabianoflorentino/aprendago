@@ -43,7 +43,7 @@ func HelpMeAplicacoes() {
 		{Flag: "--bcrypt", Description: "Descreve o pacote bcrypt", Width: 0},
 	}
 
-	fmt.Printf("\nCapítulo 16: Aplicações")
+	fmt.Printf("\nCapítulo 16: Aplicações\n")
 	format.PrintHelpMe(hlp)
 }
 
