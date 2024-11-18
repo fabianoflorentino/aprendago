@@ -3,6 +3,7 @@ package internal
 
 import (
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
+	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
@@ -35,4 +36,5 @@ func Outline() {
 	exercicios_ninja_nivel_6.ExerciciosNinjaNivel6()
 	ponteiros.Ponteiros()
 	exercicios_ninja_nivel_7.ExerciciosNinjaNivel7()
+	aplicacoes.Aplicacoes()
 }

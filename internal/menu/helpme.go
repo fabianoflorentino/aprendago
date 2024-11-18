@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
+	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
@@ -54,4 +55,5 @@ func HelpMe() {
 	exercicios_ninja_nivel_6.HelMeExerciciosNinjaNivel6()
 	ponteiros.HelpMePonteiros()
 	exercicios_ninja_nivel_7.HelpMeExerciciosNinjaNivel7()
+	aplicacoes.HelpMeAplicacoes()
 }
