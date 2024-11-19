@@ -49,6 +49,9 @@ import (
 
 // Options displays the main menu with general and chapter-specific options based on the provided arguments.
 // It allows the user to navigate through the course content, access practical exercises, and view course overviews.
+//   - args: A list of arguments provided by the user to determine the menu or option to be displayed.
+//
+// The Options function calls the following functions:
 //   - buildOptions: Combines general and chapter-specific options based on the provided arguments.
 //   - generalOptions: Returns the general options available in the main menu.
 func Options(args []string) {

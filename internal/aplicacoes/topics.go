@@ -18,7 +18,6 @@ func Aplicacoes() {
 	executeSections("O pacote sort")
 	executeSections("Customizando sort")
 	executeSections("bcrypt")
-
 }
 
 func MenuAplicacoes([]string) []format.MenuOptions {
