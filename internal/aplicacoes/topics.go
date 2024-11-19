@@ -9,6 +9,8 @@ import (
 const rootDir = "internal/aplicacoes"
 
 func Aplicacoes() {
+	fmt.Printf("\n\nCapítulo 16: Aplicações\n")
+
 	executeSections("Documentação JSON")
 	executeSections("JSON marshal (ordenação)")
 	executeSections("JSON unmarshal (desornação)")
