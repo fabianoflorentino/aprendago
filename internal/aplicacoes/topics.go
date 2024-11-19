@@ -23,6 +23,7 @@ func MenuAplicacoes([]string) []format.MenuOptions {
 
 	return []format.MenuOptions{
 		{Options: "--documentacao-json", ExecFunc: func() { executeSections("Documentação JSON") }},
+		{Options: "--documentacao-json --example", ExecFunc: func() { PrintExampleJSON() }},
 		{Options: "--json-marshal", ExecFunc: func() { executeSections("JSON marshal (ordenação)") }},
 		{Options: "--json-unmarshal", ExecFunc: func() { executeSections("JSON unmarshal (desornação)") }},
 		{Options: "--interface-writer", ExecFunc: func() { executeSections("A interface Writer") }},
