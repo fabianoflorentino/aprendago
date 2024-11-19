@@ -435,20 +435,9 @@ Capítulo 16: Aplicações
 27 directories, 62 files
 ```
 
-## TO-DO
+## Documentação Técnica
 
-- [ ] [Refatorar o código para o uso de YAML para armazenar os tópicos.](https://github.com/fabianoflorentino/aprendago/issues/4)
-- [ ] [Implementar os tópicos restantes do curso.](https://github.com/fabianoflorentino/aprendago/issues/5)
-- [ ] [Implementar os exercícios restantes do curso.](https://github.com/fabianoflorentino/aprendago/issues/6)
-- [ ] [Implementar os testes unitários.](https://github.com/fabianoflorentino/aprendago/issues/7)
-- [ ] [Implementar o menu de overview por capítulo.](https://github.com/fabianoflorentino/aprendago/issues/8)
-- [ ] [Melhorar a documentação das funções e métodos.](https://github.com/fabianoflorentino/aprendago/issues/9)
-- [ ] [Reorganizar a documentação em diretórios por capítulo.](https://github.com/fabianoflorentino/aprendago/issues/10)
-- [ ] [Melhorar a apresentação da resolução dos exercícios.](https://github.com/fabianoflorentino/aprendago/issues/11)
-- [ ] [Implementar a funcionalidade de busca.](https://github.com/fabianoflorentino/aprendago/issues/12)
-- [ ] [Padronizar a linguagem usada para escrever o código, en-US.](https://github.com/fabianoflorentino/aprendago/issues/13)
-- [x] Implementar função de log para registrar as ações do usuário.
-- [ ] [Atualizar as funções com a nova função de log.](https://github.com/fabianoflorentino/aprendago/issues/14)
+[`pkg/format/questionnaire.go`](docs/questionarie.md)
 
 ## Licença
 
