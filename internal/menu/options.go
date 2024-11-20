@@ -29,6 +29,7 @@ import (
 
 	"github.com/fabianoflorentino/aprendago/internal"
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
+	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
@@ -48,6 +49,9 @@ import (
 
 // Options displays the main menu with general and chapter-specific options based on the provided arguments.
 // It allows the user to navigate through the course content, access practical exercises, and view course overviews.
+//   - args: A list of arguments provided by the user to determine the menu or option to be displayed.
+//
+// The Options function calls the following functions:
 //   - buildOptions: Combines general and chapter-specific options based on the provided arguments.
 //   - generalOptions: Returns the general options available in the main menu.
 func Options(args []string) {
@@ -73,6 +77,7 @@ func Options(args []string) {
 		exercicios_ninja_nivel_6.MenuExerciciosNinjaNivel6(args),
 		ponteiros.MenuPonteiros(args),
 		exercicios_ninja_nivel_7.MenuExercicioNinjaNivel7(args),
+		aplicacoes.MenuAplicacoes(args),
 	)
 }
 
