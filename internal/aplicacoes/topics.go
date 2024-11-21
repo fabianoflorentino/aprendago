@@ -31,7 +31,9 @@ func MenuAplicacoes([]string) []format.MenuOptions {
 		{Options: "--json-unmarshal", ExecFunc: func() { executeSections("JSON unmarshal (desornação)") }},
 		{Options: "--interface-writer", ExecFunc: func() { executeSections("A interface Writer") }},
 		{Options: "--pacote-sort", ExecFunc: func() { executeSections("O pacote sort") }},
+		{Options: "--pacote-sort --example", ExecFunc: func() { UsingPackageSort() }},
 		{Options: "--customizando-sort", ExecFunc: func() { executeSections("Customizando sort") }},
+		{Options: "--customizando-sort --example", ExecFunc: func() { UsingCustomSort() }},
 		{Options: "--bcrypt", ExecFunc: func() { executeSections("bcrypt") }},
 	}
 }
@@ -42,9 +44,12 @@ func HelpMeAplicacoes() {
 		{Flag: "--documentacao-json --example --json-marshal", Description: "Exemplo de como ordenar um JSON", Width: 0},
 		{Flag: "--documentacao-json --example --json-unmarshal", Description: "Exemplo de como desordenar um JSON", Width: 0},
 		{Flag: "--documentacao-json --example --json-encoder", Description: "Exemplo de como usar o encoder JSON", Width: 0},
+		{Flag: "--json-marshal", Description: "Descreve o pacote json.Marshal", Width: 0},
+		{Flag: "--json-unmarshal", Description: "Descreve o pacote json.Unmarshal", Width: 0},
 		{Flag: "--interface-writer", Description: "Descreve o que é a interface Writer", Width: 0},
 		{Flag: "--pacote-sort", Description: "Descreve o pacote sort", Width: 0},
-		{Flag: "--customizando-sort", Description: "Descreve como customizar o pacote sort", Width: 0},
+		{Flag: "--pacote-sort --example", Description: "Exemplo de como usar o pacote sort", Width: 0},
+		{Flag: "--customizando-sort --example", Description: "Descreve como customizar o pacote sort", Width: 0},
 		{Flag: "--bcrypt", Description: "Descreve o pacote bcrypt", Width: 0},
 	}
 
