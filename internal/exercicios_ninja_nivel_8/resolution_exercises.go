@@ -93,6 +93,16 @@ func resolucaoNaPraticaExercicio1() string {
 	return string(userToJson)
 }
 
+// Sorted by First from users struct
+func (a byFirst) Len() int           { return len(a) }
+func (a byFirst) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a byFirst) Less(i, j int) bool { return a[i].First < a[j].First }
+
+// Sorted by Age from users struct
+func (a byAge) Len() int           { return len(a) }
+func (a byAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a byAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
+
 // ResolucaoNaPraticaExercicio1
 func users() []user {
 	u1 := user{
@@ -118,6 +128,7 @@ func users() []user {
 	return []user{u3, u4, u2, u1}
 }
 
+// ResolucaoNaPraticaExercicio3
 func listUser3() []user3 {
 	u1 := user3{
 		First: "James",
@@ -163,28 +174,24 @@ func listUser3() []user3 {
 	return []user3{u1, u2, u3, u4}
 }
 
+// ResolucaoNaPraticaExercicio4
 func sliceInt() []int {
 	return []int{5, 8, 2, 43, 17, 987, 14, 12, 21, 1, 4, 2, 3, 93, 13}
 }
 
+// ResolucaoNaPraticaExercicio4
 func sliceString() []string {
 	return []string{"random", "rainbow", "delights", "in", "torpedo", "summers", "under", "gallantry", "fragmented", "moons", "across", "magenta"}
 }
 
-func (a byFirst) Len() int           { return len(a) }
-func (a byFirst) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-func (a byFirst) Less(i, j int) bool { return a[i].First < a[j].First }
-
-func (a byAge) Len() int           { return len(a) }
-func (a byAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-func (a byAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
-
+// ResolucaoNaPraticaExercicio5
 func sortByFirst(user []user) []user {
 	sort.Sort(byFirst(user))
 
 	return user
 }
 
+// ResolucaoNaPraticaExercicio5
 func sortByAge(user []user) []user {
 	sort.Sort(byAge(user))
 
