@@ -23,14 +23,14 @@ func MenuExerciciosNinjaNivel8([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--na-pratica-exercicio-1 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #1") }},
 		{Options: "--na-pratica-exercicio-1 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #2") }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #3") }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #4") }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #5") }},
-		{Options: "--na-pratica-exercicio-1 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
+		{Options: "--na-pratica-exercicio-2 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #2") }},
+		{Options: "--na-pratica-exercicio-2 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio2() }},
+		{Options: "--na-pratica-exercicio-3 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #3") }},
+		{Options: "--na-pratica-exercicio-3 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio3() }},
+		{Options: "--na-pratica-exercicio-4 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #4") }},
+		{Options: "--na-pratica-exercicio-4 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio4() }},
+		{Options: "--na-pratica-exercicio-5 --nivel-8", ExecFunc: func() { executeSections("Na prática: exercício #5") }},
+		{Options: "--na-pratica-exercicio-5 --nivel-8 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio5() }},
 	}
 }
 
