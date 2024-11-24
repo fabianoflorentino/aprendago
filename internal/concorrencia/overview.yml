@@ -1,6 +1,34 @@
 ---
 description:
-  name: "Capítulo 18: "
+  name: "Capítulo 18: Concorrência"
   sections:
-    - title:
+    - title: "Concorrência vs Paralelismo"
       text: |
+        - Concorrência é quando abre uma padaria do lado da outra e as duas quebram :)
+        - Fun facts:
+            - O primeiro CPU dual core "popular" veio em 2006
+            - Em 2007 o Google começou a criar a linguagem Go para utilizar essa vantagem
+            - Go foi a primeira linguagem criada com multi-cores em mente
+            - C, C++, C#, Java, JavaScript, Python, etc., foram todas criadas antes de 2006
+            - Ou seja, Go tem uma abordagem única (fácil!) para este tópico
+        - E qual a diferença entre concorrência e paralelismo?
+
+    - title: "Goroutines & WaitGroups"
+      text: |
+        - O código abaixo é linear. Como fazer as duas funções rodarem concorrentemente?
+            - https://play.golang.org/p/XP-ZMeHUk4
+        - Goroutines!
+        - O que são goroutines? São "threads."
+        - O que são threads? [WP](https://pt.wikipedia.org/wiki/Thread_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o))
+        - Na prática: go func.
+        - Exemplo: código termina antes da go func executar.
+        - Ou seja, precisamos de uma maneira pra "sincronizar" isso.
+        - Ah, mas então... não.
+        - Qualé então? sync.WaitGroup:
+        - Um WaitGroup serve para esperar que uma coleção de goroutines termine sua execução.
+            - func Add: "Quantas goroutines?"
+            - func Done: "Deu!"
+            - func Wait: "Espera todo mundo terminar."
+        - Ah, mas então... sim!
+        - Só pra ver: runtime.NumCPU() & runtime.NumGoroutine()
+        - Go Playground: https://play.golang.org/p/8iiqLX4sWc
