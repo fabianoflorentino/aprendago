@@ -32,3 +32,23 @@ description:
         - Ah, mas então... sim!
         - Só pra ver: runtime.NumCPU() & runtime.NumGoroutine()
         - Go Playground: https://play.golang.org/p/8iiqLX4sWc
+
+    - title: "Discussão: Condição de corrida"
+      text: |
+        - Agora vamos dar um mergulho na documentação:
+            - https://golang.org/doc/effective_go.html#concurrency
+            - https://pt.wikipedia.org/wiki/Multiplexador
+            - O que é yield? runtime.Gosched()
+        - Race condition:
+                *Função 1       var     Função 2*
+                Lendo: 0   →   0
+                Yield          0   →   Lendo: 0
+                var++: 1               Yield
+                Grava: 1   →   1       var++: 1
+                                1   ←   Grava: 1
+                Lendo: 1   ←   1
+                Yield          1   →   Lendo: 1
+                var++: 2               Yield
+                Grava: 2   →   2       var++: 2
+                                2   ←   Grava: 2
+        - E é por isso que vamos ver mutex, atomic e, por fim, channels.
