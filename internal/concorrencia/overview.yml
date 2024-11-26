@@ -52,3 +52,30 @@ description:
                 Grava: 2   →   2       var++: 2
                                 2   ←   Grava: 2
         - E é por isso que vamos ver mutex, atomic e, por fim, channels.
+
+    - title: Condição de corrida
+      text: |
+        - Aqui vamos replicar a race condition mencionada no artigo anterior.
+            - time.Sleep(time.Second) vs. runtime.Gosched()
+        - go help → go help build → go run -race main.go
+        - Como resolver? Mutex.
+        - Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/05_race_condition/main.go
+
+    - title: Mutex
+      text: |
+        - Agora vamos resolver a race condition do programa anterior utilizando mutex.
+        - Mutex é mutual exclusion, exclusão mútua.
+        - Utilizando mutex somente uma thread poderá utilizar a variável contador de cada vez, e as outras deve aguardar sua vez "na fila."
+        - Na prática:
+            - type Mutex
+                - func (m *Mutex) Lock()
+                - func (m *Mutex) Unlock()
+        - RWMutex
+        - Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/06_mutex/main.go
+
+    - title: Atomic
+      text: |
+        - Agora vamos fazer a mesma coisa, mas com atomic ao invés de mutex.
+            - atomic.AddInt64
+            - atomic.LoadInt64
+        - Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/07_atomic/main.go
