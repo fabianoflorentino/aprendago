@@ -35,11 +35,11 @@ jobs:
       - name: Build Docker image
         run: |
           docker build --no-cache --rm \
-            -t ${{ github.repository }}:v0.${{ github.run_number }} \
+            -t ${{ github.repository }}:v0.1.${{ github.run_number }} \
             -f ./build/Dockerfile.prod .
 
       - name: Push Docker image to Docker Hub
-        run: docker push ${{ github.repository }}:v0.${{ github.run_number }}
+        run: docker push ${{ github.repository }}:v0.1.${{ github.run_number }}
 
   tag:
     name: Tag
@@ -60,7 +60,7 @@ jobs:
         id: create_tag
         run: |
           # Define a dynamic tag using the run number and date/time
-          TAG_NAME="v0.${{ github.run_number }}"
+          TAG_NAME="v0.1.${{ github.run_number }}"
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
           # Configure the remote with authentication token
