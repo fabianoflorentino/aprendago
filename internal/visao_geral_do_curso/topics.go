@@ -20,7 +20,7 @@ func VisaoGeralDoCurso() {
 
 func MenuVisaoGeralDoCurso([]string) []format.MenuOptions {
 	return []format.MenuOptions{
-		{Options: "--bem-vindo", ExecFunc: func() { executeSection("Bem-vindo") }},
+		{Options: "--bem-vindo", ExecFunc: func() { executeSection("Bem-vindo!") }},
 		{Options: "--porque-go", ExecFunc: func() { executeSection("Por que Go?") }},
 		{Options: "--sucesso", ExecFunc: func() { executeSection("Sucesso") }},
 		{Options: "--recursos", ExecFunc: func() { executeSection("Recursos") }},
