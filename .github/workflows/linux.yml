@@ -28,7 +28,7 @@ jobs:
 
       - name: Build for Linux
         run: |
-          GOOS=linux GOARCH=amd64 go build -o aprendago
+          GOOS=linux GOARCH=amd64 go build -o aprendago cmd/aprendago/main.go
 
       - name: Upload Linux build artifact
         uses: actions/upload-artifact@v3
