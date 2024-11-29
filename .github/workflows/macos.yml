@@ -28,7 +28,7 @@ jobs:
 
       - name: Build for macOS
         run: |
-          GOOS=linux GOARCH=amd64 go build -o aprendago
+          GOOS=linux GOARCH=amd64 go build -o aprendago cmd/aprendago/main.go
 
       - name: Upload macOS build artifact
         uses: actions/upload-artifact@v3
@@ -39,6 +39,7 @@ jobs:
   release:
     name: Create GitHub Release
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Download macOS build artifact
         uses: actions/download-artifact@v3

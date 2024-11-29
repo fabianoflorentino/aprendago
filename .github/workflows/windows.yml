@@ -28,7 +28,7 @@ jobs:
 
       - name: Build for Windows
         run: |
-          GOOS=windows GOARCH=amd64 go build -o aprendago.exe
+          GOOS=windows GOARCH=amd64 go build -o aprendago.exe cmd/aprendago/main.go
 
       - name: Upload Windows build artifact
         uses: actions/upload-artifact@v3
@@ -39,6 +39,7 @@ jobs:
   release:
     name: Create GitHub Release
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Download Windows build artifact
         uses: actions/download-artifact@v3
