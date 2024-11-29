@@ -16,6 +16,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/funcoes"
 	"github.com/fabianoflorentino/aprendago/internal/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/internal/ponteiros"
+	"github.com/fabianoflorentino/aprendago/internal/seu_ambiente_de_desenvolvimento"
 	"github.com/fabianoflorentino/aprendago/internal/structs"
 	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
@@ -39,4 +40,5 @@ func Outline() {
 	exercicios_ninja_nivel_7.ExerciciosNinjaNivel7()
 	aplicacoes.Aplicacoes()
 	concorrencia.Concorrencia()
+	seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento()
 }
