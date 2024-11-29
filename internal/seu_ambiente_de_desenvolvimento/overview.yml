@@ -38,3 +38,36 @@ description:
             - grep
                 - cat temp2.txt | grep enter
                 - ls | grep -i documents
+    - title: "Go workspace & environment variables"
+      text: |
+        - $GOPATH/
+            bin/
+            pkg/
+            src/
+                github.com/
+                    <Nome do usuário (github.com)>/
+                        <Nome do projeto ou repo>/
+                        <Nome do projeto ou repo>/
+                        <Nome do projeto ou repo>/
+                        <Nome do projeto ou repo>/
+                        ...
+                        <Nome do projeto ou repo>/
+        - GOROOT: onde os binários da instalação do Go foram instalados
+            - GOROOT="/usr/lib/go"
+        - GOPATH: onde seus arquivos de trabalho, seu workspace, fica localizado
+            - GOPATH="/home/ellen/go"
+            - export GOPATH=$HOME/go (.bashrc)
+        - Package management? go get.
+            - Na prática → e.g. gouuid
+    - title: "IDEs"
+      text: |
+        - Integrated development environment. WP: "[...] é um programa de computador que reúne características e ferramentas de apoio ao desenvolvimento de software com o objetivo de agilizar este processo."
+        - IDEs:
+            - Visual Studio Code → https://code.visualstudio.com/
+                - go get -v github.com/nsf/gocode
+            - Goland → https://www.jetbrains.com/go/ ($?)
+            - Atom → https://atom.io/
+            - Sublime → https://www.sublimetext.com/ ($)
+        - Fontes:
+            - https://github.com/tonsky/FiraCode
+            - https://www.fsd.it/shop/fonts/pragmatapro/ ($)
