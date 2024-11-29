@@ -57,19 +57,19 @@ Aprenda GO
 
 Capítulos do Curso
 
-  --cap-1 --topics    Visão Geral do Curso
-  --cap-2 --topics    Variáveis, Valores e Tipos
-  --cap-3 --topics    Exercícios Ninja: Nível 1
-  --cap-4 --topics    Fundamentos da Programação
-  --cap-5 --topics    Exercícios Ninja: Nível 2
-  --cap-6 --topics    Fluxo de Controle
-  --cap-7 --topics    Exercícios Ninja: Nível 3
-  --cap-8 --topics    Agrupamento de Dados
-  --cap-9 --topics    Exercícios Ninja: Nível 4
-  --cap-10 --topics   Structs
-  --cap-11 --topics   Exercícios Ninja: Nível 5
-  --cap-12 --topics   Funções
-  --cap-13 --topics   Exercícios Ninja: Nível 6
+  --cap=1 --topics    Visão Geral do Curso
+  --cap=2 --topics    Variáveis, Valores e Tipos
+  --cap=3 --topics    Exercícios Ninja: Nível 1
+  --cap=4 --topics    Fundamentos da Programação
+  --cap=5 --topics    Exercícios Ninja: Nível 2
+  --cap=6 --topics    Fluxo de Controle
+  --cap=7 --topics    Exercícios Ninja: Nível 3
+  --cap=8 --topics    Agrupamento de Dados
+  --cap=9 --topics    Exercícios Ninja: Nível 4
+  --cap=10 --topics   Structs
+  --cap=11 --topics   Exercícios Ninja: Nível 5
+  --cap=12 --topics   Funções
+  --cap=13 --topics   Exercícios Ninja: Nível 6
 ```
 
 ### Ajuda
@@ -95,32 +95,32 @@ Ajuda:
 
 Capítulos do Curso
 
-  --cap-1 --topics    Visão Geral do Curso
-  --cap-2 --topics    Variáveis, Valores e Tipos
-  --cap-3 --topics    Exercícios Ninja: Nível 1
-  --cap-4 --topics    Fundamentos da Programação
-  --cap-5 --topics    Exercícios Ninja: Nível 2
-  --cap-6 --topics    Fluxo de Controle
-  --cap-7 --topics    Exercícios Ninja: Nível 3
-  --cap-8 --topics    Agrupamento de Dados
-  --cap-9 --topics    Exercícios Ninja: Nível 4
-  --cap-10 --topics   Structs
-  --cap-11 --topics   Exercícios Ninja: Nível 5
-  --cap-12 --topics   Funções
-  --cap-13 --topics   Exercícios Ninja: Nível 6
-  --cap-14 --topics   Ponteiros
-  --cap-15 --topics   Exercícios Ninja: Nível 7
-  --cap-16 --topics   Aplicações
+  --cap=1 --topics    Visão Geral do Curso
+  --cap=2 --topics    Variáveis, Valores e Tipos
+  --cap=3 --topics    Exercícios Ninja: Nível 1
+  --cap=4 --topics    Fundamentos da Programação
+  --cap=5 --topics    Exercícios Ninja: Nível 2
+  --cap=6 --topics    Fluxo de Controle
+  --cap=7 --topics    Exercícios Ninja: Nível 3
+  --cap=8 --topics    Agrupamento de Dados
+  --cap=9 --topics    Exercícios Ninja: Nível 4
+  --cap=10 --topics   Structs
+  --cap=11 --topics   Exercícios Ninja: Nível 5
+  --cap=12 --topics   Funções
+  --cap=13 --topics   Exercícios Ninja: Nível 6
+  --cap=14 --topics   Ponteiros
+  --cap=15 --topics   Exercícios Ninja: Nível 7
+  --cap=16 --topics   Aplicações
 
 Outline do Curso por Capítulo
 
-  --cap-1 --overview   Visão Geral do Curso
-  --cap-2 --overview   Variáveis, Valores &amp; Tipos
-  --cap-3 --overview   Exercícios Ninja Nível 1
-  --cap-4 --overview   Fundamentos da Programação
-  --cap-5 --overview   Exercícios Ninja Nível 2
-  --cap-6 --overview   Fluxo de Controle
-  --cap-7 --overview   Exercícios Ninja Nível 3
+  --cap=1 --overview   Visão Geral do Curso
+  --cap=2 --overview   Variáveis, Valores &amp; Tipos
+  --cap=3 --overview   Exercícios Ninja Nível 1
+  --cap=4 --overview   Fundamentos da Programação
+  --cap=5 --overview   Exercícios Ninja Nível 2
+  --cap=6 --overview   Fluxo de Controle
+  --cap=7 --overview   Exercícios Ninja Nível 3
 
 Capítulo 1: Visão Geral do Curso
 
