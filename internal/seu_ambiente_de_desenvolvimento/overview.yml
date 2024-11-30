@@ -71,3 +71,92 @@ description:
         - Fontes:
             - https://github.com/tonsky/FiraCode
             - https://www.fsd.it/shop/fonts/pragmatapro/ ($)
+    - title: Comandos go
+      text: |
+        - go version
+        - go env
+        - go help
+        - go fmt
+            - ./…
+        - go run
+            - go run <file name>
+            - go run *.go
+        - go build
+            - para um executável:
+                - gera o arquivo binário
+                - informa caso tenham havido erros
+                - caso não hajam erros, cria um executável e salva-o no diretório atual
+            - para um pacote:
+                - gera o arquivo
+                - informa caso tenham havido erros
+                - descarta o executável
+        - go install
+            - para um executável:
+                - faz o build
+                - nomeia o arquivo com o nome do diretório atual
+                - salva o arquivo binário em $GOPATH/bin
+            - para um pacote:
+                - faz o build
+                - salva o arquivo binário em $GOPATH/pkg
+                - cria archive files (arquivo.a), os arquivos pré-compilados utilizados pelos imports
+        - flags
+            - "-race"
+    - title: Repositórios no github
+      text: |
+        - Git foi feito pelo Linus Torvalds. O cara que criou o Linux.
+        - GitHub, GitLab.
+        - Como funciona?
+            - Vá em github.com e crie um repo
+            - Crie uma pasta com o mesmo nome no seu $GOPATH
+                - $GOPATH/src/github.com/<username>/<repo>
+            - Rode “git init” nesta pasta
+            - Adicione arquivos, e.g. README.md e .gitignore
+            - git add -A
+            - git commit -m “here’s some commit message”
+            - git remote add origin git@github.com:username/repo.git
+            - git push -u origin master
+        - Comandos:
+            - git status
+            - git add --all
+            - git commit -m "mensagem"
+            - git push
+    - title: Explorando o github
+      text: |
+        - Clonando um repo
+            git clone <repo>
+        - SSH
+            - Mac/Linux: ssh-keygen -t rsa
+                - id_rsa: Esta é sua chave privada, que fica no diretório ~/.ssh, e serve para verificar sua chave pública.
+                - id_rsa.pub: Esta é sua chave pública, que você pode compartilhar.
+            - Windows: Google :)
+        - git remote
+            - git remote get-url origin
+            - git remote blablabla ← help
+        - Truque sujo: apaga tudo e clona denovo. (Não recomendo se o repo tiver 4 GB...)
+    - title: Compilação cruzada
+      text: |
+        - GOOS
+        - GOARCH
+        - `GOOS=darwin GOARCH=amd64 go build test.go`
+        - https://godoc.org/runtime#pkg-constants
+        - git push
+        - git clone
+        - go get
+        - Arquivos: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/19_seu-ambiente-de-desenvolvimento/compilacaocruzada
+    - title: Pacotes
+      text: |
+        - Opção 1: uma pasta, vários arquivos.
+            - package declaration em todos os arquivos
+            - package scope: um elemento de um arquivo é acessível de todos os arquivos
+            - imports tem file scope
+        - Opção 2: separando por packages.
+            - pastas diferentes
+            - requer imports
+            - para usar: package.Função()
+        - Exportado vs. não-exportado, ou seja, visível vs. não-visível
+            - Em Go não utilizamos os termos "público" e "privado" como em outras linguagens
+            - É somente questão de capitalização
+                - Com maiúscula: exportado, visível fora do package
+                - Com minúscula: não exportado, não utilizável fora do package
+        - Artigo: https://rakyll.org/style-packages/
+        - Exemplo: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/19_seu-ambiente-de-desenvolvimento/pacotes
