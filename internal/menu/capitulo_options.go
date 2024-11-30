@@ -18,6 +18,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/funcoes"
 	"github.com/fabianoflorentino/aprendago/internal/fundamentos_da_programacao"
 	"github.com/fabianoflorentino/aprendago/internal/ponteiros"
+	"github.com/fabianoflorentino/aprendago/internal/seu_ambiente_de_desenvolvimento"
 	"github.com/fabianoflorentino/aprendago/internal/structs"
 	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
@@ -44,6 +45,7 @@ func MenuCapituloOptions([]string) []format.MenuOptions {
 		{Options: "--cap=16 --topics", ExecFunc: func() { aplicacoes.HelpMeAplicacoes() }},
 		{Options: "--cap=17 --topics", ExecFunc: func() { exercicios_ninja_nivel_8.HelpMeExerciciosNinjaNivel8() }},
 		{Options: "--cap=18 --topics", ExecFunc: func() { concorrencia.HelpMeConcorrencia() }},
+		{Options: "--cap=19 --topics", ExecFunc: func() { seu_ambiente_de_desenvolvimento.HelpMeSeuAmbienteDeDesenvolvimento() }},
 	}
 }
 
@@ -67,6 +69,7 @@ func HelpMeCapituloOptions() {
 		{Flag: "--cap=16 --topics", Description: "Aplicações", Width: 0},
 		{Flag: "--cap=17 --topics", Description: "Exercícios Ninja: Nível 8", Width: 0},
 		{Flag: "--cap=18 --topics", Description: "Concorrência", Width: 0},
+		{Flag: "--cap=19 --topics", Description: "Seu Ambiente de Desenvolvimento", Width: 0},
 	}
 
 	fmt.Println("Capítulos do Curso")
