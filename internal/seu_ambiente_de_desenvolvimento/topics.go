@@ -14,7 +14,7 @@ func SeuAmbienteDeDesenvolvimento() {
 	executeSection("O terminal")
 	executeSection("Go workspace & environment variables")
 	executeSection("IDEs")
-	executeSection("comandos go")
+	executeSection("Comandos go")
 	executeSection("Repositórios no github")
 	executeSection("Explorando o github")
 	executeSection("Compilação cruzada")
@@ -26,7 +26,7 @@ func MenuSeuAmbienteDeDesenvolvimento([]string) []format.MenuOptions {
 		{Options: "--o-terminal", ExecFunc: func() { executeSection("O terminal") }},
 		{Options: "--go-workspace-environment-variables", ExecFunc: func() { executeSection("Go workspace & environment variables") }},
 		{Options: "--ides", ExecFunc: func() { executeSection("IDEs") }},
-		{Options: "--comandos-go", ExecFunc: func() { executeSection("comandos go") }},
+		{Options: "--comandos-go", ExecFunc: func() { executeSection("Comandos go") }},
 		{Options: "--repositorios-no-github", ExecFunc: func() { executeSection("Repositórios no github") }},
 		{Options: "--explorando-o-github", ExecFunc: func() { executeSection("Explorando o github") }},
 		{Options: "--compilacao-cruzada", ExecFunc: func() { executeSection("Compilação cruzada") }},
