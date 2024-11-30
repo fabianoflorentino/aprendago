@@ -1,8 +1,8 @@
 ---
 description:
-  name: "Seu ambiente de desenvolvimento"
+  name: "Capítulo 19: Seu ambiente de desenvolvimento"
   sections:
-    - title: "O terminal"
+    - title: O terminal
       text: |
         - Terminologia:
             - GUI: Graphical User Interface
