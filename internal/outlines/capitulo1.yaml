@@ -1,0 +1,121 @@
+title: Visão Geral do Curso
+topics:
+  - flag: --bem-vindo
+    title: Bem vindo!
+    help_me: Exibe a mensagem de boas-vindas ao curso Aprenda Go.
+    outline: |
+      - Bem vindo ao curso!
+      - Eu sou...
+      - Go foi criada por gente foda que criou o Unix, B, UTF-8...
+      - Em 2006 o Google queria...
+      - É uma linguagem que vem crescendo horrores...
+      - Nesse curso você vai aprender...
+      - O curriculum que vamos estudar...
+      - Para os novos na programação... Para os programadores experientes...
+      - Participe!
+
+  - flag: --porque-go
+    title: Por que Go?
+    help_me: Descreve os benefícios e razões para aprender a linguagem Go.
+    outline: |
+      - Antes de investir seu tempo em aprender a linguagem Go, é bom você entender por que isso é uma boa idéia.
+      - O que estava acontecendo no Google...
+      - Criada por Ken Thompson (Unix, B, C), Rob Pike (UTF-8), e Robert Griesemer.
+      - Em 2006, não tinha uma linguagem de compilação rápida, execução rápida, e fácil de programar.
+        É uma linguagem criada para resolver as questões de performance e complexidade.
+      - https://golang.org/doc/faq#creating_a_new_language
+      - Eficiente
+          - Standard library é déis
+          - Multiplataforma.
+          - Garbage collection (lightning fast!)
+          - Cross-compile.
+      - Fácil de usar
+          - É uma linguagem compilada, de tipagem forte e estática,
+          - Tem pouquíssimas palavras reservadas, que vamos aprender todas no curso, ou seja, é muito de boas de aprender
+          - só sobe nas listas de popularidade
+      - Killer feature: Em 2006, logo após o primeiro dual core. Thread: 1mb. Goroutine: 2kb.
+      - É massa!
+      - Quando usar Go?
+          - Escala
+          - Seviços web, redes, servers (machine learning, image processing, crypto, ...)
+          - Quando precisar de uma lingaugem rápida, simples, fácil de aprender, e fácil de usar.
+      - Usa em: APIs, CLIs, microservices, libraries/framework, processamento de dados, ... É a base dos serviços de cloud e orquestração de containers.
+      - Quem usa? https://github.com/golang/go/wiki/GoUsers
+      - Go é OOP? https://golang.org/doc/faq#Is_Go_an_object-oriented_language
+      - Mais um: https://golang.org/doc/faq#principles
+      - $$$: https://insights.stackoverflow.com/survey/2017#technology-top-paying-technologies-by-region -&gt; US
+
+  - flag: --sucesso
+    title: Sucesso
+    help_me: Apresenta dicas e estratégias para ter sucesso no curso.
+    outline: |
+      - Qual o motivo que algumas pessoa obtem sucesso e outras não?
+      - Eu quero que você obtenha sucesso com este curso, então vamos falar sobre o assunto.
+      - Perguntaram a Bill Gates e Warren Buffet, independentemente, qual seria sua principal característica responsável pelo seu sucesso. A resposta de ambos foi:
+      - Foco.
+      - (Fonte: https://www.linkedin.com/pulse/20140707144749-8353952-the-one-word-answer-to-why-bill-gates-and-warren-buffett-have-been-so-successful/)
+      - O que isso quer dizer?
+      - Escolha um objetivo e se concentre nele. Faça desse objetivo sua maior prioridade.
+      - Foco. Concentração. → &#34;Vou conseguir chegar lá ou vou morrer tentando.&#34;
+      - Exemplo: minha carreira de violinista.
+      - Faça disso uma prioridade, não uma resolução de ano novo. Tem vezes que seus amigos vão te chamar pra fazer
+        algo massa e você vai ter que dizer, &#34;gente, não vai dar, estou estudando.&#34;
+      - O Todd costuma dizer: de gota em gota se enche um balde. A cada dia uma gota. Algumas semanas depois você
+        olha o balde, e pô meu não tem quase nada ali, pra que esse esforço todo? Mas depois de alguns anos o balde
+        vai estar transbordando. É só trabalhar, de gota em gota.
+      - Então:
+          - Seja proativo.
+          - Trabalhe. Invista as horas de esforço.
+          - Faça exercício, coma direito, tenha uma atitude positiva.
+          - Easy mode: pare de ver TV e use esse tempo pra estudar.
+      - E algumas dicas práticas:
+          - Metade das pessoas que assiste esse curso diz que eu falo muito rápido. A outra metade diz que eu falo muito devagar.
+            Então use o botãozinho ali no player e selecione a velocidade mais apropriada pra você.
+          - Boa parte de qualquer aprendizado se resume a memória muscular. Então quando eu passar exercícios, digite o código.
+            Não copie e cole. Digite. E quando eu estiver programando &#34;ao vivo,&#34; não passe pra frente, assista, e preste atenção.
+            Se acostume com o processo, com o ato de programar.
+
+      - Com paciência e com persistência você chega lá.
+
+  - flag: --recursos
+    title: Recursos
+    help_me: Lista recursos e materiais de apoio para o curso.
+    outline: |
+      - Leia as descrições dos vídeos!
+        - Outline completo: https://github.com/ellenkorbes/aprendago/blob/master/OUTLINE.md
+      - Exercícios:
+      - Comunidade:
+          - Slack: https://invite.slack.golangbridge.org/
+          - #brazil
+          - #brazilian-go-studies, toda quinta às 22h!
+              - gravações em: https://www.youtube.com/cesargimenes
+              - exercícios em: https://github.com/crgimenes/Go-Hands-On
+              - FB: https://www.facebook.com/gophers.br/
+      - Livros:
+          - A Linguagem de Programação Go (Alan Donovan, Brian Kernighan): https://www.amazon.com.br/dp/8575225464/
+          - Go em Ação (William Kennedy, Brian Ketelsen, Erik St. Martin): https://www.amazon.com.br/dp/8575225065/
+          - Introdução à Linguagem Go (Caleb Doxsey): https://www.amazon.com.br/dp/8575224891/
+      - Em inglês: gobyexample.com, forum.golangbridge.org, stackoverflow.com/questions/tagged/go
+      - Documentação oficial:
+          - golang.org
+          - godoc.org
+          - golang.org/doc/effective_go.html
+      - Podcast Go Time: https://changelog.com/gotime
+      - Defective Go: https://www.youtube.com/channel/UC98qIvCCqd4fjOw1ks78SwA
+
+  - flag: --como-esse-curso-funciona
+    title: Como esse curso funciona
+    help_me: Explica a estrutura e metodologia do curso.
+    outline: |
+      - Velocidade de playback.
+      - Repetição.
+      - Erros.
+      - Português vs. inglês
+          - Obviamente esse é um curso em português.
+          - Mas a língua semi-oficial da programação e do mundo da tecnologia em geral é a língua inglesa.
+          - Por isso vamos utilizar bastante termos em inglês ao longo do curso.
+          - As explicações serão em português, claro, mas quero que todos fiquem bem confortáveis com os termos em inglês.
+          - Desta maneira você será auto-suficiente e poderá procurar por documentação e ajuda por toda a internet, não somente nos sites em português.
+          - (Alem de que eu não sei e nem quero saber o nome em português de boa parte dessas coisas :P)
+      - Constantemente &#34;em progresso.&#34;
+      - Seu feedback é super importante!
