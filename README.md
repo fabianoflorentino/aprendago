@@ -111,16 +111,24 @@ Capítulos do Curso
   --cap=14 --topics   Ponteiros
   --cap=15 --topics   Exercícios Ninja: Nível 7
   --cap=16 --topics   Aplicações
+  --cap=17 --topics   Exercícios Ninja: Nível 8
+  --cap=18 --topics   Concorrência
+  --cap=19 --topics   Seu Ambiente de Desenvolvimento
 
 Outline do Curso por Capítulo
 
-  --cap=1 --overview   Visão Geral do Curso
-  --cap=2 --overview   Variáveis, Valores &amp; Tipos
-  --cap=3 --overview   Exercícios Ninja Nível 1
-  --cap=4 --overview   Fundamentos da Programação
-  --cap=5 --overview   Exercícios Ninja Nível 2
-  --cap=6 --overview   Fluxo de Controle
-  --cap=7 --overview   Exercícios Ninja Nível 3
+  --cap=1 --overview    Visão Geral do Curso
+  --cap=2 --overview    Variáveis, Valores &amp; Tipos
+  --cap=3 --overview    Exercícios Ninja Nível 1
+  --cap=4 --overview    Fundamentos da Programação
+  --cap=5 --overview    Exercícios Ninja Nível 2
+  --cap=6 --overview    Fluxo de Controle
+  --cap=7 --overview    Exercícios Ninja Nível 3
+  --cap=8 --overview    Agrupamento de Dados
+  --cap=9 --overview    Exercícios Ninja Nível 4
+  --cap=10 --overview   Structs
+  --cap=11 --overview   Exercícios Ninja Nível 5
+  --cap=12 --overview   Funções
 
 Capítulo 1: Visão Geral do Curso
 
@@ -333,14 +341,50 @@ Capítulo 15: Exercícios Ninja - Nível 7
 
 Capítulo 16: Aplicações
 
-  --documentacao-json   Descreve como documentar um pacote em Go
-  --json-marshal        Descreve como ordenar um JSON
-  --json-unmarshal      Descreve como desordenar um JSON
-  --interface-writer    Descreve o que é a interface Writer
-  --pacote-sort         Descreve o pacote sort
-  --customizando-sort   Descreve como customizar o pacote sort
-  --bcrypt              Descreve o pacote bcrypt
+  --documentacao-json                              Descreve como documentar um pacote em Go
+  --documentacao-json --example --json-marshal     Exemplo de como ordenar um JSON
+  --documentacao-json --example --json-unmarshal   Exemplo de como desordenar um JSON
+  --documentacao-json --example --json-encoder     Exemplo de como usar o encoder JSON
+  --json-marshal                                   Descreve o pacote json.Marshal
+  --json-unmarshal                                 Descreve o pacote json.Unmarshal
+  --interface-writer                               Descreve o que é a interface Writer
+  --pacote-sort                                    Descreve o pacote sort
+  --pacote-sort --example                          Exemplo de como usar o pacote sort
+  --customizando-sort --example                    Descreve como customizar o pacote sort
+  --bcrypt                                         Descreve o pacote bcrypt
 
+Capítulo 17: Exercícios Ninja Nível 8
+
+  --na-pratica-exercicio-1 --nivel-8               Apresenta o primeiro exercício prático do Nível 8.
+  --na-pratica-exercicio-1 --nivel-8 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 8.
+  --na-pratica-exercicio-2 --nivel-8               Apresenta o segundo exercício prático do Nível 8.
+  --na-pratica-exercicio-2 --nivel-8 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 8.
+  --na-pratica-exercicio-3 --nivel-8               Apresenta o terceiro exercício prático do Nível 8.
+  --na-pratica-exercicio-3 --nivel-8 --resolucao   Apresenta a resolução do terceiro exercício prático do Nível 8.
+  --na-pratica-exercicio-4 --nivel-8               Apresenta o quarto exercício prático do Nível 8.
+  --na-pratica-exercicio-4 --nivel-8 --resolucao   Apresenta a resolução do quarto exercício prático do Nível 8.
+  --na-pratica-exercicio-5 --nivel-8               Apresenta o quinto exercício prático do Nível 8.
+  --na-pratica-exercicio-5 --nivel-8 --resolucao   Apresenta a resolução do quinto exercício prático do Nível 8.
+
+Capítulo 18: Concorrência
+
+  --concorrencia-vs-paralelismo     Apresenta a diferença entre concorrência e paralelismo.
+  --goroutines-waitgroups           Apresenta o uso de goroutines e waitgroups.
+  --discussao-condicao-de-corrida   Apresenta uma discussão sobre condição de corrida.
+  --condicao-de-corrida             Apresenta o conceito de condição de corrida.
+  --mutex                           Apresenta o uso de mutex.
+  --atomic                          Apresenta o uso de atomic.
+
+Capítulo 19: Seu Ambiente de Desenvolvimento
+
+  --o-terminal                           Exibe informações sobre o terminal.
+  --go-workspace-environment-variables   Exibe informações sobre o workspace e variáveis de ambiente do Go.
+  --ides                                 Exibe informações sobre IDEs.
+  --comandos-go                          Exibe informações sobre comandos go.
+  --repositorios-no-github               Exibe informações sobre repositórios no github.
+  --explorando-o-github                  Exibe informações sobre explorando o github.
+  --compilacao-cruzada                   Exibe informações sobre compilação cruzada.
+  --pacotes                              Exibe informações sobre pacotes.
 ```
 
 ## Estrutura do Projeto

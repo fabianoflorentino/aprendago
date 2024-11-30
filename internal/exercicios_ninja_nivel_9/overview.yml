@@ -1,0 +1,84 @@
+---
+description:
+  name: "Capítulo 20: Exercícios Ninja Nível 9"
+  sections:
+    - title: "Na prática: Exercício #1"
+      text: |
+        Alem da goroutine principal, crie duas outras goroutines.
+        - Cada goroutine adicional devem fazer um print separado.
+        - Utilize waitgroups para fazer com que suas goroutines finalizem antes de o programa terminar.
+        - Solução:
+            - https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/01_foda/main_foda.go
+            - https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/01_moleza/main_moleza.go
+    - title: "Na prática: Exercício #2"
+      text: |
+        - Esse exercício vai reforçar seus conhecimentos sobre conjuntos de métodos.
+            - Crie um tipo para um struct chamado "pessoa"
+            - Crie um método "falar" para este tipo que tenha um receiver ponteiro (*pessoa)
+            - Crie uma interface, "humanos", que seja implementada por tipos com o método "falar"
+            - Crie uma função "dizerAlgumaCoisa" cujo parâmetro seja do tipo "humanos" e que chame o método "falar"
+            - Demonstre no seu código:
+                - Que você pode utilizar um valor do tipo "*pessoa" na função "dizerAlgumaCoisa"
+                - Que você não pode utilizar um valor do tipo "pessoa" na função "dizerAlgumaCoisa"
+        - Se precisar de dicas, veja: https://gobyexample.com/interfaces
+        - Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/02/main.go
+    - title: "Na prática: Exercício #3"
+      text: |
+        - Utilizando goroutines, crie um programa incrementador:
+            - Tenha uma variável com o valor da contagem
+            - Crie um monte de goroutines, onde cada uma deve:
+                - Ler o valor do contador
+                - Salvar este valor
+                - Fazer yield da thread com runtime.Gosched()
+                - Incrementar o valor salvo
+                - Copiar o novo valor para a variável inicial
+            - Utilize WaitGroups para que seu programa não finalize antes de suas goroutines.
+            - Demonstre que há uma condição de corrida utilizando a flag -race
+        - Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/03/main.go
+    - title: "Na prática: Exercício #4"
+      text: |
+        - Utilize mutex para consertar a condição de corrida do exercício anterior.
+        - Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/04/main.go
+    - title: "Na prática: Exercício #5"
+      text: |
+        - Utilize atomic para consertar a condição de corrida do exercício #3.
+        - Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/05/main.go
+    - title: "Na prática: Exercício #6"
+      text: |
+        - Crie um programa que demonstra seu OS e ARCH.
+        - Rode-o com os seguintes comandos:
+            - go run
+            - go build
+            - go install
+        - Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/06/main.go
+    - title: "Na prática: Exercício #7"
+      text: |
+        - "If you do not leave your comfort zone, you do not remember the trip" — Brian Chesky
+        - Faça download e instale: https://obsproject.com/
+        - Escolha um tópico dos que vimos até agora. Sugestões:
+            - Motivos para utilizar Go
+            - Instalando Go
+            - Configurando as environment variables (e.g. GOPATH)
+            - Hello world
+            - go commands e.g. go help
+            - Variáveis
+            - O operador curto de declaração
+            - Constantes
+            - Loops
+                - init, cond, post
+                - break
+                - continue
+            - Funções
+            - func (receiver) identifier(params) (returns) { code }
+            - Métodos
+            - Interfaces
+            - Conjuntos de métodos
+            - Tipos
+                - Conversão?
+            - Concorrência vs. paralelismo
+            - Goroutines
+            - WaitGroups
+            - Mutex
+        - Grave um vídeo onde *você* ensina o tópico em questão.
+        - Faça upload do vídeo no YouTube.
+        - Compartilhe o vídeo no Twitter e me marque no tweet (@ellenkorbes).
