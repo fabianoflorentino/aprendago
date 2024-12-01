@@ -1,3 +1,6 @@
+// Package aplicacoes provides various functionalities and examples related to JSON processing,
+// sorting, and encryption in Go. It includes functions to demonstrate JSON marshaling and unmarshaling,
+// using the Writer interface, sorting with the sort package, customizing sort operations, and using bcrypt for hashing.
 package aplicacoes
 
 import (
@@ -6,8 +9,21 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-const rootDir = "internal/aplicacoes"
+// rootDir represents the relative path to the "aplicacoes" directory within the internal package.
+// It is used as a base directory for various application-specific operations and configurations.
+const (
+	rootDir = "internal/aplicacoes"
+)
 
+// Aplicacoes prints the title of Chapter 16 and executes a series of sections related to various topics.
+// The sections include:
+// - JSON Documentation
+// - JSON marshal (ordering)
+// - JSON unmarshal (disordering)
+// - The Writer interface
+// - The sort package
+// - Customizing sort
+// - bcrypt
 func Aplicacoes() {
 	fmt.Printf("\n\nCapítulo 16: Aplicações\n")
 
@@ -20,6 +36,10 @@ func Aplicacoes() {
 	executeSections("bcrypt")
 }
 
+// MenuAplicacoes returns a slice of format.MenuOptions, each representing a different command-line option
+// and its corresponding execution function. The options cover various topics such as JSON documentation,
+// JSON marshal/unmarshal, JSON encoder, interface Writer, sort package, custom sorting, and bcrypt.
+// Each option is associated with a specific ExecFunc that executes the relevant section or example.
 func MenuAplicacoes([]string) []format.MenuOptions {
 
 	return []format.MenuOptions{
@@ -38,6 +58,9 @@ func MenuAplicacoes([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeAplicacoes provides a list of help topics related to various Go packages and functionalities.
+// It prints out a formatted help guide for each topic, including flags and descriptions.
+// The topics cover documentation, JSON handling, interfaces, sorting, and encryption with bcrypt.
 func HelpMeAplicacoes() {
 	hlp := []format.HelpMe{
 		{Flag: "--documentacao-json", Description: "Descreve como documentar um pacote em Go", Width: 0},
@@ -57,6 +80,12 @@ func HelpMeAplicacoes() {
 	format.PrintHelpMe(hlp)
 }
 
+// executeSections processes a given section by formatting it.
+// It takes a section name as a string parameter and applies the FormatSection
+// function from the format package to the section, using the rootDir as the base directory.
+//
+// Parameters:
+//   - section: The name of the section to be formatted.
 func executeSections(section string) {
 	format.FormatSection(rootDir, section)
 }

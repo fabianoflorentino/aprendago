@@ -1,3 +1,10 @@
+/*
+Package agrupamento_de_dados provides functionalities for demonstrating and executing
+various data grouping topics in Go. It includes functions to print headers, execute
+specific sections related to arrays, slices, and maps, and generate menu options and
+help information for these topics. The package leverages the format package to format
+and display the sections and help information.
+*/
 package agrupamento_de_dados
 
 import (
@@ -6,8 +13,15 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-const rootDir = "internal/agrupamento_de_dados"
+// rootDir represents the relative path to the directory where data grouping topics are stored.
+// This constant is used to reference the internal directory structure within the project.
+const (
+	rootDir = "internal/agrupamento_de_dados"
+)
 
+// AgrupamentoDeDados prints a header and executes a series of sections related to data grouping in Go.
+// Each section is executed by calling the executeSection function with a specific topic name.
+// The topics covered include arrays, slices (with various operations), and maps.
 func AgrupamentoDeDados() {
 	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
 
@@ -23,6 +37,10 @@ func AgrupamentoDeDados() {
 	executeSection("Maps: range e deletando")
 }
 
+// MenuAgrupamentoDeDados returns a slice of format.MenuOptions, each representing a menu option
+// for different data grouping topics in Go. Each menu option includes a command-line option
+// string and an associated function to execute a specific section related to arrays, slices,
+// and maps. The function does not take any parameters and returns a slice of format.MenuOptions.
 func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--array", ExecFunc: func() { executeSection("Array") }},
@@ -38,6 +56,11 @@ func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeAgrupamentoDeDados prints a list of topics related to data grouping in Go.
+// It creates a slice of HelpMe structs, each containing a flag and a description
+// of a specific topic. The topics include arrays, slices (with various operations),
+// and maps. The function then prints the chapter title and uses the PrintHelpMe
+// function from the format package to display the list of topics.
 func HelpMeAgrupamentoDeDados() {
 	hlp := []format.HelpMe{
 		{Flag: "--array", Description: "Apresenta o tópico Array.", Width: 0},
@@ -57,6 +80,16 @@ func HelpMeAgrupamentoDeDados() {
 	format.PrintHelpMe(hlp)
 }
 
+// executeSection formats and processes a specific section of data.
+// It takes a section name as a string parameter and uses the FormatSection
+// function from the format package to format the section within the root directory.
+//
+// Parameters:
+//   - section: A string representing the name of the section to be formatted.
+//
+// Example usage:
+//
+//	executeSection("introduction")
 func executeSection(section string) {
 	format.FormatSection(rootDir, section)
 }
