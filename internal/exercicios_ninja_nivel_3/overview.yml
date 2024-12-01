@@ -6,7 +6,7 @@ description:
       text: |
         - Põe na tela: todos os números de 1 a 10000.
         - Solução: https://play.golang.org/p/MkdZiDW8SQ ou use no menu do
-          programa (--na-pratica-exercicio-1 --nivel-3 --resolucao)
+          programa (--exercicio=1 --nivel=3 --resolucao)
     - title: "Na prática - Exercício #2"
       text: |
         - Põe na tela: O unicode code point de todas as letras maiúsculas do alfabeto, três vezes cada.
@@ -20,21 +20,21 @@ description:
             U+0042 'B'
             U+0042 'B'
           ...e por aí vai.
-        - Solução: https://play.golang.org/p/QlP6nVchq- ou use no menu do programa (--na-pratica-exercicio-2 --nivel-3 --resolucao)
+        - Solução: https://play.golang.org/p/QlP6nVchq- ou use no menu do programa (--exercicio=2 --nivel=3 --resolucao)
     - title: "Na prática - Exercício #3"
       text: |
         - Crie um loop utilizando a sintaxe: for condition {}
         - Utilize-o para demonstrar os anos desde que você nasceu.
-        - Solução: https://play.golang.org/p/qnFjiDJzLor ou use no menu do programa (--na-pratica-exercicio-3 --nivel-3 --resolucao)
+        - Solução: https://play.golang.org/p/qnFjiDJzLor ou use no menu do programa (--exercicio=3 --nivel=3 --resolucao)
     - title: "Na prática - Exercício #4"
       text: |
         - Crie um loop utilizando a sintaxe: for {}
         - Utilize-o para demonstrar os anos desde que você nasceu.
-        - Solução: https://play.golang.org/p/dIbfdiuw0ms ou use no menu do programa (--na-pratica-exercicio-4 --nivel-3 --resolucao)
+        - Solução: https://play.golang.org/p/dIbfdiuw0ms ou use no menu do programa (--exercicio=4 --nivel=3 --resolucao)
     - title: "Na prática - Exercício #5"
       text: |
         - Demonstre o resto da divisão por 4 de todos os números entre 10 e 100
-        - Solução: https://play.golang.org/p/zcEsXqnBr8 ou use no menu do programa (--na-pratica-exercicio-5 --nivel-3 --resolucao)
+        - Solução: https://play.golang.org/p/zcEsXqnBr8 ou use no menu do programa (--exercicio=5 --nivel=3 --resolucao)
     - title: "Na prática - Exercício #6"
       text: |
         - Crie um programa que demonstre o funcionamento da declaração if.

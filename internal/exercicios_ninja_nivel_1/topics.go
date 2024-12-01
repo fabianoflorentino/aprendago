@@ -55,18 +55,18 @@ func ExerciciosNinjaNivel1() {
 func MenuExerciciosNinjaNivel1([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--contribua-seu-codigo", ExecFunc: func() { executeSection("Contribua seu código") }},
-		{Options: "--na-pratica-exercicio-1 --nivel-1", ExecFunc: func() { executeSection("Na prática - Exercício #1") }},
-		{Options: "--na-pratica-exercicio-1 --nivel-1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
-		{Options: "--na-pratica-exercicio-2 --nivel-1", ExecFunc: func() { executeSection("Na prática - Exercício #2") }},
-		{Options: "--na-pratica-exercicio-2 --nivel-1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio2() }},
-		{Options: "--na-pratica-exercicio-3 --nivel-1", ExecFunc: func() { executeSection("Na prática - Exercício #3") }},
-		{Options: "--na-pratica-exercicio-3 --nivel-1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio3() }},
-		{Options: "--na-pratica-exercicio-4 --nivel-1", ExecFunc: func() { executeSection("Na prática - Exercício #4") }},
-		{Options: "--na-pratica-exercicio-4 --nivel-1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio4() }},
-		{Options: "--na-pratica-exercicio-5 --nivel-1", ExecFunc: func() { executeSection("Na prática - Exercício #5") }},
-		{Options: "--na-pratica-exercicio-5 --nivel-1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio5() }},
-		{Options: "--na-pratica-exercicio-6 --nivel-1", ExecFunc: func() { executeSection("Na prática - Exercício #6") }},
-		{Options: "--na-pratica-exercicio-6 --nivel-1 --prova", ExecFunc: func() { RespondaAProva() }},
+		{Options: "--exercicio=1 --nivel=1", ExecFunc: func() { executeSection("Na prática - Exercício #1") }},
+		{Options: "--exercicio=1 --nivel=1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio1() }},
+		{Options: "--exercicio=2 --nivel=1", ExecFunc: func() { executeSection("Na prática - Exercício #2") }},
+		{Options: "--exercicio=2 --nivel=1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio2() }},
+		{Options: "--exercicio=3 --nivel=1", ExecFunc: func() { executeSection("Na prática - Exercício #3") }},
+		{Options: "--exercicio=3 --nivel=1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio3() }},
+		{Options: "--exercicio=4 --nivel=1", ExecFunc: func() { executeSection("Na prática - Exercício #4") }},
+		{Options: "--exercicio=4 --nivel=1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio4() }},
+		{Options: "--exercicio=5 --nivel=1", ExecFunc: func() { executeSection("Na prática - Exercício #5") }},
+		{Options: "--exercicio=5 --nivel=1 --resolucao", ExecFunc: func() { ResolucaoNaPraticaExercicio5() }},
+		{Options: "--exercicio=6 --nivel=1", ExecFunc: func() { executeSection("Na prática - Exercício #6") }},
+		{Options: "--exercicio=6 --nivel=1 --prova", ExecFunc: func() { RespondaAProva() }},
 	}
 }
 

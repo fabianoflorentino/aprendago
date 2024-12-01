@@ -5,7 +5,7 @@ description:
     - title: "Na prática exercício #1"
       text: |
         - Escreva um programa que mostre um número em decimal, binário, e hexadecimal.
-        - Solução: (https://play.golang.org/p/X7qm3aWSa6) ou use no menu do programa (--na-pratica-exercicio-1 --nivel-2 --resolucao)
+        - Solução: (https://play.golang.org/p/X7qm3aWSa6) ou use no menu do programa (--exercicio=1 --nivel=2 --resolucao)
     - title: "Na prática exercício #2"
       text: |
         - Escreva expressões utilizando os seguintes operadores, e atribua seus valores a variáveis.
@@ -16,12 +16,12 @@ description:
         - >=
         - >
         - Demonstre estes valores.
-        - Solução: (https://play.golang.org/p/BMYEch6_s8) ou use no menu do programa (--na-pratica-exercicio-2 --nivel-2 --resolucao)
+        - Solução: (https://play.golang.org/p/BMYEch6_s8) ou use no menu do programa (--exercicio=2 --nivel=2 --resolucao)
     - title: "Na prática exercício #3"
       text: |
         - Crie constantes tipadas e não-tipadas.
         - Demonstre seus valores.
-        - Solução: https://play.golang.org/p/eWnKI59ual ou use no menu do programa (--na-pratica-exercicio-3 --nivel-2 --resolucao)
+        - Solução: https://play.golang.org/p/eWnKI59ual ou use no menu do programa (--exercicio=3 --nivel=2 --resolucao)
     - title: "Na prática exercício #4"
       text: |
         - Crie um programa que:
@@ -29,19 +29,19 @@ description:
         - Demonstre este valor em decimal, binário e hexadecimal
         - Desloque os bits dessa variável 1 para a esquerda, e atribua o resultado a outra variável
         - Demonstre esta outra variável em decimal, binário e hexadecimal
-        - Solução: (https://play.golang.org/p/IiwgT0v3Mp) ou use no menu do programa (--na-pratica-exercicio-4 --nivel-2 --resolucao
+        - Solução: (https://play.golang.org/p/IiwgT0v3Mp) ou use no menu do programa (--exercicio=4 --nivel=2 --resolucao
     - title: "Na prática exercício #5"
       text: |
         - Crie uma variável de tipo string utilizando uma raw string literal.
         - Demonstre-a.
-        - Solução: https://play.golang.org/p/RkpqPpRWuo ou use no menu do programa (--na-pratica-exercicio-5 --nivel-2 --resolucao)
+        - Solução: https://play.golang.org/p/RkpqPpRWuo ou use no menu do programa (--exercicio=5 --nivel=2 --resolucao)
     - title: "Na prática exercício #6"
       text: |
         - Utilizando iota, crie 4 constantes cujos valores sejam os próximos 4 anos.
         - Demonstre-a.
-        Solução: (https://play.golang.org/RkpqPpRWuo) ou use no menu do programa (--na-pratica-exercicio-6 --nivel-2 --resolucao)
+        Solução: (https://play.golang.org/RkpqPpRWuo) ou use no menu do programa (--exercicio=6 --nivel=2 --resolucao)
     - title: "Na prática exercício #7"
       text: |
         - Prova!
-        - Link: https://goo.gl/forms/fnPXMmxvKAEUD8xP2 [Link quebrado]. (Use a opção --na-pratica-exercicio-7 --nivel-2 --prova)
+        - Link: https://goo.gl/forms/fnPXMmxvKAEUD8xP2 [Link quebrado]. (Use a opção --exercicio=7 --nivel=2 --prova)
         - Motivação. Ninja nível 2!
