@@ -12,6 +12,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_5"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_6"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_7"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_8"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_9"
 	"github.com/fabianoflorentino/aprendago/internal/fluxo_de_controle"
 	"github.com/fabianoflorentino/aprendago/internal/funcoes"
@@ -40,6 +41,7 @@ func Outline() {
 	ponteiros.Ponteiros()
 	exercicios_ninja_nivel_7.ExerciciosNinjaNivel7()
 	aplicacoes.Aplicacoes()
+	exercicios_ninja_nivel_8.ExerciciosNinjaNivel8()
 	concorrencia.Concorrencia()
 	seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento()
 	exercicios_ninja_nivel_9.ExerciciosNinjaNivel9()
