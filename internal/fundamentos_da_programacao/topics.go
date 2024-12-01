@@ -21,6 +21,7 @@ func FundamentosDaProgramacao() {
 	executeSection("Iota")
 	executeSection("Deslocamento de bits")
 }
+
 func MenuFundamentosDaProgramcao([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--tipo-booleano", ExecFunc: func() { executeSection("Tipo booleano") }},

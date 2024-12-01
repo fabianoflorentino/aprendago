@@ -111,31 +111,58 @@ func ResolucaoNaPraticaExercicio5() {
 	fmt.Println("Contador:", contador)
 }
 
+// ResolucaoNaPraticaExercicio6 prints the operating system and architecture
+// of the machine where the program is running. It uses the runtime package
+// to retrieve the OS and architecture information and prints them using
+// the fmt.Printf function.
 func ResolucaoNaPraticaExercicio6() {
 	fmt.Printf("Sistema Operacional: %v\nArquitetura: %v\n", runtime.GOOS, runtime.GOARCH)
 }
 
+// ResolucaoNaPraticaExercicio7 prints a URL to the console.
+// The URL points to an article written by Fabiano Florentino
+// about the Write interface in Go.
 func ResolucaoNaPraticaExercicio7() {
 	fmt.Println("https://dev.to/fabianoflorentino/a-interface-write-11c5")
 }
 
+// humanos is an interface that requires the implementation of the
+// falar method. Any type that implements the falar method can be
+// considered a humanos. The falar method is intended to define
+// a way for the type to "speak" or communicate.
 type humanos interface {
 	falar()
 }
 
+// pessoa represents a person with a name and age.
 type pessoa struct {
 	nome  string
 	idade int
 }
 
+// falar is a method for the pessoa type that prints a greeting message
+// including the person's name to the standard output.
 func (p *pessoa) falar() {
 	fmt.Println("Olá, meu nome é", p.nome)
 }
 
+// dizerAlgumaCoisa takes an interface of type humanos and calls its falar method.
+// This function demonstrates polymorphism by allowing any type that implements
+// the humanos interface to be passed in and have its falar method invoked.
 func dizerAlgumaCoisa(h humanos) {
 	h.falar()
 }
 
+// buildGoRoutine launches a specified number of goroutines that increment a shared counter.
+// Each goroutine increments the counter in a thread-safe manner using a mutex lock.
+// The function takes an integer 'i' which determines the number of goroutines to be launched.
+// It also adds 'i' to a WaitGroup to ensure all goroutines complete before the program exits.
+//
+// Parameters:
+// - i: The number of goroutines to launch.
+//
+// Note: The function assumes that 'mu' is a mutex, 'contador' is a shared counter variable,
+// and 'ws' is a WaitGroup that are defined elsewhere in the package.
 func buildGoRoutine(i int) {
 	ws.Add(i)
 
