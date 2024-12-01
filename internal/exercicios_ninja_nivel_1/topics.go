@@ -70,36 +70,6 @@ func MenuExerciciosNinjaNivel1([]string) []format.MenuOptions {
 	}
 }
 
-// HelpMeExerciciosNinjaNivel1 prints a list of available commands and their descriptions
-// for the "Exercícios Ninja Nível 1" section of the course. Each command is associated
-// with a flag and a description that explains what the command does. The function
-// organizes these commands into a slice of HelpMe structs and then prints them using
-// the format.PrintHelpMe function. This helps users understand what exercises and
-// resolutions are available for this level of the course.
-func HelpMeExerciciosNinjaNivel1() {
-	hlp := []format.HelpMe{
-		{Flag: "--na-pratica-exercicio-1 --nivel-1", Description: "Apresenta o primeiro exercício prático do curso.", Width: 0},
-		{Flag: "--na-pratica-exercicio-1 --nivel-1 --resolucao", Description: "Exibe a resolução do primeiro exercício prático.", Width: 0},
-		{Flag: "--na-pratica-exercicio-2 --nivel-1", Description: "Apresenta o segundo exercício prático do curso.", Width: 0},
-		{Flag: "--na-pratica-exercicio-2 --nivel-1 --resolucao", Description: "Exibe a resolução do segundo exercício prático.", Width: 0},
-		{Flag: "--na-pratica-exercicio-3 --nivel-1", Description: "Apresenta o terceiro exercício prático do curso.", Width: 0},
-		{Flag: "--na-pratica-exercicio-3 --nivel-1 --resolucao", Description: "Exibe a resolução do terceiro exercício prático.", Width: 0},
-		{Flag: "--na-pratica-exercicio-4 --nivel-1", Description: "Apresenta o quarto exercício prático do curso.", Width: 0},
-		{Flag: "--na-pratica-exercicio-4 --nivel-1 --resolucao", Description: "Exibe a resolução do quarto exercício prático.", Width: 0},
-		{Flag: "--na-pratica-exercicio-5 --nivel-1", Description: "Apresenta o quinto exercício prático do curso.", Width: 0},
-		{Flag: "--na-pratica-exercicio-5 --nivel-1 --resolucao", Description: "Exibe a resolução do quinto exercício prático.", Width: 0},
-		{Flag: "--na-pratica-exercicio-6 --nivel-1", Description: "Apresenta o sexto exercício prático do curso.", Width: 0},
-		{Flag: "--na-pratica-exercicio-6 --nivel-1 --prova", Description: "Exibe a prova do sexto exercício prático.", Width: 0},
-	}
-
-	fmt.Println("\nCapítulo 3: Exercícios Ninja Nível 1")
-	format.PrintHelpMe(hlp)
-}
-
-// executeSection formats and processes a given section of the project.
-// It takes a section name as a string and uses the FormatSection function
-// from the format package to apply formatting to the specified section
-// within the root directory.
 func executeSection(section string) {
 	format.FormatSection(rootDir, section)
 }

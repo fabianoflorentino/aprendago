@@ -7,7 +7,6 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
 	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
-	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
@@ -47,7 +46,7 @@ func HelpMe() {
 	HelpMeCapituloOutline()
 	format.PrintChapterHelpMe(1)
 	format.PrintChapterHelpMe(2)
-	exercicios_ninja_nivel_1.HelpMeExerciciosNinjaNivel1()
+	format.PrintChapterHelpMe(3)
 	fundamentos_da_programacao.HelpMeFundamentosDaProgramacao()
 	exercicios_ninja_nivel_2.HelpMeExerciciosNinjaNivel2()
 	fluxo_de_controle.HelpMeFluxoDeControle()
