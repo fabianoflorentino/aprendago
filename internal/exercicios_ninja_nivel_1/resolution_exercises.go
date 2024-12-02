@@ -1,3 +1,8 @@
+// Package exercicios_ninja_nivel_1 provides solutions to various exercises
+// and a questionnaire related to basic Go programming concepts. It includes
+// functions that demonstrate variable declarations, type conversions, and
+// formatted printing. Additionally, it contains a function to handle a
+// questionnaire about Go programming fundamentals.
 package exercicios_ninja_nivel_1
 
 import (
@@ -6,6 +11,9 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
+// ResolucaoNaPraticaExercicio1 demonstrates a simple exercise where it declares three variables
+// with different types (int, string, and bool), formats them into a single string using fmt.Sprintf,
+// and then passes the formatted string to the FormatResolucaoExercicios function for further processing.
 func ResolucaoNaPraticaExercicio1() {
 	x := 42
 	y := "James Bond"
@@ -16,6 +24,10 @@ func ResolucaoNaPraticaExercicio1() {
 	format.FormatResolucaoExercicios(resolucao)
 }
 
+// ResolucaoNaPraticaExercicio2 demonstrates the declaration of variables with zero values in Go.
+// It declares three variables: an integer `x`, a string `y`, and a boolean `z`.
+// These variables are then formatted into a single string using `fmt.Sprintf`,
+// which is passed to the `FormatResolucaoExercicios` function for further processing.
 func ResolucaoNaPraticaExercicio2() {
 	var x int
 	var y string
@@ -26,6 +38,10 @@ func ResolucaoNaPraticaExercicio2() {
 	format.FormatResolucaoExercicios(resolucao)
 }
 
+// ResolucaoNaPraticaExercicio3 demonstrates the creation and formatting of variables in Go.
+// It initializes three variables: an integer `x` with the value 42, a string `y` with the value "James Bond",
+// and a boolean `z` with the value true. These variables are then formatted into a single string using
+// `fmt.Sprintf` and passed to the `FormatResolucaoExercicios` function for further processing.
 func ResolucaoNaPraticaExercicio3() {
 	x := 42
 	y := "James Bond"
@@ -36,6 +52,17 @@ func ResolucaoNaPraticaExercicio3() {
 	format.FormatResolucaoExercicios(resolucao)
 }
 
+// ResolucaoNaPraticaExercicio4 demonstrates the creation of a custom type `ninja`,
+// assigns a value to a variable of this type, formats it as a string, and prints
+// the type of the variable. The formatted string is passed to a function for further
+// processing.
+//
+// The function performs the following steps:
+// 1. Defines a new type `ninja` as an alias for `int`.
+// 2. Creates a variable `x` of type `ninja` and assigns it the value 42.
+// 3. Formats the value of `x` as a string using `fmt.Sprintf`.
+// 4. Passes the formatted string to `format.FormatResolucaoExercicios` for further processing.
+// 5. Prints the type of the variable `x` using `fmt.Printf`.
 func ResolucaoNaPraticaExercicio4() {
 	type ninja int
 
@@ -48,6 +75,10 @@ func ResolucaoNaPraticaExercicio4() {
 
 }
 
+// ResolucaoNaPraticaExercicio5 demonstrates type conversion in Go.
+// It defines a new type 'ninja' as an alias for int, assigns a value to a variable of this new type,
+// converts it to a standard int type, and then formats the types of both variables into a string.
+// Finally, it calls a function to format and display the result.
 func ResolucaoNaPraticaExercicio5() {
 	type ninja int
 
@@ -62,6 +93,15 @@ func ResolucaoNaPraticaExercicio5() {
 	format.FormatResolucaoExercicios(resolucao)
 }
 
+// RespondaAProva is a function that creates a questionnaire, collects answers from the user,
+// and validates those answers against a predefined set of correct answers (gabarito).
+//
+// The function performs the following steps:
+// 1. Defines a set of questions (questionario) and their corresponding correct answers (gabarito).
+// 2. Creates instances of QuestionnaireService and AnswerService.
+// 3. Uses the QuestionnaireService to create the questionnaire.
+// 4. Collects the user's answers using the AnswerService.
+// 5. Validates the collected answers against the correct answers and prints any errors encountered during the process.
 func RespondaAProva() {
 	questionario := []format.Questionnaire{
 		{Number: "1.", Question: "Qual o menor elemento em um programa que expressa uma ação a ser executada?", Options: "[1] Uma declaração (Statement) [2] Uma expressão: "},
