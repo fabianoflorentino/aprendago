@@ -1,3 +1,8 @@
+// Package exercicios_ninja_nivel_9 provides a series of exercises to demonstrate
+// various concurrency patterns and techniques in Go. The exercises cover the use
+// of goroutines, WaitGroup, Mutex, and atomic operations to handle concurrent
+// programming challenges. Additionally, the package includes examples of working
+// with structs, interfaces, and the runtime package to retrieve system information.
 package exercicios_ninja_nivel_9
 
 import (
@@ -7,11 +12,42 @@ import (
 	"sync/atomic"
 )
 
+// ws is a WaitGroup used to wait for a collection of goroutines to finish executing.
+// It provides a way to synchronize the completion of multiple concurrent tasks.
 var ws sync.WaitGroup
+
+// mu is a Mutex used to synchronize access to shared resources
+// in order to prevent race conditions and ensure thread safety.
 var mu sync.Mutex
+
+// contador is a package-level variable that keeps track of the count of certain events or actions.
+// It is an integer and can be used throughout the package to increment, decrement, or reset the count as needed.
 var contador int
 
-const numberOfGoroutines = 50000
+// numberOfGoroutines defines the number of goroutines to be used in concurrent operations.
+const (
+	numberOfGoroutines = 50000
+)
+
+// humanos is an interface that requires the implementation of the
+// falar method. Any type that implements the falar method can be
+// considered a humanos. The falar method is intended to define
+// a way for the type to "speak" or communicate.
+type humanos interface {
+	falar()
+}
+
+// pessoa represents a person with a name and age.
+type pessoa struct {
+	nome  string
+	idade int
+}
+
+// falar is a method for the pessoa type that prints a greeting message
+// including the person's name to the standard output.
+func (p *pessoa) falar() {
+	fmt.Println("Olá, meu nome é", p.nome)
+}
 
 // ResolucaoNaPraticaExercicio1 demonstrates the use of goroutines and WaitGroup in Go.
 // It creates 10 goroutines, each printing a message to the console.
@@ -124,26 +160,6 @@ func ResolucaoNaPraticaExercicio6() {
 // about the Write interface in Go.
 func ResolucaoNaPraticaExercicio7() {
 	fmt.Println("https://dev.to/fabianoflorentino/a-interface-write-11c5")
-}
-
-// humanos is an interface that requires the implementation of the
-// falar method. Any type that implements the falar method can be
-// considered a humanos. The falar method is intended to define
-// a way for the type to "speak" or communicate.
-type humanos interface {
-	falar()
-}
-
-// pessoa represents a person with a name and age.
-type pessoa struct {
-	nome  string
-	idade int
-}
-
-// falar is a method for the pessoa type that prints a greeting message
-// including the person's name to the standard output.
-func (p *pessoa) falar() {
-	fmt.Println("Olá, meu nome é", p.nome)
 }
 
 // dizerAlgumaCoisa takes an interface of type humanos and calls its falar method.

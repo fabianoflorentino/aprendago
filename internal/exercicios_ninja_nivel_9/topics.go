@@ -1,3 +1,7 @@
+// Package exercicios_ninja_nivel_9 provides functions to display and execute
+// exercises from Chapter 20: Ninja Level 9. It includes functions to list
+// exercises, display help information, and execute specific sections of the
+// exercises. The package relies on the format package for formatting output.
 package exercicios_ninja_nivel_9
 
 import (
@@ -6,8 +10,17 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-const rootDir = "internal/exercicios_ninja_nivel_9"
+// rootDir represents the relative path to the directory containing
+// the exercises for Ninja Level 9 in the "aprendago" project.
+// This constant is used to reference the directory within the project structure.
+const (
+	rootDir = "internal/exercicios_ninja_nivel_9"
+)
 
+// ExerciciosNinjaNivel9 prints the title for Chapter 20: Exercícios Ninja Nível 9
+// and sequentially executes sections for each exercise from 1 to 7.
+// Each exercise section is executed by calling the executeSection function
+// with the corresponding exercise description as an argument.
 func ExerciciosNinjaNivel9() {
 	fmt.Printf("\n\nCapítulo 20: Exercícios Ninja Nível 9\n")
 
@@ -20,6 +33,10 @@ func ExerciciosNinjaNivel9() {
 	executeSection("Na prática: Exercício #7")
 }
 
+// MenuExerciciosNinjaNivel9 returns a slice of format.MenuOptions for the exercises in Ninja Level 9.
+// Each MenuOption contains a command-line option string and an associated execution function.
+// The options include commands for executing and resolving each exercise from 1 to 7.
+// The execution functions either call executeSection with the exercise description or call a specific resolution function for the exercise.
 func MenuExerciciosNinjaNivel9([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--na-pratica-exercicio-1 --nivel-9", ExecFunc: func() { executeSection("Na prática: Exercício #1") }},
@@ -39,6 +56,11 @@ func MenuExerciciosNinjaNivel9([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeExerciciosNinjaNivel9 provides a list of help commands for the exercises
+// in chapter 20, Ninja Level 9. It creates a slice of HelpMe structs, each containing
+// a flag and a description for various exercises and their resolutions. The function
+// then prints the chapter title and uses the format.PrintHelpMe function to display
+// the help information.
 func HelpMeExerciciosNinjaNivel9() {
 	hlp := []format.HelpMe{
 		{Flag: "--na-pratica-exercicio-1 --nivel-9", Description: "Exibe o Exercício 1 do capítulo 20"},
@@ -61,6 +83,16 @@ func HelpMeExerciciosNinjaNivel9() {
 	format.PrintHelpMe(hlp)
 }
 
+// executeSection formats and processes a given section within the root directory.
+// It takes a section name as a string parameter and uses the FormatSection function
+// from the format package to apply the formatting to the specified section.
+//
+// Parameters:
+//   - section: A string representing the name of the section to be formatted.
+//
+// Example usage:
+//
+//	executeSection("chapter1")
 func executeSection(section string) {
 	format.FormatSection(rootDir, section)
 }
