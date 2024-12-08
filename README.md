@@ -71,6 +71,14 @@ Capítulos do Curso
   --cap=11 --topics   Exercícios Ninja: Nível 5
   --cap=12 --topics   Funções
   --cap=13 --topics   Exercícios Ninja: Nível 6
+  --cap=14 --topics   Ponteiros
+  --cap=15 --topics   Exercícios Ninja: Nível 7
+  --cap=16 --topics   Aplicações
+  --cap=17 --topics   Exercícios Ninja: Nível 8
+  --cap=18 --topics   Concorrência
+  --cap=19 --topics   Seu Ambiente de Desenvolvimento
+  --cap=20 --topics   Exercícios Ninja: Nível 9
+  --cap=21 --topics   Canais
 ```
 
 ### Ajuda
@@ -115,6 +123,8 @@ Capítulos do Curso
   --cap=17 --topics   Exercícios Ninja: Nível 8
   --cap=18 --topics   Concorrência
   --cap=19 --topics   Seu Ambiente de Desenvolvimento
+  --cap=20 --topics   Exercícios Ninja: Nível 9
+  --cap=21 --topics   Canais
 
 Outline do Curso por Capítulo
 
@@ -130,6 +140,15 @@ Outline do Curso por Capítulo
   --cap=10 --overview   Structs
   --cap=11 --overview   Exercícios Ninja Nível 5
   --cap=12 --overview   Funções
+  --cap=13 --overview   Exercícios Ninja Nível 6
+  --cap=14 --overview   Ponteiros
+  --cap=15 --overview   Exercícios Ninja Nível 7
+  --cap=16 --overview   Aplicações
+  --cap=17 --overview   Exercícios Ninja Nível 8
+  --cap=18 --overview   Concorrência
+  --cap=19 --overview   Seu Ambiente de Desenvolvimento
+  --cap=20 --overview   Exercícios Ninja Nível 9
+  --cap=21 --overview   Canais
 
 Capítulo 1: Visão Geral do Curso
 
@@ -386,6 +405,35 @@ Capítulo 19: Seu Ambiente de Desenvolvimento
   --explorando-o-github                  Exibe informações sobre explorando o github.
   --compilacao-cruzada                   Exibe informações sobre compilação cruzada.
   --pacotes                              Exibe informações sobre pacotes.
+
+Capítulo 20: Exercícios Ninja Nível 9
+
+  --na-pratica-exercicio-1 --nivel-9               Exibe o Exercício 1 do capítulo 20
+  --na-pratica-exercicio-1 --nivel-9 --resolucao   Exibe a resolução do Exercício 1 do capítulo 20
+  --na-pratica-exercicio-2 --nivel-9               Exibe o Exercício 2 do capítulo 20
+  --na-pratica-exercicio-2 --nivel-9 --resolucao   Exibe a resolução do Exercício 2 do capítulo 20
+  --na-pratica-exercicio-3 --nivel-9               Exibe o Exercício 3 do capítulo 20
+  --na-pratica-exercicio-3 --nivel-9 --resolucao   Exibe a resolução do Exercício 3 do capítulo 20
+  --na-pratica-exercicio-4 --nivel-9               Exibe o Exercício 4 do capítulo 20
+  --na-pratica-exercicio-4 --nivel-9 --resolucao   Exibe a resolução do Exercício 4 do capítulo 20
+  --na-pratica-exercicio-5 --nivel-9               Exibe o Exercício 5 do capítulo 20
+  --na-pratica-exercicio-5 --nivel-9 --resolucao   Exibe a resolução do Exercício 5 do capítulo 20
+  --na-pratica-exercicio-6 --nivel-9               Exibe o Exercício 6 do capítulo 20
+  --na-pratica-exercicio-6 --nivel-9 --resolucao   Exibe a resolução do Exercício 6 do capítulo 20
+  --na-pratica-exercicio-7 --nivel-9               Exibe o Exercício 7 do capítulo 20
+  --na-pratica-exercicio-7 --nivel-9 --resolucao   Exibe a resolução do Exercício 7 do capítulo 20
+
+Capítulo 21: Canais
+
+  --entendendo-canais                      Entendendo Canais
+  --canais-direcionais-utilizando-canais   Canais direcionais &amp; utilizando canais
+  --range-e-close                          Range e Close
+  --select                                 Select
+  --a-expressao-comma-ok                   A expressão comma ok
+  --convergencia                           Convergência
+  --divergencia                            Divergência
+  --context                                Context
+
 ```
 
 ## Estrutura do Projeto
@@ -403,10 +451,23 @@ Capítulo 19: Seu Ambiente de Desenvolvimento
 ├── configs
 │   └── _env
 ├── docker-compose.yml
+├── docs
+│   └── questionarie.md
 ├── go.mod
 ├── go.sum
+├── help.out
 ├── internal
 │   ├── agrupamento_de_dados
+│   │   ├── overview.yml
+│   │   └── topics.go
+│   ├── aplicacoes
+│   │   ├── examples.go
+│   │   ├── overview.yml
+│   │   └── topics.go
+│   ├── canais
+│   │   ├── overview.yml
+│   │   └── topics.go
+│   ├── concorrencia
 │   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_1
@@ -437,6 +498,14 @@ Capítulo 19: Seu Ambiente de Desenvolvimento
 │   │   ├── overview.yml
 │   │   ├── resolution_exercises.go
 │   │   └── topics.go
+│   ├── exercicios_ninja_nivel_8
+│   │   ├── overview.yml
+│   │   ├── resolution_exercises.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_9
+│   │   ├── overview.yml
+│   │   ├── resolution_exercise.go
+│   │   └── topics.go
 │   ├── fluxo_de_controle
 │   │   ├── overview.yml
 │   │   └── topics.go
@@ -454,6 +523,9 @@ Capítulo 19: Seu Ambiente de Desenvolvimento
 │   │   └── options.go
 │   ├── outline.go
 │   ├── ponteiros
+│   │   ├── overview.yml
+│   │   └── topics.go
+│   ├── seu_ambiente_de_desenvolvimento
 │   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── structs
@@ -481,7 +553,7 @@ Capítulo 19: Seu Ambiente de Desenvolvimento
 │       └── overview.go
 └── tree.log
 
-27 directories, 62 files
+34 directories, 79 files
 ```
 
 ## Documentação Técnica

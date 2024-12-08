@@ -4,6 +4,7 @@ package internal
 import (
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
+	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
@@ -45,4 +46,5 @@ func Outline() {
 	concorrencia.Concorrencia()
 	seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento()
 	exercicios_ninja_nivel_9.ExerciciosNinjaNivel9()
+	canais.Canais()
 }

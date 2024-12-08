@@ -30,6 +30,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal"
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
+	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
@@ -86,6 +87,7 @@ func Options(args []string) {
 		concorrencia.MenuConcorrencia(args),
 		seu_ambiente_de_desenvolvimento.MenuSeuAmbienteDeDesenvolvimento(args),
 		exercicios_ninja_nivel_9.MenuExerciciosNinjaNivel9(args),
+		canais.MenuCanais(args),
 	)
 }
 
