@@ -11,6 +11,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
@@ -54,4 +55,5 @@ func Outline() {
 	seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento()
 	exercicios_ninja_nivel_9.ExerciciosNinjaNivel9()
 	canais.Canais()
+	exercicios_ninja_nivel_10.ExerciciosNinjaNivel10()
 }
