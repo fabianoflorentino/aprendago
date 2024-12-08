@@ -5,6 +5,7 @@ import (
 
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
+	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
@@ -48,31 +49,33 @@ func MenuCapituloOptions([]string) []format.MenuOptions {
 		{Options: "--cap=18 --topics", ExecFunc: func() { concorrencia.HelpMeConcorrencia() }},
 		{Options: "--cap=19 --topics", ExecFunc: func() { seu_ambiente_de_desenvolvimento.HelpMeSeuAmbienteDeDesenvolvimento() }},
 		{Options: "--cap=20 --topics", ExecFunc: func() { exercicios_ninja_nivel_9.HelpMeExerciciosNinjaNivel9() }},
+		{Options: "--cap=21 --topics", ExecFunc: func() { canais.HelpMeCanais() }},
 	}
 }
 
 func HelpMeCapituloOptions() {
 	hlp := []format.HelpMe{
-		{Flag: "--cap=1 --topics", Description: "Visão Geral do Curso", Width: 0},
-		{Flag: "--cap=2 --topics", Description: "Variáveis, Valores e Tipos", Width: 0},
-		{Flag: "--cap=3 --topics", Description: "Exercícios Ninja: Nível 1", Width: 0},
-		{Flag: "--cap=4 --topics", Description: "Fundamentos da Programação", Width: 0},
-		{Flag: "--cap=5 --topics", Description: "Exercícios Ninja: Nível 2", Width: 0},
-		{Flag: "--cap=6 --topics", Description: "Fluxo de Controle", Width: 0},
-		{Flag: "--cap=7 --topics", Description: "Exercícios Ninja: Nível 3", Width: 0},
-		{Flag: "--cap=8 --topics", Description: "Agrupamento de Dados", Width: 0},
-		{Flag: "--cap=9 --topics", Description: "Exercícios Ninja: Nível 4", Width: 0},
-		{Flag: "--cap=10 --topics", Description: "Structs", Width: 0},
-		{Flag: "--cap=11 --topics", Description: "Exercícios Ninja: Nível 5", Width: 0},
-		{Flag: "--cap=12 --topics", Description: "Funções", Width: 0},
-		{Flag: "--cap=13 --topics", Description: "Exercícios Ninja: Nível 6", Width: 0},
-		{Flag: "--cap=14 --topics", Description: "Ponteiros", Width: 0},
-		{Flag: "--cap=15 --topics", Description: "Exercícios Ninja: Nível 7", Width: 0},
-		{Flag: "--cap=16 --topics", Description: "Aplicações", Width: 0},
-		{Flag: "--cap=17 --topics", Description: "Exercícios Ninja: Nível 8", Width: 0},
-		{Flag: "--cap=18 --topics", Description: "Concorrência", Width: 0},
-		{Flag: "--cap=19 --topics", Description: "Seu Ambiente de Desenvolvimento", Width: 0},
-		{Flag: "--cap=20 --topics", Description: "Exercícios Ninja: Nível 9", Width: 0},
+		{Flag: "--cap=1 --topics", Description: "Visão Geral do Curso"},
+		{Flag: "--cap=2 --topics", Description: "Variáveis, Valores e Tipos"},
+		{Flag: "--cap=3 --topics", Description: "Exercícios Ninja: Nível 1"},
+		{Flag: "--cap=4 --topics", Description: "Fundamentos da Programação"},
+		{Flag: "--cap=5 --topics", Description: "Exercícios Ninja: Nível 2"},
+		{Flag: "--cap=6 --topics", Description: "Fluxo de Controle"},
+		{Flag: "--cap=7 --topics", Description: "Exercícios Ninja: Nível 3"},
+		{Flag: "--cap=8 --topics", Description: "Agrupamento de Dados"},
+		{Flag: "--cap=9 --topics", Description: "Exercícios Ninja: Nível 4"},
+		{Flag: "--cap=10 --topics", Description: "Structs"},
+		{Flag: "--cap=11 --topics", Description: "Exercícios Ninja: Nível 5"},
+		{Flag: "--cap=12 --topics", Description: "Funções"},
+		{Flag: "--cap=13 --topics", Description: "Exercícios Ninja: Nível 6"},
+		{Flag: "--cap=14 --topics", Description: "Ponteiros"},
+		{Flag: "--cap=15 --topics", Description: "Exercícios Ninja: Nível 7"},
+		{Flag: "--cap=16 --topics", Description: "Aplicações"},
+		{Flag: "--cap=17 --topics", Description: "Exercícios Ninja: Nível 8"},
+		{Flag: "--cap=18 --topics", Description: "Concorrência"},
+		{Flag: "--cap=19 --topics", Description: "Seu Ambiente de Desenvolvimento"},
+		{Flag: "--cap=20 --topics", Description: "Exercícios Ninja: Nível 9"},
+		{Flag: "--cap=21 --topics", Description: "Canais"},
 	}
 
 	fmt.Println("Capítulos do Curso")

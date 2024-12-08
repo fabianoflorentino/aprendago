@@ -5,6 +5,7 @@ import (
 
 	"github.com/fabianoflorentino/aprendago/internal/agrupamento_de_dados"
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
+	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
@@ -47,31 +48,33 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 		{Options: "--cap=18 --overview", ExecFunc: func() { concorrencia.Concorrencia() }},
 		{Options: "--cap=19 --overview", ExecFunc: func() { seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento() }},
 		{Options: "--cap=20 --overview", ExecFunc: func() { exercicios_ninja_nivel_9.ExerciciosNinjaNivel9() }},
+		{Options: "--cap=21 --overview", ExecFunc: func() { canais.Canais() }},
 	}
 }
 
 func HelpMeCapituloOutline() {
 	hlp := []format.HelpMe{
-		{Flag: "--cap=1 --overview", Description: "Visão Geral do Curso", Width: 0},
-		{Flag: "--cap=2 --overview", Description: "Variáveis, Valores & Tipos", Width: 0},
-		{Flag: "--cap=3 --overview", Description: "Exercícios Ninja Nível 1", Width: 0},
-		{Flag: "--cap=4 --overview", Description: "Fundamentos da Programação", Width: 0},
-		{Flag: "--cap=5 --overview", Description: "Exercícios Ninja Nível 2", Width: 0},
-		{Flag: "--cap=6 --overview", Description: "Fluxo de Controle", Width: 0},
-		{Flag: "--cap=7 --overview", Description: "Exercícios Ninja Nível 3", Width: 0},
-		{Flag: "--cap=8 --overview", Description: "Agrupamento de Dados", Width: 0},
-		{Flag: "--cap=9 --overview", Description: "Exercícios Ninja Nível 4", Width: 0},
-		{Flag: "--cap=10 --overview", Description: "Structs", Width: 0},
-		{Flag: "--cap=11 --overview", Description: "Exercícios Ninja Nível 5", Width: 0},
-		{Flag: "--cap=12 --overview", Description: "Funções", Width: 0},
-		{Flag: "--cap=13 --overview", Description: "Exercícios Ninja Nível 6", Width: 0},
-		{Flag: "--cap=14 --overview", Description: "Ponteiros", Width: 0},
-		{Flag: "--cap=15 --overview", Description: "Exercícios Ninja Nível 7", Width: 0},
-		{Flag: "--cap=16 --overview", Description: "Aplicações", Width: 0},
-		{Flag: "--cap=17 --overview", Description: "Exercícios Ninja Nível 8", Width: 0},
-		{Flag: "--cap=18 --overview", Description: "Concorrência", Width: 0},
-		{Flag: "--cap=19 --overview", Description: "Seu Ambiente de Desenvolvimento", Width: 0},
-		{Flag: "--cap=20 --overview", Description: "Exercícios Ninja Nível 9", Width: 0},
+		{Flag: "--cap=1 --overview", Description: "Visão Geral do Curso"},
+		{Flag: "--cap=2 --overview", Description: "Variáveis, Valores & Tipos"},
+		{Flag: "--cap=3 --overview", Description: "Exercícios Ninja Nível 1"},
+		{Flag: "--cap=4 --overview", Description: "Fundamentos da Programação"},
+		{Flag: "--cap=5 --overview", Description: "Exercícios Ninja Nível 2"},
+		{Flag: "--cap=6 --overview", Description: "Fluxo de Controle"},
+		{Flag: "--cap=7 --overview", Description: "Exercícios Ninja Nível 3"},
+		{Flag: "--cap=8 --overview", Description: "Agrupamento de Dados"},
+		{Flag: "--cap=9 --overview", Description: "Exercícios Ninja Nível 4"},
+		{Flag: "--cap=10 --overview", Description: "Structs"},
+		{Flag: "--cap=11 --overview", Description: "Exercícios Ninja Nível 5"},
+		{Flag: "--cap=12 --overview", Description: "Funções"},
+		{Flag: "--cap=13 --overview", Description: "Exercícios Ninja Nível 6"},
+		{Flag: "--cap=14 --overview", Description: "Ponteiros"},
+		{Flag: "--cap=15 --overview", Description: "Exercícios Ninja Nível 7"},
+		{Flag: "--cap=16 --overview", Description: "Aplicações"},
+		{Flag: "--cap=17 --overview", Description: "Exercícios Ninja Nível 8"},
+		{Flag: "--cap=18 --overview", Description: "Concorrência"},
+		{Flag: "--cap=19 --overview", Description: "Seu Ambiente de Desenvolvimento"},
+		{Flag: "--cap=20 --overview", Description: "Exercícios Ninja Nível 9"},
+		{Flag: "--cap=21 --overview", Description: "Canais"},
 	}
 
 	fmt.Printf("\nOutline do Curso por Capítulo\n")
