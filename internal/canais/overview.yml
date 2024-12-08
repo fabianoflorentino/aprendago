@@ -70,7 +70,7 @@ description:
         - Código: https://play.golang.org/p/_g5IEjSkh1
 
     - title: Select
-      content: |
+      text: |
         - Select é como switch, só que pra canais, e não é sequencial.
         - "A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready." — https://tour.golang.org/concurrency/5
         - Na prática:
@@ -91,7 +91,7 @@ description:
             - 3. https://play.golang.org/p/rK8QwsBo0H
 
     - title: A expressão comma ok
-      content: |
+      text: |
         - v, ok := <-chan
         - Se receber valor: v, true
         - Canal fechado, nada, etc.: zero v, false
@@ -99,7 +99,7 @@ description:
         - Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/21_canais/06_exerc%C3%ADcio_anterior/main.go
 
     - title: Convergência
-      content: |
+      text: |
         - Observamos convergência quando informação de vários canais é enviada a um número menor de canais.
         - Interessante: <- <-
         - Na prática, exemplos:
@@ -115,7 +115,7 @@ description:
         - Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/21_canais/07
 
     - title: Divergência
-      content: |
+      text: |
         - Divergência é o contrário de convergência :)
         - Na prática, exemplos:
             - 1. Um stream vira centenas de go funcs que depois convergem.
@@ -130,7 +130,7 @@ description:
         - Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/21_canais/08
 
     - title: Context
-      content: |
+      text: |
         - Só pra ter uma idéia geral:
         - Se a gente lança 500 goroutines pra fazer uma tarefa, e cancelamos a tarefa no meio do caminho, como fazemos pra matar as goroutines?
         - Documentação: https://golang.org/pkg/context/
