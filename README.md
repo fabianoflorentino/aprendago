@@ -125,6 +125,7 @@ Capítulos do Curso
   --cap=19 --topics   Seu Ambiente de Desenvolvimento
   --cap=20 --topics   Exercícios Ninja: Nível 9
   --cap=21 --topics   Canais
+  --cap=22 --topics   Exercícios Ninja: Nível 10
 
 Outline do Curso por Capítulo
 
@@ -149,6 +150,7 @@ Outline do Curso por Capítulo
   --cap=19 --overview   Seu Ambiente de Desenvolvimento
   --cap=20 --overview   Exercícios Ninja Nível 9
   --cap=21 --overview   Canais
+  --cap=22 --overview   Exercícios Ninja Nível 10
 
 Capítulo 1: Visão Geral do Curso
 
@@ -434,6 +436,24 @@ Capítulo 21: Canais
   --divergencia                            Divergência
   --context                                Context
 
+
+Capítulo 21: Exercícios Ninja Nível 10
+
+  --na-pratica-exercicio-1 --nivel-10               Exibe a descrição do Exercício #1
+  --na-pratica-exercicio-1 --nivel-10 --resolucao   Exibe a resolução do Exercício #1
+  --na-pratica-exercicio-2 --nivel-10               Exibe a descrição do Exercício #2
+  --na-pratica-exercicio-2 --nivel-10 --resolucao   Exibe a resolução do Exercício #2
+  --na-pratica-exercicio-3 --nivel-10               Exibe a descrição do Exercício #3
+  --na-pratica-exercicio-3 --nivel-10 --resolucao   Exibe a resolução do Exercício #3
+  --na-pratica-exercicio-4 --nivel-10               Exibe a descrição do Exercício #4
+  --na-pratica-exercicio-4 --nivel-10 --resolucao   Exibe a resolução do Exercício #4
+  --na-pratica-exercicio-5 --nivel-10               Exibe a descrição do Exercício #5
+  --na-pratica-exercicio-5 --nivel-10 --resolucao   Exibe a resolução do Exercício #5
+  --na-pratica-exercicio-6 --nivel-10               Exibe a descrição do Exercício #6
+  --na-pratica-exercicio-6 --nivel-10 --resolucao   Exibe a resolução do Exercício #6
+  --na-pratica-exercicio-7 --nivel-10               Exibe a descrição do Exercício #7
+  --na-pratica-exercicio-7 --nivel-10 --resolucao   Exibe a resolução do Exercício #7
+
 ```
 
 ## Estrutura do Projeto
@@ -471,6 +491,10 @@ Capítulo 21: Canais
 │   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_1
+│   │   ├── overview.yml
+│   │   ├── resolution_exercises.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_10
 │   │   ├── overview.yml
 │   │   ├── resolution_exercises.go
 │   │   └── topics.go
@@ -553,7 +577,7 @@ Capítulo 21: Canais
 │       └── overview.go
 └── tree.log
 
-34 directories, 79 files
+35 directories, 82 files
 ```
 
 ## Documentação Técnica
