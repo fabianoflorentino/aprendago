@@ -1,4 +1,8 @@
-// OUTLINE: https://github.com/vkorbes/aprendago/blob/master/OUTLINE.md
+// Package internal provides a collection of functions and modules that cover various topics
+// and exercises related to learning the Go programming language. It includes modules for
+// basic programming concepts, control flow, data grouping, functions, pointers, concurrency,
+// and more. Each module is designed to help users understand and practice different aspects
+// of Go programming through a series of exercises and examples.
 package internal
 
 import (
@@ -25,6 +29,9 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
 )
 
+// Outline provides an overview of the course by sequentially calling functions
+// from various packages. Each function represents a different topic or set of
+// exercises in the course.
 func Outline() {
 	visao_geral_do_curso.VisaoGeralDoCurso()
 	variaveis_valores_tipos.VariaveisValoresETipos()
