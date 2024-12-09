@@ -16,9 +16,6 @@ import (
 // completes, and the Wait method blocks until the counter becomes zero.
 var wg sync.WaitGroup
 
-// breakLine is a string variable used to represent a line break or separator in the output.
-var breakLine string
-
 // UsingConverge demonstrates the use of channels to converge values from two separate channels (odd and even) into a single channel (converge).
 // It starts two goroutines: one to send values to the odd and even channels, and another to receive values from these channels and send them to the converge channel.
 // The function then iterates over the values received from the converge channel, printing each value as either "Even Value" or "Odd Value".
@@ -33,14 +30,11 @@ func UsingConverge() {
 
 	for value := range converge {
 
-		if value%5 == 0 {
-			breakLine = "\n"
-		}
-
 		if value%2 == 0 {
-			fmt.Printf("Even Value: %v  %v", value, breakLine)
+			fmt.Printf("Even Value: %v  ", value)
 		} else {
-			fmt.Printf("Odd Value: %v  %v", value, breakLine)
+
+			fmt.Printf("Odd Value: %v  ", value)
 		}
 	}
 }
