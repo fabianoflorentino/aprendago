@@ -113,9 +113,10 @@ func workWithChanString(value string) chan string {
 	return stringChan
 }
 
-// receiveChanStringToConverge takes two input channels of type string and returns a new channel of type string.
-// It starts two goroutines that continuously read from the input channels and send the received values to the new channel.
-// This function effectively merges the two input channels into one, allowing values from both channels to be received on the new channel.
+// receiveChanStringToConverge converges two input channels (chan1 and chan2) into a single output channel (newChan).
+// It launches two goroutines, each of which continuously reads from one of the input channels and sends the received
+// value to the output channel. This allows values from both input channels to be received on the single output channel.
+//   - The line `newChan <- <-chan2` reads a value from chan2 and sends it to newChan.
 func receiveChanStringToConverge(chan1, chan2 chan string) chan string {
 	newChan := make(chan string)
 
