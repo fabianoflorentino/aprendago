@@ -433,6 +433,8 @@ Capítulo 21: Canais
   --select                                 Select
   --a-expressao-comma-ok                   A expressão comma ok
   --convergencia                           Convergência
+  --convergencia --example                 Convergência - Exemplo
+  --convergencia --chan-string --example   Convergência de Strings - Exemplo
   --divergencia                            Divergência
   --context                                Context
 
@@ -475,7 +477,6 @@ Capítulo 21: Exercícios Ninja Nível 10
 │   └── questionarie.md
 ├── go.mod
 ├── go.sum
-├── help.out
 ├── internal
 │   ├── agrupamento_de_dados
 │   │   ├── overview.yml
@@ -485,6 +486,7 @@ Capítulo 21: Exercícios Ninja Nível 10
 │   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── canais
+│   │   ├── examples.go
 │   │   ├── overview.yml
 │   │   └── topics.go
 │   ├── concorrencia
