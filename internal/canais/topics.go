@@ -55,6 +55,7 @@ func MenuCanais([]string) []format.MenuOptions {
 		{Options: "--a-expressao-comma-ok", ExecFunc: func() { executeSection("A expressão comma ok") }},
 		{Options: "--convergencia", ExecFunc: func() { executeSection("Convergência") }},
 		{Options: "--convergencia --example", ExecFunc: func() { UsingConverge() }},
+		{Options: "--convergencia --chan-string --example", ExecFunc: func() { UsingConvergeString() }},
 		{Options: "--divergencia", ExecFunc: func() { executeSection("Divergência") }},
 		{Options: "--context", ExecFunc: func() { executeSection("Context") }},
 	}
@@ -75,6 +76,7 @@ func HelpMeCanais() {
 		{Flag: "--a-expressao-comma-ok", Description: "A expressão comma ok"},
 		{Flag: "--convergencia", Description: "Convergência"},
 		{Flag: "--convergencia --example", Description: "Convergência - Exemplo"},
+		{Flag: "--convergencia --chan-string --example", Description: "Convergência de Strings - Exemplo"},
 		{Flag: "--divergencia", Description: "Divergência"},
 		{Flag: "--context", Description: "Context"},
 	}
