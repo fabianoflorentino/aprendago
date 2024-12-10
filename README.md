@@ -434,7 +434,7 @@ Capítulo 21: Canais
   --a-expressao-comma-ok                   A expressão comma ok
   --convergencia                           Convergência
   --convergencia --example                 Convergência - Exemplo
-  --convergencia --chan-string --example   Convergência de Strings - Exemplo
+  --convergencia --example --chan-string   Convergência de Strings - Exemplo
   --divergencia                            Divergência
   --context                                Context
 
