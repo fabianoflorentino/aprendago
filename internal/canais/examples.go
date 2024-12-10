@@ -7,6 +7,7 @@ package canais
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
 // wg is a WaitGroup used to wait for a collection of goroutines to finish executing.
@@ -36,6 +37,22 @@ func UsingConverge() {
 
 			fmt.Printf("Odd Value: %v  ", value)
 		}
+	}
+}
+
+// UsingConvergeString demonstrates how to converge two string channels into a single channel.
+// It creates two channels, chan1 and chan2, by calling workWithChanString with "A" and "B" respectively.
+// These channels are then passed to receiveChanStringToConverge, which merges them into a new channel, newChan.
+// The function iterates over newChan, printing each value received from the merged channels.
+func UsingConvergeString() {
+	chan1 := workWithChanString("A")
+	chan2 := workWithChanString("B")
+
+	newChan := receiveChanStringToConverge(chan1, chan2)
+
+	fmt.Printf("\nUse Ctrl+C to interrupt the program!!\n\n")
+	for value := range newChan {
+		fmt.Printf("%v\t", value)
 	}
 }
 
@@ -77,4 +94,41 @@ func receiveToConverge(odd, even, converge chan int) {
 
 	wg.Wait()
 	close(converge)
+}
+
+// workWithChanString takes a string value and returns a channel of strings.
+// It starts a goroutine that continuously sends formatted strings to the channel.
+// Each string is the input value concatenated with an incrementing index, separated by a space.
+// The goroutine sleeps for 2 seconds between each send operation.
+func workWithChanString(value string) chan string {
+	stringChan := make(chan string)
+
+	go func(value string, chann chan string) {
+		for idx := 0; ; idx++ {
+			chann <- fmt.Sprintf("%s %d", value, idx)
+			time.Sleep(time.Second * 2)
+		}
+	}(value, stringChan)
+
+	return stringChan
+}
+
+// receiveChanStringToConverge takes two input channels of type string and returns a new channel of type string.
+// It starts two goroutines that continuously read from the input channels and send the received values to the new channel.
+// This function effectively merges the two input channels into one, allowing values from both channels to be received on the new channel.
+func receiveChanStringToConverge(chan1, chan2 chan string) chan string {
+	newChan := make(chan string)
+
+	go func() {
+		for {
+			newChan <- <-chan1
+		}
+	}()
+	go func() {
+		for {
+			newChan <- <-chan2
+		}
+	}()
+
+	return newChan
 }
