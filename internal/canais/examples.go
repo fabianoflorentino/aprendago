@@ -26,7 +26,7 @@ func UsingConverge() {
 	converge := make(chan int)
 
 	go sentToConverge(odd, even)
-	go receivetoConverge(odd, even, converge)
+	go receiveToConverge(odd, even, converge)
 
 	for value := range converge {
 
@@ -54,11 +54,11 @@ func sentToConverge(odd, even chan int) {
 	close(even)
 }
 
-// receivetoConverge takes three channels as input: odd, even, and converge.
+// receiveToConverge takes three channels as input: odd, even, and converge.
 // It starts two goroutines to read values from the odd and even channels and send them to the converge channel.
 // The function uses a WaitGroup to ensure both goroutines complete their execution before closing the converge channel.
 // This function is useful for merging values from two separate channels into a single channel.
-func receivetoConverge(odd, even, converge chan int) {
+func receiveToConverge(odd, even, converge chan int) {
 	wg.Add(1)
 	go func() {
 		for value := range odd {
