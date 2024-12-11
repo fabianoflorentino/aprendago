@@ -7,7 +7,6 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
 	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
-	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
@@ -23,8 +22,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/ponteiros"
 	"github.com/fabianoflorentino/aprendago/internal/seu_ambiente_de_desenvolvimento"
 	"github.com/fabianoflorentino/aprendago/internal/structs"
-	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
-	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
+	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
 const HEADER = `
@@ -46,9 +44,9 @@ func HelpMe() {
 	fmt.Printf("%s\n", HEADER)
 	HelpMeCapituloOptions()
 	HelpMeCapituloOutline()
-	visao_geral_do_curso.HelpMeVisaoGeralDoCurso()
-	variaveis_valores_tipos.HelpMeVariaveisValoresTipos()
-	exercicios_ninja_nivel_1.HelpMeExerciciosNinjaNivel1()
+	format.PrintChapterHelpMe(1)
+	format.PrintChapterHelpMe(2)
+	format.PrintChapterHelpMe(3)
 	fundamentos_da_programacao.HelpMeFundamentosDaProgramacao()
 	exercicios_ninja_nivel_2.HelpMeExerciciosNinjaNivel2()
 	fluxo_de_controle.HelpMeFluxoDeControle()

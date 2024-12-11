@@ -25,7 +25,7 @@ description:
         - Agora demonstre os valores nestas variáveis, com:
           1. Uma única declaração print
           2. Múltiplas declarações print
-        - Solução: https://play.golang.org/p/yYXnWXIQNa ou use no menu do programa (--na-pratica-exercicio-1 --nivel-1 --resolucao)
+        - Solução: https://play.golang.org/p/yYXnWXIQNa ou use no menu do programa (--exercicio=1 --nivel=1 --resolucao)
     - title: "Na prática - Exercício #2"
       text: |
         - Use var para declarar três variáveis. Elas devem ter package-level scope. Não atribua valores a estas variáveis. Utilize os seguintes identificadores e tipos para estas variáveis:
@@ -35,7 +35,7 @@ description:
         - Na função main:
           1. Demonstre os valores de cada identificador
           2. O compilador atribuiu valores para essas variáveis. Como esses valores se chamam?
-        - Solução: https://play.golang.org/p/pAFd-F7uGZ ou use no menu do programa (--na-pratica-exercicio-2 --nivel-1 --resolucao)
+        - Solução: https://play.golang.org/p/pAFd-F7uGZ ou use no menu do programa (--exercicio=2 --nivel=1 --resolucao)
     - title: "Na prática - Exercício #3"
       text: |
         - Utilizando a solução do exercício anterior:
@@ -47,7 +47,7 @@ description:
             1. Use fmt.Sprintf para atribuir todos esses valores a uma única variável.
               Faça essa atribuição de tipo string a uma variável de nome "s" utilizando o operador curto de declaração.
             2. Demonstre a variável "s".
-        - Solução: https://play.golang.org/p/QFctSQB_h3 ou use no menu do programa (--na-pratica-exercicio-3 --nivel-1 --resolucao)
+        - Solução: https://play.golang.org/p/QFctSQB_h3 ou use no menu do programa (--exercicio=3 --nivel=1 --resolucao)
     - title: "Na prática - Exercício #4"
       text: |
         - Crie um tipo. O tipo subjacente deve ser int.
@@ -59,7 +59,7 @@ description:
           4. Demonstre o valor da variável "x"
         - Para os aventureiros: https://golang.org/ref/spec#Types
         - Agora já somos quase ninjas nível 1!
-        - Solução: https://play.golang.org/p/snm4WuuYmG ou use no menu do programa (--na-pratica-exercicio-4 --nivel-1 --resolucao)
+        - Solução: https://play.golang.org/p/snm4WuuYmG ou use no menu do programa (--exercicio=4 --nivel=1 --resolucao)
     - title: "Na prática - Exercício #5"
       text: |
         - Utilizando a solução do exercício anterior:
@@ -74,11 +74,11 @@ description:
               1. Utilize conversão para transformar o tipo do valor da variável "x" em seu tipo subjacente e, utilizando o operador "=", atribua o valor de "x" a "y"
               2. Demonstre o valor de "y"
               3. Demonstre o tipo de "y"
-        - Solução: https://play.golang.org/p/uq81T_fasP ou use no menu do programa (--na-pratica-exercicio-5 --nivel-1 --resolucao)
+        - Solução: https://play.golang.org/p/uq81T_fasP ou use no menu do programa (--exercicio=5 --nivel=1 --resolucao)
     - title: "Na prática - Exercício #6"
       text: |
         - Prova!
-        - Link: https://goo.gl/forms/s9y91iVSPvA4iahj1 [Link quebrado]. (Use a opção --na-pratica-exercicio-6 --nivel-1 --prova)
+        - Link: https://goo.gl/forms/s9y91iVSPvA4iahj1 [Link quebrado]. (Use a opção --exercicio=6 --nivel=1 --prova)
         - Se você deu pausa e fez todos os exercícios anteriores você mesmo, e só viu a resposta depois...
           e se você der pausa agora e fizer a prova inteira por conta própria, e só assistir as respostas depois...
           sabe o que isso quer dizer? Que você é ninja. Ninja nível 1. Tá no caminho certo pra ser um developer ninja mestre.

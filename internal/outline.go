@@ -30,10 +30,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
 )
 
-// Outline provides an overview of the course by sequentially calling functions
-// from various packages. Each function represents a different topic or set of
-// exercises in the course.
-func Outline() {
+func PrintOutline() {
 	visao_geral_do_curso.VisaoGeralDoCurso()
 	variaveis_valores_tipos.VariaveisValoresETipos()
 	exercicios_ninja_nivel_1.ExerciciosNinjaNivel1()

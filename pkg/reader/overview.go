@@ -14,7 +14,7 @@ import (
 	"path/filepath"
 
 	"github.com/fabianoflorentino/aprendago/pkg/logger"
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 )
 
 // Constants for the overview file
