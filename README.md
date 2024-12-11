@@ -174,18 +174,18 @@ Capítulo 2: Variáveis, Valores e Tipos
 
 Capítulo 3: Exercícios Ninja Nível 1
 
-  --na-pratica-exercicio-1 --nivel-1               Apresenta o primeiro exercício prático do curso.
-  --na-pratica-exercicio-1 --nivel-1 --resolucao   Exibe a resolução do primeiro exercício prático.
-  --na-pratica-exercicio-2 --nivel-1               Apresenta o segundo exercício prático do curso.
-  --na-pratica-exercicio-2 --nivel-1 --resolucao   Exibe a resolução do segundo exercício prático.
-  --na-pratica-exercicio-3 --nivel-1               Apresenta o terceiro exercício prático do curso.
-  --na-pratica-exercicio-3 --nivel-1 --resolucao   Exibe a resolução do terceiro exercício prático.
-  --na-pratica-exercicio-4 --nivel-1               Apresenta o quarto exercício prático do curso.
-  --na-pratica-exercicio-4 --nivel-1 --resolucao   Exibe a resolução do quarto exercício prático.
-  --na-pratica-exercicio-5 --nivel-1               Apresenta o quinto exercício prático do curso.
-  --na-pratica-exercicio-5 --nivel-1 --resolucao   Exibe a resolução do quinto exercício prático.
-  --na-pratica-exercicio-6 --nivel-1               Apresenta o sexto exercício prático do curso.
-  --na-pratica-exercicio-6 --nivel-1 --prova       Exibe a prova do sexto exercício prático.
+  --exercicio=1 --nivel=1               Apresenta o primeiro exercício prático do curso.
+  --exercicio=1 --nivel=1 --resolucao   Exibe a resolução do primeiro exercício prático.
+  --exercicio=2 --nivel=1               Apresenta o segundo exercício prático do curso.
+  --exercicio=2 --nivel=1 --resolucao   Exibe a resolução do segundo exercício prático.
+  --exercicio=3 --nivel=1               Apresenta o terceiro exercício prático do curso.
+  --exercicio=3 --nivel=1 --resolucao   Exibe a resolução do terceiro exercício prático.
+  --exercicio=4 --nivel=1               Apresenta o quarto exercício prático do curso.
+  --exercicio=4 --nivel=1 --resolucao   Exibe a resolução do quarto exercício prático.
+  --exercicio=5 --nivel=1               Apresenta o quinto exercício prático do curso.
+  --exercicio=5 --nivel=1 --resolucao   Exibe a resolução do quinto exercício prático.
+  --exercicio=6 --nivel=1               Apresenta o sexto exercício prático do curso.
+  --exercicio=6 --nivel=1 --prova       Exibe a prova do sexto exercício prático.
 
 Capítulo 4: Fundamentos da Programação
 
@@ -201,20 +201,20 @@ Capítulo 4: Fundamentos da Programação
 
 Capítulo 5: Exercícios Ninja - Nível 2
 
-  --na-pratica-exercicio-1 --nivel-2               Apresenta o primeiro exercício prático do nível 2.
-  --na-pratica-exercicio-1 --nivel-2 --resolucao   Exibe a resolução do primeiro exercício prático do nível 2.
-  --na-pratica-exercicio-2 --nivel-2               Apresenta o segundo exercício prático do nível 2.
-  --na-pratica-exercicio-2 --nivel-2 --resolucao   Exibe a resolução do segundo exercício prático do nível 2.
-  --na-pratica-exercicio-3 --nivel-2               Apresenta o terceiro exercício prático do nível 2.
-  --na-pratica-exercicio-3 --nivel-2 --resolucao   Exibe a resolução do terceiro exercício prático do nível 2.
-  --na-pratica-exercicio-4 --nivel-2               Apresenta o quarto exercício prático do nível 2.
-  --na-pratica-exercicio-4 --nivel-2 --resolucao   Exibe a resolução do quarto exercício prático do nível 2.
-  --na-pratica-exercicio-5 --nivel-2               Apresenta o quinto exercício prático do nível 2.
-  --na-pratica-exercicio-5 --nivel-2 --resolucao   Exibe a resolução do quinto exercício prático do nível 2.
-  --na-pratica-exercicio-6 --nivel-2               Apresenta o sexto exercício prático do nível 2.
-  --na-pratica-exercicio-6 --nivel-2 --resolucao   Exibe a resolução do sexto exercício prático do nível 2.
-  --na-pratica-exercicio-7 --nivel-2               Apresenta o sétimo exercício prático do nível 2.
-  --na-pratica-exercicio-7 --nivel-2 --prova       Exibe a prova do sétimo exercício prático do nível 2.
+  --exercicio=1 --nivel=2               Apresenta o primeiro exercício prático do nível 2.
+  --exercicio=1 --nivel=2 --resolucao   Exibe a resolução do primeiro exercício prático do nível 2.
+  --exercicio=2 --nivel=2               Apresenta o segundo exercício prático do nível 2.
+  --exercicio=2 --nivel=2 --resolucao   Exibe a resolução do segundo exercício prático do nível 2.
+  --exercicio=3 --nivel=2               Apresenta o terceiro exercício prático do nível 2.
+  --exercicio=3 --nivel=2 --resolucao   Exibe a resolução do terceiro exercício prático do nível 2.
+  --exercicio=4 --nivel=2               Apresenta o quarto exercício prático do nível 2.
+  --exercicio=4 --nivel=2 --resolucao   Exibe a resolução do quarto exercício prático do nível 2.
+  --exercicio=5 --nivel=2               Apresenta o quinto exercício prático do nível 2.
+  --exercicio=5 --nivel=2 --resolucao   Exibe a resolução do quinto exercício prático do nível 2.
+  --exercicio=6 --nivel=2               Apresenta o sexto exercício prático do nível 2.
+  --exercicio=6 --nivel=2 --resolucao   Exibe a resolução do sexto exercício prático do nível 2.
+  --exercicio=7 --nivel=2               Apresenta o sétimo exercício prático do nível 2.
+  --exercicio=7 --nivel=2 --prova       Exibe a prova do sétimo exercício prático do nível 2.
 
 Capípulo 6: Fluxo de Controle
 
@@ -233,26 +233,26 @@ Capípulo 6: Fluxo de Controle
 
 Capítulo 7: Exercícios Ninja Nível 3
 
-  --na-pratica-exercicio-1 --nivel-3                Apresenta o primeiro exercício prático do nível 3.
-  --na-pratica-exercicio-1 --nivel-3 --resolucao    Exibe a resolução do primeiro exercício prático do nível 3.
-  --na-pratica-exercicio-2 --nivel-3                Apresenta o segundo exercício prático do nível 3.
-  --na-pratica-exercicio-2 --nivel-3 --resolucao    Exibe a resolução do segundo exercício prático do nível 3.
-  --na-pratica-exercicio-3 --nivel-3                Apresenta o terceiro exercício prático do nível 3.
-  --na-pratica-exercicio-3 --nivel-3 --resolucao    Exibe a resolução do terceiro exercício prático do nível 3.
-  --na-pratica-exercicio-4 --nivel-3                Apresenta o quarto exercício prático do nível 3.
-  --na-pratica-exercicio-4 --nivel-3 --resolucao    Exibe a resolução do quarto exercício prático do nível 3.
-  --na-pratica-exercicio-5 --nivel-3                Apresenta o quinto exercício prático do nível 3.
-  --na-pratica-exercicio-5 --nivel-3 --resolucao    Exibe a resolução do quinto exercício prático do nível 3.
-  --na-pratica-exercicio-6 --nivel-3                Apresenta o sexto exercício prático do nível 3.
-  --na-pratica-exercicio-6 --nivel-3 --resolucao    Exibe a resolução do sexto exercício prático do nível 3.
-  --na-pratica-exercicio-7 --nivel-3                Apresenta o sétimo exercício prático do nível 3.
-  --na-pratica-exercicio-7 --nivel-3 --resolucao    Exibe a resolução do sétimo exercício prático do nível 3.
-  --na-pratica-exercicio-8 --nivel-3                Apresenta o oitavo exercício prático do nível 3.
-  --na-pratica-exercicio-8 --nivel-3 --resolucao    Exibe a resolução do oitavo exercício prático do nível 3.
-  --na-pratica-exercicio-9 --nivel-3                Apresenta o nono exercício prático do nível 3.
-  --na-pratica-exercicio-9 --nivel-3 --resolucao    Exibe a resolução do nono exercício prático do nível 3.
-  --na-pratica-exercicio-10 --nivel-3               Apresenta o décimo exercício prático do nível 3.
-  --na-pratica-exercicio-10 --nivel-3 --resolucao   Exibe a resolução do décimo exercício prático do nível 3.
+  --exercicio=1 --nivel=3                Apresenta o primeiro exercício prático do nível 3.
+  --exercicio=1 --nivel=3 --resolucao    Exibe a resolução do primeiro exercício prático do nível 3.
+  --exercicio=2 --nivel=3                Apresenta o segundo exercício prático do nível 3.
+  --exercicio=2 --nivel=3 --resolucao    Exibe a resolução do segundo exercício prático do nível 3.
+  --exercicio=3 --nivel=3                Apresenta o terceiro exercício prático do nível 3.
+  --exercicio=3 --nivel=3 --resolucao    Exibe a resolução do terceiro exercício prático do nível 3.
+  --exercicio=4 --nivel=3                Apresenta o quarto exercício prático do nível 3.
+  --exercicio=4 --nivel=3 --resolucao    Exibe a resolução do quarto exercício prático do nível 3.
+  --exercicio=5 --nivel=3                Apresenta o quinto exercício prático do nível 3.
+  --exercicio=5 --nivel=3 --resolucao    Exibe a resolução do quinto exercício prático do nível 3.
+  --exercicio=6 --nivel=3                Apresenta o sexto exercício prático do nível 3.
+  --exercicio=6 --nivel=3 --resolucao    Exibe a resolução do sexto exercício prático do nível 3.
+  --exercicio=7 --nivel=3                Apresenta o sétimo exercício prático do nível 3.
+  --exercicio=7 --nivel=3 --resolucao    Exibe a resolução do sétimo exercício prático do nível 3.
+  --exercicio=8 --nivel=3                Apresenta o oitavo exercício prático do nível 3.
+  --exercicio=8 --nivel=3 --resolucao    Exibe a resolução do oitavo exercício prático do nível 3.
+  --exercicio=9 --nivel=3                Apresenta o nono exercício prático do nível 3.
+  --exercicio=9 --nivel=3 --resolucao    Exibe a resolução do nono exercício prático do nível 3.
+  --exercicio=10 --nivel=3               Apresenta o décimo exercício prático do nível 3.
+  --exercicio=10 --nivel=3 --resolucao   Exibe a resolução do décimo exercício prático do nível 3.
 
 Capítulo 8: Agrupamento de Dados
 
@@ -270,26 +270,26 @@ Capítulo 8: Agrupamento de Dados
 
 Capítulo 9: Exercícios Ninja Nível 4
 
-  --na-pratica-exercicio-1 --nivel-4                Apresenta o primeiro exercício prático do Nível 4.
-  --na-pratica-exercicio-1 --nivel-4 --resolucao    Exibe a resolução do primeiro exercício prático do Nível 4.
-  --na-pratica-exercicio-2 --nivel-4                Apresenta o segundo exercício prático do Nível 4.
-  --na-pratica-exercicio-2 --nivel-4 --resolucao    Exibe a resolução do segundo exercício prático do Nível 4.
-  --na-pratica-exercicio-3 --nivel-4                Apresenta o terceiro exercício prático do Nível 4.
-  --na-pratica-exercicio-3 --nivel-4 --resolucao    Exibe a resolução do terceiro exercício prático do Nível 4.
-  --na-pratica-exercicio-4 --nivel-4                Apresenta o quarto exercício prático do Nível 4.
-  --na-pratica-exercicio-4 --nivel-4 --resolucao    Exibe a resolução do quarto exercício prático do Nível 4.
-  --na-pratica-exercicio-5 --nivel-4                Apresenta o quinto exercício prático do Nível 4.
-  --na-pratica-exercicio-5 --nivel-4 --resolucao    Exibe a resolução do quinto exercício prático do Nível 4.
-  --na-pratica-exercicio-6 --nivel-4                Apresenta o sexto exercício prático do Nível 4.
-  --na-pratica-exercicio-6 --nivel-4 --resolucao    Exibe a resolução do sexto exercício prático do Nível 4.
-  --na-pratica-exercicio-7 --nivel-4                Apresenta o sétimo exercício prático do Nível 4.
-  --na-pratica-exercicio-7 --nivel-4 --resolucao    Exibe a resolução do sétimo exercício prático do Nível 4.
-  --na-pratica-exercicio-8 --nivel-4                Apresenta o oitavo exercício prático do Nível 4.
-  --na-pratica-exercicio-8 --nivel-4 --resolucao    Exibe a resolução do oitavo exercício prático do Nível 4.
-  --na-pratica-exercicio-9 --nivel-4                Apresenta o nono exercício prático do Nível 4.
-  --na-pratica-exercicio-9 --nivel-4 --resolucao    Exibe a resolução do nono exercício prático do Nível 4.
-  --na-pratica-exercicio-10 --nivel-4               Apresenta o décimo exercício prático do Nível 4.
-  --na-pratica-exercicio-10 --nivel-4 --resolucao   Exibe a resolução do décimo exercício prático do Nível 4.
+  --exercicio=1 --nivel=4                Apresenta o primeiro exercício prático do Nível 4.
+  --exercicio=1 --nivel=4 --resolucao    Exibe a resolução do primeiro exercício prático do Nível 4.
+  --exercicio=2 --nivel=4                Apresenta o segundo exercício prático do Nível 4.
+  --exercicio=2 --nivel=4 --resolucao    Exibe a resolução do segundo exercício prático do Nível 4.
+  --exercicio=3 --nivel=4                Apresenta o terceiro exercício prático do Nível 4.
+  --exercicio=3 --nivel=4 --resolucao    Exibe a resolução do terceiro exercício prático do Nível 4.
+  --exercicio=4 --nivel=4                Apresenta o quarto exercício prático do Nível 4.
+  --exercicio=4 --nivel=4 --resolucao    Exibe a resolução do quarto exercício prático do Nível 4.
+  --exercicio=5 --nivel=4                Apresenta o quinto exercício prático do Nível 4.
+  --exercicio=5 --nivel=4 --resolucao    Exibe a resolução do quinto exercício prático do Nível 4.
+  --exercicio=6 --nivel=4                Apresenta o sexto exercício prático do Nível 4.
+  --exercicio=6 --nivel=4 --resolucao    Exibe a resolução do sexto exercício prático do Nível 4.
+  --exercicio=7 --nivel=4                Apresenta o sétimo exercício prático do Nível 4.
+  --exercicio=7 --nivel=4 --resolucao    Exibe a resolução do sétimo exercício prático do Nível 4.
+  --exercicio=8 --nivel=4                Apresenta o oitavo exercício prático do Nível 4.
+  --exercicio=8 --nivel=4 --resolucao    Exibe a resolução do oitavo exercício prático do Nível 4.
+  --exercicio=9 --nivel=4                Apresenta o nono exercício prático do Nível 4.
+  --exercicio=9 --nivel=4 --resolucao    Exibe a resolução do nono exercício prático do Nível 4.
+  --exercicio=10 --nivel=4               Apresenta o décimo exercício prático do Nível 4.
+  --exercicio=10 --nivel=4 --resolucao   Exibe a resolução do décimo exercício prático do Nível 4.
 
  Capítulo 10: Structs
 
@@ -300,14 +300,14 @@ Capítulo 9: Exercícios Ninja Nível 4
 
 Capítulo 11: Exercícios Ninja Nível 5
 
-  --na-pratica-exercicio-1 --nivel-5               Apresenta o primeiro exercício prático do Nível 5.
-  --na-pratica-exercicio-1 --nivel-5 --resolucao   Exibe a resolução do primeiro exercício prático do Nível 5.
-  --na-pratica-exercicio-2 --nivel-5               Apresenta o segundo exercício prático do Nível 5.
-  --na-pratica-exercicio-2 --nivel-5 --resolucao   Exibe a resolução do segundo exercício prático do Nível 5.
-  --na-pratica-exercicio-3 --nivel-5               Apresenta o terceiro exercício prático do Nível 5.
-  --na-pratica-exercicio-3 --nivel-5 --resolucao   Exibe a resolução do terceiro exercício prático do Nível 5.
-  --na-pratica-exercicio-4 --nivel-5               Apresenta o quarto exercício prático do Nível 5.
-  --na-pratica-exercicio-4 --nivel-5 --resolucao   Exibe a resolução do quarto exercício prático do Nível 5.
+  --exercicio=1 --nivel=5               Apresenta o primeiro exercício prático do Nível 5.
+  --exercicio=1 --nivel=5 --resolucao   Exibe a resolução do primeiro exercício prático do Nível 5.
+  --exercicio=2 --nivel=5               Apresenta o segundo exercício prático do Nível 5.
+  --exercicio=2 --nivel=5 --resolucao   Exibe a resolução do segundo exercício prático do Nível 5.
+  --exercicio=3 --nivel=5               Apresenta o terceiro exercício prático do Nível 5.
+  --exercicio=3 --nivel=5 --resolucao   Exibe a resolução do terceiro exercício prático do Nível 5.
+  --exercicio=4 --nivel=5               Apresenta o quarto exercício prático do Nível 5.
+  --exercicio=4 --nivel=5 --resolucao   Exibe a resolução do quarto exercício prático do Nível 5.
 
 Capítulo 12: Funções
 
@@ -326,28 +326,28 @@ Capítulo 12: Funções
 
 Capítulo 13: Exercícios Ninja Nível 6
 
-  --na-pratica-exercicio-1 --nivel-6                Apresenta o primeiro exercício prático do Nível 6.
-  --na-pratica-exercicio-1 --nivel-6 --resolucao    Apresenta a resolução do primeiro exercício prático do Nível 6.
-  --na-pratica-exercicio-2 --nivel-6                Apresenta o segundo exercício prático do Nível 6.
-  --na-pratica-exercicio-2 --nivel-6 --resolucao    Apresenta a resolução do segundo exercício prático do Nível 6.
-  --na-pratica-exercicio-3 --nivel-6                Apresenta o terceiro exercício prático do Nível 6.
-  --na-pratica-exercicio-3 --nivel-6 --resolucao    Apresenta a resolução do terceiro exercício prático do Nível 6.
-  --na-pratica-exercicio-4 --nivel-6                Apresenta o quarto exercício prático do Nível 6.
-  --na-pratica-exercicio-4 --nivel-6 --resolucao    Apresenta a resolução do quarto exercício prático do Nível 6.
-  --na-pratica-exercicio-5 --nivel-6                Apresenta o quinto exercício prático do Nível 6.
-  --na-pratica-exercicio-5 --nivel-6 --resolucao    Apresenta a resolução do quinto exercício prático do Nível 6.
-  --na-pratica-exercicio-6 --nivel-6                Apresenta o sexto exercício prático do Nível 6.
-  --na-pratica-exercicio-6 --nivel-6 --resolucao    Apresenta a resolução do sexto exercício prático do Nível 6.
-  --na-pratica-exercicio-7 --nivel-6                Apresenta o sétimo exercício prático do Nível 6.
-  --na-pratica-exercicio-7 --nivel-6 --resolucao    Apresenta a resolução do sétimo exercício prático do Nível 6.
-  --na-pratica-exercicio-8 --nivel-6                Apresenta o oitavo exercício prático do Nível 6.
-  --na-pratica-exercicio-8 --nivel-6 --resolucao    Apresenta a resolução do oitavo exercício prático do Nível 6.
-  --na-pratica-exercicio-9 --nivel-6                Apresenta o nono exercício prático do Nível 6.
-  --na-pratica-exercicio-9 --nivel-6 --resolucao    Apresenta a resolução do nono exercício prático do Nível 6.
-  --na-pratica-exercicio-10 --nivel-6               Apresenta o décimo exercício prático do Nível 6.
-  --na-pratica-exercicio-10 --nivel-6 --resolucao   Apresenta a resolução do décimo exercício prático do Nível 6.
-  --na-pratica-exercicio-11 --nivel-6               Apresenta o décimo primeiro exercício prático do Nível 6.
-  --na-pratica-exercicio-11 --nivel-6 --resolucao   Apresenta a resolução do décimo primeiro exercício prático do Nível 6.
+  --exercicio=1 --nivel=6                Apresenta o primeiro exercício prático do Nível 6.
+  --exercicio=1 --nivel=6 --resolucao    Apresenta a resolução do primeiro exercício prático do Nível 6.
+  --exercicio=2 --nivel=6                Apresenta o segundo exercício prático do Nível 6.
+  --exercicio=2 --nivel=6 --resolucao    Apresenta a resolução do segundo exercício prático do Nível 6.
+  --exercicio=3 --nivel=6                Apresenta o terceiro exercício prático do Nível 6.
+  --exercicio=3 --nivel=6 --resolucao    Apresenta a resolução do terceiro exercício prático do Nível 6.
+  --exercicio=4 --nivel=6                Apresenta o quarto exercício prático do Nível 6.
+  --exercicio=4 --nivel=6 --resolucao    Apresenta a resolução do quarto exercício prático do Nível 6.
+  --exercicio=5 --nivel=6                Apresenta o quinto exercício prático do Nível 6.
+  --exercicio=5 --nivel=6 --resolucao    Apresenta a resolução do quinto exercício prático do Nível 6.
+  --exercicio=6 --nivel=6                Apresenta o sexto exercício prático do Nível 6.
+  --exercicio=6 --nivel=6 --resolucao    Apresenta a resolução do sexto exercício prático do Nível 6.
+  --exercicio=7 --nivel=6                Apresenta o sétimo exercício prático do Nível 6.
+  --exercicio=7 --nivel=6 --resolucao    Apresenta a resolução do sétimo exercício prático do Nível 6.
+  --exercicio=8 --nivel=6                Apresenta o oitavo exercício prático do Nível 6.
+  --exercicio=8 --nivel=6 --resolucao    Apresenta a resolução do oitavo exercício prático do Nível 6.
+  --exercicio=9 --nivel=6                Apresenta o nono exercício prático do Nível 6.
+  --exercicio=9 --nivel=6 --resolucao    Apresenta a resolução do nono exercício prático do Nível 6.
+  --exercicio=10 --nivel=6               Apresenta o décimo exercício prático do Nível 6.
+  --exercicio=10 --nivel=6 --resolucao   Apresenta a resolução do décimo exercício prático do Nível 6.
+  --exercicio=11 --nivel=6               Apresenta o décimo primeiro exercício prático do Nível 6.
+  --exercicio=11 --nivel=6 --resolucao   Apresenta a resolução do décimo primeiro exercício prático do Nível 6.
 
 Capítulo 14: Ponteiros
 
@@ -356,10 +356,10 @@ Capítulo 14: Ponteiros
 
 Capítulo 15: Exercícios Ninja - Nível 7
 
-  --na-pratica-exercicio-1 --nivel-7               Apresenta o primeiro exercício prático do Nível 7.
-  --na-pratica-exercicio-1 --nivel-7 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 7.
-  --na-pratica-exercicio-2 --nivel-7               Apresenta o segundo exercício prático do Nível 7.
-  --na-pratica-exercicio-2 --nivel-7 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 7.
+  --exercicio=1 --nivel=7               Apresenta o primeiro exercício prático do Nível 7.
+  --exercicio=1 --nivel=7 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 7.
+  --exercicio=2 --nivel=7               Apresenta o segundo exercício prático do Nível 7.
+  --exercicio=2 --nivel=7 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 7.
 
 Capítulo 16: Aplicações
 
@@ -377,16 +377,16 @@ Capítulo 16: Aplicações
 
 Capítulo 17: Exercícios Ninja Nível 8
 
-  --na-pratica-exercicio-1 --nivel-8               Apresenta o primeiro exercício prático do Nível 8.
-  --na-pratica-exercicio-1 --nivel-8 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 8.
-  --na-pratica-exercicio-2 --nivel-8               Apresenta o segundo exercício prático do Nível 8.
-  --na-pratica-exercicio-2 --nivel-8 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 8.
-  --na-pratica-exercicio-3 --nivel-8               Apresenta o terceiro exercício prático do Nível 8.
-  --na-pratica-exercicio-3 --nivel-8 --resolucao   Apresenta a resolução do terceiro exercício prático do Nível 8.
-  --na-pratica-exercicio-4 --nivel-8               Apresenta o quarto exercício prático do Nível 8.
-  --na-pratica-exercicio-4 --nivel-8 --resolucao   Apresenta a resolução do quarto exercício prático do Nível 8.
-  --na-pratica-exercicio-5 --nivel-8               Apresenta o quinto exercício prático do Nível 8.
-  --na-pratica-exercicio-5 --nivel-8 --resolucao   Apresenta a resolução do quinto exercício prático do Nível 8.
+  --exercicio=1 --nivel=8               Apresenta o primeiro exercício prático do Nível 8.
+  --exercicio=1 --nivel=8 --resolucao   Apresenta a resolução do primeiro exercício prático do Nível 8.
+  --exercicio=2 --nivel=8               Apresenta o segundo exercício prático do Nível 8.
+  --exercicio=2 --nivel=8 --resolucao   Apresenta a resolução do segundo exercício prático do Nível 8.
+  --exercicio=3 --nivel=8               Apresenta o terceiro exercício prático do Nível 8.
+  --exercicio=3 --nivel=8 --resolucao   Apresenta a resolução do terceiro exercício prático do Nível 8.
+  --exercicio=4 --nivel=8               Apresenta o quarto exercício prático do Nível 8.
+  --exercicio=4 --nivel=8 --resolucao   Apresenta a resolução do quarto exercício prático do Nível 8.
+  --exercicio=5 --nivel=8               Apresenta o quinto exercício prático do Nível 8.
+  --exercicio=5 --nivel=8 --resolucao   Apresenta a resolução do quinto exercício prático do Nível 8.
 
 Capítulo 18: Concorrência
 
