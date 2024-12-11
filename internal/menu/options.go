@@ -98,7 +98,7 @@ func Options(args []string) {
 func generalOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--help", ExecFunc: func() { HelpMe() }},
-		{Options: "--outline", ExecFunc: func() { internal.Outline() }},
+		{Options: "--outline", ExecFunc: func() { internal.PrintOutline() }},
 		{Options: "--caps", ExecFunc: func() { HelpMeCapituloOptions() }},
 	}
 }
