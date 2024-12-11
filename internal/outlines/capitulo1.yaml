@@ -1,9 +1,10 @@
 title: Visão Geral do Curso
-topics:
+outlines:
   - flag: --bem-vindo
     title: Bem vindo!
-    help_me: Exibe a mensagem de boas-vindas ao curso Aprenda Go.
-    outline: |
+    help_me:
+      - span: Exibe a mensagem de boas-vindas ao curso Aprenda Go.
+    content: |
       - Bem vindo ao curso!
       - Eu sou...
       - Go foi criada por gente foda que criou o Unix, B, UTF-8...
@@ -16,8 +17,9 @@ topics:
 
   - flag: --porque-go
     title: Por que Go?
-    help_me: Descreve os benefícios e razões para aprender a linguagem Go.
-    outline: |
+    help_me:
+      - span: Descreve os benefícios e razões para aprender a linguagem Go.
+    content: |
       - Antes de investir seu tempo em aprender a linguagem Go, é bom você entender por que isso é uma boa idéia.
       - O que estava acontecendo no Google...
       - Criada por Ken Thompson (Unix, B, C), Rob Pike (UTF-8), e Robert Griesemer.
@@ -47,8 +49,9 @@ topics:
 
   - flag: --sucesso
     title: Sucesso
-    help_me: Apresenta dicas e estratégias para ter sucesso no curso.
-    outline: |
+    help_me:
+      - span: Apresenta dicas e estratégias para ter sucesso no curso.
+    content: |
       - Qual o motivo que algumas pessoa obtem sucesso e outras não?
       - Eu quero que você obtenha sucesso com este curso, então vamos falar sobre o assunto.
       - Perguntaram a Bill Gates e Warren Buffet, independentemente, qual seria sua principal característica responsável pelo seu sucesso. A resposta de ambos foi:
@@ -79,8 +82,9 @@ topics:
 
   - flag: --recursos
     title: Recursos
-    help_me: Lista recursos e materiais de apoio para o curso.
-    outline: |
+    help_me:
+      - span: Lista recursos e materiais de apoio para o curso.
+    content: |
       - Leia as descrições dos vídeos!
         - Outline completo: https://github.com/ellenkorbes/aprendago/blob/master/OUTLINE.md
       - Exercícios:
@@ -105,8 +109,9 @@ topics:
 
   - flag: --como-esse-curso-funciona
     title: Como esse curso funciona
-    help_me: Explica a estrutura e metodologia do curso.
-    outline: |
+    help_me:
+      - span: Explica a estrutura e metodologia do curso.
+    content: |
       - Velocidade de playback.
       - Repetição.
       - Erros.

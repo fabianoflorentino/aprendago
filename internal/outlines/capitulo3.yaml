@@ -1,19 +1,26 @@
 title: Exercícios Ninja Nível 1
-topics:
+outlines:
   - flag: --contribua-seu-codigo
     title: Contribua seu código
-    help_me: Apresenta como contribuir com seu código.
-    outline: |
+    help_me:
+      - span: Apresenta como contribuir com seu código.
+    content: |
       - Nesse curso a gente vai fazer um monte de exercícios.
         - Talvez você queira contribuir suas próprias soluções.
         - Talvez você tenha exemplos melhores que os que estamos mostrando aqui.
       - Para compartilhar me manda o link no twitter do seu código no Go Playground, twitter.com/ellenkorbes!
       - "@ellenkorbes Olha essa solução pro exercício Ninja nível 5, exercício 2: <link> O que vc acha?"
 
-  - flag: --na-pratica-exercicio-1 --nivel-1
+exercises:
+  - level: 1
+    number: 1
     title: "Na prática - Exercício #1"
-    help_me: Apresenta o primeiro exercício prático do curso.
-    outline: |
+    help_me:
+      - span: Apresenta o primeiro exercício prático do curso.
+
+      - flag: --resolucao
+        span: Exibe a resolução do primeiro exercício prático.
+    content: |
       - Esses são seus primeiros exercícios, e seus primeiros passos.
       - Completando os exercícios dessa seção, você será um ninja nível 1.
       - É o seu primeiro passo pra se tornar um developer ninja.
@@ -28,15 +35,17 @@ topics:
       - Agora demonstre os valores nestas variáveis, com:
         1. Uma única declaração print
         2. Múltiplas declarações print
-      - Solução: https://play.golang.org/p/yYXnWXIQNa ou use no menu do programa (--na-pratica-exercicio-1 --nivel-1 --resolucao)
+      - Solução: https://play.golang.org/p/yYXnWXIQNa ou use no menu do programa (--exercicio=1 --nivel=1 --resolucao)
 
-  - flag: --na-pratica-exercicio-1 --nivel-1 --resolucao
-    help_me: Exibe a resolução do primeiro exercício prático.
-  
-  - flag: --na-pratica-exercicio-2 --nivel-1
+  - level: 1
+    number: 2
     title: "Na prática - Exercício #2"
-    help_me: Apresenta o segundo exercício prático do curso.
-    outline: |
+    help_me:
+      - span: Apresenta o segundo exercício prático do curso.
+
+      - flag: --resolucao
+        span: Exibe a resolução do segundo exercício prático.
+    content: |
       - Use var para declarar três variáveis. Elas devem ter package-level scope. Não atribua valores a estas variáveis. Utilize os seguintes identificadores e tipos para estas variáveis:
         1. Identificador "x" deverá ter tipo int
         2. Identificador "y" deverá ter tipo string
@@ -44,15 +53,17 @@ topics:
       - Na função main:
         1. Demonstre os valores de cada identificador
         2. O compilador atribuiu valores para essas variáveis. Como esses valores se chamam?
-      - Solução: https://play.golang.org/p/pAFd-F7uGZ ou use no menu do programa (--na-pratica-exercicio-2 --nivel-1 --resolucao)
+      - Solução: https://play.golang.org/p/pAFd-F7uGZ ou use no menu do programa (--exercicio=2 --nivel=1 --resolucao)
 
-  - flag: --na-pratica-exercicio-2 --nivel-1 --resolucao
-    help_me: Exibe a resolução do segundo exercício prático.
-
-  - flag: --na-pratica-exercicio-3 --nivel-1
+  - level: 1
+    number: 3
     title: "Na prática - Exercício #3"
-    help_me: Apresenta o terceiro exercício prático do curso.
-    outline: |
+    help_me:
+      - span: Apresenta o terceiro exercício prático do curso.
+
+      - flag: --resolucao
+        span: Exibe a resolução do terceiro exercício prático.
+    content: |
       - Utilizando a solução do exercício anterior:
         1. Em package-level scope, atribua os seguintes valores às variáveis:
           1. para "x" atribua 42
@@ -62,15 +73,17 @@ topics:
           1. Use fmt.Sprintf para atribuir todos esses valores a uma única variável.
             Faça essa atribuição de tipo string a uma variável de nome "s" utilizando o operador curto de declaração.
           2. Demonstre a variável "s".
-      - Solução: https://play.golang.org/p/QFctSQB_h3 ou use no menu do programa (--na-pratica-exercicio-3 --nivel-1 --resolucao)
+      - Solução: https://play.golang.org/p/QFctSQB_h3 ou use no menu do programa (--exercicio=3 --nivel=1 --resolucao)
 
-  - flag: --na-pratica-exercicio-3 --nivel-1 --resolucao
-    help_me: Exibe a resolução do terceiro exercício prático.
-
-  - flag: --na-pratica-exercicio-4 --nivel-1
+  - level: 1
+    number: 4
     title: "Na prática - Exercício #4"
-    help_me: Apresenta o quarto exercício prático do curso.
-    outline: |
+    help_me:
+      - span: Apresenta o quarto exercício prático do curso.
+
+      - flag: --resolucao
+        span: Exibe a resolução do quarto exercício prático.
+    content: |
       - Crie um tipo. O tipo subjacente deve ser int.
       - Crie uma variável para este tipo, com o identificador "x", utilizando a palavra-chave var.
       - Na função main:
@@ -80,15 +93,17 @@ topics:
         4. Demonstre o valor da variável "x"
       - Para os aventureiros: https://golang.org/ref/spec#Types
       - Agora já somos quase ninjas nível 1!
-      - Solução: https://play.golang.org/p/snm4WuuYmG ou use no menu do programa (--na-pratica-exercicio-4 --nivel-1 --resolucao)
+      - Solução: https://play.golang.org/p/snm4WuuYmG ou use no menu do programa (--exercicio=4 --nivel=1 --resolucao)
 
-  - flag: --na-pratica-exercicio-4 --nivel-1 --resolucao
-    help_me: Exibe a resolução do quarto exercício prático.
-
-  - flag: --na-pratica-exercicio-5 --nivel-1
+  - level: 1
+    number: 5
     title: "Na prática - Exercício #5"
-    help_me: Apresenta o quinto exercício prático do curso.
-    outline: |
+    help_me:
+      - span: Apresenta o quinto exercício prático do curso.
+
+      - flag: --resolucao
+        span: Exibe a resolução do quinto exercício prático.
+    content: |
       - Utilizando a solução do exercício anterior:
         1. Em package-level scope, utilizando a palavra-chave var, crie uma variável com o identificador "y". O tipo desta variável deve ser o tipo subjacente do tipo que você criou no exercício anterior.
         2. Na função main:
@@ -101,20 +116,283 @@ topics:
             1. Utilize conversão para transformar o tipo do valor da variável "x" em seu tipo subjacente e, utilizando o operador "=", atribua o valor de "x" a "y"
             2. Demonstre o valor de "y"
             3. Demonstre o tipo de "y"
-      - Solução: https://play.golang.org/p/uq81T_fasP ou use no menu do programa (--na-pratica-exercicio-5 --nivel-1 --resolucao)
+      - Solução: https://play.golang.org/p/uq81T_fasP ou use no menu do programa (--exercicio=5 --nivel=1 --resolucao)
 
-  - flag: --na-pratica-exercicio-5 --nivel-1 --resolucao
-    help_me: Exibe a resolução do quinto exercício prático.
-  
-  - flag: --na-pratica-exercicio-6 --nivel-1
-    title: "Na prática - Exercício #6"
-    help_me: Apresenta o sexto exercício prático do curso.
-    outline: |
-      - Prova!
-      - Link: https://goo.gl/forms/s9y91iVSPvA4iahj1 [Link quebrado]. (Use a opção --na-pratica-exercicio-6 --nivel-1 --prova)
-      - Se você deu pausa e fez todos os exercícios anteriores você mesmo, e só viu a resposta depois...
-        e se você der pausa agora e fizer a prova inteira por conta própria, e só assistir as respostas depois...
-        sabe o que isso quer dizer? Que você é ninja. Ninja nível 1. Tá no caminho certo pra ser um developer ninja mestre.
+exam:
+  level: 1
+  title: "Na prática - Prova"
+  help_me:
+    - span: Apresenta a prova do capítulo.
 
-  - flag: --na-pratica-exercicio-6 --nivel-1 --prova
-    help_me: Exibe a prova do sexto exercício prático.
+    - flag: --resolucao
+      span: Exibe o gabarito da prova
+  content: |
+    - Prova!
+    - Link: https://goo.gl/forms/s9y91iVSPvA4iahj1 [Link quebrado]. (Use a opção --exercicio=6 --nivel=1 --prova)
+    - Se você deu pausa e fez todos os exercícios anteriores você mesmo, e só viu a resposta depois...
+      e se você der pausa agora e fizer a prova inteira por conta própria, e só assistir as respostas depois...
+      sabe o que isso quer dizer? Que você é ninja. Ninja nível 1. Tá no caminho certo pra ser um developer ninja mestre.
+  questions:
+    - text: Qual o menor elemento em um programa que expressa uma ação a ser executada?
+      options:
+        - identifer: 1
+          span: Uma declaração (Statement)
+        - identifer: 2
+          span: Uma expressão
+      right_answer: 1
+
+    - text: A combinação de um ou mais valores, constantes, variáveis, operadores e funções que a linguagem interpreta e usa para produzir outro valor é?
+      options:
+        - identifier: 1
+          span: Uma declaração (Statement)
+        - identifer: 2
+          span: Uma expressão
+      right_answer: 2
+
+    - text: Quais são parênteses?
+      options:
+        - identifier: 1
+          span: ()
+        - identifer: 2
+          span: "{}"
+        - identifer: 3
+          span: "[]"
+      right_answer: 1
+
+    - text: Quais são colchetes?
+      options:
+        - identifier: 1
+          span: ()
+        - identifer: 2
+          span: "{}"
+        - identifer: 3
+          span: "[]"
+      right_answer: 3
+
+    - text: Quais são chaves?
+      options:
+        - identifier: 1
+          span: ()
+        - identifer: 2
+          span: "{}"
+        - identifer: 3
+          span: "[]"
+      right_answer: 2
+
+    - text: A abrangência de uma variável designa onde no código você pode acessar essa variável, e atribuir ou ler valores dela
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Um tipo de dados primitivo é um tipo composto, criado a partir de outros tipos básicos que ja vem de fabrica na linguagem
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: O tipo int é um tipo de dado primitivo
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: O tipo string é um tipo de dado composto
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: Um tipo de dado composto permite que você crie estruturas formadas de outros tipos de dados
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: |
+        Quando declaramos uma variável com a palavra chave "var" e não atribuimos nenhum valor a esta variável, o compilador designa para esta um valor padrão, chamado de valor zero.
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Palavras chaves servem a propositos especificos, mas fora isso podem ser usadas livremente ao longo do programa
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: Palavra chave e palavra reservada designam coisas diferentes
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Uma palavra chave somente pode ser usada para seu proposito especifico e para declarar variaveis
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: Em 2 + 2, os numeros 2 são operadores
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: |
+        O termo "package" é uma palavra chav
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: |
+        O termo "variable" é uma palavra chave
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: O ponto de entrada para todos os programas é a função main(), que deve ficar dentro do package main
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: O operador curto de declaração pode ser usado ao invés de var em todas as situações
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: Quando vemos fmt.Println(), isto esta chamando a função Println() que pertence ao package fmt
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Identificador é o nome atribuido a uma variável, função ou constante
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Para utilizar uma função, variável ou constante de outro package utiliza-se o formato package-ponto-identificador. Por exemplo fmt.Println()
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Qual é o caracter que permite jogar fora um valor? Ou seja, qual caracter permite que voce diga ao programa que não vai utilzar o valor retornado por uma função?
+      options:
+        - identifier: 1
+          span: "#"
+        - identifer: 2
+          span: "@"
+        - identifer: 3
+          span: _
+        - identifer: 4
+          span: $
+        - identifer: 5
+          span: isso é pegadinha...
+      right_answer: 3
+
+    - text: Uma função cujo parâmetro é '... interface{}' é uma função variatica. Isso significa que você pode passar à função um número pré determinado de valores
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Todo valor em Go pertence também ao tipo interface vazia, representado pela notação interface{}
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: 2+3 é uma declaração/statement, não uma expressão
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 2
+
+    - text: 2+3 é uma expressão, não uma declaração/statement
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Se eu quiser salvar o resultado de um format printing em uma variável, posso usar a função fmt.Sprintf()
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Em Go podemos criar nossos proprios tipos?
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: |
+        Falando de tipos, em Go utilizamos o termo "coerção" diferentemente de Java, por exemplo, onde se utiliza o termo "conversão"
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1
+
+    - text: Todo tipo criado pelo programador tem um tipo subjacente
+      options:
+        - identifier: 1
+          span: Verdade
+        - identifer: 2
+          span: Mentira
+      right_answer: 1

@@ -1,9 +1,10 @@
 title: Variáveis, Valores e Tipos
-topics:
+outlines:
   - flag: --go-playground
     title: Go Playground
-    help_me: Exibe o Go Playground.
-    outline: |
+    help_me:
+      - span: Exibe o Go Playground.
+    content: |
       - É online, funciona sem instalar nem configurar nada.
       - Assim você pode começar a programar o mais rápido possível.
       - Mais pra frente no curso vou explicar direitinho como configurar tudo no seu computador.
@@ -16,8 +17,9 @@ topics:
 
   - flag: --hello-world
     title: Hello, World!
-    help_me: Exibe o Hello World.
-    outline: |
+    help_me:
+      - span: Exibe o Hello World.
+    content: |
       - Estrutura básica:
         - package main.
         - func main: é aqui que tudo começa, é aqui que tudo acaba.
@@ -33,8 +35,9 @@ topics:
 
   - flag: --operador-curto-de-declaracao
     title: Operador curto de declaração
-    help_me: Exibe o operador curto de declaração.
-    outline: |
+    help_me:
+      - span: Exibe o operador curto de declaração.
+    content: |
       - := parece uma marmota (gopher) ou o punisher.
       - Uso:
         - Tipagem automática
@@ -51,11 +54,12 @@ topics:
       - Lição principal:
         - := utilizado pra criar novas variáveis, dentro de code blocks
         - = para atribuir valores a variáveis já existentes
-  
+
   - flag: --a-palavra-reservada-var
     title: A palavra reservada var
-    help_me: Exibe a palavra reservada var.
-    outline: |
+    help_me:
+      - span: Exibe a palavra reservada var.
+    content: |
       - Variável declarada em um code block é undefined em outro
       - Para variáveis com uma abrangência maior, package level scope, utilizamos "var"
       - Funciona em qualquer lugar
@@ -63,8 +67,9 @@ topics:
 
   - flag: --explorando-tipos
     title: Explorando tipos
-    help_me: Exibe como explorar tipos.
-    outline: |
+    help_me:
+      - span: Exibe como explorar tipos.
+    content: |
       - Tipos em Go são extremamente importantes. (Veremos mais quando chegarmos em métodos e interfaces.)
       - Tipos em Go são estáticos.
       - Ao declarar uma variável para conter valores de um certo tipo, essa variável só poderá conter valores desse tipo.
@@ -83,8 +88,9 @@ topics:
 
   - flag: --valor-zero
     title: Valor zero
-    help_me: Exibe o valor zero.
-    outline: |
+    help_me:
+      - span: Exibe o valor zero.
+    content: |
       - Declaração vs. inicialização vs. atribuição de valor. Variáveis: caixas postais.
       - O que é valor zero?
       - Os zeros:
@@ -98,8 +104,9 @@ topics:
 
   - flag: --o-pacote-fmt
     title: O pacote fmt
-    help_me: Exibe o pacote fmt.
-    outline: |
+    help_me:
+      - span: Exibe o pacote fmt.
+    content: |
       - Setup: strings, ints, bools.
       - Strings: interpreted string literals vs. raw string literals.
         - Rune literals.
@@ -121,8 +128,9 @@ topics:
 
   - flag: --criando-seu-proprio-tipo
     title: Criando seu próprio tipo
-    help_me: Exibe como criar seu próprio tipo.
-    outline: |
+    help_me:
+      - span: Exibe como criar seu próprio tipo.
+    content: |
       - Revisando: tipos em Go são extremamente importantes. (Veremos mais quando chegarmos em métodos e interfaces.)
       - Tem uma história que Bill Kennedy dizia que se um dia fizesse uma tattoo, ela diria "type is life."
       - Grande parte dos aspectos mais avançados de Go dependem quase que exclusivamente de tipos.
@@ -133,8 +141,9 @@ topics:
 
   - flag: --conversao-nao-coercao
     title: Conversão, não coerção
-    help_me: Exibe a conversão não coerção.
-    outline: |
+    help_me:
+      - span: Exibe a conversão não coerção.
+    content: |
       - Conversão de tipos é o que soa.
       - Em Go não se diz casting, se diz conversion.
       - a = int(b)
