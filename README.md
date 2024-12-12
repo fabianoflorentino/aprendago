@@ -434,7 +434,7 @@ Capítulo 21: Canais
   --a-expressao-comma-ok                   A expressão comma ok
   --convergencia                           Convergência
   --convergencia --example                 Convergência - Exemplo
-  --convergencia --chan-string --example   Convergência de Strings - Exemplo
+  --convergencia --example --chan-string   Convergência de Strings - Exemplo
   --divergencia                            Divergência
   --context                                Context
 
@@ -489,6 +489,8 @@ Capítulo 21: Exercícios Ninja Nível 10
 │   │   ├── examples.go
 │   │   ├── overview.yml
 │   │   └── topics.go
+│   ├── chapter
+│   │   └── chapter.go
 │   ├── concorrencia
 │   │   ├── overview.yml
 │   │   └── topics.go
@@ -557,6 +559,9 @@ Capítulo 21: Exercícios Ninja Nível 10
 │   ├── structs
 │   │   ├── overview.yml
 │   │   └── topics.go
+│   ├── tratamento_de_erro
+│   │   ├── overview.yml
+│   │   └── topics.go
 │   ├── variaveis_valores_tipos
 │   │   ├── overview.yml
 │   │   └── topics.go
@@ -579,7 +584,8 @@ Capítulo 21: Exercícios Ninja Nível 10
 │       └── overview.go
 └── tree.log
 
-35 directories, 82 files
+37 directories, 85 files
+
 ```
 
 ## Documentação Técnica
