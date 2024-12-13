@@ -22,6 +22,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/ponteiros"
 	"github.com/fabianoflorentino/aprendago/internal/seu_ambiente_de_desenvolvimento"
 	"github.com/fabianoflorentino/aprendago/internal/structs"
+	"github.com/fabianoflorentino/aprendago/internal/tratamento_de_erro"
 	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
 	"github.com/fabianoflorentino/aprendago/pkg/format"
@@ -51,6 +52,7 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 		{Options: "--cap=20 --overview", ExecFunc: func() { exercicios_ninja_nivel_9.ExerciciosNinjaNivel9() }},
 		{Options: "--cap=21 --overview", ExecFunc: func() { canais.Canais() }},
 		{Options: "--cap=22 --overview", ExecFunc: func() { exercicios_ninja_nivel_10.ExerciciosNinjaNivel10() }},
+		{Options: "--cap=23 --overview", ExecFunc: func() { tratamento_de_erro.TratamentoDeErro() }},
 	}
 }
 
@@ -78,6 +80,7 @@ func HelpMeCapituloOutline() {
 		{Flag: "--cap=20 --overview", Description: "Exercícios Ninja Nível 9"},
 		{Flag: "--cap=21 --overview", Description: "Canais"},
 		{Flag: "--cap=22 --overview", Description: "Exercícios Ninja Nível 10"},
+		{Flag: "--cap=23 --overview", Description: "Tratamento de Erro"},
 	}
 
 	fmt.Printf("\nOutline do Curso por Capítulo\n")
