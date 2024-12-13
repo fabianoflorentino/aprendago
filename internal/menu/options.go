@@ -48,6 +48,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/ponteiros"
 	"github.com/fabianoflorentino/aprendago/internal/seu_ambiente_de_desenvolvimento"
 	"github.com/fabianoflorentino/aprendago/internal/structs"
+	"github.com/fabianoflorentino/aprendago/internal/tratamento_de_erro"
 	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
 	"github.com/fabianoflorentino/aprendago/pkg/format"
@@ -90,6 +91,7 @@ func Options(args []string) {
 		exercicios_ninja_nivel_9.MenuExerciciosNinjaNivel9(args),
 		canais.MenuCanais(args),
 		exercicios_ninja_nivel_10.MenuExerciciosNinjaNivel10(args),
+		tratamento_de_erro.MenuTratamentoDeErro(args),
 	)
 }
 
