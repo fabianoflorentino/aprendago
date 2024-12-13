@@ -1,3 +1,6 @@
+// Package fluxo_de_controle provides functions and utilities to demonstrate
+// and explain control flow concepts in Go. It includes examples and explanations
+// for various control flow structures such as loops, conditionals, and logical operators.
 package fluxo_de_controle
 
 import (
@@ -6,8 +9,14 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-const rootDir = "internal/fluxo_de_controle"
+// rootDir represents the root directory path for the "fluxo_de_controle" module within the internal package.
+const (
+	rootDir = "internal/fluxo_de_controle"
+)
 
+// FluxoDeControle demonstrates various control flow constructs in Go.
+// It prints section headers and executes corresponding sections to illustrate
+// different control flow mechanisms such as loops, conditionals, and logical operators.
 func FluxoDeControle() {
 	fmt.Printf("\n\n06 - Fluxo de Controle\n")
 
@@ -24,6 +33,9 @@ func FluxoDeControle() {
 	executeSection("Operadores lógicos condicionais")
 }
 
+// MenuFluxoDeControle returns a slice of format.MenuOptions, each representing a menu option
+// for different sections of control flow topics in Go. Each menu option has an associated
+// execution function that calls executeSection with a specific section title.
 func MenuFluxoDeControle([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--entendendo-fluxo-de-controle", ExecFunc: func() { executeSection("Entendendo Fluxo de Controle") }},
@@ -40,6 +52,10 @@ func MenuFluxoDeControle([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeFluxoDeControle provides a list of help topics related to control flow in Go.
+// It includes explanations and details about various control flow concepts such as loops,
+// conditional statements, and logical operators. The function prints a formatted help
+// message to guide users through these topics.
 func HelpMeFluxoDeControle() {
 	hlp := []format.HelpMe{
 		{Flag: "--entendendo-fluxo-de-controle", Description: "Explica o conceito de fluxo de controle em Go.", Width: 0},
@@ -60,6 +76,9 @@ func HelpMeFluxoDeControle() {
 	format.PrintHelpMe(hlp)
 }
 
+// executeSection formats and processes a given section of the project.
+// It takes a section name as a string and applies the FormatSection function
+// from the format package to the specified section within the root directory.
 func executeSection(section string) {
 	format.FormatSection(rootDir, section)
 }
