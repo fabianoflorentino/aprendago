@@ -1,3 +1,8 @@
+// Package funcoes provides various examples and explanations of functions in Go.
+// It covers topics such as function syntax, slices, defer, methods, interfaces,
+// anonymous functions, function expressions, returning functions, callbacks,
+// closures, and recursion. This package is part of the "aprendago" project,
+// which aims to teach Go programming concepts.
 package funcoes
 
 import (
@@ -6,8 +11,15 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-const rootDir = "internal/funcoes"
+// rootDir represents the relative path to the internal functions directory
+// within the project. It is used to reference the location of function-related
+// files and resources.
+const (
+	rootDir = "internal/funcoes"
+)
 
+// Funcoes prints the chapter title and executes a series of sections related to functions in Go.
+// Each section is executed by calling the executeSection function with the section name as an argument.
 func Funcoes() {
 	fmt.Printf("\n\nCapítulo 12: Funções\n")
 
@@ -24,6 +36,12 @@ func Funcoes() {
 	executeSection("Recursividade")
 }
 
+// MenuFuncoes returns a slice of format.MenuOptions, each representing a menu option
+// for different sections related to Go functions. Each menu option includes an
+// option string and an associated function to execute the corresponding section.
+// The sections covered include syntax, enumerating slices, defer, methods, interfaces
+// and polymorphism, anonymous functions, functions as expressions, returning functions,
+// callbacks, closure, and recursion.
 func MenuFuncoes([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--sintaxe", ExecFunc: func() { executeSection("Síntaxe") }},
@@ -41,6 +59,11 @@ func MenuFuncoes([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeFuncoes provides a list of help topics related to functions in Go.
+// Each topic includes a flag and a description explaining various concepts
+// such as function syntax, iterating over slices, defer statement, methods,
+// interfaces and polymorphism, anonymous functions, function expressions,
+// returning functions, callbacks, closures, and recursion.
 func HelpMeFuncoes() {
 	hlp := []format.HelpMe{
 		{Flag: "--sintaxe", Description: "Sintaxe de declaração de função", Width: 0},
@@ -61,6 +84,10 @@ func HelpMeFuncoes() {
 	format.PrintHelpMe(hlp)
 }
 
+// executeSection formats and processes a given section of the project.
+// It takes a section name as a string and uses the FormatSection function
+// from the format package to apply formatting to the specified section
+// within the root directory.
 func executeSection(section string) {
 	format.FormatSection(rootDir, section)
 }
