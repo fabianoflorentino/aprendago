@@ -1,3 +1,6 @@
+// Package menu provides functionality to display help and outline information
+// for the "aprendago" application. It includes a function to show all available
+// options and detailed help for each chapter of the course.
 package menu
 
 import (
@@ -28,6 +31,8 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
 )
 
+// HEADER is a constant string that provides usage instructions for running the Go program.
+// It includes an example command and descriptions of available options such as --outline, --help, and --caps.
 const HEADER = `
 Uso: go run cmd/aprendago/main.go [opção]
 
@@ -41,8 +46,11 @@ Ajuda:
 --caps     Exibe a lista de capítulos disponíveis.
 `
 
-// ShowHelpMe exibe a lista de todas as opções disponíveis.
-// Esta função é chamada quando o usuário passa a opção --help.
+// HelpMe provides a comprehensive guide through various chapters and exercises
+// of the Go programming course. It prints the header and sequentially calls
+// helper functions for each chapter and exercise level, offering an overview
+// and detailed explanations of variables, control flow, data grouping, structs,
+// functions, pointers, concurrency, error handling, and more.
 func HelpMe() {
 	fmt.Printf("%s\n", HEADER)
 	HelpMeCapituloOptions()
