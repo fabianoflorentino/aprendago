@@ -56,6 +56,49 @@ func UsingConvergeString() {
 	}
 }
 
+// UsingDivergence demonstrates the use of channels and goroutines to perform concurrent processing.
+// It creates two channels: one for sending integers and another for receiving processed integers.
+// A goroutine is started to send integers to the sendChan channel, and another goroutine is started
+// to receive integers from sendChan, process them, and send the results to receiveChan.
+// The function then iterates over the values received from receiveChan and prints them.
+func UsingDivergence() {
+	// Create channels for sending and receiving integers.
+	sendChan := make(chan int)
+	receiveChan := make(chan int)
+
+	// Start a goroutine to send integers to the sendChan channel.
+	go sendToDivergence(10, sendChan)
+
+	// Start a goroutine to receive integers from sendChan, process them, and send the results to receiveChan.
+	go receiveFromDivergence(sendChan, receiveChan)
+
+	// Iterate over the values received from receiveChan and print them.
+	for value := range receiveChan {
+		fmt.Printf("Received: %d\n", value)
+	}
+}
+
+// UsingDivergenceWithFunc demonstrates the use of channels and goroutines to perform concurrent processing with multiple goroutines.
+// It creates two channels: one for sending integers and another for receiving processed integers.
+// Multiple goroutines are started to process the integers concurrently and send the results to the receiveChan channel.
+// The function then iterates over the values received from receiveChan and prints them.
+func UsingDivergenceWithFunc() {
+	// Create channels for sending and receiving integers.
+	sendChan := make(chan int)
+	receiveChan := make(chan int)
+
+	// Start multiple goroutines to process integers concurrently.
+	go receiveFromDivergenceWithFunc(5, sendChan, receiveChan)
+
+	// Send integers to the sendChan channel.
+	go sendToDivergence(100, sendChan)
+
+	// Iterate over the values received from receiveChan and print them.
+	for value := range receiveChan {
+		fmt.Printf("Received: %d\n", value)
+	}
+}
+
 // sentToConverge sends numbers from 0 to 99 to either the odd or even channel.
 // If the number is even, it is sent to the even channel; otherwise, it is sent to the odd channel.
 // After sending all numbers, both channels are closed.
@@ -132,4 +175,72 @@ func receiveChanStringToConverge(chan1, chan2 chan string) chan string {
 	}()
 
 	return newChan
+}
+
+// sendToDivergence sends a sequence of integers from 0 to number-1 to the provided channel.
+// It iterates from 0 to the specified number and sends each integer to the channel.
+//
+// Parameters:
+//   - number: The number of integers to send to the channel.
+//   - chann: The channel to which the integers will be sent.
+func sendToDivergence(number int, chann chan int) {
+	for idx := 0; idx < number; idx++ {
+		chann <- idx
+	}
+	close(chann)
+}
+
+// receiveFromDivergence reads integers from chann1, processes each integer
+// using the timeToDivergence function in a separate goroutine, and sends
+// the result to chann2. The function continues to read from chann1 until it
+// is closed.
+func receiveFromDivergence(chann1, chann2 chan int) {
+	for value := range chann1 {
+		wg.Add(1)
+		go func(newValue int) {
+			chann2 <- timeToDivergence(newValue)
+			wg.Done()
+		}(value)
+	}
+
+	wg.Wait()
+	close(chann2)
+}
+
+// timeToDivergence simulates work by sleeping for a random duration up to 1 second
+// and then returns the provided number. This function can be used to mimic
+// processing time or delays in concurrent operations.
+//
+// Parameters:
+//   - number: an integer that will be returned after the simulated work.
+//
+// Returns:
+//   - int: the same integer that was passed as an argument.
+func timeToDivergence(number int) int {
+	time.Sleep(time.Millisecond * 1000)
+
+	return number
+}
+
+// receiveFromDivergenceWithFunc concurrently processes values from chann1 and sends the results to chann2.
+// It starts 'funcc' number of goroutines that read from chann1 and send the processed values to chann2.
+// Additionally, it processes remaining values from chann1 in the main goroutine and waits for all goroutines to finish before closing chann2.
+//
+// Parameters:
+// - funcc: the number of goroutines to start for processing values.
+// - chann1: the input channel from which values are read.
+// - chann2: the output channel to which processed values are sent.
+func receiveFromDivergenceWithFunc(funcc int, chann1, chann2 chan int) {
+	for idx := 0; idx < funcc; idx++ {
+		wg.Add(1)
+		go func() {
+			for value := range chann1 {
+				chann2 <- timeToDivergence(value)
+			}
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+	close(chann2)
 }
