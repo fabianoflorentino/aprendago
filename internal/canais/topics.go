@@ -57,6 +57,8 @@ func MenuCanais([]string) []format.MenuOptions {
 		{Options: "--convergencia --example", ExecFunc: func() { UsingConverge() }},
 		{Options: "--convergencia --example --chan-string", ExecFunc: func() { UsingConvergeString() }},
 		{Options: "--divergencia", ExecFunc: func() { executeSection("Divergência") }},
+		{Options: "--divergencia --example", ExecFunc: func() { UsingDivergence() }},
+		{Options: "--divergencia --example --with-func", ExecFunc: func() { UsingDivergenceWithFunc() }},
 		{Options: "--context", ExecFunc: func() { executeSection("Context") }},
 	}
 }
@@ -78,6 +80,8 @@ func HelpMeCanais() {
 		{Flag: "--convergencia --example", Description: "Convergência - Exemplo"},
 		{Flag: "--convergencia --example --chan-string", Description: "Convergência de Strings - Exemplo"},
 		{Flag: "--divergencia", Description: "Divergência"},
+		{Flag: "--divergencia --example", Description: "Divergência - Exemplo"},
+		{Flag: "--divergencia --example --with-func", Description: "Divergência - Exemplo com Função"},
 		{Flag: "--context", Description: "Context"},
 	}
 
