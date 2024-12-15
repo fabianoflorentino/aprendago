@@ -1,3 +1,8 @@
+// Package seu_ambiente_de_desenvolvimento provides functionalities to display and manage
+// information related to the development environment setup. It includes sections on
+// terminal usage, Go workspace and environment variables, IDEs, Go commands, GitHub
+// repositories, cross-compilation, and packages. The package offers functions to display
+// these sections, generate menu options, and provide help descriptions for each section.
 package seu_ambiente_de_desenvolvimento
 
 import (
@@ -6,8 +11,15 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-var rootDir = "internal/seu_ambiente_de_desenvolvimento"
+// rootDir represents the root directory path for the development environment configuration files.
+const (
+	rootDir = "internal/seu_ambiente_de_desenvolvimento"
+)
 
+// SeuAmbienteDeDesenvolvimento prints the title of Chapter 19 and executes a series of sections
+// related to setting up and understanding your development environment in Go. The sections include
+// topics such as using the terminal, Go workspace and environment variables, IDEs, Go commands,
+// GitHub repositories, exploring GitHub, cross-compilation, and packages.
 func SeuAmbienteDeDesenvolvimento() {
 	fmt.Print("\n\nCapítulo 19: Seu Ambiente de Desenvolvimento\n")
 
@@ -21,6 +33,12 @@ func SeuAmbienteDeDesenvolvimento() {
 	executeSection("Pacotes")
 }
 
+// MenuSeuAmbienteDeDesenvolvimento returns a slice of format.MenuOptions,
+// each representing a different development environment topic with an associated
+// execution function. The options include topics such as terminal usage, Go workspace
+// and environment variables, IDEs, Go commands, GitHub repositories, exploring GitHub,
+// cross-compilation, and packages. Each option is linked to a function that executes
+// the corresponding section.
 func MenuSeuAmbienteDeDesenvolvimento([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--o-terminal", ExecFunc: func() { executeSection("O terminal") }},
@@ -34,6 +52,10 @@ func MenuSeuAmbienteDeDesenvolvimento([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeSeuAmbienteDeDesenvolvimento provides a list of help topics related to the development environment.
+// It includes information about the terminal, Go workspace environment variables, IDEs, Go commands,
+// GitHub repositories, exploring GitHub, cross-compilation, and packages.
+// The function prints the chapter title and then displays the help topics using the format.PrintHelpMe function.
 func HelpMeSeuAmbienteDeDesenvolvimento() {
 	hlp := []format.HelpMe{
 		{Flag: "--o-terminal", Description: "Exibe informações sobre o terminal."},
@@ -50,6 +72,10 @@ func HelpMeSeuAmbienteDeDesenvolvimento() {
 	format.PrintHelpMe(hlp)
 }
 
+// executeSection formats and processes a given section of the project.
+// It takes a section name as a string parameter and uses the FormatSection
+// function from the format package to format the specified section within
+// the root directory.
 func executeSection(section string) {
 	format.FormatSection(rootDir, section)
 }
