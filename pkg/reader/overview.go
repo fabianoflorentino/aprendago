@@ -1,12 +1,7 @@
-/*
-Description: This file contains the functions to read the overview file.
-The overview file is a YAML file that contains the description of the overview.
-The overview file can be either overview.yml or overview.yaml.
-The overview file contains the name of the overview and the sections of the overview.
-Each section contains a title and a text.
-The functions in this file read the overview file and return the document of the overview.
-*/
-
+// Package reader provides functionality to read and parse overview files in YAML format.
+// The overview files contain descriptions and sections, each with a title and text.
+// This package includes functions to read the entire overview document or specific sections by title.
+// The overview file can be named either overview.yml or overview.yaml.
 package reader
 
 import (
@@ -17,7 +12,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// Constants for the overview file
+// DOCTOREAD_YML represents the filename for the overview document in YAML format with the .yml extension.
 const (
 	DOCTOREAD_YML  = "overview.yml"
 	DOCTOREAD_YAML = "overview.yaml"

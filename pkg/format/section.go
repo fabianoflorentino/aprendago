@@ -1,6 +1,4 @@
-/*
-Package format provides methods to format a document or a section of a document
-*/
+// Package format provides methods to format a document or a section of a document
 package format
 
 import (

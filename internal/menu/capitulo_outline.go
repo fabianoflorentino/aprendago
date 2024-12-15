@@ -1,3 +1,6 @@
+// Package menu provides functionality to display and handle the menu options
+// for different chapters of the "aprendago" course. It includes functions to
+// generate menu options and display help information for each chapter.
 package menu
 
 import (
@@ -28,6 +31,10 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
+// MenuCapituloOutline returns a slice of format.MenuOptions, each representing
+// a chapter outline with an associated command-line option and execution function.
+// The options are structured as "--cap=<chapter_number> --overview" and the
+// corresponding ExecFunc executes a specific function related to that chapter.
 func MenuCapituloOutline([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--cap=1 --overview", ExecFunc: func() { visao_geral_do_curso.VisaoGeralDoCurso() }},
@@ -56,6 +63,9 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeCapituloOutline prints the outline of the course chapters.
+// Each chapter is represented by a flag and a description, which are stored in a slice of HelpMe structs.
+// The function then prints the course outline using the PrintHelpMe function from the format package.
 func HelpMeCapituloOutline() {
 	hlp := []format.HelpMe{
 		{Flag: "--cap=1 --overview", Description: "Visão Geral do Curso"},

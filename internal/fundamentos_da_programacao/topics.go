@@ -1,3 +1,7 @@
+// Package fundamentos_da_programacao provides fundamental concepts of programming in Go.
+// It includes various sections that cover topics such as boolean types, how computers work,
+// numeric types, overflow, string types, numeric systems, constants, iota, and bit shifting.
+// The package offers functions to display these topics, generate menu options, and provide help descriptions.
 package fundamentos_da_programacao
 
 import (
@@ -6,8 +10,16 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
-const rootDir = "internal/fundamentos_da_programacao"
+// rootDir represents the relative path to the directory containing
+// foundational programming topics within the project structure.
+const (
+	rootDir = "internal/fundamentos_da_programacao"
+)
 
+// FundamentosDaProgramacao prints the title "Fundamentos da Programação" and
+// executes a series of sections related to fundamental programming concepts.
+// Each section is executed by calling the executeSection function with a
+// specific topic name as an argument.
 func FundamentosDaProgramacao() {
 	fmt.Print("\n\n04 - Fundamentos da Programação\n")
 
@@ -22,6 +34,10 @@ func FundamentosDaProgramacao() {
 	executeSection("Deslocamento de bits")
 }
 
+// MenuFundamentosDaProgramcao returns a slice of format.MenuOptions, each representing
+// a different topic in the "Fundamentos da Programação" (Programming Fundamentals) section.
+// Each menu option has an associated execution function that calls executeSection with
+// the corresponding topic name.
 func MenuFundamentosDaProgramcao([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--tipo-booleano", ExecFunc: func() { executeSection("Tipo booleano") }},
@@ -36,6 +52,8 @@ func MenuFundamentosDaProgramcao([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeFundamentosDaProgramacao provides a list of topics related to the fundamentals of programming in Go.
+// Each topic is represented by a flag and a description, which explains the concept in detail.
 func HelpMeFundamentosDaProgramacao() {
 	hlp := []format.HelpMe{
 		{Flag: "--tipo-booleano", Description: "Explora o tipo de dados booleano em Go.", Width: 0},
@@ -53,6 +71,10 @@ func HelpMeFundamentosDaProgramacao() {
 	format.PrintHelpMe(hlp)
 }
 
+// executeSection formats and processes a given section of the documentation.
+// It takes a section name as a string and uses the FormatSection function
+// from the format package to apply the necessary formatting to the section
+// located in the root directory.
 func executeSection(section string) {
 	format.FormatSection(rootDir, section)
 }

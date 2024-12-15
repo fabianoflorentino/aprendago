@@ -1,3 +1,5 @@
+// Package menu provides functionality to display and handle menu options for different chapters of a Go programming course.
+// It includes functions to generate menu options and display help information for each chapter.
 package menu
 
 import (
@@ -29,6 +31,8 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
+// MenuCapituloOptions returns a slice of format.MenuOptions, each representing a chapter option with associated topics and execution functions.
+// The options are structured with a specific format "--cap=<chapter_number> --topics" and each option has an ExecFunc that calls a corresponding help function.
 func MenuCapituloOptions([]string) []format.MenuOptions {
 	return []format.MenuOptions{
 		{Options: "--cap=1 --topics", ExecFunc: func() { visao_geral_do_curso.HelpMeVisaoGeralDoCurso() }},
@@ -57,6 +61,11 @@ func MenuCapituloOptions([]string) []format.MenuOptions {
 	}
 }
 
+// HelpMeCapituloOptions prints a list of course chapters and their descriptions.
+// Each chapter is represented by a flag and a description, which are printed
+// in a formatted manner to the console. This function is useful for providing
+// an overview of the course content and helping users navigate through different
+// topics and exercises.
 func HelpMeCapituloOptions() {
 	hlp := []format.HelpMe{
 		{Flag: "--cap=1 --topics", Description: "Visão Geral do Curso"},

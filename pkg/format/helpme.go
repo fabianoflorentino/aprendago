@@ -1,3 +1,6 @@
+// Package format provides utilities for formatting help messages for command-line applications.
+// It includes functionality to format flags and their descriptions in a uniform manner,
+// ensuring that the output is neatly aligned and easy to read.
 package format
 
 import (
@@ -7,28 +10,38 @@ import (
 	"strings"
 )
 
-// Template para formatar a saída de ajuda. O modelo usa a função printf para formatar a saída.
+// templateHelpMe is a Go template that iterates over a collection of items,
+// formatting each item with a flag and its corresponding description. The flag
+// is left-aligned with a specified width, and the description is indented by
+// the same width. This template is useful for generating formatted help or
+// usage messages where flags and their descriptions need to be aligned neatly.
 var templateHelpMe = `
 {{- range .}}
   {{ printf "%-*s" .Width .Flag }}   {{ .Description | indent .Width}}
 {{- end }}
 `
 
-// HelpMe é uma estrutura que representa uma opção de ajuda.
+// HelpMe represents a structure that holds information about a command-line flag.
+// It includes the flag name, a description of the flag, and the width for formatting purposes.
 type HelpMe struct {
 	Flag        string
 	Description string
 	Width       int
 }
 
-// parseWidth é uma função que calcula o tamanho máximo de uma flag. O tamanho máximo é usado para formatar a saída de ajuda.
+// parseWidth takes a slice of HelpMe structs and returns the length of the longest
+// flag string within the slice. It iterates through each HelpMe struct, trims any
+// leading or trailing whitespace from the flag string, and updates the maximum
+// width if the current flag string is longer than the previously recorded maximum width.
 func parseWidth(flags []HelpMe) int {
 	maxWidth := 0
 
-	// O loop for percorre a lista de flags e verifica o tamanho de cada flag.
-	// Se o tamanho da flag for maior que o tamanho máximo, o tamanho máximo é atualizado.
 	for _, flag := range flags {
+		// Trim leading and trailing whitespace from the flag.Flag string
 		flag.Flag = strings.TrimSpace(flag.Flag)
+
+		// Check if the length of the flag.Flag string is greater than maxWidth
+		// If it is, update maxWidth with the new length
 		if len(flag.Flag) > maxWidth {
 			maxWidth = len(flag.Flag)
 		}
@@ -37,8 +50,18 @@ func parseWidth(flags []HelpMe) int {
 	return maxWidth
 }
 
-// indent adiciona um recuo à frente de cada linha de uma string.
-// O recuo é calculado com base no tamanho da flag e em um valor fixo (4).
+// indent formats a multi-line string by adding indentation to each line except the first one.
+// The indentation is calculated based on the provided width and a fixed flag width of 4 spaces.
+// It trims any leading or trailing whitespace from the input description before processing.
+// If the description contains only one line, it returns the original description without modification.
+//
+// Parameters:
+//   - width: The number of spaces to add as indentation.
+//   - description: The multi-line string to be indented.
+//
+// Returns:
+//
+//	A new string with the specified indentation applied to each line except the first one.
 func indent(width int, description string) string {
 	trimSpaceDescription := strings.TrimSpace(description)
 	flagWidth := 4
@@ -48,8 +71,8 @@ func indent(width int, description string) string {
 		return description
 	}
 
-	// O loop for percorre as linhas da descrição e adiciona um recuo à frente de cada linha.
-	// O recuo é calculado com base no tamanho da flag e em um valor fixo (4).
+	// The for loop iterates over the lines of the description and adds indentation to each line.
+	// The indentation is calculated based on the width of the flag and a fixed value (4).
 	for idx := 1; idx < len(lines); idx++ {
 		lines[idx] = strings.Repeat(" ", width+flagWidth) + lines[idx]
 	}
@@ -57,30 +80,35 @@ func indent(width int, description string) string {
 	return strings.Join(lines, "\n")
 }
 
-// PrintHelpMe é uma função que imprime a lista de opções disponíveis para o programa.
-// A função usa um template para formatar a saída de ajuda de maneira uniforme.
+// PrintHelpMe formats and prints a slice of HelpMe structs using a predefined template.
+// It first calculates the width for each HelpMe item, then sets up a template with custom functions
+// for formatting. The template is parsed and executed, rendering the formatted output to os.Stdout.
+//
+// Parameters:
+//
+//	helpme []HelpMe - A slice of HelpMe structs to be formatted and printed.
 func PrintHelpMe(helpme []HelpMe) {
 	width := parseWidth(helpme)
 	for i := range helpme {
 		helpme[i].Width = width
 	}
 
-	// funcMap é um mapa de funções que podem ser usadas no template.
-	// Neste caso, estamos usando a função printf do pacote fmt para formatar a saída.
+	// funcMap is a map of functions that can be used in the template.
+	// In this case, we are using the printf function from the fmt package to format the output.
 	funcMap := template.FuncMap{
 		"printf": fmt.Sprintf,
 		"indent": indent,
 	}
 
-	// tmpl é um objeto de template que contém o modelo de saída de ajuda.
-	// O modelo é uma string que contém a formatação da saída de ajuda.
+	// tmpl is a template object that contains the help output template.
+	// The template is a string that contains the formatting for the help output.
 	tmpl, err := template.New("helpme").Funcs(funcMap).Parse(templateHelpMe)
 	if err != nil {
 		panic(err)
 	}
 
-	// A função Execute é usada para renderizar o modelo e imprimir a saída formatada.
-	// O primeiro argumento é o destino da saída (os.Stdout) e o segundo argumento é o modelo de dados (HELPME).
+	// The Execute function is used to render the template and print the formatted output.
+	// The first argument is the output destination (os.Stdout) and the second argument is the data model (helpme).
 	err = tmpl.Execute(os.Stdout, helpme)
 	if err != nil {
 		panic(err)
