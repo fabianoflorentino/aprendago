@@ -11,7 +11,7 @@ const (
 )
 
 func ExerciciosNinjaNivel10() {
-	fmt.Printf("\n\nCapítulo 21: Exercícios Ninja Nível 10\n")
+	fmt.Printf("\n\nCapítulo 22: Exercícios Ninja Nível 10\n")
 
 	executeSection("Na prática: Exercício #1")
 	executeSection("Na prática: Exercício #2")
@@ -59,7 +59,7 @@ func HelpMeExerciciosNinjaNivel10() {
 		{Flag: "--na-pratica-exercicio-7 --nivel-10 --resolucao", Description: "Exibe a resolução do Exercício #7"},
 	}
 
-	fmt.Printf("\n\nCapítulo 21: Exercícios Ninja Nível 10\n")
+	fmt.Printf("\n\nCapítulo 22: Exercícios Ninja Nível 10\n")
 	format.PrintHelpMe(help)
 }
 
