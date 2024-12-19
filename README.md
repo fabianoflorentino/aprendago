@@ -79,6 +79,9 @@ Capítulos do Curso
   --cap=19 --topics   Seu Ambiente de Desenvolvimento
   --cap=20 --topics   Exercícios Ninja: Nível 9
   --cap=21 --topics   Canais
+  --cap=22 --topics   Exercícios Ninja: Nível 10
+  --cap=23 --topics   Tratamento de Erro
+  --cap=24 --topics   Exercícios Ninja: Nível 11
 ```
 
 ### Ajuda
