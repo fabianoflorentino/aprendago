@@ -93,6 +93,7 @@ func HelpMeCapituloOutline() {
 		{Flag: "--cap=21 --overview", Description: "Canais"},
 		{Flag: "--cap=22 --overview", Description: "Exercícios Ninja Nível 10"},
 		{Flag: "--cap=23 --overview", Description: "Tratamento de Erro"},
+		{Flag: "--cap=24 --overview", Description: "Exercícios Ninja Nível 11"},
 	}
 
 	fmt.Printf("\nOutline do Curso por Capítulo\n")
