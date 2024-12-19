@@ -126,6 +126,8 @@ Capítulos do Curso
   --cap=20 --topics   Exercícios Ninja: Nível 9
   --cap=21 --topics   Canais
   --cap=22 --topics   Exercícios Ninja: Nível 10
+  --cap=23 --topics   Tratamento de Erro
+  --cap=24 --topics   Exercícios Ninja: Nível 11
 
 Outline do Curso por Capítulo
 
@@ -151,6 +153,7 @@ Outline do Curso por Capítulo
   --cap=20 --overview   Exercícios Ninja Nível 9
   --cap=21 --overview   Canais
   --cap=22 --overview   Exercícios Ninja Nível 10
+  --cap=23 --overview   Tratamento de Erro
 
 Capítulo 1: Visão Geral do Curso
 
@@ -436,10 +439,12 @@ Capítulo 21: Canais
   --convergencia --example                 Convergência - Exemplo
   --convergencia --example --chan-string   Convergência de Strings - Exemplo
   --divergencia                            Divergência
+  --divergencia --example                  Divergência - Exemplo
+  --divergencia --example --with-func      Divergência - Exemplo com Função
   --context                                Context
 
 
-Capítulo 21: Exercícios Ninja Nível 10
+Capítulo 22: Exercícios Ninja Nível 10
 
   --na-pratica-exercicio-1 --nivel-10               Exibe a descrição do Exercício #1
   --na-pratica-exercicio-1 --nivel-10 --resolucao   Exibe a resolução do Exercício #1
@@ -455,6 +460,27 @@ Capítulo 21: Exercícios Ninja Nível 10
   --na-pratica-exercicio-6 --nivel-10 --resolucao   Exibe a resolução do Exercício #6
   --na-pratica-exercicio-7 --nivel-10               Exibe a descrição do Exercício #7
   --na-pratica-exercicio-7 --nivel-10 --resolucao   Exibe a resolução do Exercício #7
+
+Capítulo 23: Tratamento de Erro
+
+  --entendendo-erro                    Entendendo erros
+  --verificando-erros                  Verificando erros
+  --print-log                          Print &amp; log
+  --recover                            Recover
+  --erros-com-informacoes-adicionais   Erros com informações adicionais
+
+Capítulo 24: Exercicios Ninja Nível 11
+
+  --na-pratica-exercicio-1 --nivel-11               Apresenta o primeiro exercício prático do curso.
+  --na-pratica-exercicio-1 --nivel-11 --resolucao   Exibe a resolução do primeiro exercício prático.
+  --na-pratica-exercicio-2 --nivel-11               Apresenta o segundo exercício prático do curso.
+  --na-pratica-exercicio-2 --nivel-11 --resolucao   Exibe a resolução do segundo exercício prático.
+  --na-pratica-exercicio-3 --nivel-11               Apresenta o terceiro exercício prático do curso.
+  --na-pratica-exercicio-3 --nivel-11 --resolucao   Exibe a resolução do terceiro exercício prático.
+  --na-pratica-exercicio-4 --nivel-11               Apresenta o quarto exercício prático do curso.
+  --na-pratica-exercicio-4 --nivel-11 --resolucao   Exibe a resolução do quarto exercício prático.
+  --na-pratica-exercicio-5 --nivel-11               Apresenta o quinto exercício prático do curso.
+  --na-pratica-exercicio-5 --nivel-11 --resolucao   Exibe a resolução do quinto exercício prático.
 
 ```
 
@@ -477,6 +503,7 @@ Capítulo 21: Exercícios Ninja Nível 10
 │   └── questionarie.md
 ├── go.mod
 ├── go.sum
+├── help.out
 ├── internal
 │   ├── agrupamento_de_dados
 │   │   ├── overview.yml
@@ -501,6 +528,11 @@ Capítulo 21: Exercícios Ninja Nível 10
 │   ├── exercicios_ninja_nivel_10
 │   │   ├── overview.yml
 │   │   ├── resolution_exercises.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_11
+│   │   ├── overview.yml
+│   │   ├── resolution_exercises.go
+│   │   ├── resolution_exercises_test.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_2
 │   │   ├── overview.yml
@@ -584,7 +616,7 @@ Capítulo 21: Exercícios Ninja Nível 10
 │       └── overview.go
 └── tree.log
 
-37 directories, 85 files
+38 directories, 90 files
 
 ```
 

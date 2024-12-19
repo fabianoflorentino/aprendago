@@ -11,6 +11,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_11"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
@@ -60,6 +61,7 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 		{Options: "--cap=21 --overview", ExecFunc: func() { canais.Canais() }},
 		{Options: "--cap=22 --overview", ExecFunc: func() { exercicios_ninja_nivel_10.ExerciciosNinjaNivel10() }},
 		{Options: "--cap=23 --overview", ExecFunc: func() { tratamento_de_erro.TratamentoDeErro() }},
+		{Options: "--cap=24 --overview", ExecFunc: func() { exercicios_ninja_nivel_11.ExerciciosNinjaNivel11() }},
 	}
 }
 
