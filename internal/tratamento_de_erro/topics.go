@@ -22,7 +22,7 @@ const (
 // - Recover
 // - Errors with additional information
 func TratamentoDeErro() {
-	fmt.Print("\n\nCapítulo 23 - Tratamento de Erro\n")
+	fmt.Printf("\n\nCapítulo 23: Tratamento de Erro\n")
 
 	executeSection("Entendendo erros")
 	executeSection("Verificando erros")
