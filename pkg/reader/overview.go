@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 
 	"github.com/fabianoflorentino/aprendago/pkg/logger"
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 )
 
 // DOCTOREAD_YML represents the filename for the overview document in YAML format with the .yml extension.
