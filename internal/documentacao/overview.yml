@@ -4,3 +4,53 @@ description:
   section:
     - title: Introdução
       text: |
+        - Antes de escrever documentação, vamos ver como lê-la. Temos algumas possibilidades:
+            - golang.org → documentação da standard library
+            - godoc.org → documentação da standard library e outros
+            - go doc → comando para ler documentação na linha de comando
+            - godoc → idem acima, para pode-se servir a documentação local via http
+
+    - title: go doc
+      text: |
+        - go help doc
+        - go doc demonstra a documentação de um package, const, func, type, var, método, etc.
+        - go doc aceita zero, um, ou dois argumentos:
+            - zero: demonstra a documentação do package do diretório atual
+            - um: toma argumentos nos padrões abaixo
+                - go doc <pkg>
+                - go doc <sym>[.<method>]
+                - go doc [<pkg>.]<sym>[.<method>]
+                - go doc [<pkg>.][<sym>.]<method>
+            - dois: o primeiro argumento deve ser o nome do package
+                - go doc <pkg> <sym>[.<method>]
+
+    - title: godoc
+      text: |
+        - godoc extrai e gera documentação de programas em Go. Funciona de duas maneiras:
+          - Sem o flag http é um comando normal, mostra a documentação no stdout e é isso aí. Pode conter o flag src, que mostra o código fonte.
+          - Com o flag http roda um servidor web local e mostra a documentação como página web.
+        - Exemplo: godoc -http=:8080 → http://localhost:8080/
+
+    - title: https://pkg.go.dev/
+      text: |
+        - Documentação da standard library e outros
+        - Como colocar a documentação do seu package no godoc.org
+        - refresh, delete
+
+    - title: Escrevendo documentação
+      text: |
+        - Documentação é uma parte extremamente importante de fazer com que software seja acessível e sustentável.
+        - Documentação deve ser bem escrita e correta, mas tambem fácil de escrever e manter.
+        - Deve ser acoplada com o código e evoluir junto com este. Quanto mais fácil for para os programadores criarem boa documentação... melhor fica pra todos os envolvidos.
+        - godoc:
+            - Analisa código fonte em Go, incluindo comentários, e gera documentação em HTML ou texto
+            - O resultado é uma documentação firmemente atrelada ao código que documenta.
+            - Por exemplo, na interface web de godoc pode-se navegar da documentação à implementação de um código com apenas um clique.
+            - https://blog.golang.org/godoc-documenting-go-code
+        - Na prática:
+            - Para documentar um tipo, uma variável, uma constante, ou um pacote, escreva um comentário imediatamente antes de sua declaração, sem linhas em branco
+            - Comece a frase com o nome do elemento. No caso de pacotes, a primeira linha aparece no "package list."
+            - Caso esteja escrevendo bastante documentação, utilize um arquivo doc.go. Exemplo: package fmt.
+        - A melhor parte dessa abordagem minimalista é que é super fácil de usar. Como resultado, muita coisa em Go, incluindo toda a standard library, já segue estas convenções.
+        - Outro exemplo: errors package.
+        - Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/25_escrevendo-documentacao
