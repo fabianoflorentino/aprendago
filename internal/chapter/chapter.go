@@ -10,6 +10,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
 	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
+	"github.com/fabianoflorentino/aprendago/internal/documentacao"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_11"
@@ -62,5 +63,6 @@ func New() []func() {
 		exercicios_ninja_nivel_10.ExerciciosNinjaNivel10,
 		tratamento_de_erro.TratamentoDeErro,
 		exercicios_ninja_nivel_11.ExerciciosNinjaNivel11,
+		documentacao.Documentacao,
 	}
 }
