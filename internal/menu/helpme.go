@@ -29,6 +29,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/ponteiros"
 	"github.com/fabianoflorentino/aprendago/internal/seu_ambiente_de_desenvolvimento"
 	"github.com/fabianoflorentino/aprendago/internal/structs"
+	"github.com/fabianoflorentino/aprendago/internal/teste_benchmarking"
 	"github.com/fabianoflorentino/aprendago/internal/tratamento_de_erro"
 	"github.com/fabianoflorentino/aprendago/internal/variaveis_valores_tipos"
 	"github.com/fabianoflorentino/aprendago/internal/visao_geral_do_curso"
@@ -84,4 +85,5 @@ func HelpMe() {
 	exercicios_ninja_nivel_11.HelpMeExerciciosNinjaNivel11()
 	documentacao.HelpMeDocumentacao()
 	exercicios_ninja_nivel_12.HelpMeExerciciosNinjaNivel12()
+	teste_benchmarking.HelpMeTesteEBenchmarking()
 }
