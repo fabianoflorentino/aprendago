@@ -33,11 +33,11 @@ func TesteEBenchmarking() {
 // MenuTesteEBenchmarking returns a slice of MenuOptions, each representing a different
 // testing and benchmarking topic. Each MenuOption contains an option string and an
 // associated function to execute the corresponding section. The available options are:
-// --introducao, --testes-em-tabelas, --testes-como-exemplo, --go-fmt-govet-golint,
+// --introducao-testes-benchmarking, --testes-em-tabelas, --testes-como-exemplo, --go-fmt-govet-golint,
 // --benchmark, and --cobertura.
 func MenuTesteEBenchmarking([]string) []format.MenuOptions {
 	return []format.MenuOptions{
-		{Options: "--introducao", ExecFunc: func() { executeSections("Introdução") }},
+		{Options: "--introducao-testes-benchmarking", ExecFunc: func() { executeSections("Introdução") }},
 		{Options: "--testes-em-tabelas", ExecFunc: func() { executeSections("Testes em tabelas") }},
 		{Options: "--testes-como-exemplo", ExecFunc: func() { executeSections("Testes como exemplo") }},
 		{Options: "--go-fmt-govet-golint", ExecFunc: func() { executeSections("go fmt, govet e golint") }},

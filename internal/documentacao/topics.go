@@ -36,7 +36,7 @@ func Documentacao() {
 // an ExecFunc that executes the corresponding section.
 func MenuDocumentacao([]string) []format.MenuOptions {
 	return []format.MenuOptions{
-		{Options: "--introducao", ExecFunc: func() { executeSections("Introdução") }},
+		{Options: "--introducao-documentacao", ExecFunc: func() { executeSections("Introdução") }},
 		{Options: "--go-doc", ExecFunc: func() { executeSections("go doc") }},
 		{Options: "--godoc", ExecFunc: func() { executeSections("godoc") }},
 		{Options: "--pkg-go-dev", ExecFunc: func() { executeSections("https://pkg.go.dev/") }},
