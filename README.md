@@ -131,6 +131,9 @@ Capítulos do Curso
   --cap=22 --topics   Exercícios Ninja: Nível 10
   --cap=23 --topics   Tratamento de Erro
   --cap=24 --topics   Exercícios Ninja: Nível 11
+  --cap=25 --topics   Documentação
+  --cap=26 --topics   Exercícios Ninja: Nível 12
+  --cap=27 --topics   Teste e Benchmarking
 
 Outline do Curso por Capítulo
 
@@ -157,6 +160,10 @@ Outline do Curso por Capítulo
   --cap=21 --overview   Canais
   --cap=22 --overview   Exercícios Ninja Nível 10
   --cap=23 --overview   Tratamento de Erro
+  --cap=24 --overview   Exercícios Ninja Nível 11
+  --cap=25 --overview   Documentação
+  --cap=26 --overview   Exercícios Ninja Nível 12
+  --cap=27 --overview   Teste e Benchmarking
 
 Capítulo 1: Visão Geral do Curso
 
@@ -485,6 +492,31 @@ Capítulo 24: Exercicios Ninja Nível 11
   --na-pratica-exercicio-5 --nivel-11               Apresenta o quinto exercício prático do curso.
   --na-pratica-exercicio-5 --nivel-11 --resolucao   Exibe a resolução do quinto exercício prático.
 
+Capítulo 25: Documentação
+  --introducao                Introdução
+  --go-doc                    go doc
+  --godoc                     godoc
+  --pkg-go-dev                https://pkg.go.dev/
+  --escrevendo-documentacao   Escrevendo documentação
+
+Capítulo 26: Exercicios Ninja Nível 12
+
+  --na-pratica-exercicio-1 --nivel-12               Apresenta o primeiro exercício prático do curso.
+  --na-pratica-exercicio-1 --nivel-12 --resolucao   Exibe a resolução do primeiro exercício prático.
+  --na-pratica-exercicio-2 --nivel-12               Apresenta o segundo exercício prático do curso.
+  --na-pratica-exercicio-2 --nivel-12 --resolucao   Exibe a resolução do segundo exercício prático.
+  --na-pratica-exercicio-3 --nivel-12               Apresenta o terceiro exercício prático do curso.
+  --na-pratica-exercicio-3 --nivel-12 --resolucao   Exibe a resolução do terceiro exercício prático.
+
+Capítulo 27: Teste e Benchmarking
+
+  --introducao            Introdução
+  --testes-em-tabelas     Testes em tabelas
+  --testes-como-exemplo   Testes como exemplo
+  --go-fmt-govet-golint   go fmt, govet e golint
+  --benchmark             Benchmark
+  --cobertura             Cobertura
+
 ```
 
 ## Estrutura do Projeto
@@ -524,6 +556,9 @@ Capítulo 24: Exercicios Ninja Nível 11
 │   ├── concorrencia
 │   │   ├── overview.yml
 │   │   └── topics.go
+│   ├── documentacao
+│   │   ├── overview.yml
+│   │   └── topics.go
 │   ├── exercicios_ninja_nivel_1
 │   │   ├── overview.yml
 │   │   ├── resolution_exercises.go
@@ -536,6 +571,10 @@ Capítulo 24: Exercicios Ninja Nível 11
 │   │   ├── overview.yml
 │   │   ├── resolution_exercises.go
 │   │   ├── resolution_exercises_test.go
+│   │   └── topics.go
+│   ├── exercicios_ninja_nivel_12
+│   │   ├── overview.yml
+│   │   ├── resolution_exercises.go
 │   │   └── topics.go
 │   ├── exercicios_ninja_nivel_2
 │   │   ├── overview.yml
@@ -594,6 +633,9 @@ Capítulo 24: Exercicios Ninja Nível 11
 │   ├── structs
 │   │   ├── overview.yml
 │   │   └── topics.go
+│   ├── teste_benchmarking
+│   │   ├── overview.yml
+│   │   └── topics.go
 │   ├── tratamento_de_erro
 │   │   ├── overview.yml
 │   │   └── topics.go
@@ -619,13 +661,9 @@ Capítulo 24: Exercicios Ninja Nível 11
 │       └── overview.go
 └── tree.log
 
-38 directories, 90 files
+41 directories, 97 files
 
 ```
-
-## Documentação Técnica
-
-[`pkg/format/questionnaire.go`](docs/questionarie.md)
 
 ## Licença
 

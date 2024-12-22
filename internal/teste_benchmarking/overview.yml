@@ -1,0 +1,63 @@
+---
+description:
+  name: "Capítulo 27: Teste de Benchmarking"
+  sections:
+    - title: "Introdução"
+      text: |
+        - Testes devem:
+          - ficar num arquivo cuja terminação seja _test.go
+          - ficar na mesma package que o código a ser testado
+          - ficar em funções com nome "func TestNome(*testing.T)"
+        - Para rodar os testes:
+          - go test
+          - go test -v
+        - Para falhas, utilizamos t.Error(), onde a maneira idiomática é algo do tipo "expected: x. got: y."
+        - Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/27_testes-e-benchmarking/01_introducao
+
+    - title: Testes em tabelas
+      text: |
+        - Podemos escrever testes em série para testar variedades de situações.
+        - Exemplo:
+          - struct test, fields: data []int, answer int
+          - tests := []test{[]int{}, int}
+          - range tests
+
+    - title: Testes como exemplo
+      text: |
+        - Outra maneira é fazer testes como exemplos.
+        - Estes exemplos são os mesmos que aparecem na documentação.
+        - Para exemplos o formato é "func ExampleFuncao()"
+        - Deve haver um comentário "// Output: resultado", que é o que será testado
+        - Para visualizar seu exemplo na documentação, fazemos o de sempre:
+          - godoc -http :8080
+        - Tanto para testes quanto para exemplos podemos utilizar: go test ./...
+        - Mais: https://blog.golang.org/examples
+
+    - title: go fmt, govet e golint
+      text: |
+        - gofmt: formata o código
+        - go vet: correctness → procura constructs suspeitos
+        - golint: suggestions → procura coding style ruim
+
+    - title: Benchmark
+      text: |
+        - Benchmarks nos permitem testar a velocidade ou performance do nosso código.
+        - Na prática:
+          - Arquivo: _test.go
+          - BET: Testes, Exemplos e...
+          - func BenchmarkFunc (b *testing.B) { for i := 0; i < b.N; i++ { ... } }
+          - go test -bench . ← todos
+          - go test -bench Func ← somente Func
+        - go help testflag
+        - Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/27_testes-e-benchmarking/benchtest
+
+    - title: Cobertura
+      text: |
+        - "Cobertura" em se tratando de testes se refere a quanto do seu código, percentualmente, está sendo testado. (E antes que alguem fique neurótico querendo 100%: em geral, 70-80% tá ótimo.)
+        - A flag -cover faz a análise de cobertura do nosso código.
+        - Podemos utilizar a flag -coverprofile <arquivo> para salvar a análise de cobertura em um arquivo.
+        - Na prática:
+          - go test -cover
+          - go test -coverprofile c.out
+          - go tool cover -html=c.out ← abre no browser
+          - go tool cover -h ← para mais detalhes
