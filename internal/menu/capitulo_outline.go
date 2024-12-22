@@ -13,6 +13,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/documentacao"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_11"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_12"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
@@ -64,6 +65,7 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 		{Options: "--cap=23 --overview", ExecFunc: func() { tratamento_de_erro.TratamentoDeErro() }},
 		{Options: "--cap=24 --overview", ExecFunc: func() { exercicios_ninja_nivel_11.ExerciciosNinjaNivel11() }},
 		{Options: "--cap=25 --overview", ExecFunc: func() { documentacao.Documentacao() }},
+		{Options: "--cap=26 --overview", ExecFunc: func() { exercicios_ninja_nivel_12.ExerciciosNinjaNivel12() }},
 	}
 }
 
@@ -97,6 +99,7 @@ func HelpMeCapituloOutline() {
 		{Flag: "--cap=23 --overview", Description: "Tratamento de Erro"},
 		{Flag: "--cap=24 --overview", Description: "Exercícios Ninja Nível 11"},
 		{Flag: "--cap=25 --overview", Description: "Documentação"},
+		{Flag: "--cap=26 --overview", Description: "Exercícios Ninja Nível 12"},
 	}
 
 	fmt.Printf("\nOutline do Curso por Capítulo\n")

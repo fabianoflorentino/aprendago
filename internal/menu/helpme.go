@@ -14,6 +14,7 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_11"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_12"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
@@ -82,4 +83,5 @@ func HelpMe() {
 	tratamento_de_erro.HelpMeTratamentoDeErro()
 	exercicios_ninja_nivel_11.HelpMeExerciciosNinjaNivel11()
 	documentacao.HelpMeDocumentacao()
+	exercicios_ninja_nivel_12.HelpMeExerciciosNinjaNivel12()
 }
