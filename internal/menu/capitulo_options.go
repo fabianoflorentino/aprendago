@@ -9,9 +9,11 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/aplicacoes"
 	"github.com/fabianoflorentino/aprendago/internal/canais"
 	"github.com/fabianoflorentino/aprendago/internal/concorrencia"
+	"github.com/fabianoflorentino/aprendago/internal/documentacao"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_1"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_10"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_11"
+	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_12"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_2"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_3"
 	"github.com/fabianoflorentino/aprendago/internal/exercicios_ninja_nivel_4"
@@ -60,6 +62,8 @@ func MenuCapituloOptions([]string) []format.MenuOptions {
 		{Options: "--cap=22 --topics", ExecFunc: func() { exercicios_ninja_nivel_10.HelpMeExerciciosNinjaNivel10() }},
 		{Options: "--cap=23 --topics", ExecFunc: func() { tratamento_de_erro.HelpMeTratamentoDeErro() }},
 		{Options: "--cap=24 --topics", ExecFunc: func() { exercicios_ninja_nivel_11.HelpMeExerciciosNinjaNivel11() }},
+		{Options: "--cap=25 --topics", ExecFunc: func() { documentacao.HelpMeDocumentacao() }},
+		{Options: "--cap=26 --topics", ExecFunc: func() { exercicios_ninja_nivel_12.HelpMeExerciciosNinjaNivel12() }},
 	}
 }
 
@@ -94,6 +98,8 @@ func HelpMeCapituloOptions() {
 		{Flag: "--cap=22 --topics", Description: "Exercícios Ninja: Nível 10"},
 		{Flag: "--cap=23 --topics", Description: "Tratamento de Erro"},
 		{Flag: "--cap=24 --topics", Description: "Exercícios Ninja: Nível 11"},
+		{Flag: "--cap=25 --topics", Description: "Documentação"},
+		{Flag: "--cap=26 --topics", Description: "Exercícios Ninja: Nível 12"},
 	}
 
 	fmt.Println("Capítulos do Curso")
