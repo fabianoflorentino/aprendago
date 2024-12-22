@@ -1,8 +1,8 @@
 ---
 description:
   name: "Capítulo 25: Documentação"
-  section:
-    - title: Introdução
+  sections:
+    - title: "Introdução"
       text: |
         - Antes de escrever documentação, vamos ver como lê-la. Temos algumas possibilidades:
             - golang.org → documentação da standard library
