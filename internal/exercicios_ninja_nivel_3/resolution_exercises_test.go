@@ -5,7 +5,9 @@ package exercicios_ninja_nivel_3
 
 import (
 	"fmt"
+	"strings"
 	"testing"
+	"time"
 )
 
 // TestResolucaoNaPraticaExercicio1 tests the functionality of a loop that
@@ -72,5 +74,35 @@ func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 
 	if result != expect {
 		t.Errorf("\ngot %v\nwant %v", result, expect)
+	}
+}
+
+// TestResolucaoExercicioNaPratica3 is a test function that calculates and prints the years from a given birth year (1985) to the current year.
+// It also calculates the age based on the current year and compares the result with an expected string.
+// If the calculated age string does not match the expected string, it prints the actual and expected values.
+func TestResolucaoExercicioNaPratica3(t *testing.T) {
+	var yearsCount string
+	var birthYear int = 1985
+
+	currentYear := time.Now().Year()
+
+	for year := birthYear; year <= currentYear; year++ {
+		if year == currentYear {
+			yearsCount += fmt.Sprintf("%d\n", year)
+		} else {
+			yearsCount += fmt.Sprintf("%d, ", year)
+		}
+	}
+
+	age := fmt.Sprintf("%v\nSua idade: %v", yearsCount, currentYear-birthYear)
+
+	expect := `
+1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+
+Sua idade: 39
+`
+
+	if strings.TrimSpace(age) != strings.TrimSpace(expect) {
+		t.Errorf("got\n%v\nwant\n%v", age, expect)
 	}
 }
