@@ -106,3 +106,35 @@ Sua idade: 39
 		t.Errorf("got\n%v\nwant\n%v", age, expect)
 	}
 }
+
+// TestResolucaoExercicioNaPratica4 tests the functionality of generating a string
+// that lists all years from a given birth year (1985) up to the current year,
+// followed by the calculated age based on the current year. It compares the
+// generated string with an expected string to ensure correctness.
+func TestResolucaoExercicioNaPratica4(t *testing.T) {
+	var yearsCount string
+	var birthYear int = 1985
+
+	currentYear := time.Now().Year()
+
+	for {
+		if birthYear >= currentYear {
+			yearsCount += fmt.Sprintf("%d", birthYear)
+			break
+		} else {
+			yearsCount += fmt.Sprintf("%d, ", birthYear)
+			birthYear++
+		}
+	}
+
+	age := fmt.Sprintf("%v\nSua idade: %v", yearsCount, time.Now().Year()-1985)
+
+	expect := `
+1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+Sua idade: 39
+`
+
+	if strings.TrimSpace(age) != strings.TrimSpace(expect) {
+		t.Errorf("\ngot: %v\nwant: %v", age, expect)
+	}
+}
