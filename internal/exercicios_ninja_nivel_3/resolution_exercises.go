@@ -68,12 +68,22 @@ func ResolucaoNaPraticaExercicio4() {
 			// nessário para quebrar o loop
 			break
 		} else {
+			breakLineby10(birdthYear)
+
 			fmt.Printf("%d, ", birdthYear)
 			birdthYear++
 		}
 	}
 
-	fmt.Printf("\nSua idade: %v", time.Now().Year()-1985)
+	fmt.Printf("\n\nSua idade: %v", time.Now().Year()-1985)
+}
+
+var breakLineby10 = func(i int) error {
+	if i%10 == 0 {
+		fmt.Printf("\n")
+	}
+
+	return nil
 }
 
 // ResolucaoNaPraticaExercicio5 prints the remainder of the division by 4
