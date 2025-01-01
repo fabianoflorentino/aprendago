@@ -122,20 +122,29 @@ func TestResolucaoExercicioNaPratica4(t *testing.T) {
 			yearsCount += fmt.Sprintf("%d", birthYear)
 			break
 		} else {
+			if birthYear%10 == 0 {
+				yearsCount = strings.TrimSuffix(yearsCount, ", ") + ",\n"
+			}
+
 			yearsCount += fmt.Sprintf("%d, ", birthYear)
 			birthYear++
 		}
 	}
 
-	age := fmt.Sprintf("%v\nSua idade: %v", yearsCount, time.Now().Year()-1985)
+	age := fmt.Sprintf("%v\n\nSua idade: %v", yearsCount, time.Now().Year()-1985)
 
 	expect := `
-1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
-Sua idade: 39
+1985, 1986, 1987, 1988, 1989,
+1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
+2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
+2020, 2021, 2022, 2023, 2024, 2025
+
+Sua idade: 40
 `
 
 	if strings.TrimSpace(age) != strings.TrimSpace(expect) {
-		t.Errorf("\ngot: %v\nwant: %v", age, expect)
+		t.Errorf("\ngot:\n%v\nwant: %v", age, expect)
 	}
 }
 
@@ -170,11 +179,11 @@ func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 100: 0
 `
 
-	normalize := func(s string) string {
-		return strings.ReplaceAll(strings.TrimSpace(s), "\r\n", "\n")
-	}
-
 	if normalize(result) != normalize(expect) {
 		t.Errorf("\ngot:\n%v\nwant:\n%v", result, expect)
 	}
+}
+
+var normalize = func(s string) string {
+	return strings.ReplaceAll(strings.TrimSpace(s), "\r\n", "\n")
 }
