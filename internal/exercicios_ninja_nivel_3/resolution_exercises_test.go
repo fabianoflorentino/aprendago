@@ -139,21 +139,26 @@ Sua idade: 39
 	}
 }
 
+// TestResolucaoNaPraticaExercicio5 tests the output of a loop that generates a formatted string
+// of numbers from 10 to 100 and their remainders when divided by 4. The output is formatted
+// such that every 10 numbers are separated by a newline. The test compares the generated
+// string with the expected string to ensure correctness.
 func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 	var result string
+	result += "\n"
 
 	for number := 10; number <= 100; number++ {
 		if number%10 == 0 && number != 10 {
-			result += "\n"
+			result = strings.TrimSuffix(result, ", ") + ",\n"
 		}
-		if number == 100 {
-			result += fmt.Sprintf("%d: %d ", number, number%4)
-		} else {
-			result += fmt.Sprintf("%d: %d, ", number, number%4)
-		}
+
+		result += fmt.Sprintf("%d: %d, ", number, number%4)
 	}
 
-	expect := `10: 2, 11: 3, 12: 0, 13: 1, 14: 2, 15: 3, 16: 0, 17: 1, 18: 2, 19: 3,
+	result = strings.TrimSuffix(result, ", ") + "\n"
+
+	expect := `
+10: 2, 11: 3, 12: 0, 13: 1, 14: 2, 15: 3, 16: 0, 17: 1, 18: 2, 19: 3,
 20: 0, 21: 1, 22: 2, 23: 3, 24: 0, 25: 1, 26: 2, 27: 3, 28: 0, 29: 1,
 30: 2, 31: 3, 32: 0, 33: 1, 34: 2, 35: 3, 36: 0, 37: 1, 38: 2, 39: 3,
 40: 0, 41: 1, 42: 2, 43: 3, 44: 0, 45: 1, 46: 2, 47: 3, 48: 0, 49: 1,
@@ -162,9 +167,14 @@ func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 70: 2, 71: 3, 72: 0, 73: 1, 74: 2, 75: 3, 76: 0, 77: 1, 78: 2, 79: 3,
 80: 0, 81: 1, 82: 2, 83: 3, 84: 0, 85: 1, 86: 2, 87: 3, 88: 0, 89: 1,
 90: 2, 91: 3, 92: 0, 93: 1, 94: 2, 95: 3, 96: 0, 97: 1, 98: 2, 99: 3,
-100: 0`
+100: 0
+`
 
-	if strings.TrimSpace(result) != strings.TrimSpace(expect) {
+	normalize := func(s string) string {
+		return strings.ReplaceAll(strings.TrimSpace(s), "\r\n", "\n")
+	}
+
+	if normalize(result) != normalize(expect) {
 		t.Errorf("\ngot:\n%v\nwant:\n%v", result, expect)
 	}
 }
