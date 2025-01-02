@@ -209,31 +209,35 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 // and appending the result to a question string. It verifies if the constructed
 // question string matches the expected output.
 func TestResolucaoNaPraticaExercicio7(t *testing.T) {
-	question := "10 é maior que 5? "
-
-	if 10 > 5 {
-		question += "Sim"
-	} else if 5 > 10 {
-		question += "Não"
-	} else {
-		question += "Não sei"
-	}
-
-	expectList := []string{
+	expectAwnsers := []string{
 		"10 é maior que 5? Sim",
 		"10 é maior que 5? Não",
 		"10 é maior que 5? Não sei",
 	}
 
-	found := false
-	for _, expect := range expectList {
-		if question == expect {
-			found = true
-			break
-		}
+	trueAnwser := 10 > 5
+	falseAnwser := 5 > 10
+	unknownAnwser := 5 == 10
+
+	expectTrue := expectAwnsers[0]
+	expectFalse := expectAwnsers[1]
+	expectUnknown := expectAwnsers[2]
+
+	if trueAnwser != true {
+		t.Errorf("got %v want %v", trueAnwser, expectTrue)
+	} else {
+		println("expectTrue: pass")
 	}
 
-	if !found {
-		t.Errorf("got %v, want one of %v", question, expectList)
+	if falseAnwser != false {
+		t.Errorf("got %v want %v", falseAnwser, expectFalse)
+	} else {
+		println("expectFalse: pass")
+	}
+
+	if unknownAnwser != false {
+		t.Errorf("got %v want %v", unknownAnwser, expectUnknown)
+	} else {
+		println("unkwonAnwser: pass")
 	}
 }
