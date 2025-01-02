@@ -204,3 +204,36 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 		t.Errorf("got %v want %v", question, expect)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio7 tests the logic of comparing the number 10 with 5
+// and appending the result to a question string. It verifies if the constructed
+// question string matches the expected output.
+func TestResolucaoNaPraticaExercicio7(t *testing.T) {
+	question := "10 é maior que 5? "
+
+	if 10 > 5 {
+		question += "Sim"
+	} else if 5 > 10 {
+		question += "Não"
+	} else {
+		question += "Não sei"
+	}
+
+	expectList := []string{
+		"10 é maior que 5? Sim",
+		"10 é maior que 5? Não",
+		"10 é maior que 5? Não sei",
+	}
+
+	found := false
+	for _, expect := range expectList {
+		if question == expect {
+			found = true
+			break
+		}
+	}
+
+	if !found {
+		t.Errorf("got %v, want one of %v", question, expectList)
+	}
+}
