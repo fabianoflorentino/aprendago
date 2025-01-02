@@ -188,6 +188,9 @@ var normalize = func(s string) string {
 	return strings.ReplaceAll(strings.TrimSpace(s), "\r\n", "\n")
 }
 
+// TestResolucaoNaPraticaExercicio6 tests if the string "10 é maior que 5? "
+// is correctly appended with "Sim" when the condition 10 > 5 is true.
+// It compares the resulting string with the expected string and reports an error if they do not match.
 func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 	question := "10 é maior que 5? "
 
