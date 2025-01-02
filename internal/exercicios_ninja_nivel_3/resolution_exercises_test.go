@@ -187,3 +187,17 @@ func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 var normalize = func(s string) string {
 	return strings.ReplaceAll(strings.TrimSpace(s), "\r\n", "\n")
 }
+
+func TestResolucaoNaPraticaExercicio6(t *testing.T) {
+	question := "10 é maior que 5? "
+
+	if 10 > 5 {
+		question += "Sim"
+	}
+
+	expect := "10 é maior que 5? Sim"
+
+	if question != expect {
+		t.Errorf("got %v want %v", question, expect)
+	}
+}
