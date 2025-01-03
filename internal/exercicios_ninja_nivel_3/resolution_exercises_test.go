@@ -209,35 +209,70 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 // and appending the result to a question string. It verifies if the constructed
 // question string matches the expected output.
 func TestResolucaoNaPraticaExercicio7(t *testing.T) {
-	expectAwnsers := []string{
-		"10 é maior que 5? Sim",
-		"10 é maior que 5? Não",
-		"10 é maior que 5? Não sei",
-	}
-
 	trueAnwser := 10 > 5
 	falseAnwser := 5 > 10
 	unknownAnwser := 5 == 10
 
-	expectTrue := expectAwnsers[0]
-	expectFalse := expectAwnsers[1]
-	expectUnknown := expectAwnsers[2]
+	expectTrue := "10 é maior que 5? Sim"
+	expectFalse := "10 é maior que 5? Não"
+	expectUnknown := "10 é maior que 5? Não sei"
 
 	if trueAnwser != true {
 		t.Errorf("got %v want %v", trueAnwser, expectTrue)
 	} else {
-		println("expectTrue: pass")
+		println("expectTrue: PASS")
 	}
 
 	if falseAnwser != false {
 		t.Errorf("got %v want %v", falseAnwser, expectFalse)
 	} else {
-		println("expectFalse: pass")
+		println("expectFalse: PASS")
 	}
 
 	if unknownAnwser != false {
 		t.Errorf("got %v want %v", unknownAnwser, expectUnknown)
 	} else {
-		println("unkwonAnwser: pass")
+		println("unkwonAnwser: PASS")
+	}
+}
+
+// TestResolucaoExercicioNaPratica8 tests the behavior of switch statements
+// with boolean conditions. It verifies that the correct case is executed
+// based on the value of the boolean variable. The test checks if the expected
+// results match the actual results for both true and false conditions.
+func TestResolucaoExercicioNaPratica8(t *testing.T) {
+	var resultTrue string
+	var resultFalse string
+
+	statementTrue := true
+	statementFalse := !true
+
+	switch statementTrue {
+	case true:
+		resultTrue = "Deve ser impresso"
+	case !true:
+		resultTrue = "Não deve ser impresso"
+	}
+
+	switch statementFalse {
+	case !true:
+		resultFalse = "Não deve ser impresso"
+	case true:
+		resultFalse = "Deve ser impresso"
+	}
+
+	expectTrue := "Deve ser impresso"
+	expectFalse := "Não deve ser impresso"
+
+	if resultTrue != expectTrue {
+		t.Errorf("got %v want %v", resultTrue, expectTrue)
+	} else {
+		println("expectTrue: PASS")
+	}
+
+	if resultFalse != expectFalse {
+		t.Errorf("got %v want %v", resultFalse, expectFalse)
+	} else {
+		println("expectFalse: PASS")
 	}
 }
