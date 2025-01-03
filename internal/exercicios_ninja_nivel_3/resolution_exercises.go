@@ -68,12 +68,22 @@ func ResolucaoNaPraticaExercicio4() {
 			// nessário para quebrar o loop
 			break
 		} else {
+			breakLineby10(birdthYear)
+
 			fmt.Printf("%d, ", birdthYear)
 			birdthYear++
 		}
 	}
 
-	fmt.Printf("\nSua idade: %v", time.Now().Year()-1985)
+	fmt.Printf("\n\nSua idade: %v", time.Now().Year()-1985)
+}
+
+var breakLineby10 = func(i int) error {
+	if i%10 == 0 {
+		fmt.Printf("\n")
+	}
+
+	return nil
 }
 
 // ResolucaoNaPraticaExercicio5 prints the remainder of the division by 4
@@ -85,6 +95,9 @@ func ResolucaoNaPraticaExercicio4() {
 func ResolucaoNaPraticaExercicio5() {
 	fmt.Printf("O resto da divisão por 4 de todos os números entre 10 e 100\n\n")
 	for i := 10; i <= 100; i++ {
+		if i%10 == 0 && i != 10 {
+			fmt.Printf("\n")
+		}
 		if i == 100 {
 			fmt.Printf("%d: %d ", i, i%4)
 		} else {
@@ -169,18 +182,17 @@ func ResolucaoNaPraticaExercicio9() {
 // The function helps in understanding how logical AND (&&), OR (||), and NOT (!) operators work in Go.
 func ResolucaoNaPraticaExercicio10() {
 	anotacao := `
-fmt.Println(true && true)
-fmt.Println(true && false)
-fmt.Println(true || true)
-fmt.Println(true || false)
-fmt.Println(!true)
-`
-	fmt.Printf("%v\n", anotacao)
-
 	fmt.Println(true && true)
 	fmt.Println(true && false)
 	fmt.Println(true || true)
 	fmt.Println(true || false)
 	fmt.Println(!true)
+	`
+	fmt.Printf("%v\n", anotacao)
 
+	fmt.Println(true)
+	fmt.Println(true && false)
+	fmt.Println(true)
+	fmt.Println(true || false)
+	fmt.Println(!true)
 }
