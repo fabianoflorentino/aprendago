@@ -181,19 +181,18 @@ func ResolucaoNaPraticaExercicio9() {
 // - !true
 // The function helps in understanding how logical AND (&&), OR (||), and NOT (!) operators work in Go.
 func ResolucaoNaPraticaExercicio10() {
-	// 	anotacao := `
-	// fmt.Println(true && true)
-	// fmt.Println(true && false)
-	// fmt.Println(true || true)
-	// fmt.Println(true || false)
-	// fmt.Println(!true)
-	// `
-	// 	fmt.Printf("%v\n", anotacao)
+	anotacao := `
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println(true || true)
+	fmt.Println(true || false)
+	fmt.Println(!true)
+	`
+	fmt.Printf("%v\n", anotacao)
 
-	// 	fmt.Println(true && true)
-	// 	fmt.Println(true && false)
-	// 	fmt.Println(true || true)
-	// 	fmt.Println(true || false)
-	// 	fmt.Println(!true)
-
+	fmt.Println(true)
+	fmt.Println(true && false)
+	fmt.Println(true)
+	fmt.Println(true || false)
+	fmt.Println(!true)
 }
