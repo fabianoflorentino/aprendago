@@ -205,35 +205,47 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 	}
 }
 
+// testResolucaoNaPraticaExercicio7 represents a structure used for testing purposes.
+// It contains a question and its corresponding answer.
+type testResolucaoNaPraticaExercicio7 struct {
+	expression bool
+	question   string
+	answer     string
+}
+
 // TestResolucaoNaPraticaExercicio7 tests the logic of comparing the number 10 with 5
 // and appending the result to a question string. It verifies if the constructed
 // question string matches the expected output.
 func TestResolucaoNaPraticaExercicio7(t *testing.T) {
-	trueAnwser := 10 > 5
-	falseAnwser := 5 > 10
-	unknownAnwser := 5 == 10
-
-	expectTrue := "10 é maior que 5? Sim"
-	expectFalse := "10 é maior que 5? Não"
-	expectUnknown := "10 é maior que 5? Não sei"
-
-	if trueAnwser != true {
-		t.Errorf("got %v want %v", trueAnwser, expectTrue)
-	} else {
-		println("expectTrue: PASS")
+	var tests = []testResolucaoNaPraticaExercicio7{
+		{10 > 5, "10 é maior que 5? ", "Sim"},
+		{5 > 10, "10 é maior que 5? ", "Não"},
+		{5 == 10, "10 é maior que 5? ", "Não sei"},
 	}
 
-	if falseAnwser != false {
-		t.Errorf("got %v want %v", falseAnwser, expectFalse)
-	} else {
-		println("expectFalse: PASS")
-	}
+	for _, test := range tests {
+		if test.expression {
+			test.question += test.answer
+		}
 
-	if unknownAnwser != false {
-		t.Errorf("got %v want %v", unknownAnwser, expectUnknown)
-	} else {
-		println("unkwonAnwser: PASS")
+		expect := test.question
+
+		if test.question != expect {
+			t.Errorf("got %v want %v", test.question, expect)
+		} else {
+			fmt.Printf("PASS: %v\n", test.expression)
+		}
 	}
+}
+
+// testResolucaoNaPraticaExercicio8 is a struct used for testing purposes.
+// It contains two boolean fields, statementTrue and statementFalse, which represent
+// the truth values of certain statements, and a string field, showMessage, which
+// holds a message to be displayed during the test.
+type testResolucaoNaPraticaExercicio8 struct {
+	statementTrue  bool
+	statementFalse bool
+	showMessage    string
 }
 
 // TestResolucaoExercicioNaPratica8 tests the behavior of switch statements
@@ -241,38 +253,68 @@ func TestResolucaoNaPraticaExercicio7(t *testing.T) {
 // based on the value of the boolean variable. The test checks if the expected
 // results match the actual results for both true and false conditions.
 func TestResolucaoExercicioNaPratica8(t *testing.T) {
-	var resultTrue string
-	var resultFalse string
-
-	statementTrue := true
-	statementFalse := !true
-
-	switch statementTrue {
-	case true:
-		resultTrue = "Deve ser impresso"
-	case !true:
-		resultTrue = "Não deve ser impresso"
+	var tests = []testResolucaoNaPraticaExercicio8{
+		{true, false, "Não deve ser impresso"},
+		{false, true, "Deve ser impresso"},
 	}
 
-	switch statementFalse {
-	case !true:
-		resultFalse = "Não deve ser impresso"
-	case true:
-		resultFalse = "Deve ser impresso"
+	for _, test := range tests {
+		switch {
+		case test.statementTrue:
+			if test.showMessage != "Não deve ser impresso" {
+				t.Errorf("got %v want %v", test.showMessage, "Não deve ser impresso")
+			} else {
+				fmt.Printf("PASS: %v\n", test.showMessage)
+			}
+		case test.statementFalse:
+			if test.showMessage != "Deve ser impresso" {
+				t.Errorf("got %v want %v", test.showMessage, "Deve ser impresso")
+			} else {
+				fmt.Printf("PASS: %v\n", test.showMessage)
+			}
+		}
+	}
+}
+
+// testResolucaoNaPraticaExercicio9 is a struct used for testing purposes.
+// It contains fields to store a favorite sport, the expected output, and a default output.
+type testResolucaoNaPraticaExercicio9 struct {
+	esporteFavorito string
+	expectedOutput  string
+	OutputDefault   string
+}
+
+// TestResolucaoExercicioNaPratica9 tests the functionality of determining the favorite sport
+// based on a given input string. It checks various cases including "futebol", "futebol americano",
+// "basquete", and a default case for other sports. The test compares the output of the switch
+// statement with the expected output and reports an error if they do not match.
+func TestResolucaoExercicioNaPratica9(t *testing.T) {
+	var tests = []testResolucaoNaPraticaExercicio9{
+		{"futebol", "Seu esporte favorito é futebol", "Seu esporte favorito é futebol americano"},
+		{"futebol americano", "Seu esporte favorito é futebol americano", "Seu esporte favorito é futebol"},
+		{"basquete", "Seu esporte favorito é basquete", "Seu esporte favorito é futebol"},
+		{"natação", "Seu esporte favorito não é futebol, futebol americano ou basquete", "Seu esporte favorito é futebol"},
 	}
 
-	expectTrue := "Deve ser impresso"
-	expectFalse := "Não deve ser impresso"
+	for _, test := range tests {
+		var esporteFavorito string = test.esporteFavorito
+		var output string
 
-	if resultTrue != expectTrue {
-		t.Errorf("got %v want %v", resultTrue, expectTrue)
-	} else {
-		println("expectTrue: PASS")
-	}
+		switch esporteFavorito {
+		case "futebol":
+			output = "Seu esporte favorito é futebol"
+		case "futebol americano":
+			output = "Seu esporte favorito é futebol americano"
+		case "basquete":
+			output = "Seu esporte favorito é basquete"
+		default:
+			output = "Seu esporte favorito não é futebol, futebol americano ou basquete"
+		}
 
-	if resultFalse != expectFalse {
-		t.Errorf("got %v want %v", resultFalse, expectFalse)
-	} else {
-		println("expectFalse: PASS")
+		if output != test.expectedOutput {
+			t.Errorf("got %v want %v", output, test.expectedOutput)
+		} else {
+			fmt.Printf("PASS: %v\n", test.esporteFavorito)
+		}
 	}
 }
