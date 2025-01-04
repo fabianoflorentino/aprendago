@@ -6,6 +6,7 @@ package exercicios_ninja_nivel_4
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 )
 
@@ -24,10 +25,15 @@ func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	array := [5]int{1, 2, 3, 4, 5}
 
 	for _, v := range array {
+		if v == array[len(array)-1] {
+			resolution += fmt.Sprintf("%d", v)
+			continue
+		}
 		resolution += fmt.Sprintf("%d, ", v)
 	}
+	resolution = strings.TrimSpace(resolution)
 
-	expect := "1, 2, 3, 4, 5, "
+	expect := "1, 2, 3, 4, 5"
 
 	if resolution != expect {
 		t.Errorf(expectTemplate, expect, resolution)
