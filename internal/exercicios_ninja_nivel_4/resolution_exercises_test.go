@@ -23,10 +23,8 @@ const (
 // concatenating each integer to a string with a comma and space separator, and comparing the result
 // to an expected string. If the resulting string does not match the expected string, the test fails.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
-	var result string
-
 	capturer := output.Capture()
-	result = capturer.New(ResolucaoNaPraticaExercicio1)
+	result := capturer.New(ResolucaoNaPraticaExercicio1)
 
 	expect := `
 Resolução:
@@ -47,10 +45,8 @@ Resolução:
 // The test checks if the captured output contains the expected string, ignoring
 // leading and trailing whitespace, and reports an error if it does not match.
 func TestResolucaoNaPraticaExercicio2(t *testing.T) {
-	var result string
-
 	capturer := output.Capture()
-	result = capturer.New(ResolucaoNaPraticaExercicio2)
+	result := capturer.New(ResolucaoNaPraticaExercicio2)
 
 	expect := `
 Resolução:
