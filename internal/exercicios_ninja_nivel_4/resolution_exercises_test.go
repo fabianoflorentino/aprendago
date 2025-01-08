@@ -9,6 +9,7 @@ import (
 	"testing"
 
 	"github.com/fabianoflorentino/aprendago/pkg/output"
+	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
 
 // testTemplate is a constant string used for formatting test output.
@@ -31,7 +32,10 @@ func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 Resolução:
 1, 2, 3, 4, 5
 `
-	if !strings.Contains(strings.TrimSpace(result), strings.TrimSpace(expect)) {
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
@@ -55,7 +59,9 @@ Slice: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 Tipo: []string
 `
 
-	if !strings.Contains(strings.TrimSpace(result), strings.TrimSpace(expect)) {
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
