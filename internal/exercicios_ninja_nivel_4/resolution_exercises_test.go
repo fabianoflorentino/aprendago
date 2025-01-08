@@ -5,12 +5,10 @@
 package exercicios_ninja_nivel_4
 
 import (
-	"bytes"
-	"fmt"
-	"io"
-	"os"
 	"strings"
 	"testing"
+
+	"github.com/fabianoflorentino/aprendago/pkg/output"
 )
 
 // testTemplate is a constant string used for formatting test output.
@@ -24,24 +22,17 @@ const (
 // concatenating each integer to a string with a comma and space separator, and comparing the result
 // to an expected string. If the resulting string does not match the expected string, the test fails.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
-	var output string
+	var result string
 
-	func() {
-		defer func() {
-			if rr := recover(); rr != nil {
-				output = fmt.Sprint(rr)
-			}
-		}()
-
-		output = captureOutput(ResolucaoNaPraticaExercicio1)
-	}()
+	capturer := output.Capture()
+	result = capturer.New(ResolucaoNaPraticaExercicio1)
 
 	expect := `
 Resolução:
 1, 2, 3, 4, 5
 `
-	if !strings.Contains(strings.TrimSpace(output), strings.TrimSpace(expect)) {
-		t.Errorf(expectTemplate, expect, output)
+	if !strings.Contains(strings.TrimSpace(result), strings.TrimSpace(expect)) {
+		t.Errorf(expectTemplate, expect, result)
 	}
 }
 
@@ -52,16 +43,10 @@ Resolução:
 // The test checks if the captured output contains the expected string, ignoring
 // leading and trailing whitespace, and reports an error if it does not match.
 func TestResolucaoNaPraticaExercicio2(t *testing.T) {
-	var output string
+	var result string
 
-	func() {
-		defer func() {
-			if r := recover(); r != nil {
-				output = fmt.Sprint(r)
-			}
-		}()
-		output = captureOutput(ResolucaoNaPraticaExercicio2)
-	}()
+	capturer := output.Capture()
+	result = capturer.New(ResolucaoNaPraticaExercicio2)
 
 	expect := `
 Resolução:
@@ -70,25 +55,7 @@ Slice: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 Tipo: []string
 `
 
-	if !strings.Contains(strings.TrimSpace(output), strings.TrimSpace(expect)) {
-		t.Errorf(expectTemplate, expect, output)
+	if !strings.Contains(strings.TrimSpace(result), strings.TrimSpace(expect)) {
+		t.Errorf(expectTemplate, expect, result)
 	}
-}
-
-// captureOutput captures and returns the output of a function that writes to the standard output.
-// It temporarily redirects os.Stdout to a pipe, executes the provided function, and then restores os.Stdout.
-// The captured output is returned as a string.
-func captureOutput(resolutionFunction func()) string {
-	read, write, _ := os.Pipe()
-	stdout := os.Stdout
-	os.Stdout = write
-
-	resolutionFunction()
-
-	write.Close()
-	os.Stdout = stdout
-
-	var buf bytes.Buffer
-	io.Copy(&buf, read)
-	return buf.String()
 }
