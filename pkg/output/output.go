@@ -47,6 +47,7 @@ func Capture() *Output {
 //	A string containing the captured output.
 func (o *Output) New(captureOutput func()) string {
 	var buf bytes.Buffer
+
 	os.Stdout = o.write
 
 	captureOutput()
@@ -54,7 +55,7 @@ func (o *Output) New(captureOutput func()) string {
 	o.write.Close()
 
 	os.Stdout = o.stdout
-
 	io.Copy(&buf, o.read)
+
 	return buf.String()
 }
