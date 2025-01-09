@@ -84,3 +84,25 @@ Tipo: []string
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio4 tests the function ResolucaoNaPraticaExercicio4
+// by capturing its output and comparing it to the expected result. The test
+// verifies that the function correctly appends elements to slices and produces
+// the expected output. If the actual output does not match the expected output,
+// the test will fail and report the discrepancy.
+func TestResolucaoNaPraticaExercicio4(t *testing.T) {
+	capturer := output.Capture()
+	result := capturer.New(ResolucaoNaPraticaExercicio4)
+
+	expect := `
+Resolução:
+append52: [42 43 44 45 46 47 48 49 50 51 52]
+append53to55: [42 43 44 45 46 47 48 49 50 51 52 53 54 55]
+appendSliceY: [42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60]
+`
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
