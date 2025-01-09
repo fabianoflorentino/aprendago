@@ -106,3 +106,24 @@ appendSliceY: [42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60]
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio5 tests the function ResolucaoNaPraticaExercicio5
+// by capturing its output and comparing it to the expected result.
+// It uses the output.Capture utility to capture the function's output
+// and the trim.New utility to normalize the strings before comparison.
+// If the captured output does not contain the expected result, the test fails
+// and an error message is displayed.
+func TestResolucaoNaPraticaExercicio5(t *testing.T) {
+	capturer := output.Capture()
+	result := capturer.New(ResolucaoNaPraticaExercicio5)
+
+	expect := `
+Resolução:
+[42 43 44 48 49 50 51]
+`
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
