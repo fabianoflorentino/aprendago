@@ -61,3 +61,26 @@ Tipo: []string
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio3 tests the function ResolucaoNaPraticaExercicio3
+// by capturing its output and comparing it to the expected result. It uses the
+// output.Capture utility to capture the function's output and the trim.New utility
+// to normalize the strings before comparison. If the captured output does not
+// contain the expected result, the test fails with an error message.
+func TestResolucaoNaPraticaExercicio3(t *testing.T) {
+	capturer := output.Capture()
+	result := capturer.New(ResolucaoNaPraticaExercicio3)
+
+	expect := `
+Resolução:
+
+Slice: 1, 2, 3, 4
+Tipo: []string
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
