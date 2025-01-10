@@ -147,3 +147,21 @@ Estados: Acre, Alagoas, Amapá, Amazonas, Bahia, Ceará, Espírito Santo, Goiás
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+func TestResolucaoNaPraticaExercicio7(t *testing.T) {
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio7)
+
+	expect := `
+Resolução:
+Nome: Fabiano, Sobrenome: Florentino, Hobby favorito: Programar
+Nome: Fulano, Sobrenome: de Tal, Hobby favorito: Jogar bola
+Nome: Ciclano, Sobrenome: da Silva, Hobby favorito: Assistir filmes
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
