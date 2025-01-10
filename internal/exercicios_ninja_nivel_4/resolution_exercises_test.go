@@ -23,8 +23,8 @@ const (
 // concatenating each integer to a string with a comma and space separator, and comparing the result
 // to an expected string. If the resulting string does not match the expected string, the test fails.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
-	capturer := output.Capture()
-	result := capturer.New(ResolucaoNaPraticaExercicio1)
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio1)
 
 	expect := `
 Resolução:
@@ -45,8 +45,8 @@ Resolução:
 // The test checks if the captured output contains the expected string, ignoring
 // leading and trailing whitespace, and reports an error if it does not match.
 func TestResolucaoNaPraticaExercicio2(t *testing.T) {
-	capturer := output.Capture()
-	result := capturer.New(ResolucaoNaPraticaExercicio2)
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio2)
 
 	expect := `
 Resolução:
@@ -68,8 +68,8 @@ Tipo: []string
 // to normalize the strings before comparison. If the captured output does not
 // contain the expected result, the test fails with an error message.
 func TestResolucaoNaPraticaExercicio3(t *testing.T) {
-	capturer := output.Capture()
-	result := capturer.New(ResolucaoNaPraticaExercicio3)
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio3)
 
 	expect := `
 Resolução:
@@ -91,8 +91,8 @@ Tipo: []string
 // the expected output. If the actual output does not match the expected output,
 // the test will fail and report the discrepancy.
 func TestResolucaoNaPraticaExercicio4(t *testing.T) {
-	capturer := output.Capture()
-	result := capturer.New(ResolucaoNaPraticaExercicio4)
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio4)
 
 	expect := `
 Resolução:
@@ -114,8 +114,8 @@ appendSliceY: [42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60]
 // If the captured output does not contain the expected result, the test fails
 // and an error message is displayed.
 func TestResolucaoNaPraticaExercicio5(t *testing.T) {
-	capturer := output.Capture()
-	result := capturer.New(ResolucaoNaPraticaExercicio5)
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio5)
 
 	expect := `
 Resolução:
@@ -132,8 +132,8 @@ Resolução:
 // It captures the output of the function and compares it with the expected result.
 // If the captured output does not match the expected result, the test fails with an error message.
 func TestResolucaoNaPraticaExercicio6(t *testing.T) {
-	capturer := output.Capture()
-	result := capturer.New(ResolucaoNaPraticaExercicio6)
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio6)
 
 	expect := `
 Resolução:
