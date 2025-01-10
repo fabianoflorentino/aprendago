@@ -185,10 +185,10 @@ func ResolucaoNaPraticaExercicio9() {
 	var resolucao string
 
 	pessoas := map[string][]string{
-		"florentino_fabio": {"Programar", "Jogar bola", "Assistir filmes"},
-		"de_tal_fulano":    {"Programar", "Jogar bola", "Assistir filmes"},
-		"da_silva_ciclano": {"Programar 2", "Jogar bola 2", "Assistir filmes 2"},
-		"de_tal_ciclano":   {"Programar 3", "Jogar bola 3", "Assistir filmes 3"},
+		"florentino_fabiano": {"Programar", "Jogar bola", "Assistir filmes"},
+		"de_tal_fulano":      {"Programar", "Jogar bola", "Assistir filmes"},
+		"da_silva_ciclano":   {"Programar 2", "Jogar bola 2", "Assistir filmes 2"},
+		"de_tal_ciclano":     {"Programar 3", "Jogar bola 3", "Assistir filmes 3"},
 	}
 
 	for sobrenome_nome, hobbies := range pessoas {
