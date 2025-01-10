@@ -169,3 +169,34 @@ Nome: Ciclano, Sobrenome: da Silva, Hobby favorito: Assistir filmes
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio8 tests the function ResolucaoNaPraticaExercicio8
+// by capturing its output and comparing it with the expected result. The test
+// checks if the output contains the expected formatted string with names and hobbies.
+// If the output does not match the expected result, the test will fail and report an error.
+func TestResolucaoNaPraticaExercicio8(t *testing.T) {
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio8)
+
+	expect := `
+Resolução:
+Sobrenome_Nome: florentino_fabiano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: de_tal_fulano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: da_silva_ciclano
+  Hobby 1: Programar 2
+  Hobby 2: Jogar bola 2
+  Hobby 3: Assistir filmes 2
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
