@@ -127,3 +127,23 @@ Resolução:
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio6 tests the function ResolucaoNaPraticaExercicio6.
+// It captures the output of the function and compares it with the expected result.
+// If the captured output does not match the expected result, the test fails with an error message.
+func TestResolucaoNaPraticaExercicio6(t *testing.T) {
+	capturer := output.Capture()
+	result := capturer.New(ResolucaoNaPraticaExercicio6)
+
+	expect := `
+Resolução:
+len: 26 cap: 26
+Estados: Acre, Alagoas, Amapá, Amazonas, Bahia, Ceará, Espírito Santo, Goiás, Maranhão, Mato Grosso, Mato Grosso do Sul, Minas Gerais, Pará, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Norte, Rio Grande do Sul, Rondônia, Roraima, Santa Catarina, São Paulo, Sergipe, Tocantins
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
