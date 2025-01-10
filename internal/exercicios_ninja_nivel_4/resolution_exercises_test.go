@@ -200,3 +200,69 @@ Sobrenome_Nome: da_silva_ciclano
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio9 tests the function ResolucaoNaPraticaExercicio9
+// by capturing its output and comparing it to the expected result. The test
+// verifies that the output contains the expected formatted strings for different
+// individuals and their hobbies. If the output does not match the expected result,
+// the test will fail and report the discrepancy.
+func TestResolucaoNaPraticaExercicio9(t *testing.T) {
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio9)
+
+	expect := `
+Resolução:
+Sobrenome_Nome: florentino_fabiano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: de_tal_fulano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: da_silva_ciclano
+  Hobby 1: Programar 2
+  Hobby 2: Jogar bola 2
+  Hobby 3: Assistir filmes 2
+Sobrenome_Nome: de_tal_ciclano
+  Hobby 1: Programar 3
+  Hobby 2: Jogar bola 3
+  Hobby 3: Assistir filmes 3
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
+
+// TestResolucaoNaPraticaExercicio10 tests the function ResolucaoNaPraticaExercicio10.
+// It captures the output of the function and compares it with the expected output.
+// If the captured output does not match the expected output, the test fails and an error is reported.
+func TestResolucaoNaPraticaExercicio10(t *testing.T) {
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio10)
+
+	expect := `
+Resolução:
+Sobrenome_Nome: florentino_fabio
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: de_tal_fulano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: de_tal_ciclano
+  Hobby 1: Programar 3
+  Hobby 2: Jogar bola 3
+  Hobby 3: Assistir filmes 3
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
