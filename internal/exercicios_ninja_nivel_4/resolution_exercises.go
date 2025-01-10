@@ -140,7 +140,7 @@ func ResolucaoNaPraticaExercicio7() {
 	var resolucao string
 
 	pessoas := [][]string{
-		{"Fábio", "Florentino", "Programar"},
+		{"Fabiano", "Florentino", "Programar"},
 		{"Fulano", "de Tal", "Jogar bola"},
 		{"Ciclano", "da Silva", "Assistir filmes"},
 	}
