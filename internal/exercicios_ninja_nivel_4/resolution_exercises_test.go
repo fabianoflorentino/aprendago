@@ -148,6 +148,10 @@ Estados: Acre, Alagoas, Amapá, Amazonas, Bahia, Ceará, Espírito Santo, Goiás
 	}
 }
 
+// TestResolucaoNaPraticaExercicio7 tests the function ResolucaoNaPraticaExercicio7
+// by capturing its output and comparing it to the expected result. The test
+// verifies that the output contains the expected formatted strings for names,
+// surnames, and favorite hobbies.
 func TestResolucaoNaPraticaExercicio7(t *testing.T) {
 	output := output.New()
 	result := output.Capture(ResolucaoNaPraticaExercicio7)
