@@ -39,3 +39,28 @@ Ciclano da Silva
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio2 tests the function ResolucaoNaPraticaExercicio2
+// by capturing its output and comparing it to the expected result.
+// The expected output is a formatted string containing names and their favorite ice cream flavors.
+// If the captured output does not match the expected output, the test will fail and report the difference.
+func TestResolucaoNaPraticaExercicio2(t *testing.T) {
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio2)
+
+	expect := `
+de Tal
+	Chocolate
+	Morango
+	Baunilha
+da Silva
+	Pistache
+	Creme
+	Coco
+`
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
