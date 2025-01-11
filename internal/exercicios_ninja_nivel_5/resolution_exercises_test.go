@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	expectTemplate = "\nwant:\n%s\n, \ngot:\n%s\n"
+	expectTemplate = "\nwant:\n%s\n\ngot:\n%s\n"
 )
 
 // TestResolucaoNaPraticaExercicio1 tests the function ResolucaoNaPraticaExercicio1
@@ -58,6 +58,28 @@ da Silva
 	Creme
 	Coco
 `
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
+
+// TestResolucaoNaPraticaExercicio3 tests the function ResolucaoNaPraticaExercicio3
+// by capturing its output and comparing it to the expected result. The test
+// checks if the output contains the expected formatted strings for a truck
+// and a sedan, including their attributes such as the number of doors and color.
+func TestResolucaoNaPraticaExercicio3(t *testing.T) {
+	output := output.New()
+	result := output.Capture(ResolucaoNaPraticaExercicio3)
+
+	expect := `
+Caminhonete: {veiculo:{portas:4 cor:Preto} tracaoNasQuatro:true}
+Sedan: {veiculo:{portas:2 cor:Branco} modeloLuxo:true}
+Portas da caminhonete: 4
+Cor do sedan: Branco
+`
+
 	trim := trim.New()
 
 	if !strings.Contains(trim.String(result), trim.String(expect)) {
