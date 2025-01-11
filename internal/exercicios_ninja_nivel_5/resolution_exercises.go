@@ -68,9 +68,9 @@ func ResolucaoNaPraticaExercicio2() {
 	}
 
 	for k, p := range pessoas {
-		println(k)
+		fmt.Println(k)
 		for _, s := range p.sabores_de_sorvete {
-			println("\t", s)
+			fmt.Printf("\t%v\n", s)
 		}
 	}
 }
