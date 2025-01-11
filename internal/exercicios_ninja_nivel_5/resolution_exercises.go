@@ -117,8 +117,8 @@ func ResolucaoNaPraticaExercicio3() {
 		modeloLuxo: true,
 	}
 
-	fmt.Printf("Caminhonete: %+v \n", cnt)
-	fmt.Printf("Sedan: %+v \n", sdn)
+	fmt.Printf("Caminhonete: %+v\n", cnt)
+	fmt.Printf("Sedan: %+v\n", sdn)
 
 	fmt.Println("Portas da caminhonete:", cnt.portas)
 	fmt.Println("Cor do sedan:", sdn.cor)
