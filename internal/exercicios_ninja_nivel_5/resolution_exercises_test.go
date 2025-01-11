@@ -7,6 +7,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
@@ -21,7 +22,10 @@ const (
 // If the captured output does not match the expected output, the test will fail.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio1)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Fulano de Tal
@@ -46,7 +50,10 @@ Ciclano da Silva
 // If the captured output does not match the expected output, the test will fail and report the difference.
 func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio2)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 de Tal
@@ -71,7 +78,10 @@ da Silva
 // and a sedan, including their attributes such as the number of doors and color.
 func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio3)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Caminhonete: {veiculo:{portas:4 cor:Preto} tracaoNasQuatro:true}
