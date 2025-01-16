@@ -68,9 +68,9 @@ func ResolucaoNaPraticaExercicio2() {
 	}
 
 	for k, p := range pessoas {
-		println(k)
+		fmt.Println(k)
 		for _, s := range p.sabores_de_sorvete {
-			println("\t", s)
+			fmt.Printf("\t%v\n", s)
 		}
 	}
 }
@@ -117,8 +117,8 @@ func ResolucaoNaPraticaExercicio3() {
 		modeloLuxo: true,
 	}
 
-	fmt.Printf("Caminhonete: %+v \n", cnt)
-	fmt.Printf("Sedan: %+v \n", sdn)
+	fmt.Printf("Caminhonete: %+v\n", cnt)
+	fmt.Printf("Sedan: %+v\n", sdn)
 
 	fmt.Println("Portas da caminhonete:", cnt.portas)
 	fmt.Println("Cor do sedan:", sdn.cor)

@@ -8,6 +8,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
@@ -24,7 +25,10 @@ const (
 // to an expected string. If the resulting string does not match the expected string, the test fails.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio1)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -46,7 +50,10 @@ Resolução:
 // leading and trailing whitespace, and reports an error if it does not match.
 func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio2)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -69,7 +76,10 @@ Tipo: []string
 // contain the expected result, the test fails with an error message.
 func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio3)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -92,7 +102,10 @@ Tipo: []string
 // the test will fail and report the discrepancy.
 func TestResolucaoNaPraticaExercicio4(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio4)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -115,7 +128,10 @@ appendSliceY: [42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60]
 // and an error message is displayed.
 func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio5)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -133,7 +149,10 @@ Resolução:
 // If the captured output does not match the expected result, the test fails with an error message.
 func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio6)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -154,7 +173,10 @@ Estados: Acre, Alagoas, Amapá, Amazonas, Bahia, Ceará, Espírito Santo, Goiás
 // surnames, and favorite hobbies.
 func TestResolucaoNaPraticaExercicio7(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio7)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -176,7 +198,10 @@ Nome: Ciclano, Sobrenome: da Silva, Hobby favorito: Assistir filmes
 // If the output does not match the expected result, the test will fail and report an error.
 func TestResolucaoNaPraticaExercicio8(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio8)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio8)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -208,7 +233,10 @@ Sobrenome_Nome: da_silva_ciclano
 // the test will fail and report the discrepancy.
 func TestResolucaoNaPraticaExercicio9(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio9)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio9)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
@@ -242,7 +270,10 @@ Sobrenome_Nome: de_tal_ciclano
 // If the captured output does not match the expected output, the test fails and an error is reported.
 func TestResolucaoNaPraticaExercicio10(t *testing.T) {
 	output := output.New()
-	result := output.Capture(ResolucaoNaPraticaExercicio10)
+	result, err := output.Capture(ResolucaoNaPraticaExercicio10)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
 
 	expect := `
 Resolução:
