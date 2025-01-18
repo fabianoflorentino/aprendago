@@ -97,6 +97,9 @@ Cor do sedan: Branco
 	}
 }
 
+// TestResolucaoNaPraticaExercicio4 tests the function ResolucaoNaPraticaExercicio4
+// by capturing its output and comparing it to the expected result. If the captured
+// output does not match the expected output, the test will fail and log an error.
 func TestResolucaoNaPraticaExercicio4(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
