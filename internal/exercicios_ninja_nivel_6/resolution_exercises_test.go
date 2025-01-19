@@ -90,3 +90,24 @@ Execução do defer ocorreu ao final do contexto.
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio4 tests the function ResolucaoNaPraticaExercicio4
+// by capturing its output and comparing it to the expected result.
+// It logs an error if the captured output does not match the expected output.
+func TestResolucaoNaPraticaExercicio4(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Nome: Fabiano Florentino
+Idade: 39
+`
+	trim := trim.New()
+
+	if !strings.contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
