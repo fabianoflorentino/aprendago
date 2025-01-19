@@ -107,7 +107,7 @@ Idade: 39
 `
 	trim := trim.New()
 
-	if !strings.contains(trim.String(result), trim.String(expect)) {
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
