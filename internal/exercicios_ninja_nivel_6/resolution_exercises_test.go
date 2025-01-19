@@ -111,3 +111,25 @@ Idade: 39
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio5 tests the function ResolucaoNaPraticaExercicio5
+// by capturing its output and comparing it to the expected output.
+// It verifies that the function correctly calculates and prints the area of a square and a circle.
+func TestResolucaoNaPraticaExercicio5(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Área do quadrado: 100.000000
+Área do círculo: 31.400000
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
