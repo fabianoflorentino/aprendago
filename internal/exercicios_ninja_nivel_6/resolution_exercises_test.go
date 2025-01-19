@@ -42,3 +42,27 @@ Inteiro&Texto: 42 e Olá, mundo!
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio2 tests the function ResolucaoNaPraticaExercicio2
+// by capturing its output and comparing it to the expected result.
+// It verifies that the function correctly calculates and prints the sum of a variadic
+// argument and a slice. If the captured output does not match the expected output,
+// the test will fail and log an error.
+func TestResolucaoNaPraticaExercicio2(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Soma do variádico: 55
+Soma do slice: 66
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
