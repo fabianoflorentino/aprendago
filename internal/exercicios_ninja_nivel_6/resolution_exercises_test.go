@@ -66,3 +66,27 @@ Soma do slice: 66
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio3 tests the function ResolucaoNaPraticaExercicio3
+// by capturing its output and comparing it to the expected result.
+// It uses the output.Capture method to capture the function's output and
+// the strings.Contains method to check if the captured output matches the expected output.
+// If the output does not match, it logs an error with the expected and actual results.
+func TestResolucaoNaPraticaExercicio3(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Execução do defer ocorre ao final do contexto ao qual ela pertence.
+Execução do defer ocorreu ao final do contexto.
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
