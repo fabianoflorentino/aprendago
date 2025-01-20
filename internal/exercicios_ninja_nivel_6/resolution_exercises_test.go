@@ -156,3 +156,24 @@ Anonymous function executed.
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio7 tests the function ResolucaoNaPraticaExercicio7
+// by capturing its output and comparing it to the expected result.
+// It logs an error if the captured output does not match the expected output.
+func TestResolucaoNaPraticaExercicio7(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Função atribuída a uma variável.
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
