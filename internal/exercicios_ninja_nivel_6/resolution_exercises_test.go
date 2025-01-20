@@ -133,3 +133,26 @@ func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio6 tests the function ResolucaoNaPraticaExercicio6
+// by capturing its output and comparing it to the expected output.
+// It uses the output.Capture method to capture the function's output and
+// the trim.String method to normalize the strings before comparison.
+// If the captured output does not contain the expected string, the test fails.
+func TestResolucaoNaPraticaExercicio6(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Anonymous function executed.
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
