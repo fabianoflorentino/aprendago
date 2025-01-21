@@ -201,3 +201,49 @@ Função retornada.
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio9 tests the function ResolucaoNaPraticaExercicio9
+// by capturing its output and comparing it to the expected result.
+// It uses the output.Capture method to capture the function's output
+// and the trim.String method to normalize the strings before comparison.
+// If the captured output does not contain the expected string, the test fails.
+func TestResolucaoNaPraticaExercicio9(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio9)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Função passada como argumento
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
+
+// TestResolucaoNaPraticaExercicio10 tests the function ResolucaoNaPraticaExercicio10
+// by capturing its output and comparing it to the expected result.
+// It uses the output.Capture method to capture the function's output and
+// the strings.Contains method to check if the captured output contains the expected string.
+// If the captured output does not match the expected result, it logs an error.
+func TestResolucaoNaPraticaExercicio10(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio10)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+10
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
