@@ -247,3 +247,29 @@ func TestResolucaoNaPraticaExercicio10(t *testing.T) {
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio11 tests the function ResolucaoNaPraticaExercicio11
+// by capturing its output and comparing it to the expected output. If the captured
+// output does not match the expected output, the test fails and logs an error.
+func TestResolucaoNaPraticaExercicio11(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio11)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+- Uma das melhores maneiras de aprender é ensinando.
+- Para este exercício escolha o seu código favorito dentre os que vimos estudando funções. Pode ser das aulas ou da seção de exercícios. Então:
+		- Faça download e instale isso aqui: https://obsproject.com/
+		- Grave um vídeo onde *você* ensina o tópico em questão
+		- Faça upload do vídeo no YouTube
+		- Compartilhe o vídeo no Twitter e me marque no tweet (@ellenkorbes)
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
