@@ -177,3 +177,27 @@ Função atribuída a uma variável.
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio8 tests the function ResolucaoNaPraticaExercicio8
+// by capturing its output and comparing it to the expected result.
+// It uses the output.Capture method to capture the function's output
+// and the strings.Contains method to check if the captured output
+// contains the expected string. If the output does not match the expected
+// result, it logs an error.
+func TestResolucaoNaPraticaExercicio8(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio8)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+Função retornada.
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
