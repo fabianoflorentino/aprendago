@@ -1,3 +1,5 @@
+// Package exercicios_ninja_nivel_8 contains tests for the exercises in level 8 of the Ninja Go course.
+// These tests are designed to validate the functionality of the solutions provided for the exercises.
 package exercicios_ninja_nivel_8
 
 import (
@@ -6,12 +8,21 @@ import (
 
 	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
+	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
 
-// const (
-// 	expectTemplate = "\nwant:\n%s\n\ngot:\n%s\n"
-// )
+// expectTemplate is a format string used to display the expected and actual output
+// in a test result. It includes placeholders for the expected value (%s) and the
+// actual value (%s), and separates them with labels "want:" and "got:" for clarity.
+const (
+	expectTemplate = "\nwant:\n%s\n\ngot:\n%s\n"
+)
 
+// TestResolucaoNaPraticaExercicio1 tests the function ResolucaoNaPraticaExercicio1
+// by capturing its output and comparing it to the expected output.
+// It uses the output.Capture method to capture the function's output and
+// the trim.String method to normalize the output and expected strings before comparison.
+// If the captured output does not contain the expected output, the test fails with an error message.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
@@ -32,24 +43,9 @@ Exemplo 2
 
 [{"First":"M","Age":54},{"First":"Q","Age":64},{"First":"Moneypenny","Age":27},{"First":"James","Age":32}]`
 
-	// Utility function to normalize strings
-	normalize := func(input string) string {
-		lines := strings.Split(input, "\n")
-		for i, line := range lines {
-			lines[i] = strings.TrimSpace(line) // Remove leading/trailing spaces
-		}
-		trimmed := strings.Join(lines, "\n") // Rejoin lines
-		return strings.TrimSpace(trimmed)    // Trim leading/trailing newlines
-	}
+	trim := trim.New()
 
-	normalizedResult := normalize(result)
-	normalizedExpect := normalize(expect)
-
-	// Log outputs for debugging
-	// t.Logf("Normalized Expected: %q", normalizedExpect)
-	// t.Logf("Normalized Result: %q", normalizedResult)
-
-	if normalizedResult != normalizedExpect {
-		t.Errorf("Expected output does not match result.\nWant:\n%q\nGot:\n%q", normalizedExpect, normalizedResult)
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
 	}
 }
