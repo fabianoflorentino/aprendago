@@ -16,5 +16,12 @@ func New() *Space {
 // New trims leading and trailing white spaces from the string stored in the Space struct.
 // It returns the trimmed string.
 func (s Space) String(txt string) string {
-	return strings.TrimSpace(txt)
+	lines := strings.Split(txt, "\n")
+	for idx, lns := range lines {
+		lines[idx] = strings.TrimSpace(lns)
+	}
+
+	trimmed := strings.Join(lines, "\n")
+
+	return strings.TrimSpace(trimmed)
 }
