@@ -127,10 +127,10 @@ func ResolucaoNaPraticaExercicio5() {
 // In this example, the anonymous function prints a message to the console when executed.
 func ResolucaoNaPraticaExercicio6() {
 
-	// Uma função anônima é uma função sem nome que pode ser definida e executada inline.
-	// Elas são úteis para tarefas rápidas e podem ser passadas como argumentos para outras funções.
+	// An anonymous function is a function without a name that can be defined and executed inline.
+	// They are useful for quick tasks and can be passed as arguments to other functions.
 	func() {
-		fmt.Println("Função anônima executada.")
+		fmt.Println("Anonymous function executed.")
 	}()
 }
 

@@ -49,14 +49,14 @@ type byAge []user
 //
 // Package internal/exercicios_ninja_nivel_8 contains exercises and solutions for advanced Go programming concepts.
 func ResolucaoNaPraticaExercicio1() {
-	fmt.Printf("Exemplo 1 \n\n")
+	fmt.Printf("\nExemplo 1 \n\n")
 
 	for index, user := range users() {
 		userToJson, _ := json.Marshal(user)
 		fmt.Printf("User %d: %s\n", index+1, userToJson)
 	}
 
-	fmt.Printf("\nExemplo 2 \n\n%v", resolucaoNaPraticaExercicio1())
+	fmt.Printf("\nExemplo 2 \n\n%v\n", resolucaoNaPraticaExercicio1())
 }
 
 // ResolucaoNaPraticaExercicio2 unmarshals a JSON byte slice into a slice of user2 structs,

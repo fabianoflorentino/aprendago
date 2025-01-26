@@ -96,3 +96,24 @@ Cor do sedan: Branco
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio4 tests the function ResolucaoNaPraticaExercicio4
+// by capturing its output and comparing it to the expected result. If the captured
+// output does not match the expected output, the test will fail and log an error.
+func TestResolucaoNaPraticaExercicio4(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+	}
+
+	expect := `
+{Fabiano 39 map[Ale:46 Lucas:38] [Pizza Lasanha Hamburguer]}
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
