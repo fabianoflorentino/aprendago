@@ -58,3 +58,31 @@ Olá, meu nome é fabiano
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio3 tests the function ResolucaoNaPraticaExercicio3 by capturing its output,
+// extracting the expected integer value from the output, and verifying if the value is greater than 50.
+// If the value is less than or equal to 50, the test fails with an error message.
+func TestResolucaoNaPraticaExercicio3(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expect := strings.Split(result, ":")[1]
+	println(expect)
+
+	trim := trim.New()
+
+	expectInt, err := strconv.Atoi(trim.String(expect))
+	if err != nil {
+		t.Fatalf("failed to convert expect to int: %v", err)
+	}
+
+	println(expectInt)
+
+	if expectInt <= 50 {
+		t.Errorf(expectTemplate, strconv.Itoa(50), strings.Split(result, ":")[1])
+	}
+}
