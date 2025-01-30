@@ -24,10 +24,10 @@ const (
 )
 
 // TestResolucaoNaPraticaExercicio1 tests the function ResolucaoNaPraticaExercicio1
-// by capturing its output and comparing it to the expected output.
+// by capturing its output and comparing it with the expected output.
 // It uses the output.Capture method to capture the function's output and
-// the trim.String method to normalize the output and expected strings before comparison.
-// If the captured output does not contain the expected output, the test fails with an error message.
+// the trim.String method to normalize the strings before comparison.
+// If the captured output does not contain the expected output, the test fails.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
