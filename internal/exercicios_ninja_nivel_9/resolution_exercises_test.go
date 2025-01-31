@@ -71,8 +71,6 @@ func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 	}
 
 	expect := strings.Split(result, ":")[1]
-	println(expect)
-
 	trim := trim.New()
 
 	expectInt, err := strconv.Atoi(trim.String(expect))
@@ -84,5 +82,39 @@ func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 
 	if expectInt <= 50 {
 		t.Errorf(expectTemplate, strconv.Itoa(50), strings.Split(result, ":")[1])
+	}
+}
+
+// TestResolucaoNaPraticaExercicio4 tests the function ResolucaoNaPraticaExercicio4
+// by capturing its output and verifying that it contains the expected string
+// "All goroutines completed". It also checks if the integer value extracted from
+// the output is greater than 42000. If any of these conditions are not met, the
+// test will fail with an appropriate error message.
+func TestResolucaoNaPraticaExercicio4(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	trim := trim.New()
+
+	expectString := `All goroutines completed`
+
+	if !strings.Contains(trim.String(result), trim.String(expectString)) {
+		t.Errorf(expectTemplate, expectString, result)
+	}
+
+	expectInt := strings.Split(result, ":")[1]
+	expectInt = strings.TrimSpace(expectInt)
+
+	expect, err := strconv.Atoi(expectInt)
+	if err != nil {
+		t.Fatalf("failed to convert expect to int: %v", err)
+	}
+
+	if expect <= 42000 {
+		t.Errorf(expectTemplate, strconv.Itoa(40000), expectInt)
 	}
 }
