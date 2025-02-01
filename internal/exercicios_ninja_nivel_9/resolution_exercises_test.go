@@ -118,3 +118,23 @@ func TestResolucaoNaPraticaExercicio4(t *testing.T) {
 		t.Errorf(expectTemplate, strconv.Itoa(40000), expectInt)
 	}
 }
+
+// TestResolucaoNapraticaExercicio5 tests the function ResolucaoNaPraticaExercicio5
+// by capturing its output and comparing it to the expected string "Contador: 100".
+// If the captured output does not contain the expected string, the test fails.
+func TestResolucaoNapraticaExercicio5(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	trim := trim.New()
+
+	expectString := `Contador: 100`
+
+	if !strings.Contains(trim.String(result), trim.String(expectString)) {
+		t.Errorf(expectTemplate, expectString, result)
+	}
+}
