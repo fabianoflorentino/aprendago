@@ -161,3 +161,27 @@ Arquitetura: amd64
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio7 tests the function ResolucaoNaPraticaExercicio7
+// by capturing its output and comparing it to the expected result.
+// It uses the output.Capture method to capture the function's output and
+// the trim.String method to normalize the output and expected strings before comparison.
+// If the captured output does not contain the expected string, the test fails.
+func TestResolucaoNaPraticaExercicio7(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	trim := trim.New()
+
+	expect := `
+https://dev.to/fabianoflorentino/a-interface-write-11c5
+`
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
