@@ -138,3 +138,26 @@ func TestResolucaoNapraticaExercicio5(t *testing.T) {
 		t.Errorf(expectTemplate, expectString, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio6 tests the function ResolucaoNaPraticaExercicio6
+// by capturing its output and comparing it to the expected result.
+// It ensures that the function correctly prints the operating system and architecture.
+func TestResolucaoNaPraticaExercicio6(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	trim := trim.New()
+
+	expect := `
+Sistema Operacional: darwin
+Arquitetura: amd64
+`
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
