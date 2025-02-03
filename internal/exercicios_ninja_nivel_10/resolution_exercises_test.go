@@ -1,3 +1,6 @@
+// Package exercicios_ninja_nivel_10 contains tests for the exercises in level 10 of the Ninja Go course.
+// These tests are designed to validate the solutions to the exercises by comparing the actual output
+// of the functions to the expected output.
 package exercicios_ninja_nivel_10
 
 import (
@@ -9,10 +12,16 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
 
+// expectTemplate is a format string used for displaying the expected and actual output
+// in a structured way. It helps in comparing the expected result with the actual result
+// by showing them side by side in the output.
 const (
 	expectTemplate = "\nwant:\n%s\n\ngot:\n%s\n"
 )
 
+// TestResolucaoNaPraticaExercicio1 tests the function ResolucaoNaPraticaExercicio1
+// by capturing its output and comparing it to the expected value.
+// It fails the test if the output does not contain the expected value or if there is an error capturing the output.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
