@@ -39,3 +39,27 @@ Value: 42
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio2 tests the function ResolucaoNaPraticaExercicio2
+// by capturing its output and comparing it to the expected result. If the output
+// does not match the expected result, the test fails with an error message.
+func TestResolucaoNaPraticaExercicio2(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expect := `
+Value: 42
+--------------------
+Type: chan<- int
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
