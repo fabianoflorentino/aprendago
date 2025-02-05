@@ -133,7 +133,14 @@ Channel open: false
 
 	trim := trim.New()
 
+	expectChannelOpen := strings.Contains(trim.String(result), "Channel open: true")
+	expectChannelClosed := strings.Contains(trim.String(result), "Channel open: false")
+
 	if !strings.Contains(trim.String(result), trim.String(expect)) {
 		t.Errorf(expectTemplate, expect, result)
+	}
+
+	if !expectChannelOpen || !expectChannelClosed {
+		t.Errorf("expected channel open and closed states, got open: %v, closed: %v", expectChannelOpen, expectChannelClosed)
 	}
 }
