@@ -185,3 +185,26 @@ About to exit...
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio4 tests the function ResolucaoNaPraticaExercicio4
+// by capturing its output and comparing it to the expected output.
+// It logs and fails the test if there is an error capturing the output
+// or if the captured output does not contain the expected string.
+func TestResolucaoNaPraticaExercicio4(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expect := `
+About to exit...
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
