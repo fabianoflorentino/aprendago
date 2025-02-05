@@ -208,3 +208,25 @@ About to exit...
 		t.Errorf(expectTemplate, expect, result)
 	}
 }
+
+func TestResolucaoNaPraticaExercicio5(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expect := `
+Value: 42
+Channel open: true
+Value: 0
+Channel open: false
+`
+
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+}
