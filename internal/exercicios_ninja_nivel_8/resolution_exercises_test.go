@@ -1,5 +1,10 @@
-// Package exercicios_ninja_nivel_8 contains tests for the exercises in level 8 of the Ninja Go course.
-// These tests are designed to validate the functionality of the solutions provided for the exercises.
+// Package exercicios_ninja_nivel_8 contains a series of test functions designed to validate
+// the output of various exercises. These exercises are part of a learning module aimed at
+// practicing Go programming skills. Each test function captures the output of a specific
+// exercise function and compares it to the expected output. If the captured output does not
+// match the expected output, the test fails and logs an error. The package utilizes helper
+// functions from other packages such as logger, output, and trim to facilitate output
+// capturing, logging, and string normalization.
 package exercicios_ninja_nivel_8
 
 import (
@@ -19,10 +24,10 @@ const (
 )
 
 // TestResolucaoNaPraticaExercicio1 tests the function ResolucaoNaPraticaExercicio1
-// by capturing its output and comparing it to the expected output.
+// by capturing its output and comparing it with the expected output.
 // It uses the output.Capture method to capture the function's output and
-// the trim.String method to normalize the output and expected strings before comparison.
-// If the captured output does not contain the expected output, the test fails with an error message.
+// the trim.String method to normalize the strings before comparison.
+// If the captured output does not contain the expected output, the test fails.
 func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
