@@ -31,7 +31,7 @@ jobs:
           GOOS=linux GOARCH=amd64 go build -o aprendago cmd/aprendago/main.go
 
       - name: Upload Linux build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: aprendago
           path: aprendago
@@ -42,7 +42,7 @@ jobs:
     needs: build
     steps:
       - name: Download Linux build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: aprendago
           path: ./artifacts
