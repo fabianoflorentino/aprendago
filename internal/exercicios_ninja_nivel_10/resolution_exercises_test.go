@@ -209,6 +209,10 @@ About to exit...
 	}
 }
 
+// TestResolucaoNaPraticaExercicio5 tests the function ResolucaoNaPraticaExercicio5
+// by capturing its output and comparing it to the expected result.
+// It verifies that the function produces the correct output and handles
+// the channel state as expected.
 func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
