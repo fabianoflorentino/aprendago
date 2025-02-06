@@ -144,3 +144,31 @@ Channel open: false
 		t.Errorf("expected channel open and closed states, got open: %v, closed: %v", expectChannelOpen, expectChannelClosed)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio6 tests the function ResolucaoNaPraticaExercicio6
+// by capturing its output and verifying the expected number of occurrences of
+// the string "Channel:" and the presence of the string "Channel: 100".
+// It uses the output.Capture method to capture the function's output and
+// the strings.Count and strings.Contains functions to perform the checks.
+// If the captured output does not meet the expectations, the test will fail
+// with an appropriate error message.
+func TestResolucaoNaPraticaExercicio6(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expectChannelCount := 101
+
+	trim := trim.New()
+
+	if strings.Count(trim.String(result), "Channel:") != expectChannelCount {
+		t.Errorf("expected %d occurrences of 'Channel:', got %d", expectChannelCount, strings.Count(trim.String(result), "Channel:"))
+	}
+
+	if !strings.Contains(trim.String(result), "Channel: 100") {
+		t.Errorf("expected 'Channel: 100', got %s", result)
+	}
+}
