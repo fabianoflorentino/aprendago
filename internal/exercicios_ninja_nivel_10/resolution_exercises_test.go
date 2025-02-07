@@ -172,3 +172,24 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 		t.Errorf("expected 'Channel: 100', got %s", result)
 	}
 }
+
+func TestResolucaoNaPraticaExercicio7(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expectChannelCount := 101
+
+	trim := trim.New()
+
+	if strings.Count(trim.String(result), "Channel:") != expectChannelCount {
+		t.Errorf("expected %d occurrences of 'Channel:', got %d", expectChannelCount, strings.Count(trim.String(result), "Channel:"))
+	}
+
+	if !strings.Contains(trim.String(result), "99 	 9") {
+		t.Errorf("expected 'Channel: 100', got %s", result)
+	}
+}
