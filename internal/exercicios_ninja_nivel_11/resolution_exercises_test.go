@@ -9,7 +9,19 @@ package exercicios_ninja_nivel_11
 
 import (
 	"encoding/json"
+	"strings"
 	"testing"
+
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
+	"github.com/fabianoflorentino/aprendago/pkg/output"
+	"github.com/fabianoflorentino/aprendago/pkg/trim"
+)
+
+// expectTemplate is a format string used for displaying the expected and actual output
+// in a structured way. It helps in comparing the expected result with the actual result
+// by showing them side by side in the output.
+const (
+	expectTemplate = "\nwant:\n%s\n\ngot:\n%s\n"
 )
 
 // TestResolucaoNaPraticaExercicio1 tests the JSON marshaling of a 'person' struct.
@@ -54,5 +66,28 @@ func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 
 	if string(bs) != expected {
 		t.Errorf("Expected %v, got %v", expected, string(bs))
+	}
+}
+
+// TestResolucaoNaPraticaExercicio3 tests the function ResolucaoNaPraticaExercicio3
+// by capturing its output and comparing it to the expected output.
+// It uses the output.Capture method to capture the function's output and
+// the strings.Contains method to check if the captured output contains the expected string.
+// If the output does not match the expected string, the test fails with an error message.
+func TestResolucaoNaPraticaExercicio3(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expected := `
+erro especial
+`
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expected)) {
+		t.Errorf(expectTemplate, expected, result)
 	}
 }
