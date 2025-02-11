@@ -91,3 +91,22 @@ erro especial
 		t.Errorf(expectTemplate, expected, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio4 tests the function ResolucaoNaPraticaExercicio4
+// by capturing its output and checking if it contains the expected substring.
+// It ensures that the function handles the specific error message correctly.
+// If the expected substring is not found in the output, the test will fail.
+func TestResolucaoNaPraticaExercicio4(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
+	if err != nil {
+		t.Fatalf("Unexpected error capturing output: %v", err)
+	}
+
+	expectedSubstring := "math error: 50.2289 N 99.4656 W número negativo: -10.23"
+
+	// Verifica apenas a parte relevante da mensagem de erro.
+	if !strings.Contains(result, expectedSubstring) {
+		t.Errorf("Expected substring not found.\nWant: %q\nGot: %q", expectedSubstring, result)
+	}
+}
