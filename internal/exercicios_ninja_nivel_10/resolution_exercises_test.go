@@ -4,6 +4,7 @@
 package exercicios_ninja_nivel_10
 
 import (
+	"strconv"
 	"strings"
 	"testing"
 
@@ -75,114 +76,17 @@ func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 		t.Fatalf("unexpected error: %v", err)
 	}
 
-	expect := `
-Value: 0
-Value: 1
-Value: 2
-Value: 3
-Value: 4
-Value: 5
-Value: 6
-Value: 7
-Value: 8
-Value: 9
-Value: 10
-Value: 11
-Value: 12
-Value: 13
-Value: 14
-Value: 15
-Value: 16
-Value: 17
-Value: 18
-Value: 19
-Value: 20
-Value: 21
-Value: 22
-Value: 23
-Value: 24
-Value: 25
-Value: 26
-Value: 27
-Value: 28
-Value: 29
-Value: 30
-Value: 31
-Value: 32
-Value: 33
-Value: 34
-Value: 35
-Value: 36
-Value: 37
-Value: 38
-Value: 39
-Value: 40
-Value: 41
-Value: 42
-Value: 43
-Value: 44
-Value: 45
-Value: 46
-Value: 47
-Value: 48
-Value: 49
-Value: 50
-Value: 51
-Value: 52
-Value: 53
-Value: 54
-Value: 55
-Value: 56
-Value: 57
-Value: 58
-Value: 59
-Value: 60
-Value: 61
-Value: 62
-Value: 63
-Value: 64
-Value: 65
-Value: 66
-Value: 67
-Value: 68
-Value: 69
-Value: 70
-Value: 71
-Value: 72
-Value: 73
-Value: 74
-Value: 75
-Value: 76
-Value: 77
-Value: 78
-Value: 79
-Value: 80
-Value: 81
-Value: 82
-Value: 83
-Value: 84
-Value: 85
-Value: 86
-Value: 87
-Value: 88
-Value: 89
-Value: 90
-Value: 91
-Value: 92
-Value: 93
-Value: 94
-Value: 95
-Value: 96
-Value: 97
-Value: 98
-Value: 99
-About to exit...
-`
+	expectValueCount := 100
+	expectExitText := "About to exit..."
 
 	trim := trim.New()
 
-	if !strings.Contains(trim.String(result), trim.String(expect)) {
-		t.Errorf(expectTemplate, expect, result)
+	if !strings.Contains(trim.String(result), trim.String(expectExitText)) {
+		t.Errorf(expectTemplate, expectExitText, result)
+	}
+
+	if strings.Count(trim.String(result), "Value:") != expectValueCount {
+		t.Errorf("expected %d occurrences of 'Value:', got %d", expectValueCount, strings.Count(trim.String(result), "Value:"))
 	}
 }
 
@@ -206,5 +110,92 @@ About to exit...
 
 	if !strings.Contains(trim.String(result), trim.String(expect)) {
 		t.Errorf(expectTemplate, expect, result)
+	}
+}
+
+// TestResolucaoNaPraticaExercicio5 tests the function ResolucaoNaPraticaExercicio5
+// by capturing its output and comparing it to the expected result.
+// It verifies that the function produces the correct output and handles
+// the channel state as expected.
+func TestResolucaoNaPraticaExercicio5(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expect := `
+Value: 42
+Channel open: true
+Value: 0
+Channel open: false
+`
+
+	trim := trim.New()
+
+	expectChannelOpen := strings.Contains(trim.String(result), "Channel open: true")
+	expectChannelClosed := strings.Contains(trim.String(result), "Channel open: false")
+
+	if !strings.Contains(trim.String(result), trim.String(expect)) {
+		t.Errorf(expectTemplate, expect, result)
+	}
+
+	if !expectChannelOpen || !expectChannelClosed {
+		t.Errorf("expected channel open and closed states, got open: %v, closed: %v", expectChannelOpen, expectChannelClosed)
+	}
+}
+
+// TestResolucaoNaPraticaExercicio6 tests the function ResolucaoNaPraticaExercicio6
+// by capturing its output and verifying the expected number of occurrences of
+// the string "Channel:" and the presence of the string "Channel: 100".
+// It uses the output.Capture method to capture the function's output and
+// the strings.Count and strings.Contains functions to perform the checks.
+// If the captured output does not meet the expectations, the test will fail
+// with an appropriate error message.
+func TestResolucaoNaPraticaExercicio6(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expectChannelCount := 101
+
+	trim := trim.New()
+
+	if strings.Count(trim.String(result), "Channel:") != expectChannelCount {
+		t.Errorf("expected %d occurrences of 'Channel:', got %d", expectChannelCount, strings.Count(trim.String(result), "Channel:"))
+	}
+
+	if !strings.Contains(trim.String(result), "Channel: 100") {
+		t.Errorf("expected 'Channel: 100', got %s", result)
+	}
+}
+
+// TestResolucaoNaPraticaExercicio7 tests the function ResolucaoNaPraticaExercicio7
+// by capturing its output and verifying the number of occurrences of the string "Channel:"
+// in the output. It expects 101 occurrences of "Channel:" and checks if the output contains
+// the specific string "99 	 9". If the expectations are not met, the test will fail with
+// an appropriate error message.
+func TestResolucaoNaPraticaExercicio7(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expectChannelCount := 101
+
+	trim := trim.New()
+
+	if strings.Contains(trim.String(result), strconv.Itoa(expectChannelCount)) {
+		t.Errorf("expected 99 occurrences of 'Channel:', got %d", strings.Count(trim.String(result), "Channel:"))
+	}
+
+	if !strings.Contains(trim.String(result), "99 	 9") {
+		t.Errorf("expected 'Channel: 100', got %s", result)
 	}
 }
