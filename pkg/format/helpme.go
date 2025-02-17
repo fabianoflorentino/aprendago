@@ -62,8 +62,6 @@ func PrintHelpMe(helpme []HelpMe) {
 	if err != nil {
 		panic(err)
 	}
-
-	fmt.Println("teste")
 }
 
 // parseWidth takes a slice of HelpMe structs and returns the length of the longest
