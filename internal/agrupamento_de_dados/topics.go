@@ -24,17 +24,7 @@ const (
 // The topics covered include arrays, slices (with various operations), and maps.
 func AgrupamentoDeDados() {
 	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
-
-	executeSection("Array")
-	executeSection("Slice: literal composta")
-	executeSection("Slice: for range")
-	executeSection("Slice: fatiando ou deletando de uma fatia")
-	executeSection("Slice: anexando a uma slice")
-	executeSection("Slice: make")
-	executeSection("Slice: multi dimensional")
-	executeSection("Slice: a surpresa do array subjacente")
-	executeSection("Maps: introdução")
-	executeSection("Maps: range e deletando")
+	listOfTopics()
 }
 
 // MenuAgrupamentoDeDados returns a slice of format.MenuOptions, each representing a menu option
@@ -78,6 +68,29 @@ func HelpMeAgrupamentoDeDados() {
 
 	fmt.Println("\nCapítulo 8: Agrupamento de Dados")
 	format.PrintHelpMe(hlp)
+}
+
+// listOfTopics executes each topic in the list.
+// It iterates over a predefined list of topics and calls the executeSection
+// function for each topic. This function is used to sequentially execute
+// and display the content of each section.
+func listOfTopics() {
+	listOfTopics := []string{
+		"Array",
+		"Slice: literal composta",
+		"Slice: for range",
+		"Slice: fatiando ou deletando de uma fatia",
+		"Slice: anexando a uma slice",
+		"Slice: make",
+		"Slice: multi dimensional",
+		"Slice: a surpresa do array subjacente",
+		"Maps: introdução",
+		"Maps: range e deletando",
+	}
+
+	for _, topic := range listOfTopics {
+		executeSection(topic)
+	}
 }
 
 // executeSection formats and processes a specific section of data.
