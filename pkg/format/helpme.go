@@ -29,6 +29,41 @@ type HelpMe struct {
 	Width       int
 }
 
+// PrintHelpMe formats and prints a slice of HelpMe structs using a predefined template.
+// It first calculates the width for each HelpMe item, then sets up a template with custom functions
+// for formatting. The template is parsed and executed, rendering the formatted output to os.Stdout.
+//
+// Parameters:
+//
+//	helpme []HelpMe - A slice of HelpMe structs to be formatted and printed.
+func PrintHelpMe(helpme []HelpMe) {
+	width := parseWidth(helpme)
+	for i := range helpme {
+		helpme[i].Width = width
+	}
+
+	// funcMap is a map of functions that can be used in the template.
+	// In this case, we are using the printf function from the fmt package to format the output.
+	funcMap := template.FuncMap{
+		"printf": fmt.Sprintf,
+		"indent": indent,
+	}
+
+	// tmpl is a template object that contains the help output template.
+	// The template is a string that contains the formatting for the help output.
+	tmpl, err := template.New("helpme").Funcs(funcMap).Parse(templateHelpMe)
+	if err != nil {
+		panic(err)
+	}
+
+	// The Execute function is used to render the template and print the formatted output.
+	// The first argument is the output destination (os.Stdout) and the second argument is the data model (helpme).
+	err = tmpl.Execute(os.Stdout, helpme)
+	if err != nil {
+		panic(err)
+	}
+}
+
 // parseWidth takes a slice of HelpMe structs and returns the length of the longest
 // flag string within the slice. It iterates through each HelpMe struct, trims any
 // leading or trailing whitespace from the flag string, and updates the maximum
@@ -78,39 +113,4 @@ func indent(width int, description string) string {
 	}
 
 	return strings.Join(lines, "\n")
-}
-
-// PrintHelpMe formats and prints a slice of HelpMe structs using a predefined template.
-// It first calculates the width for each HelpMe item, then sets up a template with custom functions
-// for formatting. The template is parsed and executed, rendering the formatted output to os.Stdout.
-//
-// Parameters:
-//
-//	helpme []HelpMe - A slice of HelpMe structs to be formatted and printed.
-func PrintHelpMe(helpme []HelpMe) {
-	width := parseWidth(helpme)
-	for i := range helpme {
-		helpme[i].Width = width
-	}
-
-	// funcMap is a map of functions that can be used in the template.
-	// In this case, we are using the printf function from the fmt package to format the output.
-	funcMap := template.FuncMap{
-		"printf": fmt.Sprintf,
-		"indent": indent,
-	}
-
-	// tmpl is a template object that contains the help output template.
-	// The template is a string that contains the formatting for the help output.
-	tmpl, err := template.New("helpme").Funcs(funcMap).Parse(templateHelpMe)
-	if err != nil {
-		panic(err)
-	}
-
-	// The Execute function is used to render the template and print the formatted output.
-	// The first argument is the output destination (os.Stdout) and the second argument is the data model (helpme).
-	err = tmpl.Execute(os.Stdout, helpme)
-	if err != nil {
-		panic(err)
-	}
 }

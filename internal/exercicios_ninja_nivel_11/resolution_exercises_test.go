@@ -110,3 +110,33 @@ func TestResolucaoNaPraticaExercicio4(t *testing.T) {
 		t.Errorf("Expected substring not found.\nWant: %q\nGot: %q", expectedSubstring, result)
 	}
 }
+
+// TestResolucaoNaPraticaExercicio5 tests the function ResolucaoNaPraticaExercicio5
+// by capturing its output and comparing it to the expected result. If the output
+// does not match the expected result, the test will fail. The expected output
+// includes instructions for learning how to write tests in Go and a reference
+// to the file where the solution can be found.
+func TestResolucaoNaPraticaExercicio5(t *testing.T) {
+	output := output.New()
+	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
+	if err != nil {
+		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	expected := `
+- Nos capítulos seguintes, uma das coisas que veremos é testes.
+- Para testar sua habilidade de se virar por conta própria... desafio:
+  - Utilizando as seguintes fontes: https://godoc.org/testing & http://www.golang-book.com/books/intro/12
+  - Tente descobrir por conta própria como funcionam testes em Go.
+  - Pode usar tradutor automático, pode rodar código na sua máquina, pode procurar no Google. Vale tudo.
+  - O exercício é: crie um teste simples de uma função ou método ou pedaço qualquer de código.
+
+Resolução: internal/exercicios_ninja_nivel_11/resolution_exercises_test.go
+`
+	trim := trim.New()
+
+	if !strings.Contains(trim.String(result), trim.String(expected)) {
+		t.Errorf(expectTemplate, expected, result)
+	}
+}

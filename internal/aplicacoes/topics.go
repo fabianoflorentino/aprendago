@@ -15,25 +15,12 @@ const (
 	rootDir = "internal/aplicacoes"
 )
 
-// Aplicacoes prints the title of Chapter 16 and executes a series of sections related to various topics.
-// The sections include:
-// - JSON Documentation
-// - JSON marshal (ordering)
-// - JSON unmarshal (disordering)
-// - The Writer interface
-// - The sort package
-// - Customizing sort
-// - bcrypt
+// Aplicacoes prints the chapter title and executes a series of sections
+// related to various topics such as JSON handling, interfaces, sorting,
+// and encryption using bcrypt.
 func Aplicacoes() {
 	fmt.Printf("\n\nCapítulo 16: Aplicações\n")
-
-	executeSections("Documentação JSON")
-	executeSections("JSON marshal (ordenação)")
-	executeSections("JSON unmarshal (desornação)")
-	executeSections("A interface Writer")
-	executeSections("O pacote sort")
-	executeSections("Customizando sort")
-	executeSections("bcrypt")
+	listOfTopics()
 }
 
 // MenuAplicacoes returns a slice of format.MenuOptions, each representing a different command-line option
@@ -78,6 +65,22 @@ func HelpMeAplicacoes() {
 
 	fmt.Printf("\nCapítulo 16: Aplicações\n")
 	format.PrintHelpMe(hlp)
+}
+
+func listOfTopics() {
+	listOfTopics := []string{
+		"Documentação JSON",
+		"JSON marshal (ordenação)",
+		"JSON unmarshal (desornação)",
+		"A interface Writer",
+		"O pacote sort",
+		"Customizando sort",
+		"bcrypt",
+	}
+
+	for _, topic := range listOfTopics {
+		executeSections(topic)
+	}
 }
 
 // executeSections processes a given section by formatting it.

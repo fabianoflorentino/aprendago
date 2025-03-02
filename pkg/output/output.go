@@ -58,19 +58,15 @@ func (o *Output) Capture(captureOutput func()) (string, error) {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		io.Copy(&buf, o.read) // Captura os dados
+		io.Copy(&buf, o.read)
 	}()
 
-	// Executa a função alvo
 	captureOutput()
 
-	// Fecha o pipe para garantir que todos os dados sejam escritos
 	o.write.Close()
 
-	// Aguarda a goroutine terminar a leitura
 	wg.Wait()
 
-	// **Restaura a saída antes de ler o buffer**
 	os.Stdout = o.stdout
 	os.Stderr = o.stderr
 	log.SetOutput(os.Stderr)
