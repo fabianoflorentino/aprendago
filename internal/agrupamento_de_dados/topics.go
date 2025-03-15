@@ -24,7 +24,7 @@ const (
 // The topics covered include arrays, slices (with various operations), and maps.
 func AgrupamentoDeDados() {
 	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
-	listOfTopics()
+	showTopics()
 }
 
 // MenuAgrupamentoDeDados returns a slice of format.MenuOptions, each representing a menu option
@@ -70,12 +70,19 @@ func HelpMeAgrupamentoDeDados() {
 	format.PrintHelpMe(hlp)
 }
 
-// listOfTopics executes each topic in the list.
-// It iterates over a predefined list of topics and calls the executeSection
-// function for each topic. This function is used to sequentially execute
-// and display the content of each section.
-func listOfTopics() {
-	listOfTopics := []string{
+// showTopics iterates over a list of topics and executes a section for each topic.
+// It retrieves the list of topics from the listOfTopics function and processes each topic
+// using the executeSection function.
+func showTopics() {
+	for _, topic := range listOfTopics() {
+		executeSection(topic)
+	}
+}
+
+// listOfTopics returns a list of topics related to Go programming.
+// The topics include various aspects of arrays, slices, and maps.
+func listOfTopics() []string {
+	return []string{
 		"Array",
 		"Slice: literal composta",
 		"Slice: for range",
@@ -86,10 +93,6 @@ func listOfTopics() {
 		"Slice: a surpresa do array subjacente",
 		"Maps: introdução",
 		"Maps: range e deletando",
-	}
-
-	for _, topic := range listOfTopics {
-		executeSection(topic)
 	}
 }
 
