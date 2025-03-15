@@ -20,7 +20,7 @@ const (
 // and encryption using bcrypt.
 func Aplicacoes() {
 	fmt.Printf("\n\nCapítulo 16: Aplicações\n")
-	listOfTopics()
+	showTopics()
 }
 
 // MenuAplicacoes returns a slice of format.MenuOptions, each representing a different command-line option
@@ -67,8 +67,20 @@ func HelpMeAplicacoes() {
 	format.PrintHelpMe(hlp)
 }
 
-func listOfTopics() {
-	listOfTopics := []string{
+// showTopics iterates over a list of topics and executes sections for each topic.
+// It retrieves the list of topics from the listOfTopics function and processes
+// each topic using the executeSections function.
+func showTopics() {
+	for _, topic := range listOfTopics() {
+		executeSections(topic)
+	}
+}
+
+// listOfTopics returns a list of topics related to Go programming.
+// The topics include JSON documentation, marshaling and unmarshaling,
+// the Writer interface, the sort package, custom sorting, and bcrypt.
+func listOfTopics() []string {
+	return []string{
 		"Documentação JSON",
 		"JSON marshal (ordenação)",
 		"JSON unmarshal (desornação)",
@@ -76,10 +88,6 @@ func listOfTopics() {
 		"O pacote sort",
 		"Customizando sort",
 		"bcrypt",
-	}
-
-	for _, topic := range listOfTopics {
-		executeSections(topic)
 	}
 }
 
