@@ -7,6 +7,7 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
+	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
 
 // rootDir represents the relative path to the "aplicacoes" directory within the internal package.
@@ -31,7 +32,8 @@ func Aplicacoes() {
 		"bcrypt",
 	}
 
-	showTopics(listOfTopics)
+	contents := topic.New()
+	contents.TopicsContents(rootDir, listOfTopics)
 }
 
 // MenuAplicacoes returns a slice of format.MenuOptions, each representing a different command-line option
@@ -41,18 +43,18 @@ func Aplicacoes() {
 func MenuAplicacoes([]string) []format.MenuOptions {
 
 	return []format.MenuOptions{
-		{Options: "--documentacao-json", ExecFunc: func() { executeSections("Documentação JSON") }},
+		{Options: "--documentacao-json", ExecFunc: func() { format.FormatSection(rootDir, "Documentação JSON") }},
 		{Options: "--documentacao-json --example --json-marshal", ExecFunc: func() { UsingJsonMarshal() }},
 		{Options: "--documentacao-json --example --json-unmarshal", ExecFunc: func() { UsingJsonUnmarshal() }},
 		{Options: "--documentacao-json --example --json-encoder", ExecFunc: func() { UsingJsonEncoder() }},
-		{Options: "--json-marshal", ExecFunc: func() { executeSections("JSON marshal (ordenação)") }},
-		{Options: "--json-unmarshal", ExecFunc: func() { executeSections("JSON unmarshal (desornação)") }},
-		{Options: "--interface-writer", ExecFunc: func() { executeSections("A interface Writer") }},
-		{Options: "--pacote-sort", ExecFunc: func() { executeSections("O pacote sort") }},
+		{Options: "--json-marshal", ExecFunc: func() { format.FormatSection(rootDir, "JSON marshal (ordenação)") }},
+		{Options: "--json-unmarshal", ExecFunc: func() { format.FormatSection(rootDir, "JSON unmarshal (desornação)") }},
+		{Options: "--interface-writer", ExecFunc: func() { format.FormatSection(rootDir, "A interface Writer") }},
+		{Options: "--pacote-sort", ExecFunc: func() { format.FormatSection(rootDir, "O pacote sort") }},
 		{Options: "--pacote-sort --example", ExecFunc: func() { UsingPackageSort() }},
-		{Options: "--customizando-sort", ExecFunc: func() { executeSections("Customizando sort") }},
+		{Options: "--customizando-sort", ExecFunc: func() { format.FormatSection(rootDir, "Customizando sort") }},
 		{Options: "--customizando-sort --example", ExecFunc: func() { UsingCustomSort() }},
-		{Options: "--bcrypt", ExecFunc: func() { executeSections("bcrypt") }},
+		{Options: "--bcrypt", ExecFunc: func() { format.FormatSection(rootDir, "bcrypt") }},
 	}
 }
 
@@ -76,23 +78,4 @@ func HelpMeAplicacoes() {
 
 	fmt.Printf("\nCapítulo 16: Aplicações\n")
 	format.PrintHelpMe(hlp)
-}
-
-// showTopics iterates over a list of topics and executes sections for each topic.
-// It retrieves the list of topics from the listOfTopics function and processes
-// each topic using the executeSections function.
-func showTopics(listOfTopics []string) {
-	for _, topic := range listOfTopics {
-		executeSections(topic)
-	}
-}
-
-// executeSections processes a given section by formatting it.
-// It takes a section name as a string parameter and applies the FormatSection
-// function from the format package to the section, using the rootDir as the base directory.
-//
-// Parameters:
-//   - section: The name of the section to be formatted.
-func executeSections(section string) {
-	format.FormatSection(rootDir, section)
 }
