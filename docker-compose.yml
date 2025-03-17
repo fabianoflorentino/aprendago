@@ -1,7 +1,7 @@
 ---
 services:
   aprendago:
-    image: fabianoflorentino/aprendago:v0.1
+    image: fabianoflorentino/aprendago:v0.0.1
     build:
       context: .
       dockerfile: build/Dockerfile.dev
