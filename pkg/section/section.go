@@ -49,6 +49,21 @@ func (s *Section) Format(title string) error {
 	return s.formatDocument(sec)
 }
 
+// validateTitle checks if the provided title is not empty.
+// It returns an error if the title is empty, otherwise it returns nil.
+//
+// Parameters:
+//   - title: The title string to be validated.
+//
+// Returns:
+//   - error: An error if the title is empty, otherwise nil.
+func (s *Section) validateTitle(title string) error {
+	if title == "" {
+		return fmt.Errorf("título da seção não pode ser vazio")
+	}
+	return nil
+}
+
 // readSection reads a section with the given title from the root directory of the Section.
 // It returns a pointer to the reader.Section and an error if any occurs during the reading process.
 //
@@ -81,21 +96,6 @@ func (s *Section) readSection(title string) (*reader.Section, error) {
 	}
 
 	return sec, nil
-}
-
-// validateTitle checks if the provided title is not empty.
-// It returns an error if the title is empty, otherwise it returns nil.
-//
-// Parameters:
-//   - title: The title string to be validated.
-//
-// Returns:
-//   - error: An error if the title is empty, otherwise nil.
-func (s *Section) validateTitle(title string) error {
-	if title == "" {
-		return fmt.Errorf("título da seção não pode ser vazio")
-	}
-	return nil
 }
 
 // formatDocument formats a given section into a document and processes it using the format.FormatOverview function.
