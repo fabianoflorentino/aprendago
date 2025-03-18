@@ -22,6 +22,22 @@ const (
 	rootDir = "internal/agrupamento_de_dados"
 )
 
+// Array represents a fixed-size sequence of elements of the same type.
+// Arrays in Go have a fixed length, and their size is part of their type.
+// They are useful when you know the exact number of elements you need to store.
+const (
+	Array                        = "Array"
+	SliceLiteralComposta         = "Slice: literal composta"
+	SliceForRange                = "Slice: for range"
+	SliceFatiandoOuDeletando     = "Slice: fatiando ou deletando de uma fatia"
+	SliceAnexando                = "Slice: anexando a uma slice"
+	SliceMake                    = "Slice: make"
+	SliceMultiDimensional        = "Slice: multi dimensional"
+	SliceSurpresaArraySubjacente = "Slice: a surpresa do array subjacente"
+	MapsIntroducao               = "Maps: introdução"
+	MapsRangeEDeletando          = "Maps: range e deletando"
+)
+
 // AgrupamentoDeDados prints a header and executes a series of sections related to data grouping in Go.
 // Each section is executed by calling the executeSection function with a specific topic name.
 // The topics covered include arrays, slices (with various operations), and maps.
@@ -29,16 +45,16 @@ func AgrupamentoDeDados() {
 	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
 
 	listOfTopics := []string{
-		"Array",
-		"Slice: literal composta",
-		"Slice: for range",
-		"Slice: fatiando ou deletando de uma fatia",
-		"Slice: anexando a uma slice",
-		"Slice: make",
-		"Slice: multi dimensional",
-		"Slice: a surpresa do array subjacente",
-		"Maps: introdução",
-		"Maps: range e deletando",
+		Array,
+		SliceLiteralComposta,
+		SliceForRange,
+		SliceFatiandoOuDeletando,
+		SliceAnexando,
+		SliceMake,
+		SliceMultiDimensional,
+		SliceSurpresaArraySubjacente,
+		MapsIntroducao,
+		MapsRangeEDeletando,
 	}
 
 	content := topic.New()
@@ -76,17 +92,17 @@ func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 // function from the format package to display the list of topics.
 func HelpMeAgrupamentoDeDados() {
 	hlp := []format.HelpMe{
-		{Flag: "--array", Description: "Apresenta o tópico Array.", Width: 0},
-		{Flag: "--slice-literal-composta", Description: "Apresenta o tópico Slice Literal Composta.", Width: 0},
-		{Flag: "--slice-for-range", Description: "Apresenta o tópico Slice: for range.", Width: 0},
-		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia", Description: "Apresenta o tópico Slice: fatiando ou deletando de uma fatia.", Width: 0},
-		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao", Description: "Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia.", Width: 0},
-		{Flag: "--slice-anexando-a-uma-slice", Description: "Apresenta o tópico Slice: anexando a uma slice.", Width: 0},
-		{Flag: "--slice-make", Description: "Apresenta o tópico Slice: Make.", Width: 0},
-		{Flag: "--slice-multi-dimensional", Description: "Apresenta o tópico Slice: Multi Dimensional.", Width: 0},
-		{Flag: "--slice-a-surpresa-do-array-subjacente", Description: "Apresenta o tópico Slice: a surpresa do array subjacente.", Width: 0},
-		{Flag: "--maps-introducao", Description: "Apresenta o tópico Maps: introdução.", Width: 0},
-		{Flag: "--maps-range-e-deletando", Description: "Apresenta o tópico Maps: Range e Deletando.", Width: 0},
+		{Flag: "--array", Description: "Apresenta o tópico Array."},
+		{Flag: "--slice-literal-composta", Description: "Apresenta o tópico Slice Literal Composta."},
+		{Flag: "--slice-for-range", Description: "Apresenta o tópico Slice: for range."},
+		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia", Description: "Apresenta o tópico Slice: fatiando ou deletando de uma fatia."},
+		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao", Description: "Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia."},
+		{Flag: "--slice-anexando-a-uma-slice", Description: "Apresenta o tópico Slice: anexando a uma slice."},
+		{Flag: "--slice-make", Description: "Apresenta o tópico Slice: Make."},
+		{Flag: "--slice-multi-dimensional", Description: "Apresenta o tópico Slice: Multi Dimensional."},
+		{Flag: "--slice-a-surpresa-do-array-subjacente", Description: "Apresenta o tópico Slice: a surpresa do array subjacente."},
+		{Flag: "--maps-introducao", Description: "Apresenta o tópico Maps: introdução."},
+		{Flag: "--maps-range-e-deletando", Description: "Apresenta o tópico Maps: Range e Deletando."},
 	}
 
 	fmt.Println("\nCapítulo 8: Agrupamento de Dados")
