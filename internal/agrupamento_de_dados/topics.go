@@ -11,6 +11,7 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
+	"github.com/fabianoflorentino/aprendago/pkg/section"
 	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
 
@@ -48,17 +49,19 @@ func AgrupamentoDeDados() {
 // string and an associated function to execute a specific section related to arrays, slices,
 // and maps. The function does not take any parameters and returns a slice of format.MenuOptions.
 func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
+	section := section.New(rootDir)
+
 	return []format.MenuOptions{
-		{Options: "--array", ExecFunc: func() { format.FormatSection(rootDir, "Array") }},
-		{Options: "--slice-literal-composta", ExecFunc: func() { format.FormatSection(rootDir, "Slice: literal composta") }},
-		{Options: "--slice-for-range", ExecFunc: func() { format.FormatSection(rootDir, "Slice: for range") }},
-		{Options: "--slice-fatiando-ou-deletando-de-uma-fatia", ExecFunc: func() { format.FormatSection(rootDir, "Slice: fatiando ou deletando de uma fatia") }},
-		{Options: "--slice-anexando-a-uma-slice", ExecFunc: func() { format.FormatSection(rootDir, "Slice: anexando a uma slice") }},
-		{Options: "--slice-make", ExecFunc: func() { format.FormatSection(rootDir, "Slice: make") }},
-		{Options: "--slice-multi-dimensional", ExecFunc: func() { format.FormatSection(rootDir, "Slice: multi dimensional") }},
-		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { format.FormatSection(rootDir, "Slice: a surpresa do array subjacente") }},
-		{Options: "--maps-introducao", ExecFunc: func() { format.FormatSection(rootDir, "Maps: introdução") }},
-		{Options: "--maps-range-e-deletando", ExecFunc: func() { format.FormatSection(rootDir, "Maps: range e deletando") }},
+		{Options: "--array", ExecFunc: func() { section.Format("Array") }},
+		{Options: "--slice-literal-composta", ExecFunc: func() { section.Format("Slice: literal composta") }},
+		{Options: "--slice-for-range", ExecFunc: func() { section.Format("Slice: for range") }},
+		{Options: "--slice-fatiando-ou-deletando-de-uma-fatia", ExecFunc: func() { section.Format("Slice: fatiando ou deletando de uma fatia") }},
+		{Options: "--slice-anexando-a-uma-slice", ExecFunc: func() { section.Format("Slice: anexando a uma slice") }},
+		{Options: "--slice-make", ExecFunc: func() { section.Format("Slice: make") }},
+		{Options: "--slice-multi-dimensional", ExecFunc: func() { section.Format("Slice: multi dimensional") }},
+		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { section.Format("Slice: a surpresa do array subjacente") }},
+		{Options: "--maps-introducao", ExecFunc: func() { section.Format("Maps: introdução") }},
+		{Options: "--maps-range-e-deletando", ExecFunc: func() { section.Format("Maps: range e deletando") }},
 	}
 }
 
