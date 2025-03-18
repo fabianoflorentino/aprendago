@@ -35,6 +35,10 @@ func New(rootDir string) (*Section, error) {
 //	dir: The directory where the section is located.
 //	title: The title of the section to be read.
 func (s *Section) Format(title string) error {
+	if title == "" {
+		return fmt.Errorf("título da seção não pode ser vazio")
+	}
+
 	section, err := reader.ReadSection(s.rootDir, title)
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -59,7 +63,8 @@ func (s *Section) Format(title string) error {
 	err = format.FormatOverview([]reader.Document{document})
 	if err != nil {
 		logger.Log("Erro ao formatar o documento: %v", err)
+		return fmt.Errorf("erro ao formatar o documento")
 	}
 
-	return err
+	return nil
 }
