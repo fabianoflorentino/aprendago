@@ -7,6 +7,7 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/section"
 	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
@@ -42,7 +43,10 @@ func Aplicacoes() {
 // JSON marshal/unmarshal, JSON encoder, interface Writer, sort package, custom sorting, and bcrypt.
 // Each option is associated with a specific ExecFunc that executes the relevant section or example.
 func MenuAplicacoes([]string) []format.MenuOptions {
-	section := section.New(rootDir)
+	section, err := section.New(rootDir)
+	if err != nil {
+		logger.Log("Erro ao criar nova seção: %v", err)
+	}
 
 	return []format.MenuOptions{
 		{Options: "--documentacao-json", ExecFunc: func() { section.Format("Documentação JSON") }},

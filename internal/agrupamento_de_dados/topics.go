@@ -11,6 +11,7 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/section"
 	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
@@ -49,7 +50,10 @@ func AgrupamentoDeDados() {
 // string and an associated function to execute a specific section related to arrays, slices,
 // and maps. The function does not take any parameters and returns a slice of format.MenuOptions.
 func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
-	section := section.New(rootDir)
+	section, err := section.New(rootDir)
+	if err != nil {
+		logger.Log("Erro ao criar nova seção: %v", err)
+	}
 
 	return []format.MenuOptions{
 		{Options: "--array", ExecFunc: func() { section.Format("Array") }},
