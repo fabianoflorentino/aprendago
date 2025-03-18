@@ -3,6 +3,7 @@
 package section
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
@@ -18,8 +19,11 @@ type Section struct {
 }
 
 // New creates and returns a new instance of Section.
-func New(rootDir string) *Section {
-	return &Section{rootDir: rootDir}
+func New(rootDir string) (*Section, error) {
+	if rootDir == "" {
+		return nil, fmt.Errorf("diretório raiz não pode ser vazio")
+	}
+	return &Section{rootDir: rootDir}, nil
 }
 
 // Format reads a section from the specified directory and title, and formats it.
@@ -30,14 +34,20 @@ func New(rootDir string) *Section {
 //
 //	dir: The directory where the section is located.
 //	title: The title of the section to be read.
-func (s *Section) Format(title string) {
+func (s *Section) Format(title string) error {
 	section, err := reader.ReadSection(s.rootDir, title)
 	if err != nil {
 		if os.IsNotExist(err) {
 			logger.Log("Seção '%s' não encontrada no diretório '%s'", title, s.rootDir)
-		} else {
-			logger.Log("Erro ao ler a seção: %v", err)
 		}
+
+		logger.Log("Erro ao ler a seção: %v", err)
+		return err
+	}
+
+	if section == nil {
+		logger.Log("Seção '%s' não encontrada no diretório '%s'", title, s.rootDir)
+		return fmt.Errorf("seção não encontrada")
 	}
 
 	document := reader.Document{
@@ -50,4 +60,6 @@ func (s *Section) Format(title string) {
 	if err != nil {
 		logger.Log("Erro ao formatar o documento: %v", err)
 	}
+
+	return err
 }
