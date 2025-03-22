@@ -26,16 +26,16 @@ const (
 // Arrays in Go have a fixed length, and their size is part of their type.
 // They are useful when you know the exact number of elements you need to store.
 const (
-	Array                        = "Array"
-	SliceLiteralComposta         = "Slice: literal composta"
-	SliceForRange                = "Slice: for range"
-	SliceFatiandoOuDeletando     = "Slice: fatiando ou deletando de uma fatia"
-	SliceAnexando                = "Slice: anexando a uma slice"
-	SliceMake                    = "Slice: make"
-	SliceMultiDimensional        = "Slice: multi dimensional"
-	SliceSurpresaArraySubjacente = "Slice: a surpresa do array subjacente"
-	MapsIntroducao               = "Maps: introdução"
-	MapsRangeEDeletando          = "Maps: range e deletando"
+	Array                        string = "Array"
+	SliceLiteralComposta         string = "Slice: literal composta"
+	SliceForRange                string = "Slice: for range"
+	SliceFatiandoOuDeletando     string = "Slice: fatiando ou deletando de uma fatia"
+	SliceAnexando                string = "Slice: anexando a uma slice"
+	SliceMake                    string = "Slice: make"
+	SliceMultiDimensional        string = "Slice: multi dimensional"
+	SliceSurpresaArraySubjacente string = "Slice: a surpresa do array subjacente"
+	MapsIntroducao               string = "Maps: introdução"
+	MapsRangeEDeletando          string = "Maps: range e deletando"
 )
 
 // AgrupamentoDeDados prints a header and executes a series of sections related to data grouping in Go.
@@ -44,7 +44,11 @@ const (
 func AgrupamentoDeDados() {
 	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
 
-	listOfTopics := []string{
+	// listOfTopics is a slice of strings initialized with a length of 0 and a capacity of 10.
+	// It is used to store a list of topics, allowing dynamic growth up to the specified capacity
+	// without reallocating memory.
+	listOfTopics := make([]string, 0, 10)
+	listOfTopics = append(listOfTopics, // the first element is the list that you want to append new elements to it.
 		Array,
 		SliceLiteralComposta,
 		SliceForRange,
@@ -55,7 +59,7 @@ func AgrupamentoDeDados() {
 		SliceSurpresaArraySubjacente,
 		MapsIntroducao,
 		MapsRangeEDeletando,
-	}
+	)
 
 	content := topic.New()
 	content.TopicsContents(rootDir, listOfTopics)
