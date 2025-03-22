@@ -7,6 +7,9 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
+	"github.com/fabianoflorentino/aprendago/pkg/section"
+	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
 
 // rootDir represents the relative path to the "aplicacoes" directory within the internal package.
@@ -15,12 +18,37 @@ const (
 	rootDir = "internal/aplicacoes"
 )
 
+// DocumentacaoJSON represents a topic about JSON documentation in Go programming.
+// It provides an overview of how to work with JSON data, including encoding and decoding.
+const (
+	DocumentacaoJSON string = "Documentação JSON"
+	JSONMarshal      string = "JSON marshal (ordenação)"
+	JSONUnmarshal    string = "JSON unmarshal (desornação)"
+	InterfaceWriter  string = "A interface Writer"
+	PacoteSort       string = "O pacote sort"
+	CustomizandoSort string = "Customizando sort"
+	Bcrypt           string = "bcrypt"
+)
+
 // Aplicacoes prints the chapter title and executes a series of sections
 // related to various topics such as JSON handling, interfaces, sorting,
 // and encryption using bcrypt.
 func Aplicacoes() {
 	fmt.Printf("\n\nCapítulo 16: Aplicações\n")
-	listOfTopics()
+
+	listOfTopics := make([]string, 0, 7)
+	listOfTopics = append(listOfTopics,
+		DocumentacaoJSON,
+		JSONMarshal,
+		JSONUnmarshal,
+		InterfaceWriter,
+		PacoteSort,
+		CustomizandoSort,
+		Bcrypt,
+	)
+
+	contents := topic.New()
+	contents.TopicsContents(rootDir, listOfTopics)
 }
 
 // MenuAplicacoes returns a slice of format.MenuOptions, each representing a different command-line option
@@ -28,20 +56,24 @@ func Aplicacoes() {
 // JSON marshal/unmarshal, JSON encoder, interface Writer, sort package, custom sorting, and bcrypt.
 // Each option is associated with a specific ExecFunc that executes the relevant section or example.
 func MenuAplicacoes([]string) []format.MenuOptions {
+	section, err := section.New(rootDir)
+	if err != nil {
+		logger.Log("Erro ao criar nova seção: %v", err)
+	}
 
 	return []format.MenuOptions{
-		{Options: "--documentacao-json", ExecFunc: func() { executeSections("Documentação JSON") }},
+		{Options: "--documentacao-json", ExecFunc: func() { section.Format("Documentação JSON") }},
 		{Options: "--documentacao-json --example --json-marshal", ExecFunc: func() { UsingJsonMarshal() }},
 		{Options: "--documentacao-json --example --json-unmarshal", ExecFunc: func() { UsingJsonUnmarshal() }},
 		{Options: "--documentacao-json --example --json-encoder", ExecFunc: func() { UsingJsonEncoder() }},
-		{Options: "--json-marshal", ExecFunc: func() { executeSections("JSON marshal (ordenação)") }},
-		{Options: "--json-unmarshal", ExecFunc: func() { executeSections("JSON unmarshal (desornação)") }},
-		{Options: "--interface-writer", ExecFunc: func() { executeSections("A interface Writer") }},
-		{Options: "--pacote-sort", ExecFunc: func() { executeSections("O pacote sort") }},
+		{Options: "--json-marshal", ExecFunc: func() { section.Format("JSON marshal (ordenação)") }},
+		{Options: "--json-unmarshal", ExecFunc: func() { section.Format("JSON unmarshal (desornação)") }},
+		{Options: "--interface-writer", ExecFunc: func() { section.Format("A interface Writer") }},
+		{Options: "--pacote-sort", ExecFunc: func() { section.Format("O pacote sort") }},
 		{Options: "--pacote-sort --example", ExecFunc: func() { UsingPackageSort() }},
-		{Options: "--customizando-sort", ExecFunc: func() { executeSections("Customizando sort") }},
+		{Options: "--customizando-sort", ExecFunc: func() { section.Format("Customizando sort") }},
 		{Options: "--customizando-sort --example", ExecFunc: func() { UsingCustomSort() }},
-		{Options: "--bcrypt", ExecFunc: func() { executeSections("bcrypt") }},
+		{Options: "--bcrypt", ExecFunc: func() { section.Format("bcrypt") }},
 	}
 }
 
@@ -65,30 +97,4 @@ func HelpMeAplicacoes() {
 
 	fmt.Printf("\nCapítulo 16: Aplicações\n")
 	format.PrintHelpMe(hlp)
-}
-
-func listOfTopics() {
-	listOfTopics := []string{
-		"Documentação JSON",
-		"JSON marshal (ordenação)",
-		"JSON unmarshal (desornação)",
-		"A interface Writer",
-		"O pacote sort",
-		"Customizando sort",
-		"bcrypt",
-	}
-
-	for _, topic := range listOfTopics {
-		executeSections(topic)
-	}
-}
-
-// executeSections processes a given section by formatting it.
-// It takes a section name as a string parameter and applies the FormatSection
-// function from the format package to the section, using the rootDir as the base directory.
-//
-// Parameters:
-//   - section: The name of the section to be formatted.
-func executeSections(section string) {
-	format.FormatSection(rootDir, section)
 }

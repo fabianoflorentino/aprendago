@@ -11,6 +11,9 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
+	"github.com/fabianoflorentino/aprendago/pkg/logger"
+	"github.com/fabianoflorentino/aprendago/pkg/section"
+	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
 
 // rootDir represents the relative path to the directory where data grouping topics are stored.
@@ -19,12 +22,47 @@ const (
 	rootDir = "internal/agrupamento_de_dados"
 )
 
+// Array represents a fixed-size sequence of elements of the same type.
+// Arrays in Go have a fixed length, and their size is part of their type.
+// They are useful when you know the exact number of elements you need to store.
+const (
+	Array                        string = "Array"
+	SliceLiteralComposta         string = "Slice: literal composta"
+	SliceForRange                string = "Slice: for range"
+	SliceFatiandoOuDeletando     string = "Slice: fatiando ou deletando de uma fatia"
+	SliceAnexando                string = "Slice: anexando a uma slice"
+	SliceMake                    string = "Slice: make"
+	SliceMultiDimensional        string = "Slice: multi dimensional"
+	SliceSurpresaArraySubjacente string = "Slice: a surpresa do array subjacente"
+	MapsIntroducao               string = "Maps: introdução"
+	MapsRangeEDeletando          string = "Maps: range e deletando"
+)
+
 // AgrupamentoDeDados prints a header and executes a series of sections related to data grouping in Go.
 // Each section is executed by calling the executeSection function with a specific topic name.
 // The topics covered include arrays, slices (with various operations), and maps.
 func AgrupamentoDeDados() {
 	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
-	listOfTopics()
+
+	// listOfTopics is a slice of strings initialized with a length of 0 and a capacity of 10.
+	// It is used to store a list of topics, allowing dynamic growth up to the specified capacity
+	// without reallocating memory.
+	listOfTopics := make([]string, 0, 10)
+	listOfTopics = append(listOfTopics, // the first element is the list that you want to append new elements to it.
+		Array,
+		SliceLiteralComposta,
+		SliceForRange,
+		SliceFatiandoOuDeletando,
+		SliceAnexando,
+		SliceMake,
+		SliceMultiDimensional,
+		SliceSurpresaArraySubjacente,
+		MapsIntroducao,
+		MapsRangeEDeletando,
+	)
+
+	content := topic.New()
+	content.TopicsContents(rootDir, listOfTopics)
 }
 
 // MenuAgrupamentoDeDados returns a slice of format.MenuOptions, each representing a menu option
@@ -32,17 +70,22 @@ func AgrupamentoDeDados() {
 // string and an associated function to execute a specific section related to arrays, slices,
 // and maps. The function does not take any parameters and returns a slice of format.MenuOptions.
 func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
+	section, err := section.New(rootDir)
+	if err != nil {
+		logger.Log("Erro ao criar nova seção: %v", err)
+	}
+
 	return []format.MenuOptions{
-		{Options: "--array", ExecFunc: func() { executeSection("Array") }},
-		{Options: "--slice-literal-composta", ExecFunc: func() { executeSection("Slice: literal composta") }},
-		{Options: "--slice-for-range", ExecFunc: func() { executeSection("Slice: for range") }},
-		{Options: "--slice-fatiando-ou-deletando-de-uma-fatia", ExecFunc: func() { executeSection("Slice: fatiando ou deletando de uma fatia") }},
-		{Options: "--slice-anexando-a-uma-slice", ExecFunc: func() { executeSection("Slice: anexando a uma slice") }},
-		{Options: "--slice-make", ExecFunc: func() { executeSection("Slice: make") }},
-		{Options: "--slice-multi-dimensional", ExecFunc: func() { executeSection("Slice: multi dimensional") }},
-		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { executeSection("Slice: a surpresa do array subjacente") }},
-		{Options: "--maps-introducao", ExecFunc: func() { executeSection("Maps: introdução") }},
-		{Options: "--maps-range-e-deletando", ExecFunc: func() { executeSection("Maps: range e deletando") }},
+		{Options: "--array", ExecFunc: func() { section.Format("Array") }},
+		{Options: "--slice-literal-composta", ExecFunc: func() { section.Format("Slice: literal composta") }},
+		{Options: "--slice-for-range", ExecFunc: func() { section.Format("Slice: for range") }},
+		{Options: "--slice-fatiando-ou-deletando-de-uma-fatia", ExecFunc: func() { section.Format("Slice: fatiando ou deletando de uma fatia") }},
+		{Options: "--slice-anexando-a-uma-slice", ExecFunc: func() { section.Format("Slice: anexando a uma slice") }},
+		{Options: "--slice-make", ExecFunc: func() { section.Format("Slice: make") }},
+		{Options: "--slice-multi-dimensional", ExecFunc: func() { section.Format("Slice: multi dimensional") }},
+		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { section.Format("Slice: a surpresa do array subjacente") }},
+		{Options: "--maps-introducao", ExecFunc: func() { section.Format("Maps: introdução") }},
+		{Options: "--maps-range-e-deletando", ExecFunc: func() { section.Format("Maps: range e deletando") }},
 	}
 }
 
@@ -53,56 +96,19 @@ func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 // function from the format package to display the list of topics.
 func HelpMeAgrupamentoDeDados() {
 	hlp := []format.HelpMe{
-		{Flag: "--array", Description: "Apresenta o tópico Array.", Width: 0},
-		{Flag: "--slice-literal-composta", Description: "Apresenta o tópico Slice Literal Composta.", Width: 0},
-		{Flag: "--slice-for-range", Description: "Apresenta o tópico Slice: for range.", Width: 0},
-		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia", Description: "Apresenta o tópico Slice: fatiando ou deletando de uma fatia.", Width: 0},
-		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao", Description: "Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia.", Width: 0},
-		{Flag: "--slice-anexando-a-uma-slice", Description: "Apresenta o tópico Slice: anexando a uma slice.", Width: 0},
-		{Flag: "--slice-make", Description: "Apresenta o tópico Slice: Make.", Width: 0},
-		{Flag: "--slice-multi-dimensional", Description: "Apresenta o tópico Slice: Multi Dimensional.", Width: 0},
-		{Flag: "--slice-a-surpresa-do-array-subjacente", Description: "Apresenta o tópico Slice: a surpresa do array subjacente.", Width: 0},
-		{Flag: "--maps-introducao", Description: "Apresenta o tópico Maps: introdução.", Width: 0},
-		{Flag: "--maps-range-e-deletando", Description: "Apresenta o tópico Maps: Range e Deletando.", Width: 0},
+		{Flag: "--array", Description: "Apresenta o tópico Array."},
+		{Flag: "--slice-literal-composta", Description: "Apresenta o tópico Slice Literal Composta."},
+		{Flag: "--slice-for-range", Description: "Apresenta o tópico Slice: for range."},
+		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia", Description: "Apresenta o tópico Slice: fatiando ou deletando de uma fatia."},
+		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao", Description: "Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia."},
+		{Flag: "--slice-anexando-a-uma-slice", Description: "Apresenta o tópico Slice: anexando a uma slice."},
+		{Flag: "--slice-make", Description: "Apresenta o tópico Slice: Make."},
+		{Flag: "--slice-multi-dimensional", Description: "Apresenta o tópico Slice: Multi Dimensional."},
+		{Flag: "--slice-a-surpresa-do-array-subjacente", Description: "Apresenta o tópico Slice: a surpresa do array subjacente."},
+		{Flag: "--maps-introducao", Description: "Apresenta o tópico Maps: introdução."},
+		{Flag: "--maps-range-e-deletando", Description: "Apresenta o tópico Maps: Range e Deletando."},
 	}
 
 	fmt.Println("\nCapítulo 8: Agrupamento de Dados")
 	format.PrintHelpMe(hlp)
-}
-
-// listOfTopics executes each topic in the list.
-// It iterates over a predefined list of topics and calls the executeSection
-// function for each topic. This function is used to sequentially execute
-// and display the content of each section.
-func listOfTopics() {
-	listOfTopics := []string{
-		"Array",
-		"Slice: literal composta",
-		"Slice: for range",
-		"Slice: fatiando ou deletando de uma fatia",
-		"Slice: anexando a uma slice",
-		"Slice: make",
-		"Slice: multi dimensional",
-		"Slice: a surpresa do array subjacente",
-		"Maps: introdução",
-		"Maps: range e deletando",
-	}
-
-	for _, topic := range listOfTopics {
-		executeSection(topic)
-	}
-}
-
-// executeSection formats and processes a specific section of data.
-// It takes a section name as a string parameter and uses the FormatSection
-// function from the format package to format the section within the root directory.
-//
-// Parameters:
-//   - section: A string representing the name of the section to be formatted.
-//
-// Example usage:
-//
-//	executeSection("introduction")
-func executeSection(section string) {
-	format.FormatSection(rootDir, section)
 }

@@ -4,7 +4,7 @@ WORKDIR /aprendago
 
 COPY . .
 
-RUN apk update && apk upgrade
+RUN apk update && apk upgrade && go mod download
 
 ENTRYPOINT [ "/bin/sh" ]
 CMD [ "-c", "while true; do echo 'Im running...' && sleep 300; done" ]
