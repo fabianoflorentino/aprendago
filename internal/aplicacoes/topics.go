@@ -18,21 +18,34 @@ const (
 	rootDir = "internal/aplicacoes"
 )
 
+// DocumentacaoJSON represents a topic about JSON documentation in Go programming.
+// It provides an overview of how to work with JSON data, including encoding and decoding.
+const (
+	DocumentacaoJSON string = "Documentação JSON"
+	JSONMarshal      string = "JSON marshal (ordenação)"
+	JSONUnmarshal    string = "JSON unmarshal (desornação)"
+	InterfaceWriter  string = "A interface Writer"
+	PacoteSort       string = "O pacote sort"
+	CustomizandoSort string = "Customizando sort"
+	Bcrypt           string = "bcrypt"
+)
+
 // Aplicacoes prints the chapter title and executes a series of sections
 // related to various topics such as JSON handling, interfaces, sorting,
 // and encryption using bcrypt.
 func Aplicacoes() {
 	fmt.Printf("\n\nCapítulo 16: Aplicações\n")
 
-	listOfTopics := []string{
-		"Documentação JSON",
-		"JSON marshal (ordenação)",
-		"JSON unmarshal (desornação)",
-		"A interface Writer",
-		"O pacote sort",
-		"Customizando sort",
-		"bcrypt",
-	}
+	listOfTopics := make([]string, 0, 7)
+	listOfTopics = append(listOfTopics,
+		DocumentacaoJSON,
+		JSONMarshal,
+		JSONUnmarshal,
+		InterfaceWriter,
+		PacoteSort,
+		CustomizandoSort,
+		Bcrypt,
+	)
 
 	contents := topic.New()
 	contents.TopicsContents(rootDir, listOfTopics)
