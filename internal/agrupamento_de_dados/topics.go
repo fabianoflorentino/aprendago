@@ -72,7 +72,7 @@ func AgrupamentoDeDados() {
 func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 	section, err := section.New(rootDir)
 	if err != nil {
-		logger.New("Error creating section: ", err.Error()).RegisterLog()
+		logger.New("Error creating section: ", err.Error()).Register()
 		return nil
 	}
 
