@@ -72,7 +72,8 @@ func AgrupamentoDeDados() {
 func MenuAgrupamentoDeDados([]string) []format.MenuOptions {
 	section, err := section.New(rootDir)
 	if err != nil {
-		logger.Log("Erro ao criar nova seção: %v", err)
+		logger.New("Error creating section: ", err.Error()).RegisterLog()
+		return nil
 	}
 
 	return []format.MenuOptions{
