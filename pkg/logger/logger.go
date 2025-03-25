@@ -30,12 +30,17 @@ type Logger struct {
 //
 //	*Logger - A pointer to the newly created Logger instance.
 //	error - An error if the input is invalid (e.g., no strings provided).
-func New(stringToLog ...string) (*Logger, error) {
+func New(stringToLog ...string) *Logger {
 	if len(stringToLog) == 0 {
-		return nil, fmt.Errorf("string to log cannot be empty")
+		log.Fatalf("string to log cannot be empty")
 	}
 
-	return &Logger{stringToLog: strings.Join(stringToLog, " ")}, nil
+	return &Logger{stringToLog: strings.Join(stringToLog, " ")}
+}
+
+func (l *Logger) RegisterLog(stringToLog ...string) {
+	log := New(stringToLog...)
+	log.register()
 }
 
 // Register creates a log directory and a log file based on the current working directory
@@ -46,7 +51,7 @@ func New(stringToLog ...string) (*Logger, error) {
 // and the log file is named using the value of the "GOENV" environment variable with a ".log" extension.
 //
 // Returns an error if the log directory cannot be created or if the log file cannot be opened.
-func (l *Logger) Register() error {
+func (l *Logger) register() error {
 	logDir := "log/"
 
 	if err := os.MkdirAll(os.Getenv("PWD")+"/"+logDir, os.ModePerm); err != nil {
