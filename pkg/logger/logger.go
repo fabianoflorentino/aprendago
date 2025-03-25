@@ -38,11 +38,6 @@ func New(stringToLog ...string) *Logger {
 	return &Logger{stringToLog: strings.Join(stringToLog, " ")}
 }
 
-func (l *Logger) RegisterLog(stringToLog ...string) {
-	log := New(stringToLog...)
-	log.register()
-}
-
 // Register creates a log directory and a log file based on the current working directory
 // and the environment variable "GOENV". It initializes a logger to write logs to the file
 // and logs the string stored in the Logger instance.
@@ -51,7 +46,7 @@ func (l *Logger) RegisterLog(stringToLog ...string) {
 // and the log file is named using the value of the "GOENV" environment variable with a ".log" extension.
 //
 // Returns an error if the log directory cannot be created or if the log file cannot be opened.
-func (l *Logger) register() error {
+func (l *Logger) Register() error {
 	logDir := "log/"
 
 	if err := os.MkdirAll(os.Getenv("PWD")+"/"+logDir, os.ModePerm); err != nil {
