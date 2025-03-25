@@ -1,18 +1,16 @@
 package logger
 
 import (
+	"os"
 	"testing"
 )
 
 func TestRegister(t *testing.T) {
-	var stringNewLog string = "New test log"
+	os.Setenv("GOENV", "development")
+	os.Setenv("PWD", "../../")
 
-	newLog, err := New(stringNewLog)
-	if err != nil {
-		t.Fatalf("Failed to create logger: %v", err)
-	}
-
-	newLog.Register()
+	newLog := New("New test log")
+	newLog.register()
 
 	if newLog.stringToLog != "New test log" {
 		t.Fatalf("Expected stringToLog to be 'New test log', got %s", newLog.stringToLog)
