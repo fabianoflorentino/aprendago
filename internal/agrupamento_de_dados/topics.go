@@ -18,15 +18,16 @@ import (
 // The topics covered include arrays, slices (with various operations), and maps.
 func Topics() {
 	fmt.Printf("\nCapítulo 8: Agrupamento de Dados\n")
-	contentsAgrupamentoDeDados(rootDir)
+
+	content := topic.New()
+	contentsAgrupamentoDeDados(rootDir, content)
 }
 
 // contentsAgrupamentoDeDados processes and organizes the contents of the
 // "agrupamento de dados" (data grouping) topics. It initializes a new
 // topic structure, retrieves the list of topics related to "agrupamento de dados",
 // and populates the topics' contents from the specified root directory.
-func contentsAgrupamentoDeDados(rootDir string) {
-	contents := topic.New()
+func contentsAgrupamentoDeDados(rootDir string, contents topic.ContentsProvider) {
 	contents.TopicsContents(rootDir, listOfTopicsAgrupamentoDeDados())
 }
 
