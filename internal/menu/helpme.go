@@ -66,7 +66,7 @@ func HelpMe() {
 	exercicios_ninja_nivel_2.HelpMeExerciciosNinjaNivel2()
 	fluxo_de_controle.HelpMeFluxoDeControle()
 	exercicios_ninja_nivel_3.HelpMeExerciciosNinjaNivel3()
-	agrupamento_de_dados.HelpMeAgrupamentoDeDados()
+	agrupamento_de_dados.Help()
 	exercicios_ninja_nivel_4.HelpMeExerciciosNinjaNivel4()
 	structs.HelpMeStructs()
 	exercicios_ninja_nivel_5.HelpMeExerciciosNinjaNivel5()

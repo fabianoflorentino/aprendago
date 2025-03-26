@@ -80,7 +80,7 @@ func Options(args []string) {
 		exercicios_ninja_nivel_2.MenuExerciciosNinjaNivel2(args),
 		fluxo_de_controle.MenuFluxoDeControle(args),
 		exercicios_ninja_nivel_3.MenuExerciciosNinjaNivel3(args),
-		agrupamento_de_dados.MenuAgrupamentoDeDados(args),
+		agrupamento_de_dados.Menu(args),
 		exercicios_ninja_nivel_4.MenuExerciciosNinjaNivel4(args),
 		structs.MenuStructs(args),
 		exercicios_ninja_nivel_5.MenuExerciciosNinjaNivel5(args),
