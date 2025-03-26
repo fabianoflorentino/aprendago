@@ -58,7 +58,7 @@ func Aplicacoes() {
 func MenuAplicacoes([]string) []format.MenuOptions {
 	section, err := section.New(rootDir)
 	if err != nil {
-		logger.Log("Erro ao criar nova seção: %v", err)
+		logger.New("error to create a new section", err.Error()).Register()
 	}
 
 	return []format.MenuOptions{
