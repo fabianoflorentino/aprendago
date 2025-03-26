@@ -30,25 +30,18 @@ const (
 	Bcrypt           string = "bcrypt"
 )
 
+// listOfTopics is a slice of strings initialized with a capacity of 7.
+// It is used to store a list of topics and starts as an empty slice.
+var (
+	listOfTopics []string = make([]string, 0, 7)
+)
+
 // Aplicacoes prints the chapter title and executes a series of sections
 // related to various topics such as JSON handling, interfaces, sorting,
 // and encryption using bcrypt.
 func Aplicacoes() {
 	fmt.Printf("\n\nCapítulo 16: Aplicações\n")
-
-	listOfTopics := make([]string, 0, 7)
-	listOfTopics = append(listOfTopics,
-		DocumentacaoJSON,
-		JSONMarshal,
-		JSONUnmarshal,
-		InterfaceWriter,
-		PacoteSort,
-		CustomizandoSort,
-		Bcrypt,
-	)
-
-	contents := topic.New()
-	contents.TopicsContents(rootDir, listOfTopics)
+	contentsAplicacoes(rootDir)
 }
 
 // MenuAplicacoes returns a slice of format.MenuOptions, each representing a different command-line option
@@ -97,4 +90,32 @@ func HelpMeAplicacoes() {
 
 	fmt.Printf("\nCapítulo 16: Aplicações\n")
 	format.PrintHelpMe(hlp)
+}
+
+// contentsAplicacoes initializes and populates the contents of applications topics.
+// It creates a new instance of topics, retrieves the list of topics for applications,
+// and processes their contents from the specified root directory.
+//
+// Parameters:
+//   - rootDir: The root directory path where the topics' contents are located.
+func contentsAplicacoes(rootDir string) {
+	contents := topic.New()
+	contents.TopicsContents(rootDir, listOfTopicsAplicacoes())
+}
+
+// listOfTopicsAplicacoes returns a slice of strings containing a list of topics
+// related to various Go programming concepts and functionalities. The topics
+// include JSON handling, interface usage, sorting, and encryption with bcrypt.
+func listOfTopicsAplicacoes() []string {
+	listOfTopics = append(listOfTopics,
+		DocumentacaoJSON,
+		JSONMarshal,
+		JSONUnmarshal,
+		InterfaceWriter,
+		PacoteSort,
+		CustomizandoSort,
+		Bcrypt,
+	)
+
+	return listOfTopics
 }

@@ -38,31 +38,18 @@ const (
 	MapsRangeEDeletando          string = "Maps: range e deletando"
 )
 
+// listOfTopics is a slice of strings initialized with a capacity of 10 and a length of 0.
+// It is used to store a list of topics and can dynamically grow as needed.
+var (
+	listOfTopics []string = make([]string, 0, 10)
+)
+
 // AgrupamentoDeDados prints a header and executes a series of sections related to data grouping in Go.
 // Each section is executed by calling the executeSection function with a specific topic name.
 // The topics covered include arrays, slices (with various operations), and maps.
 func AgrupamentoDeDados() {
 	fmt.Printf("\n\n08 - Agrupamento de Dados\n")
-
-	// listOfTopics is a slice of strings initialized with a length of 0 and a capacity of 10.
-	// It is used to store a list of topics, allowing dynamic growth up to the specified capacity
-	// without reallocating memory.
-	listOfTopics := make([]string, 0, 10)
-	listOfTopics = append(listOfTopics, // the first element is the list that you want to append new elements to it.
-		Array,
-		SliceLiteralComposta,
-		SliceForRange,
-		SliceFatiandoOuDeletando,
-		SliceAnexando,
-		SliceMake,
-		SliceMultiDimensional,
-		SliceSurpresaArraySubjacente,
-		MapsIntroducao,
-		MapsRangeEDeletando,
-	)
-
-	content := topic.New()
-	content.TopicsContents(rootDir, listOfTopics)
+	contentsAgrupamentoDeDados(rootDir)
 }
 
 // MenuAgrupamentoDeDados returns a slice of format.MenuOptions, each representing a menu option
@@ -112,4 +99,38 @@ func HelpMeAgrupamentoDeDados() {
 
 	fmt.Println("\nCapítulo 8: Agrupamento de Dados")
 	format.PrintHelpMe(hlp)
+}
+
+// contentsAgrupamentoDeDados processes and organizes the contents of the
+// "agrupamento de dados" (data grouping) topics. It initializes a new
+// topic structure, retrieves the list of topics related to "agrupamento de dados",
+// and populates the topics' contents from the specified root directory.
+//
+// Parameters:
+//   - rootDir: The root directory path where the topic contents are located.
+func contentsAgrupamentoDeDados(rootDir string) {
+	contents := topic.New()
+	contents.TopicsContents(rootDir, listOfTopicsAgrupamentoDeDados())
+}
+
+// listOfTopicsAgrupamentoDeDados returns a slice of strings containing
+// the topics related to "agrupamento de dados" (data grouping) in Go.
+// The topics include arrays, slices (with various operations such as
+// slicing, appending, and creating multi-dimensional slices), and maps
+// (introduction, range, and deletion).
+func listOfTopicsAgrupamentoDeDados() []string {
+	listOfTopics = append(listOfTopics,
+		Array,
+		SliceLiteralComposta,
+		SliceForRange,
+		SliceFatiandoOuDeletando,
+		SliceAnexando,
+		SliceMake,
+		SliceMultiDimensional,
+		SliceSurpresaArraySubjacente,
+		MapsIntroducao,
+		MapsRangeEDeletando,
+	)
+
+	return listOfTopics
 }
