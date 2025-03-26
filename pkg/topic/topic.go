@@ -5,6 +5,17 @@ package topic
 
 import "github.com/fabianoflorentino/aprendago/pkg/format"
 
+// ContentsProvider defines an interface for retrieving the contents of topics.
+// Implementations of this interface should provide a method to fetch the contents
+// of specified topics from a given root directory.
+//
+// TopicsContents takes the following parameters:
+// - rootDir: The root directory where the topics are located.
+// - topics: A slice of topic names for which the contents need to be retrieved.
+type ContentsProvider interface {
+	TopicsContents(rootDir string, topics []string)
+}
+
 // Contents represents a collection of items or information related to a specific topic.
 // It is currently an empty struct, but can be expanded in the future to include fields
 // and methods that provide more functionality.
