@@ -16,7 +16,7 @@ import (
 // AgrupamentoDeDados prints a header and executes a series of sections related to data grouping in Go.
 // Each section is executed by calling the executeSection function with a specific topic name.
 // The topics covered include arrays, slices (with various operations), and maps.
-func AgrupamentoDeDados() {
+func Topics() {
 	fmt.Printf("\nCapítulo 8: Agrupamento de Dados\n")
 	contentsAgrupamentoDeDados(rootDir)
 }

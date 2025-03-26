@@ -48,7 +48,7 @@ func New() []func() {
 		exercicios_ninja_nivel_2.ExerciciosNinjaNivel2,
 		fluxo_de_controle.FluxoDeControle,
 		exercicios_ninja_nivel_3.ExerciciosNinjaNivel3,
-		agrupamento_de_dados.AgrupamentoDeDados,
+		agrupamento_de_dados.Topics,
 		exercicios_ninja_nivel_4.ExerciciosNinjaNivel4,
 		structs.TopicStructs,
 		exercicios_ninja_nivel_5.ExerciciosNinjaNivel5,
