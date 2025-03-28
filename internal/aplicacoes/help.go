@@ -9,7 +9,7 @@ import (
 // HelpMeAplicacoes provides a list of help topics related to various Go packages and functionalities.
 // It prints out a formatted help guide for each topic, including flags and descriptions.
 // The topics cover documentation, JSON handling, interfaces, sorting, and encryption with bcrypt.
-func HelpMeAplicacoes() {
+func Help() {
 	hlp := []format.HelpMe{
 		{Flag: "--documentacao-json", Description: "Descreve como documentar um pacote em Go", Width: 0},
 		{Flag: "--documentacao-json --example --json-marshal", Description: "Exemplo de como ordenar um JSON", Width: 0},

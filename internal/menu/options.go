@@ -88,7 +88,7 @@ func Options(args []string) {
 		exercicios_ninja_nivel_6.MenuExerciciosNinjaNivel6(args),
 		ponteiros.MenuPonteiros(args),
 		exercicios_ninja_nivel_7.MenuExercicioNinjaNivel7(args),
-		aplicacoes.MenuAplicacoes(args),
+		aplicacoes.Menu(args),
 		exercicios_ninja_nivel_8.MenuExerciciosNinjaNivel8(args),
 		concorrencia.MenuConcorrencia(args),
 		seu_ambiente_de_desenvolvimento.MenuSeuAmbienteDeDesenvolvimento(args),

@@ -9,10 +9,10 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
 
-// Aplicacoes prints the chapter title and executes a series of sections
+// Topics prints the chapter title and executes a series of sections
 // related to various topics such as JSON handling, interfaces, sorting,
 // and encryption using bcrypt.
-func Aplicacoes() {
+func Topics() {
 	fmt.Printf("\nCapítulo 16: Aplicações\n")
 
 	content := topic.New()

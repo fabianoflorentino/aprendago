@@ -74,7 +74,7 @@ func HelpMe() {
 	exercicios_ninja_nivel_6.HelMeExerciciosNinjaNivel6()
 	ponteiros.HelpMePonteiros()
 	exercicios_ninja_nivel_7.HelpMeExerciciosNinjaNivel7()
-	aplicacoes.HelpMeAplicacoes()
+	aplicacoes.Help()
 	exercicios_ninja_nivel_8.HelpMeExerciciosNinjaNivel8()
 	concorrencia.HelpMeConcorrencia()
 	seu_ambiente_de_desenvolvimento.HelpMeSeuAmbienteDeDesenvolvimento()

@@ -56,7 +56,7 @@ func MenuCapituloOutline([]string) []format.MenuOptions {
 		{Options: "--cap=13 --overview", ExecFunc: func() { exercicios_ninja_nivel_6.ExerciciosNinjaNivel6() }},
 		{Options: "--cap=14 --overview", ExecFunc: func() { ponteiros.Ponteiros() }},
 		{Options: "--cap=15 --overview", ExecFunc: func() { exercicios_ninja_nivel_7.ExerciciosNinjaNivel7() }},
-		{Options: "--cap=16 --overview", ExecFunc: func() { aplicacoes.Aplicacoes() }},
+		{Options: "--cap=16 --overview", ExecFunc: func() { aplicacoes.Topics() }},
 		{Options: "--cap=17 --overview", ExecFunc: func() { exercicios_ninja_nivel_8.ExerciciosNinjaNivel8() }},
 		{Options: "--cap=18 --overview", ExecFunc: func() { concorrencia.Concorrencia() }},
 		{Options: "--cap=19 --overview", ExecFunc: func() { seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento() }},

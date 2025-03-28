@@ -10,7 +10,7 @@ import (
 // and its corresponding execution function. The options cover various topics such as JSON documentation,
 // JSON marshal/unmarshal, JSON encoder, interface Writer, sort package, custom sorting, and bcrypt.
 // Each option is associated with a specific ExecFunc that executes the relevant section or example.
-func MenuAplicacoes([]string) []format.MenuOptions {
+func Menu([]string) []format.MenuOptions {
 	section, err := section.New(rootDir)
 	if err != nil {
 		logger.New("error to create a new section", err.Error()).Register()

@@ -56,7 +56,7 @@ func New() []func() {
 		exercicios_ninja_nivel_6.ExerciciosNinjaNivel6,
 		ponteiros.Ponteiros,
 		exercicios_ninja_nivel_7.ExerciciosNinjaNivel7,
-		aplicacoes.Aplicacoes,
+		aplicacoes.Topics,
 		exercicios_ninja_nivel_8.ExerciciosNinjaNivel8,
 		concorrencia.Concorrencia,
 		seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento,
