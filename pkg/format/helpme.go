@@ -37,7 +37,12 @@ type HelpMe struct {
 //
 //	helpme []HelpMe - A slice of HelpMe structs to be formatted and printed.
 func PrintHelpMe(helpme []HelpMe) {
-	width := parseWidth(helpme)
+	width, err := parseWidth(helpme)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error parsing width: %v\n", err)
+		return
+	}
+
 	for i := range helpme {
 		helpme[i].Width = width
 	}
@@ -60,7 +65,8 @@ func PrintHelpMe(helpme []HelpMe) {
 	// The first argument is the output destination (os.Stdout) and the second argument is the data model (helpme).
 	err = tmpl.Execute(os.Stdout, helpme)
 	if err != nil {
-		panic(err)
+		fmt.Fprintf(os.Stderr, "error executing template: %v\n", err)
+		return
 	}
 }
 
@@ -68,7 +74,7 @@ func PrintHelpMe(helpme []HelpMe) {
 // flag string within the slice. It iterates through each HelpMe struct, trims any
 // leading or trailing whitespace from the flag string, and updates the maximum
 // width if the current flag string is longer than the previously recorded maximum width.
-func parseWidth(flags []HelpMe) int {
+func parseWidth(flags []HelpMe) (int, error) {
 	maxWidth := 0
 
 	for _, flag := range flags {
@@ -82,7 +88,7 @@ func parseWidth(flags []HelpMe) int {
 		}
 	}
 
-	return maxWidth
+	return maxWidth, nil
 }
 
 // indent formats a multi-line string by adding indentation to each line except the first one.
@@ -97,13 +103,13 @@ func parseWidth(flags []HelpMe) int {
 // Returns:
 //
 //	A new string with the specified indentation applied to each line except the first one.
-func indent(width int, description string) string {
+func indent(width int, description string) (string, error) {
 	trimSpaceDescription := strings.TrimSpace(description)
 	flagWidth := 4
 
 	lines := strings.Split(trimSpaceDescription, "\n")
 	if len(lines) <= 1 {
-		return description
+		return description, nil
 	}
 
 	// The for loop iterates over the lines of the description and adds indentation to each line.
@@ -112,5 +118,5 @@ func indent(width int, description string) string {
 		lines[idx] = strings.Repeat(" ", width+flagWidth) + lines[idx]
 	}
 
-	return strings.Join(lines, "\n")
+	return strings.Join(lines, "\n"), nil
 }
