@@ -24,16 +24,16 @@ func Menu(menu []string) []format.MenuOptions {
 	}
 
 	return []format.MenuOptions{
-		{Options: "--array", ExecFunc: func() { sectionsAgrupamentoDeDados(array, section) }},
-		{Options: "--slice-literal-composta", ExecFunc: func() { sectionsAgrupamentoDeDados(sliceLiteralComposta, section) }},
-		{Options: "--slice-for-range", ExecFunc: func() { sectionsAgrupamentoDeDados(sliceForRange, section) }},
-		{Options: "--slice-fatiando-ou-deletando-de-uma-fatia", ExecFunc: func() { sectionsAgrupamentoDeDados(sliceFatiandoOuDeletando, section) }},
-		{Options: "--slice-anexando-a-uma-slice", ExecFunc: func() { sectionsAgrupamentoDeDados(sliceAnexando, section) }},
-		{Options: "--slice-make", ExecFunc: func() { sectionsAgrupamentoDeDados(sliceMake, section) }},
-		{Options: "--slice-multi-dimensional", ExecFunc: func() { sectionsAgrupamentoDeDados(sliceMultiDimensional, section) }},
-		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { sectionsAgrupamentoDeDados(sliceSurpresaArraySubjacente, section) }},
-		{Options: "--maps-introducao", ExecFunc: func() { sectionsAgrupamentoDeDados(mapsIntroducao, section) }},
-		{Options: "--maps-range-e-deletando", ExecFunc: func() { sectionsAgrupamentoDeDados(mapsRangeEDeletando, section) }},
+		{Options: flagArray, ExecFunc: func() { sectionsAgrupamentoDeDados(array, section) }},
+		{Options: flagSliceLiteralComposta, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceLiteralComposta, section) }},
+		{Options: flagSliceForRange, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceForRange, section) }},
+		{Options: flagSliceFatiandoOuDeletando, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceFatiandoOuDeletando, section) }},
+		{Options: flagSliceAnexando, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceAnexando, section) }},
+		{Options: flagSliceMake, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceMake, section) }},
+		{Options: flagSliceMultiDimensional, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceMultiDimensional, section) }},
+		{Options: flagSliceSurpresaArraySubjacente, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceSurpresaArraySubjacente, section) }},
+		{Options: flagMapsIntroducao, ExecFunc: func() { sectionsAgrupamentoDeDados(mapsIntroducao, section) }},
+		{Options: flagMapsRangeEDeletando, ExecFunc: func() { sectionsAgrupamentoDeDados(mapsRangeEDeletando, section) }},
 	}
 }
 
