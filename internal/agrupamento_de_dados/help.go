@@ -23,7 +23,6 @@ func Help() {
 		{Flag: flagSliceLiteralComposta, Description: descSliceLiteralComposta},
 		{Flag: flagSliceForRange, Description: descSliceForRange},
 		{Flag: flagSliceFatiandoOuDeletando, Description: descSliceFatiandoOuDeletando},
-		{Flag: flagSliceFatiandoOuDeletandoRes, Description: descSliceFatiandoOuDeletandoRes},
 		{Flag: flagSliceAnexando, Description: descSliceAnexando},
 		{Flag: flagSliceMake, Description: descSliceMake},
 		{Flag: flagSliceMultiDimensional, Description: descSliceMultiDimensional},
