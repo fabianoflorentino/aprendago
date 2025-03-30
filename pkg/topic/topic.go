@@ -38,6 +38,16 @@ func (c Contents) TopicsContents(rootDir string, topics []string) {
 	}
 }
 
+// ListOfTopics creates and returns a new list of topics based on the provided input list.
+// It initializes an output list with a specified capacity and appends all elements
+// from the input list to the output list.
+//
+// Parameters:
+//   - inputList: A slice of strings representing the input list of topics.
+//   - lenOfArray: An integer specifying the initial capacity of the output list.
+//
+// Returns:
+//   - A slice of strings containing the topics from the input list.
 func (c Contents) ListOfTopics(inputList []string, lenOfArray int) []string {
 	outputList := make([]string, 0, lenOfArray)
 	outputList = append(outputList, inputList...)
