@@ -8,6 +8,8 @@ import (
 	"html/template"
 	"os"
 	"strings"
+
+	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
 
 // templateHelpMe is a Go template that iterates over a collection of items,
@@ -76,10 +78,11 @@ func PrintHelpMe(helpme []HelpMe) {
 // width if the current flag string is longer than the previously recorded maximum width.
 func parseWidth(flags []HelpMe) (int, error) {
 	maxWidth := 0
+	trim := trim.New()
 
 	for _, flag := range flags {
 		// Trim leading and trailing whitespace from the flag.Flag string
-		flag.Flag = strings.TrimSpace(flag.Flag)
+		flag.Flag = trim.String(flag.Flag)
 
 		// Check if the length of the flag.Flag string is greater than maxWidth
 		// If it is, update maxWidth with the new length

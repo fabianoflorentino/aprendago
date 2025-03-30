@@ -35,16 +35,16 @@ func contentsAgrupamentoDeDados(rootDir string, contents topic.ContentsProvider)
 // the topics related to "agrupamento de dados" (data grouping) in Go.
 func listOfTopicsAgrupamentoDeDados() []string {
 	list := []string{
-		Array,
-		SliceLiteralComposta,
-		SliceForRange,
-		SliceFatiandoOuDeletando,
-		SliceAnexando,
-		SliceMake,
-		SliceMultiDimensional,
-		SliceSurpresaArraySubjacente,
-		MapsIntroducao,
-		MapsRangeEDeletando,
+		array,
+		sliceLiteralComposta,
+		sliceForRange,
+		sliceFatiandoOuDeletando,
+		sliceAnexando,
+		sliceMake,
+		sliceMultiDimensional,
+		sliceSurpresaArraySubjacente,
+		mapsIntroducao,
+		mapsRangeEDeletando,
 	}
 
 	return listOfTopics(list)

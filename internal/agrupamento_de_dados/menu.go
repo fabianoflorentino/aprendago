@@ -21,19 +21,29 @@ func Menu(menu []string) []format.MenuOptions {
 	section, err := section.New(rootDir)
 	if err != nil {
 		logger.New("Error creating section: ", err.Error()).Register()
-		return nil
 	}
 
 	return []format.MenuOptions{
-		{Options: "--array", ExecFunc: func() { section.Format("Array") }},
-		{Options: "--slice-literal-composta", ExecFunc: func() { section.Format("Slice: literal composta") }},
-		{Options: "--slice-for-range", ExecFunc: func() { section.Format("Slice: for range") }},
-		{Options: "--slice-fatiando-ou-deletando-de-uma-fatia", ExecFunc: func() { section.Format("Slice: fatiando ou deletando de uma fatia") }},
-		{Options: "--slice-anexando-a-uma-slice", ExecFunc: func() { section.Format("Slice: anexando a uma slice") }},
-		{Options: "--slice-make", ExecFunc: func() { section.Format("Slice: make") }},
-		{Options: "--slice-multi-dimensional", ExecFunc: func() { section.Format("Slice: multi dimensional") }},
-		{Options: "--slice-a-surpresa-do-array-subjacente", ExecFunc: func() { section.Format("Slice: a surpresa do array subjacente") }},
-		{Options: "--maps-introducao", ExecFunc: func() { section.Format("Maps: introdução") }},
-		{Options: "--maps-range-e-deletando", ExecFunc: func() { section.Format("Maps: range e deletando") }},
+		{Options: flagArray, ExecFunc: func() { sectionsAgrupamentoDeDados(array, section) }},
+		{Options: flagSliceLiteralComposta, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceLiteralComposta, section) }},
+		{Options: flagSliceForRange, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceForRange, section) }},
+		{Options: flagSliceFatiandoOuDeletando, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceFatiandoOuDeletando, section) }},
+		{Options: flagSliceAnexando, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceAnexando, section) }},
+		{Options: flagSliceMake, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceMake, section) }},
+		{Options: flagSliceMultiDimensional, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceMultiDimensional, section) }},
+		{Options: flagSliceSurpresaArraySubjacente, ExecFunc: func() { sectionsAgrupamentoDeDados(sliceSurpresaArraySubjacente, section) }},
+		{Options: flagMapsIntroducao, ExecFunc: func() { sectionsAgrupamentoDeDados(mapsIntroducao, section) }},
+		{Options: flagMapsRangeEDeletando, ExecFunc: func() { sectionsAgrupamentoDeDados(mapsRangeEDeletando, section) }},
 	}
+}
+
+// sectionsAgrupamentoDeDados formats and processes sections of data under a given title.
+// It utilizes the SectionProvider interface to handle the formatting logic.
+//
+// Parameters:
+//   - title: A string representing the title for the sections.
+//   - sections: An implementation of the section.SectionProvider interface
+//     that provides the functionality to format the sections.
+func sectionsAgrupamentoDeDados(title string, sections section.SectionProvider) {
+	sections.Format(title)
 }

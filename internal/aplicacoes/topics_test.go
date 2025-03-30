@@ -1,7 +1,8 @@
-// Package agrupamento_de_dados provides functionality for grouping and managing data topics.
-// It includes utilities for handling arrays, slices, maps, and other data structures,
-// as well as functions for organizing and retrieving topic-related content.
-package agrupamento_de_dados
+// Package aplicacoes provides functionalities and tests related to various application topics.
+// It includes utilities for handling JSON operations, sorting custom data, working with interfaces,
+// and encrypting data using bcrypt. The package also contains tests to ensure the correctness
+// of these functionalities.
+package aplicacoes
 
 import (
 	"testing"
@@ -23,7 +24,7 @@ func TestTopics(t *testing.T) {
 	mockContents := &MockContentsProvider{}
 
 	// Call the function under test
-	contentsAgrupamentoDeDados(rootDir, mockContents)
+	contentsAplicacoes(rootDir, mockContents)
 
 	// Verify the root directory passed to TopicsContents
 	if mockContents.CalledWithRootDir != rootDir {
@@ -31,7 +32,7 @@ func TestTopics(t *testing.T) {
 	}
 
 	// Verify the topics passed to TopicsContents
-	expectedTopics := listOfTopicsAgrupamentoDeDados()
+	expectedTopics := listOfTopicsAplicacoes()
 	if len(mockContents.CalledWithTopics) != len(expectedTopics) {
 		t.Errorf("Expected %d topics, got %d", len(expectedTopics), len(mockContents.CalledWithTopics))
 	}
@@ -43,21 +44,18 @@ func TestTopics(t *testing.T) {
 	}
 }
 
-func TestListOfTopicsAgrupamentoDeDados(t *testing.T) {
+func TestListOfTopicsAplicacoes(t *testing.T) {
 	expected := []string{
-		array,
-		sliceLiteralComposta,
-		sliceForRange,
-		sliceFatiandoOuDeletando,
-		sliceAnexando,
-		sliceMake,
-		sliceMultiDimensional,
-		sliceSurpresaArraySubjacente,
-		mapsIntroducao,
-		mapsRangeEDeletando,
+		DocumentacaoJSON,
+		JSONMarshal,
+		JSONUnmarshal,
+		InterfaceWriter,
+		PacoteSort,
+		CustomizandoSort,
+		Bcrypt,
 	}
 
-	result := listOfTopicsAgrupamentoDeDados()
+	result := listOfTopicsAplicacoes()
 
 	if len(result) != len(expected) {
 		t.Errorf("Expected %d topics, got %d", len(expected), len(result))

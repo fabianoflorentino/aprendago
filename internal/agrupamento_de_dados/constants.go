@@ -6,18 +6,50 @@ const (
 	rootDir = "internal/agrupamento_de_dados"
 )
 
-// Array represents a fixed-size sequence of elements of the same type.
-// Arrays in Go have a fixed length, and their size is part of their type.
-// They are useful when you know the exact number of elements you need to store.
+// The following constants define the names of various topics related to data grouping in Go.
+// Each constant corresponds to a specific topic and provides a human-readable name for it.
 const (
-	Array                        string = "Array"
-	SliceLiteralComposta         string = "Slice: literal composta"
-	SliceForRange                string = "Slice: for range"
-	SliceFatiandoOuDeletando     string = "Slice: fatiando ou deletando de uma fatia"
-	SliceAnexando                string = "Slice: anexando a uma slice"
-	SliceMake                    string = "Slice: make"
-	SliceMultiDimensional        string = "Slice: multi dimensional"
-	SliceSurpresaArraySubjacente string = "Slice: a surpresa do array subjacente"
-	MapsIntroducao               string = "Maps: introdução"
-	MapsRangeEDeletando          string = "Maps: range e deletando"
+	array                        string = "Array"
+	sliceLiteralComposta         string = "Slice: literal composta"
+	sliceForRange                string = "Slice: for range"
+	sliceFatiandoOuDeletando     string = "Slice: fatiando ou deletando de uma fatia"
+	sliceAnexando                string = "Slice: anexando a uma slice"
+	sliceMake                    string = "Slice: make"
+	sliceMultiDimensional        string = "Slice: multi dimensional"
+	sliceSurpresaArraySubjacente string = "Slice: a surpresa do array subjacente"
+	mapsIntroducao               string = "Maps: introdução"
+	mapsRangeEDeletando          string = "Maps: range e deletando"
+)
+
+// The following constants define command-line flags for various topics related to data grouping in Go.
+// Each flag corresponds to a specific topic and is used to trigger functionality or operations
+// associated with that topic in the application.
+const (
+	flagArray                        string = "--array"
+	flagSliceLiteralComposta         string = "--slice-literal-composta"
+	flagSliceForRange                string = "--slice-for-range"
+	flagSliceFatiandoOuDeletando     string = "--slice-fatiando-ou-deletando-de-uma-fatia"
+	flagSliceFatiandoOuDeletandoRes  string = "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao"
+	flagSliceAnexando                string = "--slice-anexando-a-uma-slice"
+	flagSliceMake                    string = "--slice-make"
+	flagSliceMultiDimensional        string = "--slice-multi-dimensional"
+	flagSliceSurpresaArraySubjacente string = "--slice-a-surpresa-do-array-subjacente"
+	flagMapsIntroducao               string = "--maps-introducao"
+	flagMapsRangeEDeletando          string = "--maps-range-e-deletando"
+)
+
+// The following constants provide descriptions for various topics related to data grouping in Go.
+// Each constant corresponds to a specific topic and gives a brief explanation of its purpose or content.
+const (
+	descArray                        string = "Apresenta o tópico Array."
+	descSliceLiteralComposta         string = "Apresenta o tópico Slice Literal Composta."
+	descSliceForRange                string = "Apresenta o tópico Slice: for range."
+	descSliceFatiandoOuDeletando     string = "Apresenta o tópico Slice: fatiando ou deletando de uma fatia."
+	descSliceFatiandoOuDeletandoRes  string = "Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia."
+	descSliceAnexando                string = "Apresenta o tópico Slice: anexando a uma slice."
+	descSliceMake                    string = "Apresenta o tópico Slice: Make."
+	descSliceMultiDimensional        string = "Apresenta o tópico Slice: Multi Dimensional."
+	descSliceSurpresaArraySubjacente string = "Apresenta o tópico Slice: a surpresa do array subjacente."
+	descMapsIntroducao               string = "Apresenta o tópico Maps: introdução."
+	descMapsRangeEDeletando          string = "Apresenta o tópico Maps: Range e Deletando."
 )

@@ -18,20 +18,20 @@ import (
 // the format.HelpMe structure to organize the flags and their corresponding descriptions,
 // and outputs the information using the format.PrintHelpMe function.
 func Help() {
-	hlp := []format.HelpMe{
-		{Flag: "--array", Description: "Apresenta o tópico Array."},
-		{Flag: "--slice-literal-composta", Description: "Apresenta o tópico Slice Literal Composta."},
-		{Flag: "--slice-for-range", Description: "Apresenta o tópico Slice: for range."},
-		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia", Description: "Apresenta o tópico Slice: fatiando ou deletando de uma fatia."},
-		{Flag: "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao", Description: "Apresenta a resolução do tópico Slice: fatiando ou deletando de uma fatia."},
-		{Flag: "--slice-anexando-a-uma-slice", Description: "Apresenta o tópico Slice: anexando a uma slice."},
-		{Flag: "--slice-make", Description: "Apresenta o tópico Slice: Make."},
-		{Flag: "--slice-multi-dimensional", Description: "Apresenta o tópico Slice: Multi Dimensional."},
-		{Flag: "--slice-a-surpresa-do-array-subjacente", Description: "Apresenta o tópico Slice: a surpresa do array subjacente."},
-		{Flag: "--maps-introducao", Description: "Apresenta o tópico Maps: introdução."},
-		{Flag: "--maps-range-e-deletando", Description: "Apresenta o tópico Maps: Range e Deletando."},
+	h := []format.HelpMe{
+		{Flag: flagArray, Description: descArray},
+		{Flag: flagSliceLiteralComposta, Description: descSliceLiteralComposta},
+		{Flag: flagSliceForRange, Description: descSliceForRange},
+		{Flag: flagSliceFatiandoOuDeletando, Description: descSliceFatiandoOuDeletando},
+		{Flag: flagSliceFatiandoOuDeletandoRes, Description: descSliceFatiandoOuDeletandoRes},
+		{Flag: flagSliceAnexando, Description: descSliceAnexando},
+		{Flag: flagSliceMake, Description: descSliceMake},
+		{Flag: flagSliceMultiDimensional, Description: descSliceMultiDimensional},
+		{Flag: flagSliceSurpresaArraySubjacente, Description: descSliceSurpresaArraySubjacente},
+		{Flag: flagMapsIntroducao, Description: descMapsIntroducao},
+		{Flag: flagMapsRangeEDeletando, Description: descMapsRangeEDeletando},
 	}
 
-	fmt.Println("\nCapítulo 8: Agrupamento de Dados")
-	format.PrintHelpMe(hlp)
+	fmt.Println("Capítulo 8: Agrupamento de Dados")
+	format.PrintHelpMe(h)
 }

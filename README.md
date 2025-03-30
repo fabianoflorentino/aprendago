@@ -200,8 +200,10 @@ Outline do Curso por Capítulo
 │   │   ├── examples.go
 │   │   ├── help.go
 │   │   ├── menu.go
+│   │   ├── menu_test.go
 │   │   ├── overview.yml
-│   │   └── topics.go
+│   │   ├── topics.go
+│   │   └── topics_test.go
 │   ├── canais
 │   │   ├── examples.go
 │   │   ├── overview.yml
@@ -338,7 +340,7 @@ Outline do Curso por Capítulo
 │       └── trim.go
 └── tree.log
 
-44 directories, 121 files
+44 directories, 123 files
 ```
 
 ## Licença
