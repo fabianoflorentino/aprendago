@@ -3,7 +3,7 @@ package agrupamento_de_dados
 import (
 	// "go/format" removed as it does not contain MenuOptions
 
-	base "github.com/fabianoflorentino/aprendago/internal/base_content"
+	base "github.com/fabianoflorentino/aprendago/pkg/base_content"
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
