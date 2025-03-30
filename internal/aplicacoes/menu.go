@@ -17,17 +17,29 @@ func Menu([]string) []format.MenuOptions {
 	}
 
 	return []format.MenuOptions{
-		{Options: "--documentacao-json", ExecFunc: func() { section.Format("Documentação JSON") }},
-		{Options: "--documentacao-json --example --json-marshal", ExecFunc: func() { UsingJsonMarshal() }},
-		{Options: "--documentacao-json --example --json-unmarshal", ExecFunc: func() { UsingJsonUnmarshal() }},
-		{Options: "--documentacao-json --example --json-encoder", ExecFunc: func() { UsingJsonEncoder() }},
-		{Options: "--json-marshal", ExecFunc: func() { section.Format("JSON marshal (ordenação)") }},
-		{Options: "--json-unmarshal", ExecFunc: func() { section.Format("JSON unmarshal (desornação)") }},
-		{Options: "--interface-writer", ExecFunc: func() { section.Format("A interface Writer") }},
-		{Options: "--pacote-sort", ExecFunc: func() { section.Format("O pacote sort") }},
-		{Options: "--pacote-sort --example", ExecFunc: func() { UsingPackageSort() }},
-		{Options: "--customizando-sort", ExecFunc: func() { section.Format("Customizando sort") }},
-		{Options: "--customizando-sort --example", ExecFunc: func() { UsingCustomSort() }},
-		{Options: "--bcrypt", ExecFunc: func() { section.Format("bcrypt") }},
+		{Options: flagDocumentacaoJSON, ExecFunc: func() { sectionsAplicacoes(DocumentacaoJSON, section) }},
+		{Options: flagDocumentacaoJSONExampleJSONMarshal, ExecFunc: func() { UsingJsonMarshal() }},
+		{Options: flagDocumentacaoJSONExampleJSONUnmarshal, ExecFunc: func() { UsingJsonUnmarshal() }},
+		{Options: flagDocumentacaoJSONExampleJSONEncoder, ExecFunc: func() { UsingJsonEncoder() }},
+		{Options: flagJSONMarshal, ExecFunc: func() { sectionsAplicacoes(JSONMarshal, section) }},
+		{Options: flagJSONUnmarshal, ExecFunc: func() { sectionsAplicacoes(JSONUnmarshal, section) }},
+		{Options: flagInterfaceWriter, ExecFunc: func() { sectionsAplicacoes(InterfaceWriter, section) }},
+		{Options: flagPacoteSort, ExecFunc: func() { sectionsAplicacoes(PacoteSort, section) }},
+		{Options: flagPacoteSortExample, ExecFunc: func() { UsingPackageSort() }},
+		{Options: flagCustomizandoSort, ExecFunc: func() { sectionsAplicacoes(CustomizandoSort, section) }},
+		{Options: flagCustomizandoSortExample, ExecFunc: func() { UsingCustomSort() }},
+		{Options: flagBcrypt, ExecFunc: func() { sectionsAplicacoes(Bcrypt, section) }},
 	}
+}
+
+// sectionsAplicacoes formats and processes sections for a given title.
+// It takes a title as a string and a SectionProvider interface to handle
+// the formatting of the sections.
+//
+// Parameters:
+//   - title: The title of the sections to be formatted.
+//   - sections: An implementation of the SectionProvider interface
+//     that provides the functionality to format the sections.
+func sectionsAplicacoes(title string, sections section.SectionProvider) {
+	sections.Format(title)
 }
