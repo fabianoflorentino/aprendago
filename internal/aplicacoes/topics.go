@@ -46,8 +46,17 @@ func listOfTopicsAplicacoes() []string {
 	return listOfTopics(list)
 }
 
+// listOfTopics takes a slice of strings as input and returns a new slice of strings.
+// The returned slice is initialized with a capacity of 7 and contains all elements
+// from the input slice.
+//
+// Parameters:
+//   - inputList: A slice of strings to be copied into the output slice.
+//
+// Returns:
+//   - A new slice of strings containing all elements from the input slice.
 func listOfTopics(inputList []string) []string {
-	outputList := make([]string, 0, 7)
+	outputList := make([]string, 0, 12)
 	outputList = append(outputList, inputList...)
 
 	return outputList
