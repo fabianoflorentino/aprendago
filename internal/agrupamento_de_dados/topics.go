@@ -19,21 +19,6 @@ import (
 func Topics() {
 	fmt.Printf("\nCapítulo 8: Agrupamento de Dados\n")
 
-	content := topic.New()
-	contentsAgrupamentoDeDados(rootDir, content)
-}
-
-// contentsAgrupamentoDeDados processes and organizes the contents of the
-// "agrupamento de dados" (data grouping) topics. It initializes a new
-// topic structure, retrieves the list of topics related to "agrupamento de dados",
-// and populates the topics' contents from the specified root directory.
-func contentsAgrupamentoDeDados(rootDir string, contents topic.ContentsProvider) {
-	contents.TopicsContents(rootDir, listOfTopicsAgrupamentoDeDados())
-}
-
-// listOfTopicsAgrupamentoDeDados returns a slice of strings containing
-// the topics related to "agrupamento de dados" (data grouping) in Go.
-func listOfTopicsAgrupamentoDeDados() []string {
 	list := []string{
 		array,
 		sliceLiteralComposta,
@@ -47,15 +32,6 @@ func listOfTopicsAgrupamentoDeDados() []string {
 		mapsRangeEDeletando,
 	}
 
-	return listOfTopics(list)
-}
-
-// listOfTopics takes a slice of strings as input and returns a new slice of strings.
-// The returned slice is initialized with a capacity of 10 and contains all the elements
-// from the input slice.
-func listOfTopics(inputList []string) []string {
-	outputList := make([]string, 0, 10)
-	outputList = append(outputList, inputList...)
-
-	return outputList
+	content := topic.New()
+	content.TopicsContents(rootDir, content.ListOfTopics(list, 10))
 }
