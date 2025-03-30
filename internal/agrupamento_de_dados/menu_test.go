@@ -16,16 +16,16 @@ func TestMenu(t *testing.T) {
 	// Create a slice of MenuOptions.
 	menuOptions := Menu(
 		[]string{
-			"--array",
-			"--slice-literal-composta",
-			"--slice-for-range",
-			"--slice-fatiando-ou-deletando-de-uma-fatia",
-			"--slice-anexando-a-uma-slice",
-			"--slice-make",
-			"--slice-multi-dimensional",
-			"--slice-a-surpresa-do-array-subjacente",
-			"--maps-introducao",
-			"--maps-range-e-deletando",
+			flagArray,
+			flagSliceLiteralComposta,
+			flagSliceForRange,
+			flagSliceFatiandoOuDeletando,
+			flagSliceFatiandoOuDeletandoRes,
+			flagSliceAnexando,
+			flagSliceMake,
+			flagSliceMultiDimensional,
+			flagSliceSurpresaArraySubjacente,
+			flagMapsIntroducao,
 		})
 
 	// Check if the menuOptions slice has the expected length.
