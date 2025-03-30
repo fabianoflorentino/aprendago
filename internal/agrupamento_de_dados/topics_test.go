@@ -1,10 +1,12 @@
+// Package agrupamento_de_dados provides functionality for grouping and managing data topics.
+// It includes utilities for handling arrays, slices, maps, and other data structures,
+// as well as functions for organizing and retrieving topic-related content.
 package agrupamento_de_dados
 
 import (
 	"testing"
 )
 
-// MockContentsProvider is a mock implementation of the topic.ContentsProvider interface.
 type MockContentsProvider struct {
 	CalledWithRootDir string
 	CalledWithTopics  []string
