@@ -43,16 +43,16 @@ func TestTopics(t *testing.T) {
 
 func TestListOfTopicsAgrupamentoDeDados(t *testing.T) {
 	expected := []string{
-		Array,
-		SliceLiteralComposta,
-		SliceForRange,
-		SliceFatiandoOuDeletando,
-		SliceAnexando,
-		SliceMake,
-		SliceMultiDimensional,
-		SliceSurpresaArraySubjacente,
-		MapsIntroducao,
-		MapsRangeEDeletando,
+		array,
+		sliceLiteralComposta,
+		sliceForRange,
+		sliceFatiandoOuDeletando,
+		sliceAnexando,
+		sliceMake,
+		sliceMultiDimensional,
+		sliceSurpresaArraySubjacente,
+		mapsIntroducao,
+		mapsRangeEDeletando,
 	}
 
 	result := listOfTopicsAgrupamentoDeDados()
