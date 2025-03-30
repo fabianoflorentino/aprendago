@@ -37,3 +37,10 @@ func (c Contents) TopicsContents(rootDir string, topics []string) {
 		format.FormatSection(rootDir, topic)
 	}
 }
+
+func (c Contents) ListOfTopics(inputList []string, lenOfArray int) []string {
+	outputList := make([]string, 0, lenOfArray)
+	outputList = append(outputList, inputList...)
+
+	return outputList
+}
