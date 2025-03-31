@@ -6,6 +6,8 @@
 package basecontent
 
 import (
+	"fmt"
+
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/section"
@@ -22,6 +24,10 @@ import (
 // The method returns a slice of format.MenuOptions, representing the available menu options.
 type MenuOptions interface {
 	Menu(optionFlag string, optionFunc func()) []format.MenuOptions
+}
+
+type HelpMe interface {
+	BuildHelpMe(title string, helpString []format.HelpMe)
 }
 
 // BaseContent represents a foundational structure or entity that can be
@@ -77,4 +83,17 @@ func (b *BaseContent) SectionFactory(rootDir string) *section.Section {
 	}
 
 	return section
+}
+
+// HelpMe prints a title and a formatted help message to the console.
+// It takes a title string and a slice of format.HelpMe objects, which
+// are used to generate the help message.
+//
+// Parameters:
+//   - title: A string representing the title to be printed.
+//   - helpString: A slice of format.HelpMe objects containing the help
+//     information to be formatted and displayed.
+func (b *BaseContent) HelpMe(title string, helpString []format.HelpMe) {
+	fmt.Println(title)
+	format.PrintHelpMe(helpString)
 }
