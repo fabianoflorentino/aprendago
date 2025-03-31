@@ -7,8 +7,7 @@
 package agrupamento_de_dados
 
 import (
-	"fmt"
-
+	base "github.com/fabianoflorentino/aprendago/pkg/base_content"
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
@@ -31,6 +30,6 @@ func Help() {
 		{Flag: flagMapsRangeEDeletando, Description: descMapsRangeEDeletando},
 	}
 
-	fmt.Println("Capítulo 8: Agrupamento de Dados")
-	format.PrintHelpMe(h)
+	b := base.New()
+	b.HelpMe("Capítulo 8: Agrupamento de Dados", h)
 }
