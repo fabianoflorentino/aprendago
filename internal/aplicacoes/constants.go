@@ -1,3 +1,8 @@
+// Package aplicacoes provides a collection of constants and utilities
+// for managing application-specific configurations, command-line flags,
+// and descriptions. It serves as a central repository for defining
+// application names, their functionalities, and associated metadata
+// to streamline the development and execution of various Go applications.
 package aplicacoes
 
 // rootDir represents the relative path to the "aplicacoes" directory within the internal package.
@@ -6,8 +11,8 @@ const (
 	rootDir = "internal/aplicacoes"
 )
 
-// DocumentacaoJSON represents a topic about JSON documentation in Go programming.
-// It provides an overview of how to work with JSON data, including encoding and decoding.
+// Constants for application names and their respective flags and descriptions.
+// These constants are used to identify different applications and their functionalities.
 const (
 	DocumentacaoJSON string = "Documentação JSON"
 	JSONMarshal      string = "JSON marshal (ordenação)"
@@ -18,6 +23,8 @@ const (
 	Bcrypt           string = "bcrypt"
 )
 
+// Constants for command-line flags and their descriptions.
+// These flags are used to control the behavior of the applications and provide additional options to the user.
 const (
 	flagDocumentacaoJSON                     string = "--documentacao-json"
 	flagDocumentacaoJSONExampleJSONMarshal   string = "--documentacao-json --example --json-marshal"
@@ -33,6 +40,8 @@ const (
 	flagBcrypt                               string = "--bcrypt"
 )
 
+// Constants for descriptions of the applications and their functionalities.
+// These descriptions provide additional context and information about what each application does.
 const (
 	descDocumentacaoJSON                     string = "Descreve como documentar um pacote em Go"
 	descDocumentacaoJSONExampleJSONMarshal   string = "Exemplo de como ordenar um JSON"
