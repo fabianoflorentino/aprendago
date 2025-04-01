@@ -14,13 +14,13 @@ const (
 // Constants for application names and their respective flags and descriptions.
 // These constants are used to identify different applications and their functionalities.
 const (
-	DocumentacaoJSON string = "Documentação JSON"
-	JSONMarshal      string = "JSON marshal (ordenação)"
-	JSONUnmarshal    string = "JSON unmarshal (desornação)"
-	InterfaceWriter  string = "A interface Writer"
-	PacoteSort       string = "O pacote sort"
-	CustomizandoSort string = "Customizando sort"
-	Bcrypt           string = "bcrypt"
+	documentacaoJSON string = "Documentação JSON"
+	jsonMarshal      string = "JSON marshal (ordenação)"
+	jsonUnmarshal    string = "JSON unmarshal (desornação)"
+	interfaceWriter  string = "A interface Writer"
+	pacoteSort       string = "O pacote sort"
+	customizandoSort string = "Customizando sort"
+	bcrypt           string = "bcrypt"
 )
 
 // Constants for command-line flags and their descriptions.
