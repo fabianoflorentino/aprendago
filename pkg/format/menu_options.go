@@ -17,11 +17,13 @@ type MenuOptions struct {
 
 // headerMenu is a constant string that contains a message indicating an invalid option
 // and suggests using the --help option to get assistance.
-const headerMenu = `
+const (
+	headerMenu string = `
 Opção inválida
 
 Use a opção --help para obter ajuda
 `
+)
 
 // FormatMenuOptions takes a slice of arguments and a slice of MenuOptions,
 // concatenates the arguments into a single string, and checks if this string
