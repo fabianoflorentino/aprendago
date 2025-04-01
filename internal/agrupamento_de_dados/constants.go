@@ -29,7 +29,6 @@ const (
 	flagSliceLiteralComposta         string = "--slice-literal-composta"
 	flagSliceForRange                string = "--slice-for-range"
 	flagSliceFatiandoOuDeletando     string = "--slice-fatiando-ou-deletando-de-uma-fatia"
-	flagSliceFatiandoOuDeletandoRes  string = "--slice-fatiando-ou-deletando-de-uma-fatia --resolucao"
 	flagSliceAnexando                string = "--slice-anexando-a-uma-slice"
 	flagSliceMake                    string = "--slice-make"
 	flagSliceMultiDimensional        string = "--slice-multi-dimensional"

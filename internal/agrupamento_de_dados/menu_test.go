@@ -20,7 +20,6 @@ func TestMenu(t *testing.T) {
 			flagSliceLiteralComposta,
 			flagSliceForRange,
 			flagSliceFatiandoOuDeletando,
-			flagSliceFatiandoOuDeletandoRes,
 			flagSliceAnexando,
 			flagSliceMake,
 			flagSliceMultiDimensional,
