@@ -1,86 +1,85 @@
-// Package aplicacoes provides functionalities and tests related to various application topics.
-// It includes utilities for handling JSON operations, sorting custom data, working with interfaces,
-// and encrypting data using bcrypt. The package also contains tests to ensure the correctness
-// of these functionalities.
 package aplicacoes
 
 import (
+	"os"
 	"testing"
+
+	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
 
-type MockContentsProvider struct {
-	CalledWithRootDir string
-	CalledWithTopics  []string
-}
-
-func (m *MockContentsProvider) TopicsContents(rootDir string, topics []string) {
-	m.CalledWithRootDir = rootDir
-	m.CalledWithTopics = topics
-}
-
 func TestTopics(t *testing.T) {
-	// Mock the root directory and contents provider
-	rootDir := "mockRootDir"
-	mockContents := &MockContentsProvider{}
+	os.Setenv("GOENV", "test")
 
-	// Call the function under test
-	contentsAplicacoes(rootDir, mockContents)
+	tt := topic.New()
 
-	// Verify the root directory passed to TopicsContents
-	if mockContents.CalledWithRootDir != rootDir {
-		t.Errorf("Expected rootDir to be %s, got %s", rootDir, mockContents.CalledWithRootDir)
+	list := []string{
+		documentacaoJSON,
+		jsonMarshal,
+		jsonUnmarshal,
+		interfaceWriter,
+		pacoteSort,
+		customizandoSort,
+		bcrypt,
 	}
 
-	// Verify the topics passed to TopicsContents
-	expectedTopics := listOfTopicsAplicacoes()
-	if len(mockContents.CalledWithTopics) != len(expectedTopics) {
-		t.Errorf("Expected %d topics, got %d", len(expectedTopics), len(mockContents.CalledWithTopics))
-	}
-
-	for i, topic := range expectedTopics {
-		if mockContents.CalledWithTopics[i] != topic {
-			t.Errorf("Expected topic %s at index %d, got %s", topic, i, mockContents.CalledWithTopics[i])
+	t.Run("TestRootDirValidation", func(t *testing.T) {
+		if rootDir != "internal/aplicacoes" {
+			t.Errorf("Expected rootDir to be 'internal/aplicacoes', got '%s'", rootDir)
 		}
-	}
-}
+	})
 
-func TestListOfTopicsAplicacoes(t *testing.T) {
-	expected := []string{
-		DocumentacaoJSON,
-		JSONMarshal,
-		JSONUnmarshal,
-		InterfaceWriter,
-		PacoteSort,
-		CustomizandoSort,
-		Bcrypt,
-	}
-
-	result := listOfTopicsAplicacoes()
-
-	if len(result) != len(expected) {
-		t.Errorf("Expected %d topics, got %d", len(expected), len(result))
-	}
-
-	for i, topic := range expected {
-		if result[i] != topic {
-			t.Errorf("Expected topic %s at index %d, got %s", topic, i, result[i])
+	t.Run("TestListOfTopicsWithValidInput", func(t *testing.T) {
+		expectedLength := 7
+		topics := tt.ListOfTopics(list, expectedLength)
+		if len(topics) != expectedLength {
+			t.Errorf("Expected %d topics, got %d", expectedLength, len(topics))
 		}
-	}
-}
 
-func TestListOfTopics(t *testing.T) {
-	input := []string{"Topic1", "Topic2", "Topic3"}
-	expected := []string{"Topic1", "Topic2", "Topic3"}
-
-	result := listOfTopics(input)
-
-	if len(result) != len(expected) {
-		t.Errorf("Expected %d topics, got %d", len(expected), len(result))
-	}
-
-	for i, topic := range expected {
-		if result[i] != topic {
-			t.Errorf("Expected topic %s at index %d, got %s", topic, i, result[i])
+		expectedTopics := []string{
+			documentacaoJSON,
+			jsonMarshal,
+			jsonUnmarshal,
+			interfaceWriter,
+			pacoteSort,
+			customizandoSort,
+			bcrypt,
 		}
-	}
+		for i, topic := range expectedTopics {
+			if topics[i] != topic {
+				t.Errorf("Expected topic at index %d to be %s, got %s", i, topic, topics[i])
+			}
+		}
+	})
+
+	t.Run("TestListOfTopicsWithLimitGreaterThanListSize", func(t *testing.T) {
+		limit := 10
+		topics := tt.ListOfTopics(list, limit)
+		if len(topics) != len(list) {
+			t.Errorf("Expected %d topics, got %d", len(list), len(topics))
+		}
+	})
+
+	t.Run("TestListOfTopicsWithZeroLimit", func(t *testing.T) {
+		limit := 0
+		topics := tt.ListOfTopics(list, limit)
+		if len(topics) != 0 {
+			t.Errorf("Expected 0 topics, got %d", len(topics))
+		}
+	})
+
+	t.Run("TestListOfTopicsWithNegativeLimit", func(t *testing.T) {
+		limit := -1
+		topics := tt.ListOfTopics(list, limit)
+		if len(topics) != 0 {
+			t.Errorf("Expected 0 topics for negative limit, got %d", len(topics))
+		}
+	})
+
+	t.Run("TestListOfTopicsWithEmptyList", func(t *testing.T) {
+		emptyList := []string{}
+		topics := tt.ListOfTopics(emptyList, 5)
+		if len(topics) != 0 {
+			t.Errorf("Expected 0 topics for empty list, got %d", len(topics))
+		}
+	})
 }
