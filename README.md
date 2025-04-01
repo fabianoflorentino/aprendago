@@ -193,8 +193,8 @@ Outline do Curso por Capítulo
 │   │   ├── menu.go
 │   │   ├── menu_test.go
 │   │   ├── overview.yml
-│   │   ├── topics.go
-│   │   └── topics_test.go
+│   │   ├── topic_test.go
+│   │   └── topics.go
 │   ├── aplicacoes
 │   │   ├── constants.go
 │   │   ├── examples.go
@@ -316,6 +316,9 @@ Outline do Curso por Capítulo
 ├── log
 │   └── development.log
 ├── pkg
+│   ├── base_content
+│   │   ├── base_content.go
+│   │   └── base_content_test.go
 │   ├── format
 │   │   ├── helpme.go
 │   │   ├── menu_options.go
@@ -340,7 +343,7 @@ Outline do Curso por Capítulo
 │       └── trim.go
 └── tree.log
 
-44 directories, 123 files
+45 directories, 125 files
 ```
 
 ## Licença
