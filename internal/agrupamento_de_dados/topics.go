@@ -33,5 +33,5 @@ func Topics() {
 	}
 
 	content := topic.New()
-	content.TopicsContents(rootDir, content.ListOfTopics(list, 10))
+	content.TopicsContents(rootDir, content.ListOfTopics(list, len(list)))
 }
