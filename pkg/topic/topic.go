@@ -48,9 +48,35 @@ func (c Contents) TopicsContents(rootDir string, topics []string) {
 //
 // Returns:
 //   - A slice of strings containing the topics from the input list.
-func (c Contents) ListOfTopics(inputList []string, lenOfArray int) []string {
-	outputList := make([]string, 0, lenOfArray)
-	outputList = append(outputList, inputList...)
+func (c *Contents) ListOfTopics(inputList []string, lenOfArray int) []string {
+	validateList := validateLenOfArray(inputList, lenOfArray)
+
+	outputList := make([]string, 0, len(validateList))
+	outputList = append(outputList, validateList...)
 
 	return outputList
+}
+
+// validateLenOfArray trims or adjusts the length of the input slice to the specified length.
+// If the specified length is less than or equal to zero, it returns an empty slice.
+// If the specified length is greater than the length of the input slice, it returns the entire slice.
+//
+// Parameters:
+//   - inputList: A slice of strings to be trimmed or adjusted.
+//   - lenOfArray: The desired length of the resulting slice.
+//
+// Returns:
+//
+//	A slice of strings with a length equal to lenOfArray, or the entire input slice
+//	if lenOfArray exceeds its length. If lenOfArray is less than or equal to zero, an empty slice is returned.
+func validateLenOfArray(inputList []string, lenOfArray int) []string {
+	if lenOfArray <= 0 {
+		return []string{}
+	}
+
+	if lenOfArray > len(inputList) {
+		lenOfArray = len(inputList)
+	}
+
+	return inputList[:lenOfArray]
 }
