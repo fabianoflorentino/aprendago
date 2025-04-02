@@ -93,7 +93,7 @@ func Options(args []string) {
 		concorrencia.MenuConcorrencia(args),
 		seu_ambiente_de_desenvolvimento.MenuSeuAmbienteDeDesenvolvimento(args),
 		exercicios_ninja_nivel_9.MenuExerciciosNinjaNivel9(args),
-		canais.MenuCanais(args),
+		canais.Menu(args),
 		exercicios_ninja_nivel_10.MenuExerciciosNinjaNivel10(args),
 		tratamento_de_erro.MenuTratamentoDeErro(args),
 		exercicios_ninja_nivel_11.MenuExerciciosNinjaNivel11(args),
