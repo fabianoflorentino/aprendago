@@ -59,7 +59,7 @@ func MenuCapituloOptions([]string) []format.MenuOptions {
 		{Options: "--cap=18 --topics", ExecFunc: func() { concorrencia.HelpMeConcorrencia() }},
 		{Options: "--cap=19 --topics", ExecFunc: func() { seu_ambiente_de_desenvolvimento.HelpMeSeuAmbienteDeDesenvolvimento() }},
 		{Options: "--cap=20 --topics", ExecFunc: func() { exercicios_ninja_nivel_9.HelpMeExerciciosNinjaNivel9() }},
-		{Options: "--cap=21 --topics", ExecFunc: func() { canais.HelpMeCanais() }},
+		{Options: "--cap=21 --topics", ExecFunc: func() { canais.Help() }},
 		{Options: "--cap=22 --topics", ExecFunc: func() { exercicios_ninja_nivel_10.HelpMeExerciciosNinjaNivel10() }},
 		{Options: "--cap=23 --topics", ExecFunc: func() { tratamento_de_erro.HelpMeTratamentoDeErro() }},
 		{Options: "--cap=24 --topics", ExecFunc: func() { exercicios_ninja_nivel_11.HelpMeExerciciosNinjaNivel11() }},
