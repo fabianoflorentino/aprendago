@@ -23,15 +23,22 @@ func Menu([]string) []format.MenuOptions {
 		flagPacoteSort,
 		flagPacoteSortExample,
 		flagCustomizandoSort,
+		flagCustomizandoSortExample,
+		flagBcrypt,
 	}
 
 	newExecFunc := []func(){
 		func() { m.SectionFormat(documentacaoJSON, m.SectionFactory(rootDir)) },
+		func() { UsingJsonMarshal() },
+		func() { UsingJsonUnmarshal() },
+		func() { UsingJsonEncoder() },
 		func() { m.SectionFormat(jsonMarshal, m.SectionFactory(rootDir)) },
 		func() { m.SectionFormat(jsonUnmarshal, m.SectionFactory(rootDir)) },
 		func() { m.SectionFormat(interfaceWriter, m.SectionFactory(rootDir)) },
 		func() { m.SectionFormat(pacoteSort, m.SectionFactory(rootDir)) },
+		func() { UsingPackageSort() },
 		func() { m.SectionFormat(customizandoSort, m.SectionFactory(rootDir)) },
+		func() { UsingCustomSort() },
 		func() { m.SectionFormat(bcrypt, m.SectionFactory(rootDir)) },
 	}
 
