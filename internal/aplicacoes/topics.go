@@ -4,8 +4,6 @@
 package aplicacoes
 
 import (
-	"fmt"
-
 	"github.com/fabianoflorentino/aprendago/pkg/topic"
 )
 
@@ -13,18 +11,6 @@ import (
 // related to various topics such as JSON handling, interfaces, sorting,
 // and encryption using bcrypt.
 func Topics() {
-	fmt.Printf("\nCapítulo 16: Aplicações\n")
-
-	list := []string{
-		documentacaoJSON,
-		jsonMarshal,
-		jsonUnmarshal,
-		interfaceWriter,
-		pacoteSort,
-		customizandoSort,
-		bcrypt,
-	}
-
-	c := topic.New()
-	c.TopicsContents(rootDir, c.ListOfTopics(list, len(list)))
+	t := topic.New()
+	t.TopicConstructor(rootDir, "Capítulo 16: Aplicações", topics, t)
 }
