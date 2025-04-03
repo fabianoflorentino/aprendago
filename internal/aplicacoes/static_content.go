@@ -56,3 +56,15 @@ const (
 	descCustomizandoSortExample              string = "Exemplo de como customizar o pacote sort"
 	descBcrypt                               string = "Descreve o pacote bcrypt"
 )
+
+var (
+	topics = []string{
+		documentacaoJSON,
+		jsonMarshal,
+		jsonUnmarshal,
+		interfaceWriter,
+		pacoteSort,
+		customizandoSort,
+		bcrypt,
+	}
+)
