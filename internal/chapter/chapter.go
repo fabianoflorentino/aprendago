@@ -61,7 +61,7 @@ func New() []func() {
 		concorrencia.Concorrencia,
 		seu_ambiente_de_desenvolvimento.SeuAmbienteDeDesenvolvimento,
 		exercicios_ninja_nivel_9.ExerciciosNinjaNivel9,
-		canais.Canais,
+		canais.Topics,
 		exercicios_ninja_nivel_10.ExerciciosNinjaNivel10,
 		tratamento_de_erro.TratamentoDeErro,
 		exercicios_ninja_nivel_11.ExerciciosNinjaNivel11,
