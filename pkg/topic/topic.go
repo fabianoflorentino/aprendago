@@ -3,7 +3,11 @@
 // within a given root directory.
 package topic
 
-import "github.com/fabianoflorentino/aprendago/pkg/format"
+import (
+	"fmt"
+
+	"github.com/fabianoflorentino/aprendago/pkg/format"
+)
 
 // ContentsProvider defines an interface for retrieving the contents of topics.
 // Implementations of this interface should provide a method to fetch the contents
@@ -14,6 +18,8 @@ import "github.com/fabianoflorentino/aprendago/pkg/format"
 // - topics: A slice of topic names for which the contents need to be retrieved.
 type ContentsProvider interface {
 	TopicsContents(rootDir string, topics []string)
+	ListOfTopics(inputList []string, lenOfArray int) []string
+	TopicConstructor(rootDir string, topicTitle string, topicList []string, topicInstance ContentsProvider)
 }
 
 // Contents represents a collection of items or information related to a specific topic.
@@ -55,6 +61,20 @@ func (c *Contents) ListOfTopics(inputList []string, lenOfArray int) []string {
 	outputList = append(outputList, validateList...)
 
 	return outputList
+}
+
+// TopicConstructor initializes and processes the contents of a topic.
+// It takes the following parameters:
+// - rootDir: The root directory where the topic contents are located.
+// - topicTitle: The title of the topic to be displayed.
+// - topicList: A slice of strings representing the list of topics.
+// - topicInstance: An instance of ContentsProvider used to handle topic-specific operations.
+//
+// The method prints the topic title, generates a list of topics using the provided topicList,
+// and processes the topic contents by invoking the TopicsContents method of the topicInstance.
+func (c *Contents) TopicConstructor(rootDir string, topicTitle string, topicList []string, topicInstance ContentsProvider) {
+	fmt.Printf("\n%s\n", topicTitle)
+	topicInstance.TopicsContents(rootDir, topicInstance.ListOfTopics(topicList, len(topicList)))
 }
 
 // validateLenOfArray trims or adjusts the length of the input slice to the specified length.
