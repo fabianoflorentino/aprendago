@@ -52,3 +52,20 @@ const (
 	descMapsIntroducao               string = "Apresenta o tópico Maps: introdução."
 	descMapsRangeEDeletando          string = "Apresenta o tópico Maps: Range e Deletando."
 )
+
+// topics is a slice of strings that contains a list of topic identifiers.
+// Each identifier represents a specific topic related to data grouping concepts in Go.
+var (
+	topics = []string{
+		array,
+		sliceLiteralComposta,
+		sliceForRange,
+		sliceFatiandoOuDeletando,
+		sliceAnexando,
+		sliceMake,
+		sliceMultiDimensional,
+		sliceSurpresaArraySubjacente,
+		mapsIntroducao,
+		mapsRangeEDeletando,
+	}
+)
