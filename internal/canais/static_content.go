@@ -58,3 +58,16 @@ const (
 	descDivergenciaExampleWithFunc        string = "Divergência - Exemplo com Função"
 	descContext                           string = "Context"
 )
+
+var (
+	topics = []string{
+		entendendoCanais,
+		canaisDirecionaisUtilizandoCanais,
+		rangeEClose,
+		selectStatement,
+		commaOkExpression,
+		convergencia,
+		divergencia,
+		context,
+	}
+)
