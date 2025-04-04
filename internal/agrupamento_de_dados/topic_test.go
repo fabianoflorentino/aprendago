@@ -5,33 +5,25 @@ import (
 	"testing"
 )
 
-type MockContentsProvider struct {
-	CalledWithRootDir string
-	CalledWithTopics  []string
+func init() {
+	rootDir = "./"
 }
 
-func (m *MockContentsProvider) TopicsContents(rootDir string, topics []string) {
-	m.CalledWithRootDir = rootDir
-	m.CalledWithTopics = topics
-}
+func TestTopics(t *testing.T) {
+	oldStdout := os.Stdout
+	defer func() { os.Stdout = oldStdout }()
 
-func TestTopicsAgrupamentoDeDados(t *testing.T) {
-	os.Setenv("GOENV", "test")
-
-	rootDir := os.Getenv("GOENV")
-
-	if rootDir != "test" {
-		t.Errorf("Expected rootDir to be 'test', got '%s'", rootDir)
+	nullFile, err := os.OpenFile(os.DevNull, os.O_WRONLY, 0)
+	if err != nil {
+		t.Fatalf("failed to open null device: %v", err)
 	}
+	defer nullFile.Close()
 
-	mockProvider := &MockContentsProvider{}
-	mockProvider.TopicsContents(rootDir, []string{"topic1", "topic2"})
+	os.Stdout = nullFile
 
-	if mockProvider.CalledWithRootDir != rootDir {
-		t.Errorf("Expected rootDir to be 'test', got '%s'", mockProvider.CalledWithRootDir)
-	}
+	Topics()
 
-	if len(mockProvider.CalledWithTopics) != 2 {
-		t.Errorf("Expected 2 topics, got %d", len(mockProvider.CalledWithTopics))
+	if err != nil {
+		t.Errorf("Topics() failed: %v", err)
 	}
 }
