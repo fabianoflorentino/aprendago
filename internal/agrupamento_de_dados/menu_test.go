@@ -40,8 +40,22 @@ func TestMenu(t *testing.T) {
 		if len(menuOptions) != 10 {
 			t.Errorf("Expected menuOptions length of 10, got %v", len(menuOptions))
 		}
+	})
 
-		// Check if the menuOptions slice has the expected options.
+	t.Run("TestMenuOptionsContent", func(t *testing.T) {
+		menuOptions := Menu(
+			[]string{
+				flagArray,
+				flagSliceLiteralComposta,
+				flagSliceForRange,
+				flagSliceFatiandoOuDeletando,
+				flagSliceAnexando,
+				flagSliceMake,
+				flagSliceMultiDimensional,
+				flagSliceSurpresaArraySubjacente,
+				flagMapsIntroducao,
+			})
+
 		expectedOptions := []string{
 			"--array",
 			"--slice-literal-composta",
@@ -63,7 +77,6 @@ func TestMenu(t *testing.T) {
 	})
 
 	t.Run("TestMenuOptionsExecutionFunctions", func(t *testing.T) {
-		// Create a slice of MenuOptions.
 		menuOptions := Menu(
 			[]string{
 				flagArray,
@@ -77,7 +90,6 @@ func TestMenu(t *testing.T) {
 				flagMapsIntroducao,
 			})
 
-		// Check if the menuOptions slice has the expected execution functions.
 		for i, option := range menuOptions {
 			if option.ExecFunc == nil {
 				t.Errorf("Expected option %v to have a non-nil execution function", i)
@@ -99,13 +111,9 @@ func TestMenu(t *testing.T) {
 		}
 
 		for i, execFunc := range newExecFunc {
-			// Test if the execution functions behave as expected.
 			if menuOptions[i].ExecFunc == nil || execFunc == nil {
 				t.Errorf("Execution function for option %v is nil", i)
 			} else {
-				// Example: Compare the behavior of the functions by invoking them.
-				// This assumes the functions have observable side effects or outputs.
-				// You may need to adapt this part based on your actual function behavior.
 				menuOptions[i].ExecFunc()
 				execFunc()
 			}
