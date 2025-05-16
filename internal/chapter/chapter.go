@@ -65,7 +65,7 @@ func New() []func() {
 		exercicios_ninja_nivel_10.ExerciciosNinjaNivel10,
 		tratamento_de_erro.TratamentoDeErro,
 		exercicios_ninja_nivel_11.ExerciciosNinjaNivel11,
-		documentacao.Documentacao,
+		documentacao.Topics,
 		exercicios_ninja_nivel_12.ExerciciosNinjaNivel12,
 		teste_benchmarking.TesteEBenchmarking,
 	}
