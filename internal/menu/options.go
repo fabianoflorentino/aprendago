@@ -97,7 +97,7 @@ func Options(args []string) {
 		exercicios_ninja_nivel_10.MenuExerciciosNinjaNivel10(args),
 		tratamento_de_erro.MenuTratamentoDeErro(args),
 		exercicios_ninja_nivel_11.MenuExerciciosNinjaNivel11(args),
-		documentacao.MenuDocumentacao(args),
+		documentacao.Menu(args),
 		exercicios_ninja_nivel_12.MenuExerciciosNinjaNivel12(args),
 		teste_benchmarking.MenuTesteEBenchmarking(args),
 	)
