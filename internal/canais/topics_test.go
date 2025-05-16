@@ -1,4 +1,4 @@
-package aplicacoes
+package canais
 
 import (
 	"os"
@@ -13,36 +13,38 @@ func TestTopics(t *testing.T) {
 	tt := topic.New()
 
 	list := []string{
-		documentacaoJSON,
-		jsonMarshal,
-		jsonUnmarshal,
-		interfaceWriter,
-		pacoteSort,
-		customizandoSort,
-		bcrypt,
+		entendendoCanais,
+		canaisDirecionaisUtilizandoCanais,
+		rangeEClose,
+		selectStatement,
+		commaOkExpression,
+		convergencia,
+		divergencia,
+		context,
 	}
 
 	t.Run("TestRootDirValidation", func(t *testing.T) {
-		if rootDir != "internal/aplicacoes" {
-			t.Errorf("Expected rootDir to be 'internal/aplicacoes', got '%s'", rootDir)
+		if rootDir != "internal/canais" {
+			t.Errorf("Expected rootDir to be 'internal/canais', got '%s'", rootDir)
 		}
 	})
 
 	t.Run("TestListOfTopicsWithValidInput", func(t *testing.T) {
-		expectedLength := 7
+		expectedLength := 8
 		topics := tt.ListOfTopics(list, expectedLength)
 		if len(topics) != expectedLength {
 			t.Errorf("Expected %d topics, got %d", expectedLength, len(topics))
 		}
 
 		expectedTopics := []string{
-			documentacaoJSON,
-			jsonMarshal,
-			jsonUnmarshal,
-			interfaceWriter,
-			pacoteSort,
-			customizandoSort,
-			bcrypt,
+			entendendoCanais,
+			canaisDirecionaisUtilizandoCanais,
+			rangeEClose,
+			selectStatement,
+			commaOkExpression,
+			convergencia,
+			divergencia,
+			context,
 		}
 		for i, topic := range expectedTopics {
 			if topics[i] != topic {

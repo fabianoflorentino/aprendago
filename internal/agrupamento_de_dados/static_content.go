@@ -1,11 +1,5 @@
 package agrupamento_de_dados
 
-// rootDir represents the relative path to the directory where data grouping topics are stored.
-// This constant is used to reference the internal directory structure within the project.
-const (
-	rootDir = "internal/agrupamento_de_dados"
-)
-
 // The following constants define the names of various topics related to data grouping in Go.
 // Each constant corresponds to a specific topic and provides a human-readable name for it.
 const (
@@ -51,4 +45,27 @@ const (
 	descSliceSurpresaArraySubjacente string = "Apresenta o tópico Slice: a surpresa do array subjacente."
 	descMapsIntroducao               string = "Apresenta o tópico Maps: introdução."
 	descMapsRangeEDeletando          string = "Apresenta o tópico Maps: Range e Deletando."
+)
+
+// rootDir represents the relative path to the directory where data grouping topics are stored.
+// This constant is used to reference the internal directory structure within the project.
+var (
+	rootDir = "internal/agrupamento_de_dados"
+)
+
+// topics is a slice of strings that contains a list of topic identifiers.
+// Each identifier represents a specific topic related to data grouping concepts in Go.
+var (
+	topics = []string{
+		array,
+		sliceLiteralComposta,
+		sliceForRange,
+		sliceFatiandoOuDeletando,
+		sliceAnexando,
+		sliceMake,
+		sliceMultiDimensional,
+		sliceSurpresaArraySubjacente,
+		mapsIntroducao,
+		mapsRangeEDeletando,
+	}
 )

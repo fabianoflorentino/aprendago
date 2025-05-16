@@ -18,7 +18,7 @@ import (
 // If an error occurs while opening the file, the method logs an error message
 // and exits the program
 func Log(format string, args ...any) {
-	file, err := os.OpenFile("log/"+os.Getenv("GOENV")+".log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+	file, err := os.OpenFile("../../log/"+os.Getenv("GOENV")+".log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
 	}

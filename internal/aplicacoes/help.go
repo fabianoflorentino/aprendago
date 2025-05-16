@@ -1,8 +1,7 @@
 package aplicacoes
 
 import (
-	"fmt"
-
+	base "github.com/fabianoflorentino/aprendago/pkg/base_content"
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
@@ -25,6 +24,6 @@ func Help() {
 		{Flag: flagBcrypt, Description: descBcrypt},
 	}
 
-	fmt.Printf("\nCapítulo 16: Aplicações\n")
-	format.PrintHelpMe(h)
+	b := base.New()
+	b.HelpMe("Capítulo 16: Aplicações", h)
 }

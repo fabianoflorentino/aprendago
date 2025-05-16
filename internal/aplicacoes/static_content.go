@@ -1,3 +1,8 @@
+// Package aplicacoes provides a collection of constants and utilities
+// for managing application-specific configurations, command-line flags,
+// and descriptions. It serves as a central repository for defining
+// application names, their functionalities, and associated metadata
+// to streamline the development and execution of various Go applications.
 package aplicacoes
 
 // rootDir represents the relative path to the "aplicacoes" directory within the internal package.
@@ -6,18 +11,20 @@ const (
 	rootDir = "internal/aplicacoes"
 )
 
-// DocumentacaoJSON represents a topic about JSON documentation in Go programming.
-// It provides an overview of how to work with JSON data, including encoding and decoding.
+// Constants for application names and their respective flags and descriptions.
+// These constants are used to identify different applications and their functionalities.
 const (
-	DocumentacaoJSON string = "Documentação JSON"
-	JSONMarshal      string = "JSON marshal (ordenação)"
-	JSONUnmarshal    string = "JSON unmarshal (desornação)"
-	InterfaceWriter  string = "A interface Writer"
-	PacoteSort       string = "O pacote sort"
-	CustomizandoSort string = "Customizando sort"
-	Bcrypt           string = "bcrypt"
+	documentacaoJSON string = "Documentação JSON"
+	jsonMarshal      string = "JSON marshal (ordenação)"
+	jsonUnmarshal    string = "JSON unmarshal (desornação)"
+	interfaceWriter  string = "A interface Writer"
+	pacoteSort       string = "O pacote sort"
+	customizandoSort string = "Customizando sort"
+	bcrypt           string = "bcrypt"
 )
 
+// Constants for command-line flags and their descriptions.
+// These flags are used to control the behavior of the applications and provide additional options to the user.
 const (
 	flagDocumentacaoJSON                     string = "--documentacao-json"
 	flagDocumentacaoJSONExampleJSONMarshal   string = "--documentacao-json --example --json-marshal"
@@ -33,6 +40,8 @@ const (
 	flagBcrypt                               string = "--bcrypt"
 )
 
+// Constants for descriptions of the applications and their functionalities.
+// These descriptions provide additional context and information about what each application does.
 const (
 	descDocumentacaoJSON                     string = "Descreve como documentar um pacote em Go"
 	descDocumentacaoJSONExampleJSONMarshal   string = "Exemplo de como ordenar um JSON"
@@ -46,4 +55,16 @@ const (
 	descCustomizandoSort                     string = "Descreve como customizar o pacote sort"
 	descCustomizandoSortExample              string = "Exemplo de como customizar o pacote sort"
 	descBcrypt                               string = "Descreve o pacote bcrypt"
+)
+
+var (
+	topics = []string{
+		documentacaoJSON,
+		jsonMarshal,
+		jsonUnmarshal,
+		interfaceWriter,
+		pacoteSort,
+		customizandoSort,
+		bcrypt,
+	}
 )

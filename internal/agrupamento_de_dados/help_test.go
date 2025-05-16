@@ -5,11 +5,9 @@ import (
 	"testing"
 )
 
-func init() {
-	rootDir = "./"
-}
+func TestHelp(t *testing.T) {
+	var err error
 
-func TestTopics(t *testing.T) {
 	oldStdout := os.Stdout
 	defer func() { os.Stdout = oldStdout }()
 
@@ -21,9 +19,9 @@ func TestTopics(t *testing.T) {
 
 	os.Stdout = nullFile
 
-	Topics()
+	Help()
 
 	if err != nil {
-		t.Errorf("Topics() failed: %v", err)
+		t.Errorf("Help() failed: %v", err)
 	}
 }
