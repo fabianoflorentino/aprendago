@@ -44,6 +44,7 @@ func TestTopics(t *testing.T) {
 			customizandoSort,
 			bcrypt,
 		}
+
 		for i, topic := range expectedTopics {
 			if topics[i] != topic {
 				t.Errorf("Expected topic at index %d to be %s, got %s", i, topic, topics[i])
