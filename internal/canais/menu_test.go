@@ -3,17 +3,10 @@ package canais
 import (
 	"testing"
 
-	"github.com/fabianoflorentino/aprendago/pkg/section"
+	_ "github.com/fabianoflorentino/aprendago/pkg/section"
 )
 
 func TestMenuCanais(t *testing.T) {
-	// Create a new section with a root directory.
-	_, err := section.New(rootDir)
-	if err != nil {
-		t.Errorf("Error creating section: %v", err)
-	}
-
-	// Create a slice of MenuOptions for MenuCanais.
 	menuOptions := Menu(
 		[]string{
 			flagEntendendoCanais,
