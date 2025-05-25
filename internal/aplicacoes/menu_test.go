@@ -25,16 +25,16 @@ func TestMenuAplicacoes(t *testing.T) {
 
 	t.Run("TestMenuOptionsLengthAndContent", func(t *testing.T) {
 		// Create a slice of MenuOptions.
-		menuOptions := listMenuOptions()
+		mo := menuOptions(topics)
 
 		// Check if the menuOptions slice has the expected length.
-		if len(menuOptions) != 12 {
-			t.Errorf("Expected menuOptions length of 12, got %v", len(menuOptions))
+		if len(mo) != 12 {
+			t.Errorf("Expected menuOptions length of 12, got %v", len(mo))
 		}
 	})
 
 	t.Run("TestMenuOptionsContent", func(t *testing.T) {
-		menuOptions := listMenuOptions()
+		mo := menuOptions(topics)
 
 		expectedOptions := []string{
 			"--documentacao-json",
@@ -51,7 +51,7 @@ func TestMenuAplicacoes(t *testing.T) {
 			"--bcrypt",
 		}
 
-		for i, option := range menuOptions {
+		for i, option := range mo {
 			if option.Options != expectedOptions[i] {
 				t.Errorf("Expected %s, got %s", expectedOptions[i], option.Options)
 			}
@@ -59,9 +59,9 @@ func TestMenuAplicacoes(t *testing.T) {
 	})
 
 	t.Run("TestMenuOptionsExecutionFunctions", func(t *testing.T) {
-		menuOptions := listMenuOptions()
+		mo := menuOptions(topics)
 
-		for _, option := range menuOptions {
+		for _, option := range mo {
 			if option.ExecFunc == nil {
 				t.Errorf("Expected execution function for %s to be not nil", option.Options)
 			}
@@ -69,7 +69,7 @@ func TestMenuAplicacoes(t *testing.T) {
 	})
 
 	t.Run("TestMenuOptionsExecution", func(t *testing.T) {
-		menuOptions := listMenuOptions()
+		mo := menuOptions(topics)
 
 		m := base.New()
 		newExecFunc := []func(){
@@ -88,30 +88,16 @@ func TestMenuAplicacoes(t *testing.T) {
 		}
 
 		for i, execFunc := range newExecFunc {
-			if menuOptions[i].ExecFunc == nil || execFunc == nil {
+			if mo[i].ExecFunc == nil || execFunc == nil {
 				t.Errorf("Execution function for option %v is nil", i)
 			} else {
-				menuOptions[i].ExecFunc()
+				mo[i].ExecFunc()
 				execFunc()
 			}
 		}
 	})
 }
 
-func listMenuOptions() []format.MenuOptions {
-	return Menu(
-		[]string{
-			flagDocumentacaoJSON,
-			flagDocumentacaoJSONExampleJSONMarshal,
-			flagDocumentacaoJSONExampleJSONUnmarshal,
-			flagDocumentacaoJSONExampleJSONEncoder,
-			flagJSONMarshal,
-			flagJSONUnmarshal,
-			flagInterfaceWriter,
-			flagPacoteSort,
-			flagPacoteSortExample,
-			flagCustomizandoSort,
-			flagCustomizandoSortExample,
-			flagBcrypt,
-		})
+func menuOptions(listMenu []string) []format.MenuOptions {
+	return Menu(listMenu)
 }
