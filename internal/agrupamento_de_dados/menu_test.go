@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	base "github.com/fabianoflorentino/aprendago/pkg/base_content"
+	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
 func TestMenu(t *testing.T) {
@@ -23,18 +24,7 @@ func TestMenu(t *testing.T) {
 
 	t.Run("TestMenuOptionsLengthAndContent", func(t *testing.T) {
 		// Create a slice of MenuOptions.
-		menuOptions := Menu(
-			[]string{
-				flagArray,
-				flagSliceLiteralComposta,
-				flagSliceForRange,
-				flagSliceFatiandoOuDeletando,
-				flagSliceAnexando,
-				flagSliceMake,
-				flagSliceMultiDimensional,
-				flagSliceSurpresaArraySubjacente,
-				flagMapsIntroducao,
-			})
+		menuOptions := listMenuOptions()
 
 		// Check if the menuOptions slice has the expected length.
 		if len(menuOptions) != 10 {
@@ -43,18 +33,7 @@ func TestMenu(t *testing.T) {
 	})
 
 	t.Run("TestMenuOptionsContent", func(t *testing.T) {
-		menuOptions := Menu(
-			[]string{
-				flagArray,
-				flagSliceLiteralComposta,
-				flagSliceForRange,
-				flagSliceFatiandoOuDeletando,
-				flagSliceAnexando,
-				flagSliceMake,
-				flagSliceMultiDimensional,
-				flagSliceSurpresaArraySubjacente,
-				flagMapsIntroducao,
-			})
+		menuOptions := listMenuOptions()
 
 		expectedOptions := []string{
 			"--array",
@@ -77,18 +56,7 @@ func TestMenu(t *testing.T) {
 	})
 
 	t.Run("TestMenuOptionsExecutionFunctions", func(t *testing.T) {
-		menuOptions := Menu(
-			[]string{
-				flagArray,
-				flagSliceLiteralComposta,
-				flagSliceForRange,
-				flagSliceFatiandoOuDeletando,
-				flagSliceAnexando,
-				flagSliceMake,
-				flagSliceMultiDimensional,
-				flagSliceSurpresaArraySubjacente,
-				flagMapsIntroducao,
-			})
+		menuOptions := listMenuOptions()
 
 		for i, option := range menuOptions {
 			if option.ExecFunc == nil {
@@ -119,4 +87,20 @@ func TestMenu(t *testing.T) {
 			}
 		}
 	})
+}
+
+func listMenuOptions() []format.MenuOptions {
+	return Menu(
+		[]string{
+			flagArray,
+			flagSliceLiteralComposta,
+			flagSliceForRange,
+			flagSliceFatiandoOuDeletando,
+			flagSliceAnexando,
+			flagSliceMake,
+			flagSliceMultiDimensional,
+			flagSliceSurpresaArraySubjacente,
+			flagMapsIntroducao,
+			flagMapsRangeEDeletando,
+		})
 }
