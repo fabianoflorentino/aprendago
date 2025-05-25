@@ -24,16 +24,16 @@ func TestMenu(t *testing.T) {
 
 	t.Run("TestMenuOptionsLengthAndContent", func(t *testing.T) {
 		// Create a slice of MenuOptions.
-		menuOptions := listMenuOptions()
+		mo := menuOptions(topics)
 
 		// Check if the menuOptions slice has the expected length.
-		if len(menuOptions) != 10 {
-			t.Errorf("Expected menuOptions length of 10, got %v", len(menuOptions))
+		if len(mo) != 10 {
+			t.Errorf("Expected menuOptions length of 10, got %v", len(mo))
 		}
 	})
 
 	t.Run("TestMenuOptionsContent", func(t *testing.T) {
-		menuOptions := listMenuOptions()
+		mo := menuOptions(topics)
 
 		expectedOptions := []string{
 			"--array",
@@ -48,7 +48,7 @@ func TestMenu(t *testing.T) {
 			"--maps-range-e-deletando",
 		}
 
-		for i, option := range menuOptions {
+		for i, option := range mo {
 			if option.Options != expectedOptions[i] {
 				t.Errorf("Expected option %v to be %v, got %v", i, expectedOptions[i], option.Options)
 			}
@@ -56,9 +56,9 @@ func TestMenu(t *testing.T) {
 	})
 
 	t.Run("TestMenuOptionsExecutionFunctions", func(t *testing.T) {
-		menuOptions := listMenuOptions()
+		mo := menuOptions(topics)
 
-		for i, option := range menuOptions {
+		for i, option := range mo {
 			if option.ExecFunc == nil {
 				t.Errorf("Expected option %v to have a non-nil execution function", i)
 			}
@@ -79,28 +79,16 @@ func TestMenu(t *testing.T) {
 		}
 
 		for i, execFunc := range newExecFunc {
-			if menuOptions[i].ExecFunc == nil || execFunc == nil {
+			if mo[i].ExecFunc == nil || execFunc == nil {
 				t.Errorf("Execution function for option %v is nil", i)
 			} else {
-				menuOptions[i].ExecFunc()
+				mo[i].ExecFunc()
 				execFunc()
 			}
 		}
 	})
 }
 
-func listMenuOptions() []format.MenuOptions {
-	return Menu(
-		[]string{
-			flagArray,
-			flagSliceLiteralComposta,
-			flagSliceForRange,
-			flagSliceFatiandoOuDeletando,
-			flagSliceAnexando,
-			flagSliceMake,
-			flagSliceMultiDimensional,
-			flagSliceSurpresaArraySubjacente,
-			flagMapsIntroducao,
-			flagMapsRangeEDeletando,
-		})
+func menuOptions(listMenu []string) []format.MenuOptions {
+	return Menu(listMenu)
 }
