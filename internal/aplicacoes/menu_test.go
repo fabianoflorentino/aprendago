@@ -1,20 +1,105 @@
 package aplicacoes
 
 import (
+	"os"
 	"testing"
 
-	"github.com/fabianoflorentino/aprendago/pkg/section"
+	base "github.com/fabianoflorentino/aprendago/pkg/base_content"
+	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
 func TestMenuAplicacoes(t *testing.T) {
-	// Create a new section with a root directory.
-	_, err := section.New(rootDir)
+	var err error
+
+	oldStdout := os.Stdout
+	defer func() { os.Stdout = oldStdout }()
+
+	nullFile, err := os.OpenFile(os.DevNull, os.O_WRONLY, 0)
 	if err != nil {
-		t.Errorf("Error creating section: %v", err)
+		t.Fatalf("failed to open null device: %v", err)
 	}
 
-	// Create a slice of MenuOptions for MenuAplicacoes.
-	menuOptions := Menu(
+	defer nullFile.Close()
+
+	os.Stdout = nullFile
+
+	t.Run("TestMenuOptionsLengthAndContent", func(t *testing.T) {
+		// Create a slice of MenuOptions.
+		menuOptions := listMenuOptions()
+
+		// Check if the menuOptions slice has the expected length.
+		if len(menuOptions) != 12 {
+			t.Errorf("Expected menuOptions length of 12, got %v", len(menuOptions))
+		}
+	})
+
+	t.Run("TestMenuOptionsContent", func(t *testing.T) {
+		menuOptions := listMenuOptions()
+
+		expectedOptions := []string{
+			"--documentacao-json",
+			"--documentacao-json --example --json-marshal",
+			"--documentacao-json --example --json-unmarshal",
+			"--documentacao-json --example --json-encoder",
+			"--json-marshal",
+			"--json-unmarshal",
+			"--interface-writer",
+			"--pacote-sort",
+			"--pacote-sort --example",
+			"--customizando-sort",
+			"--customizando-sort --example",
+			"--bcrypt",
+		}
+
+		for i, option := range menuOptions {
+			if option.Options != expectedOptions[i] {
+				t.Errorf("Expected %s, got %s", expectedOptions[i], option.Options)
+			}
+		}
+	})
+
+	t.Run("TestMenuOptionsExecutionFunctions", func(t *testing.T) {
+		menuOptions := listMenuOptions()
+
+		for _, option := range menuOptions {
+			if option.ExecFunc == nil {
+				t.Errorf("Expected execution function for %s to be not nil", option.Options)
+			}
+		}
+	})
+
+	t.Run("TestMenuOptionsExecution", func(t *testing.T) {
+		menuOptions := listMenuOptions()
+
+		m := base.New()
+		newExecFunc := []func(){
+			func() { m.SectionFormat(documentacaoJSON, m.SectionFactory(rootDir)) },
+			func() { UsingJsonMarshal() },
+			func() { UsingJsonUnmarshal() },
+			func() { UsingJsonEncoder() },
+			func() { m.SectionFormat(jsonMarshal, m.SectionFactory(rootDir)) },
+			func() { m.SectionFormat(jsonUnmarshal, m.SectionFactory(rootDir)) },
+			func() { m.SectionFormat(interfaceWriter, m.SectionFactory(rootDir)) },
+			func() { m.SectionFormat(pacoteSort, m.SectionFactory(rootDir)) },
+			func() { UsingPackageSort() },
+			func() { m.SectionFormat(customizandoSort, m.SectionFactory(rootDir)) },
+			func() { UsingCustomSort() },
+			func() { m.SectionFormat(bcrypt, m.SectionFactory(rootDir)) },
+		}
+
+		for i, execFunc := range newExecFunc {
+			if menuOptions[i].ExecFunc == nil || execFunc == nil {
+				t.Errorf("Execution function for option %v is nil", i)
+			} else {
+				menuOptions[i].ExecFunc()
+				execFunc()
+			}
+		}
+	})
+}
+
+func listMenuOptions() []format.MenuOptions {
+	return Menu(
 		[]string{
 			flagDocumentacaoJSON,
 			flagDocumentacaoJSONExampleJSONMarshal,
@@ -29,38 +114,4 @@ func TestMenuAplicacoes(t *testing.T) {
 			flagCustomizandoSortExample,
 			flagBcrypt,
 		})
-
-	// Check if the menuOptions slice has the expected length.
-	if len(menuOptions) != 12 {
-		t.Errorf("Expected menuOptions length of 12, got %v", len(menuOptions))
-	}
-
-	// Check if the menuOptions slice has the expected options.
-	expectedOptions := []string{
-		"--documentacao-json",
-		"--documentacao-json --example --json-marshal",
-		"--documentacao-json --example --json-unmarshal",
-		"--documentacao-json --example --json-encoder",
-		"--json-marshal",
-		"--json-unmarshal",
-		"--interface-writer",
-		"--pacote-sort",
-		"--pacote-sort --example",
-		"--customizando-sort",
-		"--customizando-sort --example",
-		"--bcrypt",
-	}
-
-	for i, option := range menuOptions {
-		if option.Options != expectedOptions[i] {
-			t.Errorf("Expected option %v to be %v, got %v", i, expectedOptions[i], option.Options)
-		}
-	}
-
-	// Check if the menuOptions slice has the expected execution functions.
-	for i, option := range menuOptions {
-		if option.ExecFunc == nil {
-			t.Errorf("Expected option %v to have a non-nil execution function", i)
-		}
-	}
 }
