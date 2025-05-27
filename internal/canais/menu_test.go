@@ -1,59 +1,77 @@
 package canais
 
 import (
+	"os"
 	"testing"
 
-	_ "github.com/fabianoflorentino/aprendago/pkg/section"
+	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
 func TestMenuCanais(t *testing.T) {
-	menuOptions := Menu(
-		[]string{
-			flagEntendendoCanais,
-			flagCanaisDirecionaisUtilizandoCanais,
-			flagRangeEClose,
-			flagSelectStatement,
-			flagCommaOkExpression,
-			flagConvergencia,
-			flagConvergenciaExample,
-			flagConvergenciaExampleChanString,
-			flagDivergencia,
-			flagDivergenciaExample,
-			flagDivergenciaExampleWithFunc,
-			flagContext,
-		})
+	var err error
 
-	// Check if the menuOptions slice has the expected length.
-	if len(menuOptions) != 12 {
-		t.Errorf("Expected menuOptions length of 12, got %v", len(menuOptions))
+	oldStdout := os.Stdout
+	defer func() { os.Stdout = oldStdout }()
+
+	nullFile, err := os.OpenFile(os.DevNull, os.O_WRONLY, 0)
+	if err != nil {
+		t.Fatalf("failed to open null device: %v", err)
 	}
 
-	// Check if the menuOptions slice has the expected options.
-	expectedOptions := []string{
-		"--entendendo-canais",
-		"--canais-direcionais-utilizando-canais",
-		"--range-e-close",
-		"--select",
-		"--a-expressao-comma-ok",
-		"--convergencia",
-		"--convergencia --example",
-		"--convergencia --example --chan-string",
-		"--divergencia",
-		"--divergencia --example",
-		"--divergencia --example --with-func",
-		"--context",
-	}
+	defer nullFile.Close()
 
-	for i, option := range menuOptions {
-		if option.Options != expectedOptions[i] {
-			t.Errorf("Expected option %v to be %v, got %v", i, expectedOptions[i], option.Options)
+	os.Stdout = nullFile
+
+	t.Run("TestMenuOptionsLengthAndContent", func(t *testing.T) {
+		// Create a slice of MenuOptions.
+		mo := menuOptions(topics)
+
+		// Check if the menuOptions slice has the expected length.
+		if len(mo) != 12 {
+			t.Errorf("Expected menuOptions length of 12, got %v", len(mo))
 		}
-	}
+	})
 
-	// Check if the menuOptions slice has the expected execution functions.
-	for i, option := range menuOptions {
-		if option.ExecFunc == nil {
-			t.Errorf("Expected option %v to have a non-nil execution function", i)
+	t.Run("TestMenuOptionsContent", func(t *testing.T) {
+		mo := menuOptions(topics)
+
+		expectedOptions := []string{
+			"--entendendo-canais",
+			"--canais-direcionais-utilizando-canais",
+			"--range-e-close",
+			"--select",
+			"--a-expressao-comma-ok",
+			"--convergencia",
+			"--convergencia --example",
+			"--convergencia --example --chan-string",
+			"--divergencia",
+			"--divergencia --example",
+			"--divergencia --example --with-func",
+			"--context",
 		}
-	}
+
+		for i, option := range mo {
+			if option.Options != expectedOptions[i] {
+				t.Errorf("Expected %s, got %s", expectedOptions[i], option.Options)
+			}
+		}
+	})
+
+	t.Run("TestMenuOptionsExecFunc", func(t *testing.T) {
+		mo := menuOptions(topics)
+
+		if len(mo) != 12 {
+			t.Fatalf("Expected menuOptions length of 12, got %v", len(mo))
+		}
+
+		for i, option := range mo {
+			if option.ExecFunc == nil {
+				t.Errorf("Expected ExecFunc for option %v to be non-nil", i)
+			}
+		}
+	})
+}
+
+func menuOptions(listMenu []string) []format.MenuOptions {
+	return Menu(listMenu)
 }
