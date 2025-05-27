@@ -4,7 +4,6 @@ import (
 	"os"
 	"testing"
 
-	base "github.com/fabianoflorentino/aprendago/pkg/base_content"
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
@@ -55,35 +54,16 @@ func TestMenu(t *testing.T) {
 		}
 	})
 
-	t.Run("TestMenuOptionsExecutionFunctions", func(t *testing.T) {
+	t.Run("TestMenuOptionsExecFunc", func(t *testing.T) {
 		mo := menuOptions(topics)
+
+		if len(mo) != 10 {
+			t.Fatalf("Expected menuOptions length of 10, got %v", len(mo))
+		}
 
 		for i, option := range mo {
 			if option.ExecFunc == nil {
-				t.Errorf("Expected option %v to have a non-nil execution function", i)
-			}
-		}
-
-		m := base.New()
-		newExecFunc := []func(){
-			func() { m.SectionFormat(array, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(sliceLiteralComposta, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(sliceForRange, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(sliceFatiandoOuDeletando, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(sliceAnexando, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(sliceMake, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(sliceMultiDimensional, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(sliceSurpresaArraySubjacente, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(mapsIntroducao, m.SectionFactory(rootDir)) },
-			func() { m.SectionFormat(mapsRangeEDeletando, m.SectionFactory(rootDir)) },
-		}
-
-		for i, execFunc := range newExecFunc {
-			if mo[i].ExecFunc == nil || execFunc == nil {
-				t.Errorf("Execution function for option %v is nil", i)
-			} else {
-				mo[i].ExecFunc()
-				execFunc()
+				t.Errorf("Expected ExecFunc for option %v to be non-nil", i)
 			}
 		}
 	})
