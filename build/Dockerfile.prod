@@ -1,4 +1,4 @@
-FROM golang:alpine3.20 AS builder
+FROM golang:alpine3.21 AS builder
 
 WORKDIR /aprendago
 
@@ -6,7 +6,7 @@ COPY . .
 
 RUN go build -o /go/bin/aprendago cmd/aprendago/main.go
 
-FROM alpine:3.20 as aprendago
+FROM alpine:3.21 as aprendago
 
 COPY --from=builder /go/bin/aprendago /go/bin/aprendago
 
