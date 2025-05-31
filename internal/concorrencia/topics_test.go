@@ -1,4 +1,4 @@
-package agrupamento_de_dados
+package concorrencia
 
 import (
 	"os"
@@ -13,42 +13,35 @@ func TestTopics(t *testing.T) {
 	tt := topic.New()
 
 	list := []string{
-		sliceLiteralComposta,
-		sliceForRange,
-		sliceFatiandoOuDeletando,
-		sliceAnexando,
-		sliceMake,
-		sliceMultiDimensional,
-		sliceSurpresaArraySubjacente,
-		mapsIntroducao,
-		mapsRangeEDeletando,
+		concorrenciaVsParalelismo,
+		goroutinesWaitgroups,
+		discussaoCondicaoDeCorrida,
+		condicaoDeCorrida,
+		mutex,
+		atomic,
 	}
 
 	t.Run("TestRootDirValidation", func(t *testing.T) {
-		if rootDir != "internal/agrupamento_de_dados" {
-			t.Errorf("Expected rootDir to be 'internal/agrupamento_de_dados', got '%s'", rootDir)
+		if rootDir != "internal/concorrencia" {
+			t.Errorf("Expected rootDir to be 'internal/concorrencia', got '%s'", rootDir)
 		}
 	})
 
 	t.Run("TestListOfTopicsWithValidInput", func(t *testing.T) {
-		expectedLength := 9
+		expectedLength := 6
 		topics := tt.ListOfTopics(list, expectedLength)
 		if len(topics) != expectedLength {
 			t.Errorf("Expected %d topics, got %d", expectedLength, len(topics))
 		}
 
 		expectedTopics := []string{
-			sliceLiteralComposta,
-			sliceForRange,
-			sliceFatiandoOuDeletando,
-			sliceAnexando,
-			sliceMake,
-			sliceMultiDimensional,
-			sliceSurpresaArraySubjacente,
-			mapsIntroducao,
-			mapsRangeEDeletando,
+			concorrenciaVsParalelismo,
+			goroutinesWaitgroups,
+			discussaoCondicaoDeCorrida,
+			condicaoDeCorrida,
+			mutex,
+			atomic,
 		}
-
 		for i, topic := range expectedTopics {
 			if topics[i] != topic {
 				t.Errorf("Expected topic at index %d to be %s, got %s", i, topic, topics[i])
@@ -73,7 +66,7 @@ func TestTopics(t *testing.T) {
 	})
 
 	t.Run("TestListOfTopicsWithNegativeLimit", func(t *testing.T) {
-		limit := -5
+		limit := -1
 		topics := tt.ListOfTopics(list, limit)
 		if len(topics) != 0 {
 			t.Errorf("Expected 0 topics, got %d", len(topics))
@@ -84,7 +77,7 @@ func TestTopics(t *testing.T) {
 		emptyList := []string{}
 		topics := tt.ListOfTopics(emptyList, 5)
 		if len(topics) != 0 {
-			t.Errorf("Expected 0 topics for empty list, got %d", len(topics))
+			t.Errorf("Expected 0 topics, got %d", len(topics))
 		}
 	})
 }
