@@ -1,12 +1,13 @@
 ---
 services:
   aprendago:
-    image: fabianoflorentino/aprendago:v0.0.1
+    image: fabianoflorentino/aprendago:latest
     build:
       context: .
-      dockerfile: build/Dockerfile.dev
+      dockerfile: Dockerfile
+      target: development
     env_file:
-      - configs/.env
+      - .env
     networks:
       - aprendago
     volumes:
