@@ -103,3 +103,10 @@ func readOverview(rootDir string) ([]Document, error) {
 
 	return documentSpecification, nil
 }
+
+// ReadOverview is an exported wrapper around readOverview.
+// It reads the overview YAML file from the given root directory and returns
+// the parsed documents. It is the public API for accessing overview content.
+func ReadOverview(rootDir string) ([]Document, error) {
+	return readOverview(rootDir)
+}
