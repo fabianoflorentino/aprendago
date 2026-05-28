@@ -1,0 +1,28 @@
+root = "."
+tmp_dir = "/tmp/aprendago"
+
+[build]
+  # Compile the binary into a temp location to keep the workspace clean.
+  cmd = "CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -o /usr/local/bin/aprendago cmd/aprendago/main.go"
+  bin = "/usr/local/bin/aprendago"
+
+  # Only rebuild when Go source files change.
+  include_ext    = ["go"]
+  exclude_dir    = ["docs", "deploy", ".github", "vendor"]
+  delay          = 1000
+  kill_delay     = "500ms"
+  rerun          = false
+  send_interrupt = true
+
+[log]
+  time      = true
+  main_only = false
+
+[color]
+  main    = "magenta"
+  watcher = "cyan"
+  build   = "yellow"
+  runner  = "green"
+
+[misc]
+  clean_on_exit = true
