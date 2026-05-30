@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/fabianoflorentino/aprendago/internal/chapter"
 	"github.com/fabianoflorentino/aprendago/internal/compat"
 	"github.com/spf13/cobra"
 )
@@ -12,9 +13,8 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "aprendago",
 	Short: "CLI para o curso Aprenda Go",
-	// DisableFlagParsing is required during migration to prevent cobra from
-	// rejecting legacy flags (--cap=N, --bem-vindo, etc.) that it doesn't know
-	// about. We handle routing manually in rootRun.
+	// DisableFlagParsing is required to prevent cobra from rejecting legacy
+	// flags (--cap=N, --help, etc.) that it doesn't know about.
 	DisableFlagParsing: true,
 	Run: func(cmd *cobra.Command, args []string) {
 		if err := rootRun(cmd, args); err != nil {
@@ -29,24 +29,16 @@ func init() {
 	rootCmd.SilenceErrors = true
 }
 
-// Execute is the entry point for the CLI, called from cmd/aprendago/main.go.
 func Execute() error {
 	return rootCmd.Execute()
 }
 
-// rootRun routes the CLI request:
-//   - Empty args → legacy help
-//   - "caps" → new caps subcommand
-//   - "cap" → new cap subcommand
-//   - "outline" → new outline subcommand
-//   - Legacy flags (--cap=N, --help, etc.) → compat router → legacy fallback
-func rootRun(cmd *cobra.Command, args []string) error {
+func rootRun(_ *cobra.Command, args []string) error {
 	if len(args) == 0 {
-		runLegacy(args)
+		printHelp()
 		return nil
 	}
 
-	// Phase 1: New subcommands
 	switch args[0] {
 	case "caps":
 		return runCaps()
@@ -56,14 +48,56 @@ func rootRun(cmd *cobra.Command, args []string) error {
 		return runOutline()
 	}
 
-	// Phase 1+2: Legacy flags
 	if strings.HasPrefix(args[0], "--") {
-		if compat.Route(args) {
+		switch args[0] {
+		case "--help":
+			printHelp()
 			return nil
+		case "--caps":
+			return runCaps()
+		case "--outline":
+			return runOutline()
+		default:
+			if compat.Route(args) {
+				return nil
+			}
+			return fmt.Errorf("opcao desconhecida: %s. Use --help para ajuda", args[0])
 		}
-		runLegacy(args)
-		return nil
 	}
 
 	return fmt.Errorf("comando desconhecido: %s. Use --help para ajuda", args[0])
+}
+
+func printHelp() {
+	fmt.Println(`
+Uso: aprendago [comando]
+
+Comandos:
+  caps                    Lista capitulos disponiveis
+  cap <numero> [acao]     Acessa um capitulo
+  outline                 Exibe o outline completo do curso
+
+Acoes para cap:
+  topics                  Lista topicos do capitulo
+  overview                Mostra conteudo completo do capitulo
+  <topico>                Mostra um topico especifico
+
+Exemplos:
+  aprendago caps
+  aprendago cap 8 topics
+  aprendago cap 8 overview
+  aprendago cap 8 "Agregacao de fatias utilizando append"
+
+Capitulos do Curso`)
+
+	for _, c := range chapter.All() {
+		fmt.Printf("  --cap=%d --topics    %s\n", c.Number, c.Title)
+	}
+
+	fmt.Println(`
+Outline do Curso por Capitulo`)
+
+	for _, c := range chapter.All() {
+		fmt.Printf("  --cap=%d --overview    %s\n", c.Number, c.Title)
+	}
 }

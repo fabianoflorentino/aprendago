@@ -1,10 +1,8 @@
 // Package compat provides a compatibility layer that routes legacy command-line
-// flags (--cap=N --topics, --cap=N --overview) through the new chapter system
-// when the requested chapter has been migrated, falling back to the legacy
-// menu system otherwise.
+// flags (--cap=N --topics, --cap=N --overview) through the new chapter system.
 //
-// This enables incremental migration: each chapter can be migrated independently
-// without breaking existing usage patterns.
+// This enables gradual migration: legacy flag syntax still works even after
+// the old menu system has been removed.
 package compat
 
 import (
@@ -15,11 +13,11 @@ import (
 	"github.com/fabianoflorentino/aprendago/internal/chapter"
 )
 
-// Route tries to handle legacy --cap=N --topics/--overview flags
-// using the new chapter system.
+// Route handles legacy --cap=N --topics/--overview flags using the new
+// chapter system.
 //
-// Returns true if the request was handled (caller should skip legacy fallback).
-// Returns false if the request should fall through to legacy menu.Options().
+// Returns true if the request was handled (caller should not show an error).
+// Returns false if there is no --cap flag (not compat's domain).
 func Route(args []string) bool {
 	capNum := -1
 	var flags []string
@@ -41,7 +39,8 @@ func Route(args []string) bool {
 
 	ch := chapter.Get(capNum)
 	if ch == nil {
-		return false // chapter not registered yet, let legacy handle
+		fmt.Printf("capítulo %d não encontrado\n", capNum)
+		return true
 	}
 
 	// Determine action from remaining flags
@@ -54,10 +53,8 @@ func Route(args []string) bool {
 		case "--overview":
 			action = "overview"
 		default:
-			// Individual topic flags (--bem-vindo, --estudos, etc.)
-			// have complex name-to-section-title mapping handled by the
-			// legacy system. Let legacy handle these.
-			return false
+			fmt.Printf("Use o novo formato: aprendago cap %d <topico>\n", capNum)
+			return true
 		}
 	}
 
