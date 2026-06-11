@@ -3,8 +3,6 @@ package chapter
 import (
 	"os"
 	"testing"
-
-	"github.com/fabianoflorentino/aprendago/pkg/format"
 )
 
 func TestChapterNumber(t *testing.T) {
@@ -42,35 +40,6 @@ func TestChapterTopics(t *testing.T) {
 	for i, topic := range topics {
 		if topic != expected[i] {
 			t.Errorf("topic[%d] = '%s', expected '%s'", i, topic, expected[i])
-		}
-	}
-}
-
-func TestChapterHelpMe(t *testing.T) {
-	c := &Chapter{Number: 1, Title: "Visao Geral do Curso", RootDir: "../visao_geral_do_curso"}
-
-	help, err := c.HelpMe()
-	if err != nil {
-		t.Fatalf("HelpMe() returned error: %v", err)
-	}
-
-	if len(help) != 5 {
-		t.Fatalf("expected 5 help entries, got %d", len(help))
-	}
-
-	expected := []format.HelpMe{
-		{Flag: "Bem-vindo!"},
-		{Flag: "Por que Go?"},
-		{Flag: "Sucesso"},
-		{Flag: "Recursos"},
-		{Flag: "Como esse curso funciona"},
-	}
-	for i, h := range help {
-		if h.Flag != expected[i].Flag {
-			t.Errorf("help[%d].Flag = '%s', expected '%s'", i, h.Flag, expected[i].Flag)
-		}
-		if h.Description == "" {
-			t.Errorf("help[%d].Description is empty for flag '%s'", i, h.Flag)
 		}
 	}
 }

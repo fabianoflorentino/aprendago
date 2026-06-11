@@ -20,7 +20,7 @@ func runCaps() error {
 
 	all := chapter.All()
 	for _, c := range all {
-		fmt.Printf("  --cap=%d --topics    %s\n", c.Number, c.Title)
+		fmt.Printf("  aprendago cap %d topics    %s\n", c.Number, c.Title)
 	}
 
 	return nil

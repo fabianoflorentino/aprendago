@@ -3,7 +3,6 @@ package chapter
 import (
 	"fmt"
 
-	"github.com/fabianoflorentino/aprendago/pkg/format"
 	"github.com/fabianoflorentino/aprendago/pkg/reader"
 	"github.com/fabianoflorentino/aprendago/pkg/section"
 )
@@ -66,28 +65,4 @@ func (c *Chapter) Topics() ([]string, error) {
 	return titles, nil
 }
 
-// HelpMe returns formatted help entries for each topic in the chapter.
-// The flag is the topic title and the description is a preview of its text.
-func (c *Chapter) HelpMe() ([]format.HelpMe, error) {
-	docs, err := reader.ReadOverview(c.RootDir)
-	if err != nil {
-		return nil, fmt.Errorf("erro ao ler overview de '%s': %w", c.RootDir, err)
-	}
-	if len(docs) == 0 {
-		return nil, nil
-	}
 
-	sections := docs[0].Description.Sections
-	help := make([]format.HelpMe, len(sections))
-	for i, s := range sections {
-		desc := s.Text
-		if len([]rune(desc)) > 80 {
-			desc = string([]rune(desc)[:80]) + "..."
-		}
-		help[i] = format.HelpMe{
-			Flag:        s.Title,
-			Description: desc,
-		}
-	}
-	return help, nil
-}

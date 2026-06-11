@@ -45,305 +45,111 @@ docker compose up -d
 docker compose down
 ```
 
-## Testando o CLI
+## Usando o CLI
 
-### Menu Caps (Capítulos)
+O CLI oferece três subcomandos principais:
+
+### `aprendago caps` — Lista capítulos disponíveis
 
 ```shell
-docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --caps'
+go run cmd/aprendago/main.go caps
 ```
 
-```shell
-Aprenda GO
-
+```
 Capítulos do Curso
-
-  --cap=1 --overview    Visão Geral do Curso
-  --cap=2 --overview    Variáveis, Valores &amp; Tipos
-  --cap=3 --overview    Exercícios Ninja Nível 1
-  --cap=4 --overview    Fundamentos da Programação
-  --cap=5 --overview    Exercícios Ninja Nível 2
-  --cap=6 --overview    Fluxo de Controle
-  --cap=7 --overview    Exercícios Ninja Nível 3
-  --cap=8 --overview    Agrupamento de Dados
-  --cap=9 --overview    Exercícios Ninja Nível 4
-  --cap=10 --overview   Structs
-  --cap=11 --overview   Exercícios Ninja Nível 5
-  --cap=12 --overview   Funções
-  --cap=13 --overview   Exercícios Ninja Nível 6
-  --cap=14 --overview   Ponteiros
-  --cap=15 --overview   Exercícios Ninja Nível 7
-  --cap=16 --overview   Aplicações
-  --cap=17 --overview   Exercícios Ninja Nível 8
-  --cap=18 --overview   Concorrência
-  --cap=19 --overview   Seu Ambiente de Desenvolvimento
-  --cap=20 --overview   Exercícios Ninja Nível 9
-  --cap=21 --overview   Canais
-  --cap=22 --overview   Exercícios Ninja Nível 10
-  --cap=23 --overview   Tratamento de Erro
-  --cap=24 --overview   Exercícios Ninja Nível 11
-  --cap=25 --overview   Documentação
-  --cap=26 --overview   Exercícios Ninja Nível 12
-  --cap=27 --overview   Teste e Benchmarking
+  aprendago cap 1 topics    Visão Geral do Curso
+  aprendago cap 2 topics    Variáveis, Valores e Tipos
+  aprendago cap 3 topics    Exercícios Ninja: Nível 1
+  ...
 ```
 
-### Ajuda
+### `aprendago cap <N>` — Acessa um capítulo
 
 ```shell
-docker compose exec -it aprendago /bin/sh -c 'go run cmd/aprendago/main.go --help'
+go run cmd/aprendago/main.go cap 1 topics
 ```
 
+```
+Visão Geral do Curso
+  Bem-vindo!
+  Por que Go?
+  Sucesso
+  Recursos
+  Como esse curso funciona
+```
+
+Subcomandos do `cap`:
+| Uso | Descrição |
+|---|---|
+| `aprendago cap <N>` | Mostra o overview do capítulo |
+| `aprendago cap <N> topics` | Lista os tópicos do capítulo |
+| `aprendago cap <N> overview` | Mostra o conteúdo completo do capítulo |
+| `aprendago cap <N> "<tópico>"` | Mostra um tópico específico |
+
+### `aprendago outline` — Outline completo do curso
+
 ```shell
-Learn GO
+go run cmd/aprendago/main.go outline
+```
 
+```
+Visão Geral do Curso
+  Bem-vindo!
+  Por que Go?
+  ...
+```
 
-Uso: go run cmd/aprendago/main.go [opção]
+### `aprendago --help` — Ajuda
 
-Exemplo:
-  go run cmd/aprendago/main.go --bem-vindo
+```shell
+go run cmd/aprendago/main.go --help
+```
 
-Ajuda:
+```
+CLI para o curso Aprenda Go
 
---outline  Exibe o outline completo do curso.
---help     Exibe a lista de todas as opções disponíveis.
---caps     Exibe a lista de capítulos disponíveis.
+Usage:
+  aprendago [flags]
+  aprendago [command]
 
-Capítulos do Curso
+Available Commands:
+  cap         Acessa um capítulo do curso
+  caps        Lista capítulos disponíveis
+  completion  Generate the autocompletion script for the specified shell
+  help        Help about any command
+  outline     Exibe o outline completo do curso
 
-  --cap=1 --topics    Visão Geral do Curso
-  --cap=2 --topics    Variáveis, Valores e Tipos
-  --cap=3 --topics    Exercícios Ninja: Nível 1
-  --cap=4 --topics    Fundamentos da Programação
-  --cap=5 --topics    Exercícios Ninja: Nível 2
-  --cap=6 --topics    Fluxo de Controle
-  --cap=7 --topics    Exercícios Ninja: Nível 3
-  --cap=8 --topics    Agrupamento de Dados
-  --cap=9 --topics    Exercícios Ninja: Nível 4
-  --cap=10 --topics   Structs
-  --cap=11 --topics   Exercícios Ninja: Nível 5
-  --cap=12 --topics   Funções
-  --cap=13 --topics   Exercícios Ninja: Nível 6
-  --cap=14 --topics   Ponteiros
-  --cap=15 --topics   Exercícios Ninja: Nível 7
-  --cap=16 --topics   Aplicações
-  --cap=17 --topics   Exercícios Ninja: Nível 8
-  --cap=18 --topics   Concorrência
-  --cap=19 --topics   Seu Ambiente de Desenvolvimento
-  --cap=20 --topics   Exercícios Ninja: Nível 9
-  --cap=21 --topics   Canais
-  --cap=22 --topics   Exercícios Ninja: Nível 10
-  --cap=23 --topics   Tratamento de Erro
-  --cap=24 --topics   Exercícios Ninja: Nível 11
-  --cap=25 --topics   Documentação
-  --cap=26 --topics   Exercícios Ninja: Nível 12
-  --cap=27 --topics   Teste e Benchmarking
+Flags:
+  -h, --help   help for aprendago
 
-Outline do Curso por Capítulo
-
-  --cap=1 --overview    Visão Geral do Curso
-  --cap=2 --overview    Variáveis, Valores &amp; Tipos
-  --cap=3 --overview    Exercícios Ninja Nível 1
-  --cap=4 --overview    Fundamentos da Programação
-  --cap=5 --overview    Exercícios Ninja Nível 2
-  --cap=6 --overview    Fluxo de Controle
-  --cap=7 --overview    Exercícios Ninja Nível 3
-  --cap=8 --overview    Agrupamento de Dados
-  --cap=9 --overview    Exercícios Ninja Nível 4
-  --cap=10 --overview   Structs
-  --cap=11 --overview   Exercícios Ninja Nível 5
-  --cap=12 --overview   Funções
-  --cap=13 --overview   Exercícios Ninja Nível 6
-  --cap=14 --overview   Ponteiros
-  --cap=15 --overview   Exercícios Ninja Nível 7
-  --cap=16 --overview   Aplicações
-  --cap=17 --overview   Exercícios Ninja Nível 8
-  --cap=18 --overview   Concorrência
-  --cap=19 --overview   Seu Ambiente de Desenvolvimento
-  --cap=20 --overview   Exercícios Ninja Nível 9
-  --cap=21 --overview   Canais
-  --cap=22 --overview   Exercícios Ninja Nível 10
-  --cap=23 --overview   Tratamento de Erro
-  --cap=24 --overview   Exercícios Ninja Nível 11
-  --cap=25 --overview   Documentação
-  --cap=26 --overview   Exercícios Ninja Nível 12
-  --cap=27 --overview   Teste e Benchmarking
+Use "aprendago [command] --help" for more information about a command.
 ```
 
 ## Estrutura do Projeto
 
 ```shell
 .
-├── LICENSE
-├── README.md
-├── build
-│   ├── Dockerfile.dev
-│   └── Dockerfile.prod
-├── cmd
-│   └── aprendago
-│       └── main.go
-├── configs
-│   └── _env
+├── cmd/                    # CLI entrypoint and cobra commands
+│   ├── aprendago/main.go
+│   ├── cap.go              # aprendago cap <N> [topics|overview|<topic>]
+│   ├── caps.go             # aprendago caps
+│   ├── outline.go          # aprendago outline
+│   ├── register.go         # blank imports for chapter self-registration
+│   └── root.go             # cobra root command
+├── internal/
+│   ├── chapter/            # Chapter type, registry, and helpers
+│   └── <capitulo>/         # 27 chapter packages (overview.yml + chapter.go)
+├── pkg/                    # Shared utilities
+│   ├── format/             # Output formatting (overview, questionnaire)
+│   ├── logger/             # Logging
+│   ├── output/             # Output helpers
+│   ├── reader/             # YAML overview reader
+│   ├── section/            # Section formatting from overview.yml
+│   └── trim/               # String trimming
+├── Makefile
+├── Dockerfile
 ├── docker-compose.yml
-├── go.mod
-├── go.sum
-├── internal
-│   ├── agrupamento_de_dados
-│   │   ├── constants.go
-│   │   ├── help.go
-│   │   ├── menu.go
-│   │   ├── menu_test.go
-│   │   ├── overview.yml
-│   │   ├── topic_test.go
-│   │   └── topics.go
-│   ├── aplicacoes
-│   │   ├── constants.go
-│   │   ├── examples.go
-│   │   ├── help.go
-│   │   ├── menu.go
-│   │   ├── menu_test.go
-│   │   ├── overview.yml
-│   │   ├── topics.go
-│   │   └── topics_test.go
-│   ├── canais
-│   │   ├── examples.go
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── chapter
-│   │   └── chapter.go
-│   ├── concorrencia
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── documentacao
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_1
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_10
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_11
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_12
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_2
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_3
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_4
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_5
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_6
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_7
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_8
-│   │   ├── overview.yml
-│   │   ├── resolution_exercises.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── exercicios_ninja_nivel_9
-│   │   ├── overview.yml
-│   │   ├── resolution_exercise.go
-│   │   ├── resolution_exercises_test.go
-│   │   └── topics.go
-│   ├── fluxo_de_controle
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── funcoes
-│   │   ├── overview.yml
-│   │   ├── resolution_challange.go
-│   │   └── topics.go
-│   ├── fundamentos_da_programacao
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── menu
-│   │   ├── capitulo_options.go
-│   │   ├── capitulo_outline.go
-│   │   ├── helpme.go
-│   │   └── options.go
-│   ├── outline.go
-│   ├── ponteiros
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── seu_ambiente_de_desenvolvimento
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── structs
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── teste_benchmarking
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── tratamento_de_erro
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   ├── variaveis_valores_tipos
-│   │   ├── overview.yml
-│   │   └── topics.go
-│   └── visao_geral_do_curso
-│       ├── overview.yml
-│       └── topics.go
-├── log
-│   └── development.log
-├── pkg
-│   ├── base_content
-│   │   ├── base_content.go
-│   │   └── base_content_test.go
-│   ├── format
-│   │   ├── helpme.go
-│   │   ├── menu_options.go
-│   │   ├── overview.go
-│   │   ├── questionnaire.go
-│   │   ├── questionnaire_test.go
-│   │   ├── resolucao_exercicios.go
-│   │   └── section.go
-│   ├── logger
-│   │   ├── log.go
-│   │   ├── logger.go
-│   │   └── logger_test.go
-│   ├── output
-│   │   └── output.go
-│   ├── reader
-│   │   └── overview.go
-│   ├── section
-│   │   └── section.go
-│   ├── topic
-│   │   └── topic.go
-│   └── trim
-│       └── trim.go
-└── tree.log
-
-45 directories, 125 files
+└── README.md
 ```
 
 ## Licença
