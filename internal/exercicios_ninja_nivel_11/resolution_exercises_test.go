@@ -12,7 +12,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
@@ -78,8 +77,7 @@ func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expected := `
@@ -120,8 +118,7 @@ func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expected := `

@@ -8,7 +8,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
@@ -27,8 +26,7 @@ func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -48,8 +46,7 @@ func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -72,8 +69,7 @@ func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expectValueCount := 100
@@ -98,8 +94,7 @@ func TestResolucaoNaPraticaExercicio4(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -121,8 +116,7 @@ func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -157,8 +151,7 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expectChannelCount := 101
@@ -183,8 +176,7 @@ func TestResolucaoNaPraticaExercicio7(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expectChannelCount := 101

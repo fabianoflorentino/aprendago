@@ -4,7 +4,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
@@ -23,7 +22,7 @@ func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	println("Show the memory address of a string variable")
@@ -37,7 +36,7 @@ func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
