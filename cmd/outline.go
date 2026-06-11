@@ -4,10 +4,17 @@ import (
 	"fmt"
 
 	"github.com/fabianoflorentino/aprendago/internal/chapter"
+	"github.com/spf13/cobra"
 )
 
-// runOutline implements the 'outline' subcommand, showing all chapters
-// and their topics.
+var outlineCmd = &cobra.Command{
+	Use:   "outline",
+	Short: "Exibe o outline completo do curso",
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return runOutline()
+	},
+}
+
 func runOutline() error {
 	all := chapter.All()
 	if len(all) == 0 {

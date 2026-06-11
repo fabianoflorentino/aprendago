@@ -26,12 +26,17 @@ func init() {
 	rootCmd.Flags().Bool("caps", false, "Lista capítulos disponíveis")
 	rootCmd.Flags().Bool("outline", false, "Exibe o outline completo do curso")
 
+	rootCmd.AddCommand(capsCmd, capCmd, outlineCmd)
+
 	rootCmd.SilenceUsage = true
 	rootCmd.SilenceErrors = true
 }
 
-func Execute() error {
-	return rootCmd.Execute()
+func Execute() {
+	if err := rootCmd.Execute(); err != nil {
+		fmt.Fprintf(os.Stderr, "Erro: %v\n", err)
+		os.Exit(1)
+	}
 }
 
 func rootRun(cmd *cobra.Command, args []string) error {
@@ -45,14 +50,6 @@ func rootRun(cmd *cobra.Command, args []string) error {
 		return runCapFlag(capNum, cmd)
 	}
 	if len(args) > 0 {
-		switch args[0] {
-		case "caps":
-			return runCaps()
-		case "cap":
-			return runCap(args[1:])
-		case "outline":
-			return runOutline()
-		}
 		return fmt.Errorf("comando desconhecido: %s. Use --help para ajuda", args[0])
 	}
 	return cmd.Help()
