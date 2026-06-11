@@ -1,5 +1,7 @@
 package chapter
 
+import "sort"
+
 var registry []*Chapter
 
 // Register adds a chapter to the global registry.
@@ -8,8 +10,11 @@ func Register(c *Chapter) {
 	registry = append(registry, c)
 }
 
-// All returns all registered chapters.
+// All returns all registered chapters, sorted by chapter number.
 func All() []*Chapter {
+	sort.Slice(registry, func(i, j int) bool {
+		return registry[i].Number < registry[j].Number
+	})
 	return registry
 }
 
