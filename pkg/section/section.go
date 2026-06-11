@@ -7,7 +7,6 @@ import (
 	"os"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/reader"
 )
 
@@ -40,13 +39,11 @@ func New(rootDir string) (*Section, error) {
 //	title: The title of the section to be read.
 func (s *Section) Format(title string) error {
 	if err := s.validateTitle(title); err != nil {
-		logger.Log("Erro ao validar o título da seção: %v", err)
 		return err
 	}
 
 	sec, err := s.readSection(title)
 	if err != nil {
-		logger.Log("Erro ao ler a seção: %v", err)
 		return err
 	}
 
@@ -86,16 +83,13 @@ func (s *Section) readSection(title string) (*reader.Section, error) {
 	sec, err := reader.ReadSection(s.rootDir, title)
 	if err != nil {
 		if os.IsNotExist(err) {
-			logger.Log("Seção '%s' não encontrada no diretório '%s'", title, s.rootDir)
 			return nil, fmt.Errorf("seção '%s' não encontrada no diretório '%s'", title, s.rootDir)
 		}
 
-		logger.Log("Erro ao ler a seção: %v", err)
 		return nil, fmt.Errorf("erro ao ler a seção")
 	}
 
 	if sec == nil {
-		logger.Log("Seção '%s' não encontrada no diretório '%s'", title, s.rootDir)
 		return nil, fmt.Errorf("seção não encontrada")
 	}
 
@@ -119,7 +113,6 @@ func (s *Section) formatDocument(sec *reader.Section) error {
 
 	err := format.FormatOverview([]reader.Document{document})
 	if err != nil {
-		logger.Log("Erro ao formatar o documento: %v", err)
 		return fmt.Errorf("erro ao formatar o documento: %w", err)
 	}
 

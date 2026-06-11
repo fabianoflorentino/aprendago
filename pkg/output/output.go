@@ -10,7 +10,6 @@ import (
 	"os"
 	"sync"
 
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 )
 
 // Output represents a structure that holds file descriptors for standard output,
@@ -31,7 +30,7 @@ type Output struct {
 func New() *Output {
 	read, write, err := os.Pipe()
 	if err != nil {
-		logger.Log("Failed to create pipe: %v", err)
+		log.Fatalf("Failed to create pipe: %v", err)
 	}
 
 	return &Output{

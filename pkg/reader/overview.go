@@ -8,7 +8,6 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"gopkg.in/yaml.v3"
 )
 
@@ -85,7 +84,6 @@ func readOverview(rootDir string) ([]Document, error) {
 	} else if _, err := os.Stat(docPathYAML); err == nil {
 		docPath = docPathYAML
 	} else {
-		logger.Log("File %s or %s not found", docPathYML, docPathYAML)
 		return nil, os.ErrNotExist
 	}
 
