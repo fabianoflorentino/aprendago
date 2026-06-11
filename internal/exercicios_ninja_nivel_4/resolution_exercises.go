@@ -6,6 +6,7 @@ package exercicios_ninja_nivel_4
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
@@ -166,7 +167,14 @@ func ResolucaoNaPraticaExercicio8() {
 		"da_silva_ciclano":   {"Programar 2", "Jogar bola 2", "Assistir filmes 2"},
 	}
 
-	for sobrenome_nome, hobbies := range pessoas {
+	keys := make([]string, 0, len(pessoas))
+	for k := range pessoas {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	for _, sobrenome_nome := range keys {
+		hobbies := pessoas[sobrenome_nome]
 		resolucao += fmt.Sprintf("Sobrenome_Nome: %v\n", sobrenome_nome)
 		for idx, hobby := range hobbies {
 			resolucao += fmt.Sprintf("  Hobby %v: %v\n", idx+1, hobby)
@@ -191,7 +199,14 @@ func ResolucaoNaPraticaExercicio9() {
 		"de_tal_ciclano":     {"Programar 3", "Jogar bola 3", "Assistir filmes 3"},
 	}
 
-	for sobrenome_nome, hobbies := range pessoas {
+	keys := make([]string, 0, len(pessoas))
+	for k := range pessoas {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	for _, sobrenome_nome := range keys {
+		hobbies := pessoas[sobrenome_nome]
 		resolucao += fmt.Sprintf("Sobrenome_Nome: %v\n", sobrenome_nome)
 		for idx, hobby := range hobbies {
 			resolucao += fmt.Sprintf("  Hobby %v: %v\n", idx+1, hobby)
@@ -221,7 +236,14 @@ func ResolucaoNaPraticaExercicio10() {
 	// Exibindo o map inteiro utilizando range loop
 	// O range loop retorna a chave e o valor do map em cada iteração do loop
 	// A chave é o sobrenome_nome e o valor é o slice de hobbies
-	for sobrenome_nome, hobbies := range pessoas {
+	keys10 := make([]string, 0, len(pessoas))
+	for k := range pessoas {
+		keys10 = append(keys10, k)
+	}
+	sort.Strings(keys10)
+
+	for _, sobrenome_nome := range keys10 {
+		hobbies := pessoas[sobrenome_nome]
 		resolucao += fmt.Sprintf("Sobrenome_Nome: %v\n", sobrenome_nome)
 		for idx, hobby := range hobbies {
 			resolucao += fmt.Sprintf("  Hobby %v: %v\n", idx+1, hobby)

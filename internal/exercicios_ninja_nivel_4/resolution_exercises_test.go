@@ -8,7 +8,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
@@ -27,7 +26,7 @@ func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -52,7 +51,7 @@ func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -78,7 +77,7 @@ func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -104,7 +103,7 @@ func TestResolucaoNaPraticaExercicio4(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -130,7 +129,7 @@ func TestResolucaoNaPraticaExercicio5(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -151,7 +150,7 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -175,7 +174,7 @@ func TestResolucaoNaPraticaExercicio7(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
@@ -200,23 +199,23 @@ func TestResolucaoNaPraticaExercicio8(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio8)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("Failed to capture output: %v", err)
 	}
 
 	expect := `
 Resolução:
-Sobrenome_Nome: florentino_fabiano
-  Hobby 1: Programar
-  Hobby 2: Jogar bola
-  Hobby 3: Assistir filmes
-Sobrenome_Nome: de_tal_fulano
-  Hobby 1: Programar
-  Hobby 2: Jogar bola
-  Hobby 3: Assistir filmes
 Sobrenome_Nome: da_silva_ciclano
   Hobby 1: Programar 2
   Hobby 2: Jogar bola 2
   Hobby 3: Assistir filmes 2
+Sobrenome_Nome: de_tal_fulano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: florentino_fabiano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
 `
 
 	trim := trim.New()
@@ -235,19 +234,11 @@ func TestResolucaoNaPraticaExercicio9(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio9)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
 Resolução:
-Sobrenome_Nome: florentino_fabiano
-  Hobby 1: Programar
-  Hobby 2: Jogar bola
-  Hobby 3: Assistir filmes
-Sobrenome_Nome: de_tal_fulano
-  Hobby 1: Programar
-  Hobby 2: Jogar bola
-  Hobby 3: Assistir filmes
 Sobrenome_Nome: da_silva_ciclano
   Hobby 1: Programar 2
   Hobby 2: Jogar bola 2
@@ -256,6 +247,14 @@ Sobrenome_Nome: de_tal_ciclano
   Hobby 1: Programar 3
   Hobby 2: Jogar bola 3
   Hobby 3: Assistir filmes 3
+Sobrenome_Nome: de_tal_fulano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: florentino_fabiano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
 `
 
 	trim := trim.New()
@@ -272,23 +271,23 @@ func TestResolucaoNaPraticaExercicio10(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio10)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 	}
 
 	expect := `
 Resolução:
-Sobrenome_Nome: florentino_fabio
-  Hobby 1: Programar
-  Hobby 2: Jogar bola
-  Hobby 3: Assistir filmes
-Sobrenome_Nome: de_tal_fulano
-  Hobby 1: Programar
-  Hobby 2: Jogar bola
-  Hobby 3: Assistir filmes
 Sobrenome_Nome: de_tal_ciclano
   Hobby 1: Programar 3
   Hobby 2: Jogar bola 3
   Hobby 3: Assistir filmes 3
+Sobrenome_Nome: de_tal_fulano
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
+Sobrenome_Nome: florentino_fabio
+  Hobby 1: Programar
+  Hobby 2: Jogar bola
+  Hobby 3: Assistir filmes
 `
 
 	trim := trim.New()
