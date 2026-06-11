@@ -5,6 +5,7 @@ package exercicios_ninja_nivel_3
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -82,7 +83,7 @@ func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 // If the calculated age string does not match the expected string, it prints the actual and expected values.
 func TestResolucaoExercicioNaPratica3(t *testing.T) {
 	var yearsCount string
-	var birthYear int = 1985
+	const birthYear = 1985
 
 	currentYear := time.Now().Year()
 
@@ -99,15 +100,18 @@ func TestResolucaoExercicioNaPratica3(t *testing.T) {
 
 	age := fmt.Sprintf("%v\nSua idade: %v", yearsCount, currentYear-birthYear)
 
-	expect := `
-1985, 1986, 1987, 1988, 1989, 1990,
-1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001,
-2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
-2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
-2024, 2025
-
-Sua idade: 40
-`
+	var expectedYears string
+	for year := birthYear; year <= currentYear; year++ {
+		if year == currentYear {
+			expectedYears += fmt.Sprintf("%d\n", year)
+		} else {
+			if year%11 == 0 {
+				expectedYears = strings.TrimSuffix(expectedYears, ", ") + ",\n"
+			}
+			expectedYears += fmt.Sprintf("%d, ", year)
+		}
+	}
+	expect := "\n" + expectedYears + "\nSua idade: " + strconv.Itoa(currentYear-birthYear) + "\n"
 
 	if strings.TrimSpace(age) != strings.TrimSpace(expect) {
 		t.Errorf("got\n%v\nwant\n%v", age, expect)
@@ -120,7 +124,8 @@ Sua idade: 40
 // generated string with an expected string to ensure correctness.
 func TestResolucaoExercicioNaPratica4(t *testing.T) {
 	var yearsCount string
-	var birthYear int = 1985
+	birthYear := 1985
+	startYear := birthYear
 
 	currentYear := time.Now().Year()
 
@@ -138,17 +143,23 @@ func TestResolucaoExercicioNaPratica4(t *testing.T) {
 		}
 	}
 
-	age := fmt.Sprintf("%v\n\nSua idade: %v", yearsCount, time.Now().Year()-1985)
+	age := fmt.Sprintf("%v\n\nSua idade: %v", yearsCount, time.Now().Year()-startYear)
 
-	expect := `
-1985, 1986, 1987, 1988, 1989,
-1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
-2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
-2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
-2020, 2021, 2022, 2023, 2024, 2025
-
-Sua idade: 40
-`
+	var expectedYears string
+	birthYear = startYear
+	for {
+		if birthYear >= currentYear {
+			expectedYears += fmt.Sprintf("%d", birthYear)
+			break
+		} else {
+			if birthYear%10 == 0 {
+				expectedYears = strings.TrimSuffix(expectedYears, ", ") + ",\n"
+			}
+			expectedYears += fmt.Sprintf("%d, ", birthYear)
+			birthYear++
+		}
+	}
+	expect := "\n" + expectedYears + "\n\nSua idade: " + strconv.Itoa(time.Now().Year()-startYear) + "\n"
 
 	if strings.TrimSpace(age) != strings.TrimSpace(expect) {
 		t.Errorf("\ngot:\n%v\nwant: %v", age, expect)

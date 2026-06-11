@@ -3,11 +3,12 @@
 package exercicios_ninja_nivel_9
 
 import (
+	"fmt"
+	"runtime"
 	"strconv"
 	"strings"
 	"testing"
 
-	"github.com/fabianoflorentino/aprendago/pkg/logger"
 	"github.com/fabianoflorentino/aprendago/pkg/output"
 	"github.com/fabianoflorentino/aprendago/pkg/trim"
 )
@@ -26,7 +27,7 @@ func TestResolucaoNaPraticaExercicio1(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio1)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 		t.Fatalf("unexpected error: %v", err)
 	}
 
@@ -44,7 +45,7 @@ func TestResolucaoNaPraticaExercicio2(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio2)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 		t.Fatalf("unexpected error: %v", err)
 	}
 
@@ -66,7 +67,7 @@ func TestResolucaoNaPraticaExercicio3(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio3)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 		t.Fatalf("unexpected error: %v", err)
 	}
 
@@ -94,7 +95,7 @@ func TestResolucaoNaPraticaExercicio4(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio4)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 		t.Fatalf("unexpected error: %v", err)
 	}
 
@@ -126,7 +127,7 @@ func TestResolucaoNapraticaExercicio5(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio5)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 		t.Fatalf("unexpected error: %v", err)
 	}
 
@@ -146,16 +147,15 @@ func TestResolucaoNaPraticaExercicio6(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio6)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
-		t.Fatalf("unexpected error: %v", err)
+		t.Fatalf("Failed to capture output: %v", err)
 	}
 
 	trim := trim.New()
 
-	expect := `
-Sistema Operacional: darwin
-Arquitetura: amd64
-`
+	expect := fmt.Sprintf(`
+Sistema Operacional: %s
+Arquitetura: %s
+`, runtime.GOOS, runtime.GOARCH)
 
 	if !strings.Contains(trim.String(result), trim.String(expect)) {
 		t.Errorf(expectTemplate, expect, result)
@@ -171,7 +171,7 @@ func TestResolucaoNaPraticaExercicio7(t *testing.T) {
 	output := output.New()
 	result, err := output.Capture(ResolucaoNaPraticaExercicio7)
 	if err != nil {
-		logger.Log("Failed to capture output: %v", err)
+		t.Fatalf("failed to capture output: %v", err)
 		t.Fatalf("unexpected error: %v", err)
 	}
 
