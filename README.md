@@ -92,7 +92,7 @@ Subcomandos do `cap`:
 go run cmd/aprendago/main.go outline
 ```
 
-```
+```bash
 Visão Geral do Curso
   Bem-vindo!
   Por que Go?
@@ -105,7 +105,7 @@ Visão Geral do Curso
 go run cmd/aprendago/main.go --help
 ```
 
-```
+```bash
 CLI para o curso Aprenda Go
 
 Usage:
@@ -125,6 +125,90 @@ Flags:
 Use "aprendago [command] --help" for more information about a command.
 ```
 
+## Fluxo de Funcionamento
+
+```mermaid
+flowchart TD
+    CLI["aprendago &lt;comando&gt;"] --> Cobra["cobra rootCmd.Execute()"]
+    Cobra --> Caps["caps"]
+    Cobra --> Cap["cap &lt;N&gt;"]
+    Cobra --> Outline["outline"]
+    Cobra --> Help["--help"]
+
+    Caps --> CapsList["chapter.All()"]
+    CapsList --> CapsPrint["Exibe lista de capítulos"]
+
+    Cap --> CapParse["parseia args[0] → int"]
+    CapParse --> CapGet["chapter.Get(num)"]
+    CapGet --> CapArgs{"len(args) > 1?"}
+    CapArgs -->|"topics"| CapTopics["printChapterTopics(ch)"]
+    CapTopics --> TopicsRead["ch.Topics()"]
+    TopicsRead --> TopicsRender["Lista títulos das seções"]
+    CapArgs -->|"overview"| CapOverview["ch.Overview()"]
+    CapOverview --> OverviewLoop["Para cada tópico → ch.ExecTopic()"]
+    CapArgs -->|"&lt;tópico&gt;"| CapTopic["ch.ExecTopic(args[1])"]
+    CapTopic --> SectionFmt["section.New(rootDir).Format(title)"]
+    SectionFmt --> SectionRead["reader.ReadSection()"]
+    SectionFmt --> OverviewFmt["format.FormatOverview()"]
+    OverviewLoop --> SectionFmt
+
+    Outline --> OutlineAll["chapter.All()"]
+    OutlineAll --> OutlineEach["Para cada capítulo"]
+    OutlineEach --> TopicsRead
+
+    style CapsList fill:#3b82f6,color:#fff
+    style CapGet fill:#3b82f6,color:#fff
+    style SectionRead fill:#22c55e,color:#fff
+    style OverviewFmt fill:#22c55e,color:#fff
+```
+
+## Arquitetura do Código
+
+```mermaid
+flowchart TD
+    subgraph cmd["cmd/ — Cobra Commands"]
+        Main["aprendago/main.go<br/>Execute()"]
+        Root["root.go<br/>rootCmd + init()"]
+        Cap["cap.go<br/>cap &lt;N&gt;"]
+        Caps["caps.go<br/>caps"]
+        Outline["outline.go<br/>outline"]
+        Register["register.go<br/>blank imports → init()"]
+    end
+
+    subgraph internal["internal/ — Core Logic"]
+        Chapter["chapter/<br/>Chapter type + registry"]
+        ChapterTypes["types.go<br/>Overview(), ExecTopic(), Topics()"]
+        Registry["registry.go<br/>Register(), All(), Get()"]
+        ChapterPkgs["<capítulo>/*/<br/>27 packages com:<br/>chapter.go (init) + overview.yml"]
+    end
+
+    subgraph pkg["pkg/ — Shared Utilities"]
+        Section["section/<br/>Section.New().Format()"]
+        Reader["reader/<br/>YAML parsing"]
+        Format["format/<br/>FormatOverview() template"]
+        Output["output/<br/>Test helpers"]
+        Trim["trim/<br/>String utils"]
+    end
+
+    Main --> Root
+    Root --> Cap
+    Root --> Caps
+    Root --> Outline
+
+    Cap --> Chapter
+    Caps --> Chapter
+    Outline --> Chapter
+
+    ChapterTypes --> Section
+    Chapter --> Registry
+    Registry -.->|"init()"| ChapterPkgs
+    Register -.-> ChapterPkgs
+
+    Section --> Reader
+    Section --> Format
+    Reader --> Format
+```
+
 ## Estrutura do Projeto
 
 ```shell
@@ -141,7 +225,6 @@ Use "aprendago [command] --help" for more information about a command.
 │   └── <capitulo>/         # 27 chapter packages (overview.yml + chapter.go)
 ├── pkg/                    # Shared utilities
 │   ├── format/             # Output formatting (overview, questionnaire)
-│   ├── logger/             # Logging
 │   ├── output/             # Output helpers
 │   ├── reader/             # YAML overview reader
 │   ├── section/            # Section formatting from overview.yml
