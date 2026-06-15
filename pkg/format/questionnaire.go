@@ -1,5 +1,4 @@
-// Package format provides interfaces and implementations for creating, collecting, and validating questionnaires.
-// It includes structures for representing questions and answers, and services for handling questionnaire operations.
+// Package format provides types for creating, collecting, and validating questionnaires.
 package format
 
 import (
@@ -7,27 +6,6 @@ import (
 	"fmt"
 	"strings"
 )
-
-// CreateQuestionnaire is an interface for creating a questionnaire with questions and answer options.
-// Create generates a questionnaire from a slice of Questionnaire.
-// It returns a slice of Questionnaire.
-type CreateQuestionnaire interface {
-	Create(Questionnaire []Questionnaire) []Questionnaire
-}
-
-// CollectAnswers is an interface for collecting answers from a questionnaire.
-// Collect gathers answers from a questionnaire and returns a slice of Answer and an error.
-// It receives a slice of Questionnaire and returns a slice of Answer and an error.
-type CollectAnswers interface {
-	Collect(Questionnaire []Questionnaire) ([]Answer, error)
-}
-
-// ValidateAnswer is an interface for validating answers from a questionnaire.
-// Validate checks the answers from a questionnaire and displays the test result.
-// It receives a slice of Answer and a slice of Answer.
-type ValidateAnswer interface {
-	Validate(answer []Answer, key []Answer)
-}
 
 // Questionnaire represents a question in a test with its answer options.
 type Questionnaire struct {

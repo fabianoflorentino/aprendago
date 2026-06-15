@@ -10,10 +10,6 @@ import (
 	"github.com/fabianoflorentino/aprendago/pkg/reader"
 )
 
-type SectionProvider interface {
-	Format(title string) error
-}
-
 // Section represents a part or division of a larger structure or document.
 // It is currently an empty struct, but can be extended with fields and methods
 // to hold and manipulate section-specific data.
