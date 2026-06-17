@@ -5,6 +5,7 @@ package section
 import (
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/fabianoflorentino/aprendago/pkg/format"
 	"github.com/fabianoflorentino/aprendago/pkg/reader"
@@ -44,6 +45,33 @@ func (s *Section) Format(title string) error {
 	}
 
 	return s.formatDocument(sec)
+}
+
+// FormatToString reads a section by title and returns the formatted content
+// as a string, instead of printing to stdout. Useful for TUI integration
+// where the content needs to be displayed in a viewport.
+func (s *Section) FormatToString(title string) (string, error) {
+	if err := s.validateTitle(title); err != nil {
+		return "", err
+	}
+
+	sec, err := s.readSection(title)
+	if err != nil {
+		return "", err
+	}
+
+	document := reader.Document{
+		Description: reader.Description{
+			Sections: []reader.Section{*sec},
+		},
+	}
+
+	var buf strings.Builder
+	if err := format.FormatOverviewTo(&buf, []reader.Document{document}); err != nil {
+		return "", fmt.Errorf("erro ao formatar o documento: %w", err)
+	}
+
+	return buf.String(), nil
 }
 
 // validateTitle checks if the provided title is not empty.

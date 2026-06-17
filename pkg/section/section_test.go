@@ -107,6 +107,66 @@ func TestFormat(t *testing.T) {
 	}
 }
 
+func TestFormatToString(t *testing.T) {
+	dir := t.TempDir()
+	writeOverviewYML(t, dir, `description:
+  name: Test Chapter
+  sections:
+    - title: My Section
+      text: My section content
+`)
+
+	s, err := New(dir)
+	if err != nil {
+		t.Fatalf("New() error: %v", err)
+	}
+
+	got, err := s.FormatToString("My Section")
+	if err != nil {
+		t.Fatalf("FormatToString() error: %v", err)
+	}
+
+	if !strings.Contains(got, "My Section") {
+		t.Error("output missing section title")
+	}
+	if !strings.Contains(got, "My section content") {
+		t.Error("output missing section content")
+	}
+}
+
+func TestFormatToStringEmptyTitle(t *testing.T) {
+	dir := t.TempDir()
+	s, err := New(dir)
+	if err != nil {
+		t.Fatalf("New() error: %v", err)
+	}
+
+	_, err = s.FormatToString("")
+	if err == nil {
+		t.Fatal("expected error for empty title, got nil")
+	}
+}
+
+func TestFormatToStringNotFound(t *testing.T) {
+	dir := t.TempDir()
+	writeOverviewYML(t, dir, `description:
+  name: Test Chapter
+  sections:
+    - title: Existing
+      text: Some content
+`)
+
+	s, err := New(dir)
+	if err != nil {
+		t.Fatalf("New() error: %v", err)
+	}
+
+	_, err = s.FormatToString("Non-existent Section")
+	if err == nil {
+		t.Fatal("expected error for non-existent section, got nil")
+	}
+}
+
 func TestValidateTitle(t *testing.T) {
 	s := &Section{rootDir: t.TempDir()}
 

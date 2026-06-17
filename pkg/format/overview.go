@@ -5,6 +5,7 @@ package format
 
 import (
 	"html/template"
+	"io"
 	"os"
 
 	"github.com/fabianoflorentino/aprendago/pkg/reader"
@@ -24,6 +25,42 @@ const documentTemplate = `
 {{end -}}
 `
 
+// FormatOverviewTo formats the given documents using the predefined template and
+// writes the output to the provided writer. This allows callers to capture the
+// formatted output (e.g. into a bytes.Buffer) instead of printing to stdout.
+//
+// Parameters:
+//
+//	w         - the writer to write the formatted output to.
+//	documents - a slice of reader.Document to be formatted.
+//
+// Returns:
+//
+//	error - an error if there is an issue with template parsing or execution,
+//	        otherwise nil.
+func FormatOverviewTo(w io.Writer, documents []reader.Document) error {
+	tmpl, err := template.New("document").Parse(documentTemplate)
+	if err != nil {
+		return err
+	}
+
+	for _, doc := range documents {
+		context := struct {
+			reader.Document
+			Divider string
+		}{
+			Document: doc,
+		}
+
+		err = tmpl.Execute(w, context)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
 // FormatOverview takes a slice of reader.Document and formats each document
 // using a predefined template. It writes the formatted output to the standard
 // output. If there is an error during template parsing or execution, it returns
@@ -38,24 +75,5 @@ const documentTemplate = `
 //	error - an error if there is an issue with template parsing or execution,
 //	        otherwise nil.
 func FormatOverview(documents []reader.Document) error {
-	tmpl, err := template.New("document").Parse(documentTemplate)
-	if err != nil {
-		return err
-	}
-
-	for _, doc := range documents {
-		context := struct {
-			reader.Document
-			Divider string
-		}{
-			Document: doc,
-		}
-
-		err = tmpl.Execute(os.Stdout, context)
-		if err != nil {
-			return err
-		}
-	}
-
-	return nil
+	return FormatOverviewTo(os.Stdout, documents)
 }

@@ -138,6 +138,81 @@ func TestFormatOverviewMultipleDocuments(t *testing.T) {
 	}
 }
 
+func TestFormatOverviewTo(t *testing.T) {
+	docs := []reader.Document{
+		{
+			Description: reader.Description{
+				Name: "Test Chapter",
+				Sections: []reader.Section{
+					{Title: "Section 1", Text: "Content 1"},
+				},
+			},
+		},
+	}
+
+	var buf bytes.Buffer
+	err := FormatOverviewTo(&buf, docs)
+
+	if err != nil {
+		t.Fatalf("FormatOverviewTo() returned error: %v", err)
+	}
+
+	output := buf.String()
+	if !strings.Contains(output, "Test Chapter") {
+		t.Error("output missing chapter name")
+	}
+	if !strings.Contains(output, "Section 1") {
+		t.Error("output missing section title")
+	}
+	if !strings.Contains(output, "Content 1") {
+		t.Error("output missing section content")
+	}
+}
+
+func TestFormatOverviewToEmptyDocuments(t *testing.T) {
+	var buf bytes.Buffer
+	err := FormatOverviewTo(&buf, []reader.Document{})
+
+	if err != nil {
+		t.Fatalf("FormatOverviewTo() returned error: %v", err)
+	}
+}
+
+func TestFormatOverviewToMultipleDocuments(t *testing.T) {
+	docs := []reader.Document{
+		{
+			Description: reader.Description{
+				Name: "Doc One",
+				Sections: []reader.Section{
+					{Title: "T1", Text: "Text 1"},
+				},
+			},
+		},
+		{
+			Description: reader.Description{
+				Name: "Doc Two",
+				Sections: []reader.Section{
+					{Title: "T2", Text: "Text 2"},
+				},
+			},
+		},
+	}
+
+	var buf bytes.Buffer
+	err := FormatOverviewTo(&buf, docs)
+	if err != nil {
+		t.Fatalf("FormatOverviewTo() returned error: %v", err)
+	}
+
+	output := buf.String()
+	if !strings.Contains(output, "Doc One") {
+		t.Error("output missing first document name")
+	}
+	if !strings.Contains(output, "Doc Two") {
+		t.Error("output missing second document name")
+	}
+}
+
 func TestFormatOverviewNoSections(t *testing.T) {
 	docs := []reader.Document{
 		{

@@ -19,7 +19,7 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(capsCmd, capCmd, outlineCmd)
+	rootCmd.AddCommand(capsCmd, capCmd, outlineCmd, tuiCmd)
 
 	rootCmd.SilenceUsage = true
 	rootCmd.SilenceErrors = true
