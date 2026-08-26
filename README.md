@@ -13,7 +13,7 @@ Curso de Go para iniciantes. Aprenda Go é um curso abrangente que ensina desde 
 
 ## Objetivo
 
-Este projeto tem como objetivo criar um CLI para facilitar a navegação e o acesso ao conteúdo do curso Aprenda Go. O CLI foi desenvolvido em Go e utiliza as bibliotecas padrão da linguagem para criar um menu interativo que permite ao usuário acessar os tópicos do curso. O CLI esta sendo desenvolvido como parte da prática de estudos da linguagem Go.
+Este projeto tem como objetivo criar um CLI para facilitar a navegação e o acesso ao conteúdo do curso Aprenda Go. Desenvolvido em Go, utiliza [Cobra](https://github.com/spf13/cobra) para comandos CLI e [Bubble Tea](https://github.com/charmbracelet/bubbletea) com [Lip Gloss](https://github.com/charmbracelet/lipgloss) para uma TUI interativa com navegação por capítulos e tópicos. O CLI esta sendo desenvolvido como parte da prática de estudos da linguagem Go.
 
 ## Afim de contribuir?
 
@@ -47,7 +47,7 @@ docker compose down
 
 ## Usando o CLI
 
-O CLI oferece três subcomandos principais:
+O CLI oferece quatro subcomandos principais:
 
 ### `aprendago caps` — Lista capítulos disponíveis
 
@@ -99,6 +99,27 @@ Visão Geral do Curso
   ...
 ```
 
+### `aprendago tui` — Interface interativa
+
+```shell
+go run cmd/aprendago/main.go tui
+```
+
+A TUI oferece uma interface split-pane com:
+- Lista de capítulos (esquerda)
+- Lista de tópicos (centro)
+- Visualização de conteúdo (direita)
+
+**Atalhos:**
+| Tecla | Ação |
+|---|---|
+| `↑↓` | Navegar entre itens |
+| `Enter` | Selecionar capítulo/tópico |
+| `/` | Fuzzy search |
+| `Esc` | Voltar |
+| `q` | Sair |
+| Mouse scroll | Rolar conteúdo |
+
 ### `aprendago --help` — Ajuda
 
 ```shell
@@ -118,6 +139,7 @@ Available Commands:
   completion  Generate the autocompletion script for the specified shell
   help        Help about any command
   outline     Exibe o outline completo do curso
+  tui         Interface interativa com Bubble Tea
 
 Flags:
   -h, --help   help for aprendago
@@ -133,6 +155,7 @@ flowchart TD
     Cobra --> Caps["caps"]
     Cobra --> Cap["cap &lt;N&gt;"]
     Cobra --> Outline["outline"]
+    Cobra --> TUI["tui"]
     Cobra --> Help["--help"]
 
     Caps --> CapsList["chapter.All()"]
@@ -156,10 +179,16 @@ flowchart TD
     OutlineAll --> OutlineEach["Para cada capítulo"]
     OutlineEach --> TopicsRead
 
+    TUI --> TUIModel["Bubble Tea Model"]
+    TUIModel --> TUIChapters["Lista de capítulos"]
+    TUIModel --> TUITopics["Lista de tópicos"]
+    TUIModel --> TUIContent["Viewport de conteúdo"]
+
     style CapsList fill:#3b82f6,color:#fff
     style CapGet fill:#3b82f6,color:#fff
     style SectionRead fill:#22c55e,color:#fff
     style OverviewFmt fill:#22c55e,color:#fff
+    style TUI fill:#7D56F4,color:#fff
 ```
 
 ## Arquitetura do Código
@@ -172,6 +201,7 @@ flowchart TD
         Cap["cap.go<br/>cap &lt;N&gt;"]
         Caps["caps.go<br/>caps"]
         Outline["outline.go<br/>outline"]
+        TUI["tui.go<br/>tui (Bubble Tea)"]
         Register["register.go<br/>blank imports → init()"]
     end
 
@@ -180,6 +210,13 @@ flowchart TD
         ChapterTypes["types.go<br/>Overview(), ExecTopic(), Topics()"]
         Registry["registry.go<br/>Register(), All(), Get()"]
         ChapterPkgs["<capítulo>/*/<br/>27 packages com:<br/>chapter.go (init) + overview.yml"]
+        TUIInternal["tui/<br/>Bubble Tea TUI"]
+        TUIModel["model.go<br/>Model + Init()"]
+        TUIView["view.go<br/>View()"]
+        TUIUpdate["update.go<br/>Update() + keys"]
+        TUIItems["items.go<br/>list adapters"]
+        TUIStyles["styles.go<br/>Lip Gloss theme"]
+        TUIScroll["scroll.go<br/>horizontal/vertical"]
     end
 
     subgraph pkg["pkg/ — Shared Utilities"]
@@ -194,6 +231,7 @@ flowchart TD
     Root --> Cap
     Root --> Caps
     Root --> Outline
+    Root --> TUI
 
     Cap --> Chapter
     Caps --> Chapter
@@ -203,6 +241,14 @@ flowchart TD
     Chapter --> Registry
     Registry -.->|"init()"| ChapterPkgs
     Register -.-> ChapterPkgs
+
+    TUI --> TUIInternal
+    TUIInternal --> TUIModel
+    TUIInternal --> TUIView
+    TUIInternal --> TUIUpdate
+    TUIInternal --> TUIItems
+    TUIInternal --> TUIStyles
+    TUIInternal --> TUIScroll
 
     Section --> Reader
     Section --> Format
@@ -219,9 +265,11 @@ flowchart TD
 │   ├── caps.go             # aprendago caps
 │   ├── outline.go          # aprendago outline
 │   ├── register.go         # blank imports for chapter self-registration
-│   └── root.go             # cobra root command
+│   ├── root.go             # cobra root command
+│   └── tui.go              # aprendago tui (Bubble Tea)
 ├── internal/
 │   ├── chapter/            # Chapter type, registry, and helpers
+│   ├── tui/                # Bubble Tea TUI (model, view, update, styles, scroll)
 │   └── <capitulo>/         # 27 chapter packages (overview.yml + chapter.go)
 ├── pkg/                    # Shared utilities
 │   ├── format/             # Output formatting (overview, questionnaire)

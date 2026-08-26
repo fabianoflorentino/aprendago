@@ -2,7 +2,7 @@
         test test/race test/short test/chapter test/cover test/cover/html bench \
         build/linux build/darwin build/windows \
         docker/build docker/run \
-        caps outline cap help
+        caps outline cap tui help
 
 BINARY  = aprendago
 CMD_DIR = ./cmd/aprendago
@@ -104,6 +104,9 @@ outline:
 cap:
 	go run $(CMD_DIR) cap $(or $(N),1) $(or $(M),topics)
 
+tui:
+	go run $(CMD_DIR) tui
+
 # ─── Help ─────────────────────────────────────────────────────────────────────
 
 help:
@@ -146,6 +149,9 @@ help:
 	@echo "    make cap N=3            capitulo N topics"
 	@echo "    make cap N=3 M=overview overview do capitulo"
 	@echo "    make cap N=3 M=\"topico\" topico especifico"
+	@echo ""
+	@echo "  TUI"
+	@echo "    make tui               interface interativa (Bubble Tea)"
 	@echo ""
 	@echo "  Exemplos"
 	@echo "    make run ARGS=\"cap 5 overview\""
